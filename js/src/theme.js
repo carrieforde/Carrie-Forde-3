@@ -1,5 +1,5 @@
 /**
- * Alcatraz Child JS
+ * Carrie Forde 3 JS
  */
 
 ( function( $ ) {
