@@ -1,0 +1,13 @@
+//--------------------------------------------------------------
+// BUTTONS
+//--------------------------------------------------------------
+.button,
+button,
+input[type='button'],
+input[type='submit'],
+.button-text {
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+}
+
