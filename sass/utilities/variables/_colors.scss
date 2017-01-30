@@ -1,0 +1,36 @@
+//--------------------------------------------------------------
+// COLORS
+//--------------------------------------------------------------
+
+//-------------------------------
+// Color Palette
+//-------------------------------
+
+// Brand colors.
+$razzmatazz: #ed1c72;
+$classic-rose: #eac5de;
+$charcoal: #424143;
+$french-gray: #bdbec0;
+$pink-cloud: linear-gradient(to top right, rgba($razzmatazz, 0.85) 25%, rgba($classic-rose, 0.85));
+
+// Accent colors.
+$west-side: #f78911;
+$sinopia: #d63e0f;
+$dark-violet: #900ad6;
+$blue: #0d10f7;
+$electric-lime: #1ced26;
+
+
+//-------------------------------
+// Buttons
+//-------------------------------
+$color__button-background: $razzmatazz;
+$color__button-background-hover: tint($razzmatazz, 15%);
+
+
+//-------------------------------
+// Forms
+//-------------------------------
+$color__checkbox-background-checked: $french-gray;
+$color__checkbox-text-checked: $razzmatazz;
+$color__radio-background-checked: $razzmatazz;
