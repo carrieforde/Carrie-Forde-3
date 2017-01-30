@@ -16,7 +16,7 @@ function carrieforde3_enqueue_scripts() {
 	// Google fonts.
 	wp_enqueue_style(
 		'carrieforde3-google-fonts',
-		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Assistant:300,700|Source+Code+Pro:300' ),
+		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Assistant:300,600|Source+Code+Pro:300' ),
 		array(),
 		CARRIEFORDE3_VERSION
 	);
