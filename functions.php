@@ -88,7 +88,7 @@ add_filter( 'alcatraz_set_fonts', 'carrieforde3_set_fonts' );
 function carrieforde3_set_fonts() {
 
 	$fonts = array(
-		'freight-display-pro' => '\'FreightDisp Pro\', serif',
+		'freight-display-pro' => '\'FreightDisp Pro\', freight-display-pro, serif',
 		'assistant' => '\'Assistant\', sans-serif',
 		'source-code-pro' => '\'Source Code Pro\', monospace',
 	);
