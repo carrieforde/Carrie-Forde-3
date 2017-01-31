@@ -62,14 +62,20 @@ add_filter( 'alcatraz_set_colors', 'carrieforde3_set_colors' );
 function carrieforde3_set_colors() {
 
 	$colors = array(
-		'Brand Colors'  => array(
+		'Brand Colors'   => array(
 			'pink-cloud'   => 'linear-gradient(to top right, rgba(237, 28, 114, 0.85) 25%, rgba(234, 197, 222, 0.85))',
 			'razzmatazz'   => '#ed1c72',
 			'classic-rose' => '#eac5de',
 			'charcoal'     => '#424143',
 			'french-gray'  => '#bdbec0',
 		),
-		'Accent Colors' => array(
+		'Neutral Colors' => array(
+			'mine-shaft' => '#323132',
+			'dim-gray'   => '#686769',
+			'oslo-gray'  => '#8d8b8f',
+			'iron'       => '#d9d5dc',
+		),
+		'Accent Colors'  => array(
 			'west-side'     => '#f79811',
 			'sinopia'       => '#d63e0f',
 			'dark-violet'   => '#900ad6',
