@@ -11,3 +11,15 @@ input[type='submit'],
 	text-transform: uppercase;
 }
 
+.button,
+button,
+input[type='button'],
+input[type='submit'] {
+	border: $button__border;
+	font-size: rem(14);
+	line-height: 1;
+
+	&:hover {
+		color: $color__button-text-hover;
+	}
+}
