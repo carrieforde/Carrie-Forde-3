@@ -13,6 +13,12 @@ $charcoal: #424143;
 $french-gray: #bdbec0;
 $pink-cloud: linear-gradient(to top right, rgba($razzmatazz, 0.85) 25%, rgba($classic-rose, 0.85));
 
+// Neutral colors.
+$mine-shaft: #323132;
+$dim-gray: #686769;
+$oslo-gray: #8d8b8f;
+$iron: #d9d5dc;
+
 // Accent colors.
 $west-side: #f78911;
 $sinopia: #d63e0f;
@@ -24,8 +30,11 @@ $electric-lime: #1ced26;
 //-------------------------------
 // Buttons
 //-------------------------------
-$color__button-background: $razzmatazz;
-$color__button-background-hover: tint($razzmatazz, 15%);
+$color__button-background: transparent;
+$color__button-background-hover: $razzmatazz;
+$color__button-border: $razzmatazz;
+$color__button-text: $razzmatazz;
+$color__button-text-hover: $true-white;
 
 
 //-------------------------------
@@ -34,3 +43,14 @@ $color__button-background-hover: tint($razzmatazz, 15%);
 $color__checkbox-background-checked: $french-gray;
 $color__checkbox-text-checked: $razzmatazz;
 $color__radio-background-checked: $razzmatazz;
+
+
+//-------------------------------
+// Typography
+//-------------------------------
+$color__body-text: $charcoal;
+$color__hr: $iron;
+$color__link: $razzmatazz;
+$color__link-hover: tint($razzmatazz, 30%);
+$color__link-visited: shade($razzmatazz, 10%);
+$color__pre-border: $iron;
