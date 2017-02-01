@@ -546,10 +546,12 @@ img {
 }
 
 body,
+button,
 input,
-select {
+select,
+textarea {
   color: #424143;
-  font: 400 18px / 1.65 "Assistant", sans-serif;
+  font: 300 18px / 1.65 "Assistant", sans-serif;
   word-wrap: break-word;
 }
 
@@ -604,7 +606,7 @@ pre,
 samp,
 tt,
 var {
-  font: 400 14px / 1.6 "Source Code Pro", Courier, monospace;
+  font: 400 14px / 1.6 "Inconsolata", monospace;
 }
 
 pre {
@@ -1043,6 +1045,7 @@ h5, .h5,
 h6, .h6 {
   font-family: "freight-display-pro", serif;
   letter-spacing: 0.0125em;
+  line-height: 1.2;
 }
 
 @media screen and (min-width: 37.5em){
