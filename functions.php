@@ -16,7 +16,7 @@ function cf3_enqueue_scripts() {
 	// Google fonts.
 	wp_enqueue_style(
 		'carrieforde3-google-fonts',
-		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Assistant:300,600|Source+Code+Pro:300' ),
+		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Assistant:300,600|Inconsolata' ),
 		array(),
 		CARRIEFORDE3_VERSION
 	);
@@ -125,7 +125,7 @@ function cf3_set_fonts() {
 	$fonts = array(
 		'freight-display-pro' => '\'FreightDisp Pro\', freight-display-pro, serif',
 		'assistant' => '\'Assistant\', sans-serif',
-		'source-code-pro' => '\'Source Code Pro\', monospace',
+		'inconsolata' => '\'Inconsolata\', monospace',
 	);
 
 	return $fonts;
