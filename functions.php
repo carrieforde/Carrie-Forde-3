@@ -55,6 +55,19 @@ function carrieforde3_typekit() {
 	echo '<script>try{Typekit.load({ async: true });}catch(e){}</script>';
 }
 
+add_filter( 'alcatraz_post_types', 'cf3_allowed_post_types' );
+
+function cf3_allowed_post_types() {
+
+	$post_type = array(
+		'alcatraz_patterns',
+		'page',
+		'style-tile',
+	);
+
+	return $post_type;
+}
+
 add_filter( 'alcatraz_set_colors', 'carrieforde3_set_colors' );
 /**
  * Set the brand colors.
