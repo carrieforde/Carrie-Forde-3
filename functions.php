@@ -7,11 +7,11 @@ define( 'CARRIEFORDE3_VERSION', '1.0.0' );
 define( 'CARRIEFORDE3_PATH', trailingslashit( get_stylesheet_directory() ) );
 define( 'CARRIEFORDE3_URL', trailingslashit( get_stylesheet_directory_uri() ) );
 
-add_action( 'wp_enqueue_scripts', 'carrieforde3_enqueue_scripts', 15 );
+add_action( 'wp_enqueue_scripts', 'cf3_enqueue_scripts', 15 );
 /**
  * Enqueue scripts and stylesheets.
  */
-function carrieforde3_enqueue_scripts() {
+function cf3_enqueue_scripts() {
 
 	// Google fonts.
 	wp_enqueue_style(
@@ -46,17 +46,25 @@ function carrieforde3_enqueue_scripts() {
 	);
 }
 
-add_action( 'wp_head', 'carrieforde3_typekit' );
+add_action( 'wp_head', 'cf3_typekit' );
 /**
  * Load Typekit inline JavaScript in head.
+ *
+ * @author Carrie Forde
  */
-function carrieforde3_typekit() {
+function cf3_typekit() {
 
 	echo '<script>try{Typekit.load({ async: true });}catch(e){}</script>';
 }
 
 add_filter( 'alcatraz_post_types', 'cf3_allowed_post_types' );
-
+/**
+ * Filter which on which pages the Post Options metabox shows.
+ *
+ * @author Carrie Forde
+ *
+ * @return  array  The post types.
+ */
 function cf3_allowed_post_types() {
 
 	$post_type = array(
@@ -68,11 +76,15 @@ function cf3_allowed_post_types() {
 	return $post_type;
 }
 
-add_filter( 'alcatraz_set_colors', 'carrieforde3_set_colors' );
+add_filter( 'alcatraz_set_colors', 'cf3_set_colors' );
 /**
  * Set the brand colors.
+ *
+ * @author Carrie Forde
+ *
+ * @return  array  The brand colors.
  */
-function carrieforde3_set_colors() {
+function cf3_set_colors() {
 
 	$colors = array(
 		'Brand Colors'   => array(
@@ -100,11 +112,15 @@ function carrieforde3_set_colors() {
 	return $colors;
 }
 
-add_filter( 'alcatraz_set_fonts', 'carrieforde3_set_fonts' );
+add_filter( 'alcatraz_set_fonts', 'cf3_set_fonts' );
 /**
  * Set the brand fonts.
+ *
+ * @author Carrie Forde
+ *
+ * @return  array  The fonts.
  */
-function carrieforde3_set_fonts() {
+function cf3_set_fonts() {
 
 	$fonts = array(
 		'freight-display-pro' => '\'FreightDisp Pro\', freight-display-pro, serif',
