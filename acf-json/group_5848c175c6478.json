@@ -1,0 +1,82 @@
+{
+    "key": "group_5848c175c6478",
+    "title": "Portfolio Meta",
+    "fields": [
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_5848c17e5559b",
+            "label": "Designer Name",
+            "name": "designer_name",
+            "type": "text",
+            "instructions": "Optional. Enter the name of the designer with whom you worked on the project.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "http:\/\/",
+            "key": "field_5848c1b25559c",
+            "label": "Designer Website",
+            "name": "designer_url",
+            "type": "url",
+            "instructions": "Optional. If the designer has a website, add the url.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "http:\/\/",
+            "key": "field_5848c1ed5559d",
+            "label": "Project URL",
+            "name": "project_url",
+            "type": "url",
+            "instructions": "Add a link for the project.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "portfolio"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cf-portfolio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1486003230
+}
