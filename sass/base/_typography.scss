@@ -1,6 +1,13 @@
 //--------------------------------------------------------------
 // TYPOGRAPHY
 //--------------------------------------------------------------
+body {
+	font-size: ($font__body-size - 2);
+
+	@include media ($tablet-landscape-up) {
+		font-size: $font__body-size;
+	}
+}
 
 h1, .h1,
 h2, .h2,
@@ -11,4 +18,39 @@ h6, .h6 {
 	font-family: $font__headings;
 	letter-spacing: 0.0125em;
 	line-height: $font__headings-line-height;
+}
+
+h1,
+.h1 {
+	font-size: 2em; // 36px at desktop
+}
+
+h2,
+.h2 {
+	font-size: 1.66em; // 30px at desktop
+}
+
+h3,
+.h3 {
+	font-size: 1.5em; // ~28px at desktop
+}
+
+h4,
+.h4 {
+	font-size: 1.33em; // 24px at desktop
+}
+
+h5,
+.h5 {
+	font-size: 1em; // 18px at desktop
+}
+
+h6,
+.h6 {
+	font-size: 0.88em; // ~16px at desktop
+}
+// Sanitize CSS uses `font-weight; bolder;`, which kinda sucks.
+b,
+strong {
+	font-weight: 600;
 }
