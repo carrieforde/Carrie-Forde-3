@@ -1,14 +1,7 @@
 //--------------------------------------------------------------
-// MIXINS
+// COLORS
 //--------------------------------------------------------------
 
-@mixin button-text-color($color) {
+.button-text--dark-violet {
 
-	&:hover {
-		color: $color;
-	}
-
-	&:after {
-		color: $color;
-	}
 }

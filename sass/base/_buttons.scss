@@ -6,7 +6,7 @@ button,
 input[type='button'],
 input[type='submit'],
 .button-text {
-	font-size: rem(14);
+	font-size: $font__body-size - 4;
 	font-weight: 600;
 	letter-spacing: 0.025em;
 	text-transform: uppercase;
@@ -21,5 +21,38 @@ input[type='submit'] {
 
 	&:hover {
 		color: $color__button-text-hover;
+	}
+}
+
+.button-text {
+	color: $color__button-link;
+
+	&:visited {
+		color: $color__button-link;
+	}
+
+	// Blue
+	@include modifier(blue) {
+		@include button-text-color($blue);
+	}
+
+	// Dark Violet
+	@include modifier(dark-violet) {
+		@include button-text-color($dark-violet);
+	}
+
+	// Electric Lime
+	@include modifier(electric-lime) {
+		@include button-text-color($electric-lime);
+	}
+
+	// Sinopia
+	@include modifier(sinopia) {
+		@include button-text-color($sinopia);
+	}
+
+	// West Side
+	@include modifier(west-side) {
+		@include button-text-color($west-side);
 	}
 }

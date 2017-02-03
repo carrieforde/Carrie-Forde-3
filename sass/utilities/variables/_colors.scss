@@ -20,11 +20,11 @@ $oslo-gray: #8d8b8f;
 $iron: #d9d5dc;
 
 // Accent colors.
-$west-side: #f78911;
-$sinopia: #d63e0f;
-$dark-violet: #900ad6;
 $blue: #0d10f7;
+$dark-violet: #900ad6;
 $electric-lime: #1ced26;
+$sinopia: #d63e0f;
+$west-side: #f78911;
 
 
 //-------------------------------
@@ -33,6 +33,7 @@ $electric-lime: #1ced26;
 $color__button-background: transparent;
 $color__button-background-hover: $razzmatazz;
 $color__button-border: $razzmatazz;
+$color__button-link: $mine-shaft;
 $color__button-text: $razzmatazz;
 $color__button-text-hover: $true-white;
 
@@ -57,3 +58,4 @@ $color__link: $razzmatazz;
 $color__link-hover: tint($razzmatazz, 30%);
 $color__link-visited: shade($razzmatazz, 10%);
 $color__pre-border: $iron;
+$color__headings: $mine-shaft;

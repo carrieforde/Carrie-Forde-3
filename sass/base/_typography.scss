@@ -19,6 +19,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+	color: $color__headings;
 	font-family: $font__headings;
 	letter-spacing: 0.0125em;
 	line-height: $font__headings-line-height;
