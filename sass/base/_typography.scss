@@ -2,10 +2,14 @@
 // TYPOGRAPHY
 //--------------------------------------------------------------
 body {
-	font-size: ($font__body-size - 2);
+	font-size: $font__body-size - 2;
 
 	@include media ($tablet-landscape-up) {
 		font-size: $font__body-size;
+	}
+
+	@include media ($desktop-large-up) {
+		font-size: $font__body-size + 2;
 	}
 }
 
@@ -49,6 +53,7 @@ h6,
 .h6 {
 	font-size: 0.88em; // ~16px at desktop
 }
+
 // Sanitize CSS uses `font-weight; bolder;`, which kinda sucks.
 b,
 strong {

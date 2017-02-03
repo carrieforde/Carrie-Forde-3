@@ -6,10 +6,19 @@
 //-------------------------------
 // Buttons
 //-------------------------------
-$button__border: rem(2) solid $razzmatazz;
+$button__border: rem(2) solid $color__button-border;
+
+
+//-------------------------------
+// Forms
+//-------------------------------
+$border__forms: rem(1) solid $color__forms-border;
+$border__forms-focus: rem(1) solid $color__forms-border-focus;
+$border__checkbox: rem(1) solid $color__checkbox-border;
 
 
 //-------------------------------
 // Typography
 //-------------------------------
 $border__hr: rem(1) solid $color__hr;
+$border__pre: rem(1) solid $color__pre-border;
