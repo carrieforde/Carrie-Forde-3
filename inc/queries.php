@@ -23,6 +23,8 @@ function cf3_fetch_posts( $args = array() ) {
 
 	if ( $posts->have_posts() ) {
 
+		ob_start();
+
 		while ( $posts->have_posts() ) {
 
 			$posts->the_post();
@@ -30,4 +32,6 @@ function cf3_fetch_posts( $args = array() ) {
 			get_template_part( $args['template_part'] );
 		}
 	}
+
+	return ob_get_clean();
 }
