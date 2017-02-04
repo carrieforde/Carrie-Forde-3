@@ -131,4 +131,13 @@ function cf3_set_fonts() {
 	return $fonts;
 }
 
+add_filter( 'excerpt_more', 'cf3_excerpt_more' );
+
+function cf3_excerpt_more() {
+
+	return '&hellip;';
+}
+
 require_once CARRIEFORDE3_PATH . '/inc/queries.php';
+
+require_once CARRIEFORDE3_PATH . '/inc/template-tags.php';
