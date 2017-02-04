@@ -130,3 +130,5 @@ function cf3_set_fonts() {
 
 	return $fonts;
 }
+
+require_once CARRIEFORDE3_PATH . '/inc/queries.php';
