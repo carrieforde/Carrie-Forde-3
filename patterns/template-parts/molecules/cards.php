@@ -26,7 +26,7 @@
 		'output'            => cf3_fetch_posts( array(
 			'category_name' => 'thoughts',
 			'template_part' => 'template-parts/content-post-card',
-	) ),
+		) ),
 		'params'            => array( '$args' => 'The arguments.' ),
 		'args'              => array( 'template_part' => 'template-parts/content-post-card' ),
 	) ); ?>

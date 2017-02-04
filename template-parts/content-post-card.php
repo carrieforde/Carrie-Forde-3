@@ -10,6 +10,7 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail(); ?>
+			<?php echo cf3_get_post_categories(); ?>
 		</div>
 	<?php endif; ?>
 
@@ -20,4 +21,13 @@
 	<div class="entry-content post-card__content">
 		<?php the_excerpt(); ?>
 	</div>
+
+	<footer class="entry-footer post-card__footer">
+		<?php echo alcatraz_button( array( // WPCS: XSS OK.
+			'type' => 'text',
+			'link' => get_the_permalink(),
+			'class' => 'button-text--blue',
+			'button_text' => 'Read More',
+		) ); ?>
+	</footer>
 </article>
