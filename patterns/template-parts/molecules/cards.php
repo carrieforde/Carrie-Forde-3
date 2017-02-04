@@ -20,8 +20,9 @@
 		'description'       => 'This is the default card for posts.',
 		'patterns_included' => 'alcatraz_button',
 		'function'          => 'cf3_fetch_posts( array(
-		\'category_name\' => \'thoughts\',
-	) )',
+	\'category_name\' => \'thoughts\',
+	\'template_part\' => \'template-parts/content-post-card\',
+) )',
 		'output'            => cf3_fetch_posts( array(
 			'category_name' => 'thoughts',
 			'template_part' => 'template-parts/content-post-card',
