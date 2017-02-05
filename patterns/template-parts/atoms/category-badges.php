@@ -1,6 +1,6 @@
 <?php
 /**
- * Buttons
+ * Category Badges
  */
 ?>
 

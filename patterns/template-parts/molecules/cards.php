@@ -39,4 +39,17 @@
 		'params'            => array( '$args' => 'The arguments.' ),
 		'args'              => array( 'template_part' => 'template-parts/content-post-card' ),
 	) ); ?>
+
+	<?php alcatraz_pattern_doc( array(
+		'heading'           => 'Portfolio Card',
+		'description'       => 'This is the card for the Portfolio post type.',
+		'patterns_included' => '',
+		'function'          => 'cf3_fetch_posts( array( \'post_type\' => \'cf-portfolio\', \'template-part\' => \'template-parts/content-portfolio-card\' ) )',
+		'output'            => cf3_fetch_posts( array(
+			'post_type' => 'cf-portfolio',
+			'template_part' => 'template-parts/content-portfolio-card'
+		) ),
+		'params'            => array( '$args' => 'The arguments.' ),
+		'args'              => array( 'post_type' => 'cf-portfolio', 'template-part' => 'template-part/content-portfolio-card' ),
+	) ); ?>
 </section>
