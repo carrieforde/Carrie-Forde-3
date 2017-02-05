@@ -71,7 +71,11 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
  *
  * @return  string  The accent color.
  */
-function cf3_get_category_accent() {
+function cf3_get_category_accent( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
 
 	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
 
