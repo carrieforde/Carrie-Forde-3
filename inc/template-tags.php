@@ -73,7 +73,7 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
  */
 function cf3_get_category_accent() {
 
-	$category = cf3_get_post_terms();
+	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
 
 	$cat_accent = get_term_meta( $category[0]->term_id, 'cat_color_accent', true );
 
