@@ -1,0 +1,46 @@
+//--------------------------------------------------------------
+// POST CARD
+//--------------------------------------------------------------
+.post-card {
+
+	@include element(image) {
+		margin-bottom: rem(24);
+		position: relative;
+	}
+
+	@include element(category) {
+		@include position(absolute, null null rem(-12) rem(10));
+
+		background-color: $razzmatazz;
+		font-weight: 600;
+		letter-spacing: 0.025em;
+		text-transform: uppercase;
+
+		a {
+			color: $true-white;
+			line-height: 1;
+			padding: rem(5) rem(10);
+			text-decoration: none;
+		}
+	}
+
+	@include element(title) {
+		margin-bottom: 0.25em;
+
+		a {
+			color: $color__headings;
+			text-decoration: none;
+
+			&:hover {
+				color: tint($color__headings, 10%);
+			}
+		}
+	}
+
+	@include element(content) {
+
+		p {
+			margin-bottom: 0.75em;
+		}
+	}
+} // .post-card

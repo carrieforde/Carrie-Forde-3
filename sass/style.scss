@@ -22,10 +22,11 @@ Tags:
 
 // Import the remaining partials from Alcatraz.
 @import 'alcatraz/sass/base/index';
-@import 'alcatraz/sass/layout/index';
 @import 'alcatraz/sass/modules/index';
+@import 'alcatraz/sass/layout/index';
 @import 'alcatraz/sass/state/index';
 
 
 // This theme's partials.
 @import 'base/index';
+@import 'modules/index';
