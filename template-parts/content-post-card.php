@@ -10,7 +10,7 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail(); ?>
-			<?php echo cf3_get_post_categories(); ?>
+			<?php echo cf3_get_post_category(); ?>
 		</div>
 	<?php endif; ?>
 
