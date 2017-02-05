@@ -14,7 +14,7 @@ $accent = cf3_get_category_accent();
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail(); ?>
 			</a>
-			<?php cf3_the_post_card_category(); ?>
+			<?php echo cf3_get_post_card_category_badge(); ?>
 		</div>
 	<?php endif; ?>
 

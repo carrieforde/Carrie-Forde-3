@@ -117,6 +117,13 @@ function cf3_set_colors() {
 	return $colors;
 }
 
+add_action( 'alcatraz_after_patterns', 'cf3_append_theme_atoms' );
+
+function cf3_append_theme_atoms() {
+
+	get_template_part( 'patterns/template-parts/atoms/category-badges' );
+}
+
 add_filter( 'alcatraz_set_fonts', 'cf3_set_fonts' );
 /**
  * Set the brand fonts.

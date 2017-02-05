@@ -1,0 +1,17 @@
+//--------------------------------------------------------------
+// CATEGORY BADGE
+//--------------------------------------------------------------
+.category-badge {
+	font-size: $font__body-size - 4;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	z-index: 1;
+
+	a {
+		color: $true-white;
+		line-height: 1;
+		padding: rem(5) rem(10);
+		text-decoration: none;
+	}
+}
