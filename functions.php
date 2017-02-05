@@ -107,6 +107,11 @@ function cf3_set_colors() {
 			'blue'          => '#0d10f7',
 			'electric-lime' => '#1ced26',
 		),
+		'Accent Gradients' => array(
+			'mystic' => 'linear-gradient(to top right, rgba(237, 28, 114, 0.85) 25%, rgba(144, 10, 214, 0.85))',
+			'cotton-candy' => 'linear-gradient(to top right, rgba(237, 28, 114, 0.85) 25%, rgba(13, 16, 247, 0.85))',
+			'sunset' => 'linear-gradient(to top right, rgba(237, 28, 114, 0.85) 25%, rgba(247, 137, 17, 0.85))',
+		),
 	);
 
 	return $colors;
