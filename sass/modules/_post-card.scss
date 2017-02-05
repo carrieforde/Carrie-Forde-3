@@ -2,16 +2,18 @@
 // POST CARD
 //--------------------------------------------------------------
 .post-card {
+	font-size: $font__body-size - 2;
 
 	@include element(image) {
-		margin-bottom: rem(24);
+		margin-bottom: rem(18);
 		position: relative;
 	}
 
 	@include element(category) {
-		@include position(absolute, null null rem(-12) rem(10));
+		@include position(absolute, null null rem(-10) rem(10));
 
 		background-color: $razzmatazz;
+		font-size: $font__body-size - 4;
 		font-weight: 600;
 		letter-spacing: 0.025em;
 		text-transform: uppercase;
