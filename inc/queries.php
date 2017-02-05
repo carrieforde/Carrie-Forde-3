@@ -45,7 +45,6 @@ function cf3_get_post_id( $args = array() ) {
 		'category_name'   => '',
 		'orderby'         => 'rand',
 		'post_type'       => 'post',
-		'posts_per_page'  => 1,
 		'tag'             => '',
 	);
 	$args = wp_parse_args( $args, $defaults );
@@ -54,15 +53,15 @@ function cf3_get_post_id( $args = array() ) {
 		'category_name'   => esc_attr( $args['category_name'] ),
 		'orderby'         => esc_attr( $args['orderby']),
 		'post_type'       => esc_attr( $args['post_type'] ),
-		'posts_per_page'  => absint( $args['posts_per_page'] ),
+		'posts_per_page'  => 1,
 		'tag'             => esc_attr( $args['tag'] ),
 	);
 
 	$posts = new WP_Query( $post );
 
-	if ( $posts->have_posts() ) {
+	$post_id = 0;
 
-		$post_id;
+	if ( $posts->have_posts() ) {
 
 		while ( $posts->have_posts() ) {
 
