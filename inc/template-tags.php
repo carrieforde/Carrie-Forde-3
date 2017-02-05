@@ -29,7 +29,7 @@ function cf3_get_post_category( $post_id = 0 ) {
 		return '';
 	}
 
-	$output = sprintf( '<span class="category"><a href="%s" rel="%s %s">%s</a></span>',
+	$output = sprintf( '<span class="post-card__category"><a href="%s" rel="%s %s">%s</a></span>',
 		get_term_link( $category[0]->term_id ),
 		esc_attr( $category[0]->slug ),
 		esc_attr( $category[0]->taxonomy ),
