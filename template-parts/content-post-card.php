@@ -6,7 +6,6 @@
  */
 
 $accent = cf3_get_category_accent();
-var_dump( $accent );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'alcatraz-col--4 post-card' ); ?>>
