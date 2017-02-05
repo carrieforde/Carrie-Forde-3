@@ -29,6 +29,16 @@ function cf3_get_post_category( $post_id = 0 ) {
 		return '';
 	}
 
+	return $category;
+}
+
+/**
+ * Echo the post card category.
+ */
+function cf3_the_post_card_category() {
+
+	$category = cf3_get_post_category();
+
 	$output = sprintf( '<span class="post-card__category"><a href="%s" rel="%s %s">%s</a></span>',
 		get_term_link( $category[0]->term_id ),
 		esc_attr( $category[0]->slug ),
@@ -36,5 +46,20 @@ function cf3_get_post_category( $post_id = 0 ) {
 		esc_html( $category[0]->name )
 	);
 
-	return $output;
+	echo $output;
+}
+
+
+/**
+ * Get the accent color for the post category.
+ *
+ * @return  string  The accent color.
+ */
+function cf3_get_category_accent() {
+
+	$category = cf3_get_post_category();
+
+	$cat_accent = get_term_meta( $category[0]->term_id, 'cat_color_accent', true );
+
+	return $cat_accent;
 }

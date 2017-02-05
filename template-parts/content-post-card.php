@@ -4,6 +4,9 @@
  *
  * @package carrieforde3
  */
+
+$accent = cf3_get_category_accent();
+var_dump( $accent );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'alcatraz-col--4 post-card' ); ?>>
@@ -12,7 +15,7 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail(); ?>
 			</a>
-			<?php echo cf3_get_post_category(); ?>
+			<?php cf3_the_post_card_category(); ?>
 		</div>
 	<?php endif; ?>
 
@@ -29,6 +32,7 @@
 			'type' => 'text',
 			'link' => get_the_permalink(),
 			'button_text' => 'Read More',
+			'class' => 'button-text--' . esc_attr( $accent ) . '',
 		) ); ?>
 	</footer>
 </article>

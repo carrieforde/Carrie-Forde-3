@@ -1,0 +1,55 @@
+{
+    "key": "group_58968d3c4fb36",
+    "title": "Category Meta",
+    "fields": [
+        {
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "razzmatazz": "Razzmatazz",
+                "blue": "Blue",
+                "dark-violet": "Dark Violet",
+                "electric-lime": "Electric Lime",
+                "sinopia": "Sinopia",
+                "west-side": "West Side"
+            },
+            "default_value": [
+                "razzmatazz"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "key": "field_58968d672f21f",
+            "label": "Category Color Accent",
+            "name": "cat_color_accent",
+            "type": "select",
+            "instructions": "Choose a color as the accent for the category.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1486261901
+}
