@@ -1,0 +1,57 @@
+//--------------------------------------------------------------
+// PORTFOLIO CARD
+//--------------------------------------------------------------
+.portfolio-card {
+	box-shadow: $box-shadow__portfolio-card;
+	color: $true-white;
+	font-size: $font__body-size - 2;
+	position: relative;
+	text-align: center;
+
+	@include element(header) {
+		display: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		z-index: 1;
+	}
+
+	@include element(title) {
+		line-height: 1;
+		margin-bottom: 0;
+
+		a{
+			color: $true-white;
+			text-decoration: none;
+		}
+	}
+
+	@include element(image) {
+
+		a,
+		img {
+			display: block;
+		}
+
+		a {
+			&:after {
+				@include position(absolute, 0 0 0 0);
+
+				background: $pink-cloud-solid;
+				content: '';
+				display: none;
+				transition: $transition__hover;
+			}
+		}
+	}
+
+	&:hover {
+
+		.portfolio-card__header,
+		.portfolio-card__image a:after {
+			display: block;
+			transition: $transition__hover;
+		}
+	}
+}
