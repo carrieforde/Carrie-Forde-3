@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 .portfolio-card {
 	box-shadow: $box-shadow__portfolio-card;
-	color: $true-white;
 	font-size: $font__body-size - 2;
 	position: relative;
 	text-align: center;
@@ -15,16 +14,17 @@
 		transform: translateY(-50%);
 		width: 100%;
 		z-index: 1;
-	}
 
-	@include element(title) {
-		line-height: 1;
-		margin-bottom: 0;
-
-		a{
+		a {
 			color: $true-white;
 			text-decoration: none;
 		}
+	}
+
+	@include element(title) {
+		color: $true-white;
+		line-height: 1;
+		margin-bottom: 0;
 	}
 
 	@include element(image) {
