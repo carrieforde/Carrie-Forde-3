@@ -117,7 +117,7 @@ function cf3_set_colors() {
 	return $colors;
 }
 
-add_action( 'alcatraz_after_patterns', 'cf3_append_theme_atoms' );
+add_action( 'alcatraz_after_patterns_atoms', 'cf3_append_theme_atoms' );
 
 function cf3_append_theme_atoms() {
 
