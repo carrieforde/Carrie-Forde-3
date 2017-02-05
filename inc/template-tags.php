@@ -6,30 +6,39 @@
  */
 
 /**
- * Get the first post category.
- *
- * @param   int    [$post_id      = 0] The post ID.
- * @return  string  The formatted category.
+ * Get the terms associated with a post.
+ * @param   int    [$post_id         = 0]    The post ID.
+ * @param   string [$taxonomy        = '']  The taxonomy to query.
+ * @param   array  [$args            = array()] Additional args to pass to wp_get_post_terms()
+ * @return  array The terms.
  */
-function cf3_get_post_category( $post_id = 0 ) {
+
+function cf3_get_post_terms( $post_id = 0, $taxonomy = '', $args = array() ) {
 
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
 	}
 
-	$category_args = array(
+	$defaults = array(
 		'orderby' => 'name',
-		'number'  => 1,
+		'number'  => 0,
 		'fields'  => 'all',
 	);
+	$args = wp_parse_args( $defaults, $args );
 
-	$category = wp_get_post_terms( $post_id, 'category', $category_args );
+	$term_args = array(
+		'orderby' => esc_attr( $args['orderby'] ),
+		'number'  => esc_attr( $args['number'] ),
+		'fields'  => esc_attr( $args['fields'] ),
+	);
 
-	if ( empty( $category) || is_wp_error( $category ) ) {
+	$terms = wp_get_post_terms( $post_id, $taxonomy, $term_args );
+
+	if ( empty( $terms ) || is_wp_error( $terms ) ) {
 		return '';
 	}
 
-	return $category;
+	return $terms;
 }
 
 /**
@@ -41,7 +50,7 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
 		$post_id = get_the_ID();
 	}
 
-	$category = cf3_get_post_category( $post_id );
+	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
 
 	$cat_accent = get_term_meta( $category[0]->term_id, 'cat_color_accent', true );
 
@@ -64,9 +73,36 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
  */
 function cf3_get_category_accent() {
 
-	$category = cf3_get_post_category();
+	$category = cf3_get_post_terms();
 
 	$cat_accent = get_term_meta( $category[0]->term_id, 'cat_color_accent', true );
 
 	return $cat_accent;
+}
+
+
+function cf3_get_portfolio_terms( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+
+		$post_id = get_the_id();
+	}
+
+	$terms = cf3_get_post_terms( $post_id, 'cf-project-services' );
+
+	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+
+		$project_terms = array();
+
+		foreach( $terms as $term ) {
+
+			$project_terms[] = sprintf( '<span class="project-service">%s</span>',
+				esc_html( $term->name )
+			);
+		}
+
+		$project_terms = implode( ', ', $project_terms );
+
+		return $project_terms;
+	}
 }
