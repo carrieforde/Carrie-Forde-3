@@ -39,7 +39,10 @@ function cf3_the_post_card_category() {
 
 	$category = cf3_get_post_category();
 
-	$output = sprintf( '<span class="post-card__category"><a href="%s" rel="%s %s">%s</a></span>',
+	$cat_accent = get_term_meta( $category[0]->term_id, 'cat_color_accent', true );
+
+	$output = sprintf( '<span class="post-card__category post-card__category--%s-bg"><a href="%s" rel="%s %s">%s</a></span>',
+		esc_attr( $cat_accent ),
 		get_term_link( $category[0]->term_id ),
 		esc_attr( $category[0]->slug ),
 		esc_attr( $category[0]->taxonomy ),
