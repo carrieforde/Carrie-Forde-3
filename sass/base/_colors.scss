@@ -1,7 +1,113 @@
 //--------------------------------------------------------------
 // COLORS
+//
+// Since BEM is the prefered methodology, I'm looking for
+// modifiers with color names at the end of the class instead
+// of using dedicated classnames.
 //--------------------------------------------------------------
 
-.button-text--dark-violet {
 
+//-----------------------------------------
+// Razzmatazz
+//-----------------------------------------
+[class$='--razzmatazz'] {
+	color: $razzmatazz;
+}
+
+[class$='--razzmatazz-bg'] {
+	background-color: $razzmatazz;
+}
+
+
+//-----------------------------------------
+// Classic Rose
+//-----------------------------------------
+[class$='--classic-rose'] {
+	color: $classic-rose;
+}
+
+[class$='--classic-rose-bg'] {
+	background-color: $classic-rose;
+}
+
+
+//-----------------------------------------
+// Charcoal
+//-----------------------------------------
+[class$='--charcoal'] {
+	color: $charcoal;
+}
+
+[class$='--charcoal-bg'] {
+	background-color: $charcoal;
+}
+
+
+//-----------------------------------------
+// French Gray
+//-----------------------------------------
+[class$='--french-gray'] {
+	color: $french-gray;
+}
+
+[class$='--french-gray-bg'] {
+	background-color: $french-gray;
+}
+
+
+//-----------------------------------------
+// Blue
+//-----------------------------------------
+[class$='--blue'] {
+	color: $blue;
+}
+
+[class$='--blue-bg'] {
+	background-color: $blue;
+}
+
+//-----------------------------------------
+// Dark Violet
+//-----------------------------------------
+[class$='--dark-violet'] {
+	color: $dark-violet;
+}
+
+[class$='--dark-violet-bg'] {
+	background-color: $dark-violet;
+}
+
+//-----------------------------------------
+// Electric Lime
+//-----------------------------------------
+[class$='--electric-lime'] {
+	color: $electric-lime;
+}
+
+[class$='--electric-lime-bg'] {
+	background-color: $electric-lime;
+}
+
+
+//-----------------------------------------
+// Sinopia
+//-----------------------------------------
+[class$='--sinopia'] {
+	color: $sinopia;
+}
+
+[class$='--sinopia-bg'] {
+	background-color: $sinopia;
+}
+
+
+//-----------------------------------------
+// West Side
+//-----------------------------------------
+[class$='--west-side'] {
+	color: $west-side;
+}
+
+[class$='--west-side-bg'] {
+	background-color: $west-side;
 }
