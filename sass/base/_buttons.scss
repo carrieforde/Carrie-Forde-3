@@ -25,6 +25,8 @@ input[type='submit'] {
 }
 
 .button-text {
+	@include button-text-color($razzmatazz);
+
 	color: $color__button-link;
 
 	&:visited {
