@@ -7,6 +7,10 @@
 	@include element(image) {
 		margin-bottom: rem(18);
 		position: relative;
+
+		img {
+			display: block;
+		}
 	}
 
 	@include element(category) {
@@ -17,6 +21,7 @@
 		font-weight: 600;
 		letter-spacing: 0.025em;
 		text-transform: uppercase;
+		z-index: 1;
 
 		a {
 			color: $true-white;
