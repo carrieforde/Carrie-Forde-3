@@ -158,6 +158,47 @@ function cf3_excerpt_more() {
 	return '&hellip;';
 }
 
+add_action( 'login_enqueue_scripts', 'cf3_custom_login_screen' );
+function cf3_custom_login_screen() { ?>
+
+	<style type="text/css">
+		.login {
+			align-items: center;
+			background: linear-gradient(to top right, rgba(237, 28, 114, 0.85) 25%, rgba(234, 197, 222, 0.85));
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			justify-content: center;
+		}
+
+		#login {
+			padding: 0 !important;
+		}
+
+		#login h1 a,
+		.login h1 a {
+			background-image: url( <?php echo CARRIEFORDE3_URL . '/images/carrie-forde-logo_white.svg'; ?> );
+			background-size: contain;
+			height: 150px;
+			width: 200px;
+		}
+
+		.login #nav a,
+		#login #nav a,
+		.login #backtoblog a,
+		#login #backtoblog a {
+			color: #fff;
+		}
+
+		.login #nav a:hover,
+		#login #nav a:hover,
+		.login #backtoblog a:hover,
+		#login #backtoblog a:hover {
+			color: #ccc;
+		}
+	</style>
+<?php }
+
 require_once CARRIEFORDE3_PATH . '/inc/queries.php';
 
 require_once CARRIEFORDE3_PATH . '/inc/template-tags.php';
