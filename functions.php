@@ -125,6 +125,13 @@ function cf3_append_theme_atoms() {
 	get_template_part( 'patterns/template-parts/atoms/project-services' );
 }
 
+add_action( 'alcatraz_after_patterns_molecules', 'cf3_append_theme_molecules' );
+
+function cf3_append_theme_molecules() {
+
+	get_template_part( 'patterns/template-parts/molecules/heroes' );
+}
+
 add_filter( 'alcatraz_set_fonts', 'cf3_set_fonts' );
 /**
  * Set the brand fonts.
@@ -154,3 +161,5 @@ function cf3_excerpt_more() {
 require_once CARRIEFORDE3_PATH . '/inc/queries.php';
 
 require_once CARRIEFORDE3_PATH . '/inc/template-tags.php';
+
+require_once CARRIEFORDE3_PATH . '/inc/acf.php';
