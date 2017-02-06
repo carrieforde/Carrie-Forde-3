@@ -1267,6 +1267,56 @@ strong {
   left: 0.625rem;
 }
 
+.portfolio-card {
+  box-shadow: 0px 3px 7px 0px rgba(50, 49, 50, 0.3);
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.portfolio-card__header {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.portfolio-card__header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.portfolio-card__title {
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.portfolio-card__image a,
+.portfolio-card__image img {
+  display: block;
+}
+
+.portfolio-card__image a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top right, #ed1c72 25%, #eac5de);
+  content: '';
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card__header,
+.portfolio-card:hover .portfolio-card__image a:after {
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
 @media screen and (min-width: 37.5em){
   .color-group{
     -ms-flex-pack: distribute;
