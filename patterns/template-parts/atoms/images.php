@@ -34,4 +34,14 @@
 		'params'            => array( '$post_id' => 'The ID of the post being queried.', '$image_size' => 'The image size to fetch' ),
 		'args'              => array( '$post_id' => 'cf3_get_post_id()', '$image_size' => 'full' ),
 	) ); ?>
+
+	<?php alcatraz_pattern_doc( array(
+		'heading'           => 'Category Image - Design',
+		'description'       => 'This is the design category image.',
+		'patterns_included' => '',
+		'function'          => 'cf3_get_category_image()',
+		'output'            => cf3_get_category_image( cf3_get_post_id( array( 'category_name' => 'design' ) ) ),
+		'params'            => array( '$post_id' => 'The ID of the post being queried.', '$image_size' => 'The image size to fetch' ),
+		'args'              => array( '$post_id' => 'cf3_get_post_id()', '$image_size' => 'full' ),
+	) ); ?>
 </section>
