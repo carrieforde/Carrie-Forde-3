@@ -9,6 +9,16 @@
 	<h2 class="alcatraz-pattern__heading"><?php esc_html_e( 'Cards', 'alcatraz' ); ?></h2>
 
 	<?php alcatraz_pattern_doc( array(
+		'heading'           => 'Post Card - Sticky Post',
+		'description'       => 'This is the card for displaying sticky posts',
+		'patterns_included' => 'alcatraz_button()',
+		'function'          => 'cfe_get_sticky_post( array( \'template_part\' => \'template-parts/content-post-card\' ) )',
+		'output'            => cf3_get_sticky_post( array( 'template_part' => 'template-parts/content-post-card-sticky' ) ),
+		'params'            => array( '$args' => 'The arguments.' ),
+		'args'              => array( 'template_part' => 'template-parts/content-post-card-sticky' ),
+	) ); ?>
+
+	<?php alcatraz_pattern_doc( array(
 		'heading'           => 'Post Card - Thoughts',
 		'description'       => 'This is the default card for posts.',
 		'patterns_included' => 'alcatraz_button',

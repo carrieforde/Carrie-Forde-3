@@ -6,9 +6,10 @@
  */
 
 $accent = cf3_get_category_accent();
+$sticky = ( is_sticky() ? ' post-card--sticky' : '' );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'alcatraz-col--4 post-card' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'alcatraz-col--4 post-card' . $sticky ); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail post-card__image">
 			<a href="<?php the_permalink(); ?>">

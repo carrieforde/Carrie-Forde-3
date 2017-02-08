@@ -38,4 +38,43 @@
 	.category-badge {
 		@include position(absolute, null null rem(-10) rem(10));
 	}
+
+
+	//-----------------------------------------
+	// Sticky Post
+	//-----------------------------------------
+	@include modifier(sticky) {
+
+		@include media($tablet-portrait-up) {
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+
+			@include element(image) {
+				position: initial;
+				width: 50%;
+			}
+
+			@include element(inner-wrap) {
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+			}
+
+			@include element(footer) {
+				margin-top: auto; // this will push the button to the bottom of the container.
+			}
+		}
+
+		@include media(em(725)) {
+
+			@include element(image) {
+				width: 33%;
+			}
+
+			@include element(inner-wrap) {
+				width: 67%;
+			}
+		}
+	}
 } // .post-card

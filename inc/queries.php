@@ -10,7 +10,6 @@
  *
  * @return  string                   The HTML markup.
  */
-
 function cf3_fetch_posts( $args = array() ) {
 
 	$defaults = array(
@@ -35,6 +34,41 @@ function cf3_fetch_posts( $args = array() ) {
 
 		while ( $posts->have_posts() ) {
 
+			$posts->the_post();
+
+			get_template_part( $args['template_part'] );
+		}
+	}
+
+	wp_reset_postdata();
+
+	return ob_get_clean();
+}
+
+
+function cf3_get_sticky_post( $args = array() ) {
+
+	$defaults = array(
+		'posts_per_page'      => 1,
+		'post__in'            => get_option( 'sticky_posts' ),
+		'ignore_sticky_posts' => 1,
+		'template_part'       => 'template-parts/content',
+	);
+	$args = wp_parse_args( $args, $defaults );
+
+	$post = array(
+		'posts_per_page'      => absint( $args['posts_per_page'] ),
+		'post__in'            => array_map( 'esc_attr', $args['post__in'] ),
+		'ignore_sticky_posts' => absint( $args['ignore_sticky_posts'] ),
+	);
+
+	$posts = new WP_Query( $post );
+
+	if ( $posts->have_posts() ) {
+
+		ob_start();
+
+		while ( $posts->have_posts() ) {
 			$posts->the_post();
 
 			get_template_part( $args['template_part'] );
