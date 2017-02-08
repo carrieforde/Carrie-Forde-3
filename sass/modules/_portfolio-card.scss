@@ -2,7 +2,7 @@
 // PORTFOLIO CARD
 //--------------------------------------------------------------
 .portfolio-card {
-	box-shadow: $box-shadow__portfolio-card;
+	box-shadow: $box-shadow__card;
 	font-size: $font__body-size - 2;
 	position: relative;
 	text-align: center;
@@ -38,9 +38,8 @@
 			&:after {
 				@include position(absolute, 0 0 0 0);
 
-				background: $pink-cloud-solid;
 				content: '';
-				display: none;
+				display: block;
 				transition: $transition__hover;
 			}
 		}
@@ -48,10 +47,13 @@
 
 	&:hover {
 
-		.portfolio-card__header,
-		.portfolio-card__image a:after {
+		.portfolio-card__header {
 			display: block;
 			transition: $transition__hover;
+		}
+
+		a:after {
+			background-color: $razzmatazz;
 		}
 	}
 }
