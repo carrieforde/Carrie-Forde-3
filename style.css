@@ -350,6 +350,11 @@ textarea,
   display: none;
 }
 
+.pattern-doc__output {
+  overflow: hidden;
+  padding: 1.25rem;
+}
+
 .color-group {
   display: -ms-flexbox;
   display: flex;
@@ -1232,11 +1237,13 @@ strong {
 }
 
 .post-card {
+  box-shadow: 1px 1px 6px 0 rgba(50, 49, 50, 0.15);
   font-size: 16px;
+  padding: 1.25rem;
 }
 
 .post-card__image {
-  margin-bottom: 1.125rem;
+  margin: -1.25rem -1.25rem 1.125rem;
   position: relative;
 }
 
@@ -1254,7 +1261,7 @@ strong {
 }
 
 .post-card__title a:hover {
-  color: #474647;
+  color: #5b5a5b;
 }
 
 .post-card__content p {
@@ -1268,7 +1275,7 @@ strong {
 }
 
 .portfolio-card {
-  box-shadow: 0px 3px 7px 0px rgba(50, 49, 50, 0.3);
+  box-shadow: 1px 1px 6px 0 rgba(50, 49, 50, 0.15);
   font-size: 16px;
   position: relative;
   text-align: center;
@@ -1305,16 +1312,18 @@ strong {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to top right, #ed1c72 25%, #eac5de);
   content: '';
-  display: none;
+  display: block;
   transition: all 0.2s ease-in-out;
 }
 
-.portfolio-card:hover .portfolio-card__header,
-.portfolio-card:hover .portfolio-card__image a:after {
+.portfolio-card:hover .portfolio-card__header {
   display: block;
   transition: all 0.2s ease-in-out;
+}
+
+.portfolio-card:hover a:after {
+  background-color: #ed1c72;
 }
 
 @media screen and (min-width: 37.5em){
@@ -1613,6 +1622,36 @@ strong {
   }
   .left-sidebar .primary-sidebar{
     float: left;
+  }
+  .post-card--sticky{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+  }
+  .post-card--sticky__image{
+    position: initial;
+    width: 50%;
+  }
+  .post-card--sticky__inner-wrap{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+  }
+  .post-card--sticky__footer{
+    margin-top: auto;
+  }
+}
+
+@media screen and (min-width: 45.3125em){
+  .post-card--sticky__image{
+    width: 33%;
+  }
+  .post-card--sticky__inner-wrap{
+    width: 67%;
   }
 }
 
