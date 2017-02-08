@@ -10,7 +10,7 @@
 
 	<?php alcatraz_pattern_doc( array(
 		'heading'           => 'Post Card - Sticky Post',
-		'description'       => 'This is the card for displaying sticky posts',
+		'description'       => 'This is the card for displaying sticky posts.',
 		'patterns_included' => 'alcatraz_button()',
 		'function'          => 'cfe_get_sticky_post( array( \'template_part\' => \'template-parts/content-post-card\' ) )',
 		'output'            => cf3_get_sticky_post( array( 'template_part' => 'template-parts/content-post-card-sticky' ) ),

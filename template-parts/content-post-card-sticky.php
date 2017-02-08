@@ -34,7 +34,7 @@ $accent = cf3_get_category_accent();
 				'type' => 'text',
 				'link' => get_the_permalink(),
 				'button_text' => 'Read More',
-				'class' => 'button-text--' . esc_attr( $accent ) . '',
+				'class' => 'button-text--' . esc_attr( $accent ),
 			) ); ?>
 		</footer>
 	</div>
