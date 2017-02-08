@@ -3,6 +3,14 @@
  * Queries
  */
 
+/**
+ * A simple query used to fetch posts with markup from a specified template part.
+ *
+ * @param   array  [$args = array()] The arguments.
+ *
+ * @return  string                   The HTML markup.
+ */
+
 function cf3_fetch_posts( $args = array() ) {
 
 	$defaults = array(
@@ -38,6 +46,14 @@ function cf3_fetch_posts( $args = array() ) {
 	return ob_get_clean();
 }
 
+
+/**
+ * Get a random (or specific) post ID or set of post IDs for use within the pattern library.
+ *
+ * @param   array [$args = array()] The WP_Query arguments.
+ *
+ * @return  int                     The queried post ID(s).
+ */
 
 function cf3_get_post_id( $args = array() ) {
 
