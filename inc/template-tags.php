@@ -65,6 +65,29 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
 	return $output;
 }
 
+/**
+ * Get the category image.
+ *
+ * @param  int    [$post_id              = 0]         The post ID.
+ * @param  string [$image_size           = 'full'] The image size.
+ *
+ * @return string The image markup.
+ */
+function cf3_get_category_image( $post_id = 0, $image_size = 'full' ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1) );
+
+	$cat_image = get_term_meta( $category[0]->term_id, 'category_image', true );
+
+	$output = wp_kses_post( wp_get_attachment_image( $cat_image, $image_size ) );
+
+	return $output;
+}
+
 
 /**
  * Get the accent color for the post category.

@@ -32,6 +32,30 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_589aa446410f3",
+            "label": "Category Image",
+            "name": "category_image",
+            "type": "image",
+            "instructions": "This is the default image for the category. It may appear as a hero on the category archive, or will be the default if a featured image isn't uploaded to a post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -51,5 +75,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1486261901
+    "modified": 1486529710
 }
