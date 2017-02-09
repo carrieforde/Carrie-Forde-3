@@ -51,8 +51,16 @@
 			position: relative;
 
 			@include element(image) {
+				align-items: center;
 				position: initial;
+				justify-content: center;
+				margin: rem(-20);
+				overflow: hidden;
 				width: 50%;
+
+				img {
+					max-width: rem(650);
+				}
 			}
 
 			@include element(inner-wrap) {
@@ -67,13 +75,14 @@
 		}
 
 		@include media(em(725)) {
+			max-height: rem(350);
 
 			@include element(image) {
-				width: 33%;
+				width: 40%;
 			}
 
 			@include element(inner-wrap) {
-				width: 67%;
+				width: 60%;
 			}
 		}
 	}
