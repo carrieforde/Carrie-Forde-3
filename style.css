@@ -1048,44 +1048,28 @@ pre {
   background-color: #bdbec0;
 }
 
-[class$='--blue'] {
-  color: #0d10f7;
+[class$='--curious-blue'] {
+  color: #219bd0;
 }
 
-[class$='--blue-bg'] {
-  background-color: #0d10f7;
+[class$='--curious-blue-bg'] {
+  background-color: #219bd0;
 }
 
-[class$='--dark-violet'] {
-  color: #900ad6;
+[class$='--lawn-green'] {
+  color: #85f200;
 }
 
-[class$='--dark-violet-bg'] {
-  background-color: #900ad6;
+[class$='--lawn-green-bg'] {
+  background-color: #85f200;
 }
 
-[class$='--electric-lime'] {
-  color: #1ced26;
+[class$='--tree-poppy'] {
+  color: #ff951e;
 }
 
-[class$='--electric-lime-bg'] {
-  background-color: #1ced26;
-}
-
-[class$='--sinopia'] {
-  color: #d63e0f;
-}
-
-[class$='--sinopia-bg'] {
-  background-color: #d63e0f;
-}
-
-[class$='--west-side'] {
-  color: #f78911;
-}
-
-[class$='--west-side-bg'] {
-  background-color: #f78911;
+[class$='--tree-poppy-bg'] {
+  background-color: #ff951e;
 }
 
 .button,
@@ -1130,44 +1114,28 @@ input[type='submit']:hover {
   color: #323132;
 }
 
-.button-text--blue:hover {
-  color: #0d10f7;
+.button-text--curious-blue:hover {
+  color: #219bd0;
 }
 
-.button-text--blue:after {
-  color: #0d10f7;
+.button-text--curious-blue:after {
+  color: #219bd0;
 }
 
-.button-text--dark-violet:hover {
-  color: #900ad6;
+.button-text--lawn-green:hover {
+  color: #85f200;
 }
 
-.button-text--dark-violet:after {
-  color: #900ad6;
+.button-text--lawn-green:after {
+  color: #85f200;
 }
 
-.button-text--electric-lime:hover {
-  color: #1ced26;
+.button-text--tree-poppy:hover {
+  color: #ff951e;
 }
 
-.button-text--electric-lime:after {
-  color: #1ced26;
-}
-
-.button-text--sinopia:hover {
-  color: #d63e0f;
-}
-
-.button-text--sinopia:after {
-  color: #d63e0f;
-}
-
-.button-text--west-side:hover {
-  color: #f78911;
-}
-
-.button-text--west-side:after {
-  color: #f78911;
+.button-text--tree-poppy:after {
+  color: #ff951e;
 }
 
 body {
@@ -1631,8 +1599,17 @@ strong {
     position: relative;
   }
   .post-card--sticky__image{
+    -ms-flex-align: center;
+    align-items: center;
     position: initial;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: -1.25rem;
+    overflow: hidden;
     width: 50%;
+  }
+  .post-card--sticky__image img{
+    max-width: 40.625rem;
   }
   .post-card--sticky__inner-wrap{
     display: -ms-flexbox;
@@ -1647,11 +1624,14 @@ strong {
 }
 
 @media screen and (min-width: 45.3125em){
+  .post-card--sticky{
+    max-height: 21.875rem;
+  }
   .post-card--sticky__image{
-    width: 33%;
+    width: 40%;
   }
   .post-card--sticky__inner-wrap{
-    width: 67%;
+    width: 60%;
   }
 }
 
