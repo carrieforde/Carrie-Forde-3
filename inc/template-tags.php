@@ -107,7 +107,13 @@ function cf3_get_category_accent( $post_id = 0 ) {
 	return $cat_accent;
 }
 
-
+/**
+ * Get the portfolio terms (project services).
+ *
+ * @param   int     [$post_id = 0] Post ID.
+ *
+ * @return  string                 The terms.
+ */
 function cf3_get_portfolio_terms( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
