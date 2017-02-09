@@ -3,27 +3,10 @@
     "title": "Category Meta",
     "fields": [
         {
-            "multiple": 0,
-            "allow_null": 0,
-            "choices": {
-                "razzmatazz": "Razzmatazz",
-                "blue": "Blue",
-                "dark-violet": "Dark Violet",
-                "electric-lime": "Electric Lime",
-                "sinopia": "Sinopia",
-                "west-side": "West Side"
-            },
-            "default_value": [
-                "razzmatazz"
-            ],
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "return_format": "value",
             "key": "field_58968d672f21f",
             "label": "Category Color Accent",
             "name": "cat_color_accent",
-            "type": "select",
+            "type": "clone",
             "instructions": "Choose a color as the accent for the category.",
             "required": 0,
             "conditional_logic": 0,
@@ -31,19 +14,16 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "clone": [
+                "field_589bc7140125e"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
             "key": "field_589aa446410f3",
             "label": "Category Image",
             "name": "category_image",
@@ -55,7 +35,17 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -75,5 +65,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1486529710
+    "modified": 1486604240
 }

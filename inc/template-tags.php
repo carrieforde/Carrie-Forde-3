@@ -52,7 +52,7 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
 
 	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
 
-	$cat_accent = get_term_meta( $category[0]->term_id, 'cat_color_accent', true );
+	$cat_accent = get_term_meta( $category[0]->term_id, 'theme_colors', true );
 
 	$output = sprintf( '<span class="category-badge category-badge--%s-bg"><a href="%s" rel="%s %s">%s</a></span>',
 		esc_attr( $cat_accent ),
@@ -102,7 +102,7 @@ function cf3_get_category_accent( $post_id = 0 ) {
 
 	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
 
-	$cat_accent = get_term_meta( $category[0]->term_id, 'cat_color_accent', true );
+	$cat_accent = get_term_meta( $category[0]->term_id, 'theme_colors', true );
 
 	return $cat_accent;
 }

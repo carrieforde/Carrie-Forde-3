@@ -101,11 +101,9 @@ function cf3_set_colors() {
 			'iron'       => '#d9d5dc',
 		),
 		'Accent Colors'  => array(
-			'west-side'     => '#f79811',
-			'sinopia'       => '#d63e0f',
-			'dark-violet'   => '#900ad6',
-			'blue'          => '#0d10f7',
-			'electric-lime' => '#1ced26',
+			'tree-poppy'   => '#ff951e',
+			'curious-blue' => '#219bd0',
+			'lawn-green'   => '#85f200',
 		),
 	);
 

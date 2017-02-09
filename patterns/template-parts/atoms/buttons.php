@@ -36,62 +36,38 @@
 	) ); ?>
 
 	<?php alcatraz_pattern_doc( array(
-		'heading'           => 'Text - Blue',
-		'description'       => 'This is an <code>a</code> with the <code>blue</code> modifier.',
-		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'blue\' ) )',
-		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--blue' ) ),
+		'heading'           => 'Text - Curious Blue',
+		'description'       => 'This is an <code>a</code> with the <code>curious blue</code> modifier.',
+		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'curious-blue\' ) )',
+		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--curious-blue' ) ),
 		'params'            => array( '$args' => 'The function arguments' ),
 		'args'              => array(
 			'type' => 'text',
-			'class' => 'button-text--blue',
+			'class' => 'button-text--curious-blue',
 		),
 	) ); ?>
 
 	<?php alcatraz_pattern_doc( array(
-		'heading'           => 'Text - Dark Violet',
-		'description'       => 'This is an <code>a</code> with the <code>dark-violet</code> modifier.',
-		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'dark-violet\' ) )',
-		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--dark-violet' ) ),
+		'heading'           => 'Text - Lawn Green',
+		'description'       => 'This is an <code>a</code> with the <code>lawn-green</code> modifier.',
+		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'lawn-green\' ) )',
+		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--lawn-green' ) ),
 		'params'            => array( '$args' => 'The function arguments' ),
 		'args'              => array(
 			'type' => 'text',
-			'class' => 'button-text--dark-violet',
+			'class' => 'button-text--lawn-green',
 		),
 	) ); ?>
 
 	<?php alcatraz_pattern_doc( array(
-		'heading'           => 'Text - Electric Lime',
-		'description'       => 'This is an <code>a</code> with the <code>electric-lime</code> modifier.',
-		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'electric-lime\' ) )',
-		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--electric-lime' ) ),
+		'heading'           => 'Text - Tree Poppy',
+		'description'       => 'This is an <code>a</code> with the <code>tree-poppy</code> modifier.',
+		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'tree-poppy\' ) )',
+		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--tree-poppy' ) ),
 		'params'            => array( '$args' => 'The function arguments' ),
 		'args'              => array(
 			'type' => 'text',
-			'class' => 'button-text--electric-lime',
-		),
-	) ); ?>
-
-	<?php alcatraz_pattern_doc( array(
-		'heading'           => 'Text - Sinopia',
-		'description'       => 'This is an <code>a</code> with the <code>sinopia</code> modifier.',
-		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'sinopia\' ) )',
-		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--sinopia' ) ),
-		'params'            => array( '$args' => 'The function arguments' ),
-		'args'              => array(
-			'type' => 'text',
-			'class' => 'button-text--sinopia',
-		),
-	) ); ?>
-
-	<?php alcatraz_pattern_doc( array(
-		'heading'           => 'Text - West Side',
-		'description'       => 'This is an <code>a</code> with the <code>west-side</code> modifier.',
-		'function'          => 'alcatraz_button( array( \'type\' => \'text\', \'class\' => \'west-side\' ) )',
-		'output'            => alcatraz_button( array( 'type' => 'text', 'class' => 'button-text--west-side' ) ),
-		'params'            => array( '$args' => 'The function arguments' ),
-		'args'              => array(
-			'type' => 'text',
-			'class' => 'button-text--west-side',
+			'class' => 'button-text--tree-poppy',
 		),
 	) ); ?>
 </section>

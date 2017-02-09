@@ -33,28 +33,18 @@ input[type='submit'] {
 		color: $color__button-link;
 	}
 
-	// Blue
-	@include modifier(blue) {
-		@include button-text-color($blue);
+	// Curious Blue
+	@include modifier(curious-blue) {
+		@include button-text-color($curious-blue);
 	}
 
-	// Dark Violet
-	@include modifier(dark-violet) {
-		@include button-text-color($dark-violet);
+	// Lawn Green
+	@include modifier(lawn-green) {
+		@include button-text-color($lawn-green);
 	}
 
-	// Electric Lime
-	@include modifier(electric-lime) {
-		@include button-text-color($electric-lime);
-	}
-
-	// Sinopia
-	@include modifier(sinopia) {
-		@include button-text-color($sinopia);
-	}
-
-	// West Side
-	@include modifier(west-side) {
-		@include button-text-color($west-side);
+	// Tree Poppy
+	@include modifier(tree-poppy) {
+		@include button-text-color($tree-poppy);
 	}
 }
