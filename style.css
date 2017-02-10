@@ -1189,6 +1189,41 @@ strong {
   font-weight: 600;
 }
 
+blockquote {
+  font-size: 20px;
+  margin: 0;
+  padding: 0 3.75rem;
+  position: relative;
+  text-align: center;
+}
+
+blockquote:after, blockquote:before {
+  color: #323132;
+  font-family: "freight-display-pro", serif;
+  font-size: 5.625rem;
+  font-weight: 900;
+  line-height: 0.75;
+  height: 2.5rem;
+  position: absolute;
+}
+
+blockquote:after {
+  bottom: 0;
+  content: '\201d';
+  right: 0;
+}
+
+blockquote:before {
+  content: '\201c';
+  left: 0;
+  top: 0;
+}
+
+blockquote cite {
+  display: block;
+  font-weight: 600;
+}
+
 .category-badge {
   font-size: 14px;
   font-weight: 600;
@@ -1202,6 +1237,18 @@ strong {
   line-height: 1;
   padding: 0.3125rem 0.625rem;
   text-decoration: none;
+}
+
+.post-card .category-badge {
+  position: absolute;
+  bottom: -0.625rem;
+  left: 0.625rem;
+}
+
+.post-hero .category-badge {
+  position: absolute;
+  bottom: -0.625rem;
+  left: 1.25rem;
 }
 
 .post-card {
@@ -1234,12 +1281,6 @@ strong {
 
 .post-card__content p {
   margin-bottom: 0.75em;
-}
-
-.post-card .category-badge {
-  position: absolute;
-  bottom: -0.625rem;
-  left: 0.625rem;
 }
 
 .portfolio-card {
@@ -1292,6 +1333,10 @@ strong {
 
 .portfolio-card:hover a:after {
   background-color: #ed1c72;
+}
+
+.hero {
+  position: relative;
 }
 
 @media screen and (min-width: 37.5em){
@@ -1591,6 +1636,11 @@ strong {
   .left-sidebar .primary-sidebar{
     float: left;
   }
+  .post-hero .category-badge{
+    bottom: -1rem;
+    font-size: 20px;
+    left: 2.5rem;
+  }
   .post-card--sticky{
     display: -ms-flexbox;
     display: flex;
@@ -1642,6 +1692,14 @@ strong {
   }
   body{
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 75em){
+  .post-hero .category-badge{
+    bottom: -1.125rem;
+    font-size: 24px;
+    left: 3.75rem;
   }
 }
 
