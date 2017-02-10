@@ -10,9 +10,9 @@ function cf3_get_acf_hero( $post_id = 0 ) {
 		$post_id = get_the_ID();
 	}
 
-	$hero_title       = get_post_meta( $post_id, 'hero_title', true );
-	$hero_description = get_post_meta( $post_id, 'hero_description', true );
-	$image = get_post_thumbnail_id( $post_id );
+	$hero_title        = get_post_meta( $post_id, 'hero_title', true );
+	$hero_description  = get_post_meta( $post_id, 'hero_description', true );
+	$image             = get_post_thumbnail_id( $post_id );
 
 
 	ob_start();
