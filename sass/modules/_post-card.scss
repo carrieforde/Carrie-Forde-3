@@ -35,10 +35,6 @@
 		}
 	}
 
-	.category-badge {
-		@include position(absolute, null null rem(-10) rem(10));
-	}
-
 
 	//-----------------------------------------
 	// Sticky Post

@@ -14,4 +14,33 @@
 		padding: rem(5) rem(10);
 		text-decoration: none;
 	}
+
+	//-----------------------------------------
+	// Post Card
+	//-----------------------------------------
+	.post-card & {
+		@include position(absolute, null null rem(-10) rem(10));
+	}
+
+
+	//-----------------------------------------
+	// Post Hero
+	//-----------------------------------------
+	.post-hero & {
+		@include position(absolute, null null rem(-10) rem(20));
+
+		@include media($tablet-portrait-up) {
+			bottom: rem(-16);
+			font-size: $font__body-size + 2;
+			left: rem(40);
+		}
+
+		@include media($desktop-up) {
+			bottom: rem(-18);
+			font-size: $font__body-size + 6;
+			left: rem(60);
+		}
+	}
 }
+
+
