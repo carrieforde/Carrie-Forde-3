@@ -139,3 +139,30 @@ function cf3_get_portfolio_terms( $post_id = 0 ) {
 		return $project_terms;
 	}
 }
+
+/**
+ * Get the post hero pattern.
+ *
+ * @param   int     [$post_id      = 0]  The post ID.
+ * @return  string                       The hero markup.
+ */
+function cf3_get_post_hero( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+
+		$post_id = get_the_ID();
+	}
+
+	ob_start(); ?>
+
+	<section class="post-hero">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail(); ?>
+		<?php else: ?>
+			<?php echo cf3_get_category_image( $post_id ); ?>
+		<?php endif; ?>
+		<?php echo cf3_get_post_card_category_badge( $post_id ); ?>
+	</section>
+
+	<?php return ob_get_clean();
+}
