@@ -155,7 +155,7 @@ function cf3_get_post_hero( $post_id = 0 ) {
 
 	ob_start(); ?>
 
-	<section class="post-hero">
+	<section class="hero post-hero">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail(); ?>
 		<?php else: ?>
@@ -165,4 +165,14 @@ function cf3_get_post_hero( $post_id = 0 ) {
 	</section>
 
 	<?php return ob_get_clean();
+}
+
+/**
+ * Echo the post hero.
+ *
+ * @param  int  [$post_id = 0]  The post ID.
+ */
+function cf3_the_post_hero( $post_id = 0 ) {
+
+	echo cf3_get_post_hero( $post_id ); // WPCS: XSS OK.
 }
