@@ -5,6 +5,89 @@
  * @package carrieforde3
  */
 
+add_filter( 'alcatraz_set_colors', 'cf3_set_colors' );
+/**
+ * Set the brand colors.
+ *
+ * @author Carrie Forde
+ *
+ * @return  array  The brand colors.
+ */
+function cf3_set_colors() {
+
+	$colors = array(
+		'Brand Colors'   => array(
+			'pink-cloud'   => 'linear-gradient(to top right, rgba(237, 28, 114, 0.85) 25%, rgba(234, 197, 222, 0.85))',
+			'razzmatazz'   => '#ed1c72',
+			'classic-rose' => '#eac5de',
+			'charcoal'     => '#424143',
+			'french-gray'  => '#bdbec0',
+		),
+		'Neutral Colors' => array(
+			'mine-shaft' => '#323132',
+			'dim-gray'   => '#686769',
+			'oslo-gray'  => '#8d8b8f',
+			'iron'       => '#d9d5dc',
+		),
+		'Accent Colors'  => array(
+			'tree-poppy'   => '#ff951e',
+			'curious-blue' => '#219bd0',
+			'lawn-green'   => '#85f200',
+		),
+	);
+
+	return $colors;
+}
+
+add_filter( 'alcatraz_set_fonts', 'cf3_set_fonts' );
+/**
+ * Set the brand fonts.
+ *
+ * @author Carrie Forde
+ *
+ * @return  array  The fonts.
+ */
+function cf3_set_fonts() {
+
+	$fonts = array(
+		'freight-display-pro' => '\'FreightDisp Pro\', freight-display-pro, serif',
+		'assistant' => '\'Assistant\', sans-serif',
+		'inconsolata' => '\'Inconsolata\', monospace',
+	);
+
+	return $fonts;
+}
+
+add_filter( 'excerpt_more', 'cf3_excerpt_more' );
+/**
+ * Filter the excerpt more text.
+ *
+ * @return  string  The excerpt more text.
+ */
+function cf3_excerpt_more() {
+
+	return '&hellip;';
+}
+
+add_filter( 'alcatraz_post_types', 'cf3_allowed_post_types' );
+/**
+ * Filter which on which pages the Post Options metabox shows.
+ *
+ * @author Carrie Forde
+ *
+ * @return  array  The post types.
+ */
+function cf3_allowed_post_types() {
+
+	$post_type = array(
+		'alcatraz_patterns',
+		'page',
+		'style-tile',
+	);
+
+	return $post_type;
+}
+
 add_filter( 'alcatraz_posted_on', 'cf3_posted_on' );
 /**
  * Filter posted on output.
