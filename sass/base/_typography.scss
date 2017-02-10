@@ -13,6 +13,9 @@ body {
 	}
 }
 
+//-----------------------------------------
+// Headings
+//-----------------------------------------
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -55,8 +58,47 @@ h6,
 	font-size: 0.88em; // ~16px at desktop
 }
 
-// Sanitize CSS uses `font-weight; bolder;`, which kinda sucks.
+// Sanitize CSS uses `font-weight: bolder;`, which kinda sucks.
 b,
 strong {
 	font-weight: 600;
+}
+
+//-----------------------------------------
+// Blockquotes
+//-----------------------------------------
+blockquote {
+	font-size: $font__body-size + 2;
+	margin: 0;
+	padding: 0 rem(60);
+	position: relative;
+	text-align: center;
+
+	&:after,
+	&:before {
+		color: $mine-shaft;
+		font-family: $freight-display-pro;
+		font-size: rem(90);
+		font-weight: 900;
+		line-height: 0.75;
+		height: rem(40);
+		position: absolute;
+	}
+
+	&:after {
+		bottom: 0;
+		content: '\201d';
+		right: 0;
+	}
+
+	&:before {
+		content: '\201c';
+		left: 0;
+		top: 0;
+	}
+
+	cite {
+		display: block;
+		font-weight: 600;
+	}
 }
