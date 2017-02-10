@@ -192,10 +192,12 @@ function cf3_custom_login_screen() { ?>
 	</style>
 <?php }
 
+require_once CARRIEFORDE3_PATH . '/inc/acf.php';
+
 require_once CARRIEFORDE3_PATH . '/inc/queries.php';
 
 require_once CARRIEFORDE3_PATH . '/inc/template-tags.php';
 
-require_once CARRIEFORDE3_PATH . '/inc/theme-hooks.php';
+require_once CARRIEFORDE3_PATH . '/inc/theme-filters.php';
 
-require_once CARRIEFORDE3_PATH . '/inc/acf.php';
+require_once CARRIEFORDE3_PATH . '/inc/theme-hooks.php';
