@@ -45,7 +45,12 @@ function cf3_fetch_posts( $args = array() ) {
 	return ob_get_clean();
 }
 
-
+/**
+ * Get a sticky post, or the latest post.
+ *
+ * @param   array  [$args = array()]  The args.
+ * @return  string                    The HTML markup.
+ */
 function cf3_get_sticky_post( $args = array() ) {
 
 	$defaults = array(
@@ -80,7 +85,6 @@ function cf3_get_sticky_post( $args = array() ) {
 	return ob_get_clean();
 }
 
-
 /**
  * Get a random (or specific) post ID or set of post IDs for use within the pattern library.
  *
@@ -88,7 +92,6 @@ function cf3_get_sticky_post( $args = array() ) {
  *
  * @return  int                     The queried post ID(s).
  */
-
 function cf3_get_post_id( $args = array() ) {
 
 	$defaults = array(
@@ -124,4 +127,56 @@ function cf3_get_post_id( $args = array() ) {
 	wp_reset_postdata();
 
 	return $post_id;
+}
+
+/**
+ * Get related posts.
+ *
+ * @param  int  [$post_id = 0]  The post ID.
+ */
+function cf3_get_related_posts( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+
+		$post_id = get_queried_object_id();
+	}
+
+	$tags = cf3_get_post_tags();
+
+	$related_post = array(
+		'orderby'         => 'rand',
+		'post__not_in'    => array( $post_id ),
+		'posts_per_page'  => 3,
+		'post_type'       => 'post',
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'post_tag',
+				'field'    => 'slug',
+				'terms'    => $tags,
+			),
+		),
+	);
+
+	$related_posts = new WP_Query( $related_post );
+
+	if ( $related_posts->have_posts() ) : ?>
+
+		<section class="related-posts">
+			<header class="related-posts__header">
+				<h2 class="related-posts__title"><?php esc_html_e( 'Related Posts', 'carrieforde3' ); ?></h2>
+			</header>
+
+		<?php while ( $related_posts->have_posts() ) :
+
+			$related_posts->the_post();
+
+			get_template_part( 'template-parts/content-post-card' );
+
+		endwhile; ?>
+
+		</section>
+
+	<?php endif;
+
+	wp_reset_postdata();
 }

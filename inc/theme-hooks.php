@@ -81,3 +81,14 @@ function cf3_hook_post_hero() {
 
 	cf3_the_post_hero();
 }
+
+add_action( 'alcatraz_after_main_inside', 'cf3_hook_related_posts' );
+
+function cf3_hook_related_posts() {
+
+	if ( ! is_singular( 'post' ) ) {
+		return;
+	}
+
+	cf3_get_related_posts();
+}

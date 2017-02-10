@@ -118,7 +118,7 @@ function cf3_get_portfolio_terms( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
 
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	$terms = cf3_get_post_terms( $post_id, 'cf-project-services' );
@@ -127,7 +127,7 @@ function cf3_get_portfolio_terms( $post_id = 0 ) {
 
 		$project_terms = array();
 
-		foreach( $terms as $term ) {
+		foreach ( $terms as $term ) {
 
 			$project_terms[] = sprintf( '<span class="project-service">%s</span>',
 				esc_html( $term->name )
@@ -137,6 +137,30 @@ function cf3_get_portfolio_terms( $post_id = 0 ) {
 		$project_terms = implode( ', ', $project_terms );
 
 		return $project_terms;
+	}
+}
+
+function cf3_get_post_tags( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+
+		$post_id = get_the_ID();
+	}
+
+	$terms = cf3_get_post_terms( $post_id, 'post_tag' );
+
+	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+
+		$tags = array();
+
+		foreach ( $terms as $term ) {
+
+			$tags[] = esc_attr( $term->slug );
+		}
+
+//		$tags = implode( ',', $tags );
+
+		return $tags;
 	}
 }
 
