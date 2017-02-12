@@ -18,7 +18,7 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="post-thumbnail portfolio-card__image">
 				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail( 'card-image' ); ?>
 				</a>
 			</div>
 		<?php endif; ?>

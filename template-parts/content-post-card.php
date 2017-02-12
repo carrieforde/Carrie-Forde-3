@@ -13,9 +13,9 @@ $accent = cf3_get_category_accent();
 		<div class="post-thumbnail post-card__image">
 			<a href="<?php the_permalink(); ?>">
 				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail( 'card-image' ); ?>
 				<?php else : ?>
-					<?php echo cf3_get_category_image(); ?>
+					<?php echo cf3_get_category_image( get_the_ID(), 'card-image' ); ?>
 				<?php endif; ?>
 			</a>
 		<?php echo cf3_get_post_card_category_badge(); ?>
