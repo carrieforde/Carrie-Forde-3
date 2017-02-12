@@ -1,0 +1,40 @@
+//--------------------------------------------------------------
+// POST NAVIGATION
+//--------------------------------------------------------------
+.post-navigation {
+
+	.nav-previous,
+	.nav-next {
+
+		a {
+			align-items: center;
+			display: inline-flex;
+			font-weight: 600;
+			text-decoration: none;
+
+			&:before,
+			&:after {
+				font-family: $freight-display-pro;
+				font-size: 2em;
+				margin-bottom: 0.2em;
+			}
+		}
+
+	}
+
+	.nav-previous a {
+
+		&:before {
+			content: '\00AB';
+			margin-right: 0.3em;
+		}
+	}
+
+	.nav-next a {
+
+		&:after {
+			content: '\00BB';
+			margin-left: 0.3em;
+		}
+	}
+}
