@@ -28,6 +28,12 @@ function cf3_append_theme_patterns() {
 
 		get_template_part( 'patterns/template-parts/molecules/heroes' );
 	}
+
+	// Append Organisms.
+	if ( is_page_template( 'template-patterns-organisms.php' ) ) {
+
+		get_template_part( 'patterns/template-parts/organisms/card-section' );
+	}
 }
 
 add_action( 'login_enqueue_scripts', 'cf3_custom_login_screen' );
