@@ -144,7 +144,7 @@ function cf3_get_related_posts( $post_id = 0 ) {
 		$post_id = get_queried_object_id();
 	}
 
-	$tags = cf3_get_post_tags();
+	$tags = cf3_get_post_tags( $post_id );
 
 	$related_post = array(
 		'orderby'         => 'rand',
@@ -162,7 +162,9 @@ function cf3_get_related_posts( $post_id = 0 ) {
 
 	$related_posts = new WP_Query( $related_post );
 
-	if ( $related_posts->have_posts() ) : ?>
+	if ( $related_posts->have_posts() ) :
+
+		ob_start(); ?>
 
 		<section class="related-posts">
 			<header class="related-posts__header">
@@ -182,4 +184,14 @@ function cf3_get_related_posts( $post_id = 0 ) {
 	<?php endif;
 
 	wp_reset_postdata();
+
+	return ob_get_clean();
+}
+
+/**
+ * Echo the related posts.
+ */
+function cf3_the_related_posts() {
+
+	echo cf3_get_related_posts();
 }
