@@ -4,6 +4,7 @@
 .post-card {
 	box-shadow: $box-shadow__card;
 	font-size: $font__body-size - 2;
+	margin-bottom: rem(30);
 	padding: rem(20);
 
 	@include element(image) {
