@@ -1,0 +1,23 @@
+//--------------------------------------------------------------
+// GRID
+//--------------------------------------------------------------
+.post-grid {
+
+	@include media($tablet-portrait-up) {
+		column-count: 2;
+		column-gap: 0;
+
+		.post-card {
+			break-inside: avoid;
+			padding: rem(10);
+		}
+	}
+
+	@include media($tablet-landscape-up) {
+		column-count: 3;
+
+		.post-card {
+			padding: rem(15);
+		}
+	}
+}
