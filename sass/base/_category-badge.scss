@@ -31,13 +31,13 @@
 
 		@include media($tablet-portrait-up) {
 			bottom: rem(-16);
-			font-size: $font__body-size + 2;
+			font-size: 1.1em; // font is 10% larger than body font.
 			left: rem(40);
 		}
 
 		@include media($desktop-up) {
 			bottom: rem(-18);
-			font-size: $font__body-size + 6;
+			font-size: 1.2em; // font is 20% larger than body font.
 			left: rem(60);
 		}
 	}

@@ -1,15 +1,16 @@
 //--------------------------------------------------------------
 // TYPOGRAPHY
 //--------------------------------------------------------------
-body {
-	font-size: $font__body-size - 2;
+body,
+input {
+	font-size: $font__body-size-smaller;
 
 	@include media ($tablet-landscape-up) {
 		font-size: $font__body-size;
 	}
 
 	@include media ($desktop-large-up) {
-		font-size: $font__body-size + 2;
+		font-size: $font__body-size-larger;
 	}
 }
 
@@ -68,7 +69,7 @@ strong {
 // Blockquotes
 //-----------------------------------------
 blockquote {
-	font-size: $font__body-size + 2;
+	font-size: 1.20em; // the font size should be 20% larger than the body font size.
 	margin: 0;
 	padding: 0 rem(60);
 	position: relative;

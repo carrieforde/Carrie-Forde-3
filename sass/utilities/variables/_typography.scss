@@ -19,8 +19,12 @@ $text__button: $assistant;
 //-------------------------------
 $font__body: $assistant;
 $font__body-line-height: 1.65;
-$font__body-size: 18px;
 $font__body-weight: 300;
 $font__headings: $freight-display-pro;
 $font__headings-line-height: 1.2;
 $font__code: $inconsolata;
+
+// Font Sizes
+$font__body-size: 18px;
+$font__body-size-smaller: $font__body-size - 2;
+$font__body-size-larger: $font__body-size + 2;

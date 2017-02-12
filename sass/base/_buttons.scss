@@ -6,7 +6,7 @@ button,
 input[type='button'],
 input[type='submit'],
 .button-text {
-	font-size: $font__body-size - 4;
+	font-size: 0.8em; // 80% of body font size.
 	font-weight: 600;
 	letter-spacing: 0.025em;
 	text-transform: uppercase;
