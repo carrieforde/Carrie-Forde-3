@@ -21,7 +21,7 @@
 		width: 45%;
 
 		@include media(max-width $tablet-portrait-up) {
-//			display: none;
+			display: none;
 		}
 
 		@include media($tablet-landscape-up) {
