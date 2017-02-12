@@ -5,23 +5,29 @@
  * @package carrieforde3
  */
 
-add_action( 'alcatraz_after_patterns_atoms', 'cf3_append_theme_atoms' );
+add_action( 'alcatraz_after_patterns', 'cf3_append_theme_patterns' );
 /**
  * Append theme atoms to template-patterns-atoms.php.
  */
-function cf3_append_theme_atoms() {
+function cf3_append_theme_patterns() {
 
-	get_template_part( 'patterns/template-parts/atoms/category-badges' );
-	get_template_part( 'patterns/template-parts/atoms/project-services' );
-}
+	// Bail early if we're not looking at a pattern.
+	if ( ! is_singular( 'alcatraz_patterns' ) ) {
+		return;
+	}
 
-add_action( 'alcatraz_after_patterns_molecules', 'cf3_append_theme_molecules' );
-/**
- * Append theme molecules to template-patterns-molecules.php.
- */
-function cf3_append_theme_molecules() {
+	// Append Atoms.
+	if ( is_page_template( 'template-patterns-atoms.php' ) ) {
 
-	get_template_part( 'patterns/template-parts/molecules/heroes' );
+		get_template_part( 'patterns/template-parts/atoms/category-badges' );
+		get_template_part( 'patterns/template-parts/atoms/project-services' );
+	}
+
+	// Append Molecules.
+	if ( is_page_template( 'template-patterns-molecules.php' ) ) {
+
+		get_template_part( 'patterns/template-parts/molecules/heroes' );
+	}
 }
 
 add_action( 'login_enqueue_scripts', 'cf3_custom_login_screen' );
@@ -82,8 +88,23 @@ function cf3_hook_post_hero() {
 	cf3_the_post_hero();
 }
 
-add_action( 'alcatraz_after_main_inside', 'cf3_hook_related_posts' );
+add_action( 'alcatraz_after_header', 'cf3_hook_homepage_hero' );
+/**
+ * Hook the Homepage hero.
+ */
+function cf3_hook_homepage_hero() {
 
+	if ( ! is_front_page() ) {
+		return;
+	}
+
+	echo cf3_get_acf_hero();
+}
+
+add_action( 'alcatraz_after_main_inside', 'cf3_hook_related_posts' );
+/**
+ * Hook the related posts.
+ */
 function cf3_hook_related_posts() {
 
 	if ( ! is_singular( 'post' ) ) {
@@ -92,3 +113,4 @@ function cf3_hook_related_posts() {
 
 	cf3_get_related_posts();
 }
+
