@@ -3,11 +3,13 @@
 //--------------------------------------------------------------
 .post-card {
 	font-size: 0.9em;
+	max-width: rem(600);
 
 	@include media(max-width $tablet-portrait-up) {
 		margin-bottom: rem(30);
 	}
 
+	// An inner wrap is needed for the posts grid layout. Otherwise, without the padding, the posts will break across columns.
 	@include element(inner-wrap) {
 		box-shadow: $box-shadow__card;
 		padding: rem(20);
@@ -47,6 +49,9 @@
 	// Sticky Post
 	//-----------------------------------------
 	@include modifier(sticky) {
+		box-shadow: $box-shadow__card;
+		max-width: 100%;
+		padding: rem(20);
 
 		@include media($tablet-portrait-up) {
 			display: flex;
@@ -66,7 +71,7 @@
 				}
 			}
 
-			@include element(inner-wrap) {
+			@include element(content-wrap) {
 				display: flex;
 				flex-direction: column;
 				width: 50%;
@@ -84,7 +89,7 @@
 				width: 40%;
 			}
 
-			@include element(inner-wrap) {
+			@include element(content-wrap) {
 				width: 60%;
 			}
 		}
