@@ -4,3 +4,36 @@
 .hero {
 	position: relative;
 }
+
+
+//-----------------------------------------
+// Hero ACF
+//-----------------------------------------
+.hero-acf {
+	line-height: 1.5;
+	text-align: center;
+
+	@include element(text) {
+		@include position(absolute, 50% null null 45%);
+
+		font-size: 0.8em;
+		transform: translateY(-50%);
+		width: 45%;
+
+		@include media(max-width $tablet-portrait-up) {
+//			display: none;
+		}
+
+		@include media($tablet-landscape-up) {
+			font-size: initial;
+		}
+
+		@include media($desktop-up) {
+			font-size: 1.2em;
+		}
+	}
+
+	@include element(title) {
+		margin-bottom: 0;
+	}
+}
