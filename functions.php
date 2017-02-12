@@ -7,6 +7,11 @@ define( 'CARRIEFORDE3_VERSION', '1.0.0' );
 define( 'CARRIEFORDE3_PATH', trailingslashit( get_stylesheet_directory() ) );
 define( 'CARRIEFORDE3_URL', trailingslashit( get_stylesheet_directory_uri() ) );
 
+/**
+ * Add theme image sizes.
+ */
+add_image_size( 'card-image', 1040, 690, true );
+
 
 require_once CARRIEFORDE3_PATH . '/inc/acf.php';
 
