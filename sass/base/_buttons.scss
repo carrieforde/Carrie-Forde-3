@@ -48,3 +48,22 @@ input[type='submit'] {
 		@include button-text-color($tree-poppy);
 	}
 }
+
+
+//-----------------------------------------
+// Search Form Button
+//-----------------------------------------
+.search-form {
+
+	.search-submit {
+		@include position(absolute, 0 0 0 null);
+
+		background-color: $razzmatazz;
+		border: 0;
+		color: $true-white;
+
+		&:hover {
+			background-color: $classic-rose;
+		}
+	}
+}
