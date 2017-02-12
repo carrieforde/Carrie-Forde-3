@@ -117,6 +117,6 @@ function cf3_hook_related_posts() {
 		return;
 	}
 
-	cf3_get_related_posts();
+	cf3_the_related_posts();
 }
 
