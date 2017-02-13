@@ -2,11 +2,13 @@
 // PORTFOLIO CARD
 //--------------------------------------------------------------
 .portfolio-card {
-	box-shadow: $box-shadow__card;
-	font-size: $font__body-size - 2;
-	margin-bottom: rem(30);
-	position: relative;
+	font-size: 0.9em;
 	text-align: center;
+
+	@include element(inner-wrap) {
+		box-shadow: $box-shadow__card;
+		position: relative;
+	}
 
 	@include element(header) {
 		display: none;
