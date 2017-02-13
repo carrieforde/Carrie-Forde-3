@@ -1333,11 +1333,13 @@ input {
 }
 
 .portfolio-card {
-  box-shadow: 1px 1px 6px 0 rgba(50, 49, 50, 0.15);
-  font-size: 16px;
-  margin-bottom: 1.875rem;
-  position: relative;
+  font-size: 0.9em;
   text-align: center;
+}
+
+.portfolio-card__inner-wrap {
+  box-shadow: 1px 1px 6px 0 rgba(50, 49, 50, 0.15);
+  position: relative;
 }
 
 .portfolio-card__header {
@@ -1767,13 +1769,24 @@ input {
   .post-card--sticky__footer{
     margin-top: auto;
   }
-  .post-grid{
+  .grid--one-two-three{
     -moz-column-count: 2;
     column-count: 2;
     -moz-column-gap: 0;
     column-gap: 0;
   }
-  .post-grid .post-card{
+  .grid--one-two-three .post-card{
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding: 0.625rem;
+  }
+  .grid--one-two{
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  .grid--one-two .portfolio-card{
     page-break-inside: avoid;
     break-inside: avoid;
     padding: 0.625rem;
@@ -1804,11 +1817,14 @@ input {
   .hero-acf__text{
     font-size: initial;
   }
-  .post-grid{
+  .grid--one-two-three{
     -moz-column-count: 3;
     column-count: 3;
   }
-  .post-grid .post-card{
+  .grid--one-two-three .post-card{
+    padding: 0.9375rem;
+  }
+  .grid--one-two .portfolio-card{
     padding: 0.9375rem;
   }
 }
@@ -1908,6 +1924,9 @@ input {
 
 @media screen and (max-width: 37.5em){
   .post-card{
+    margin-bottom: 1.875rem;
+  }
+  .portfolio-card{
     margin-bottom: 1.875rem;
   }
   .hero-acf__text{
