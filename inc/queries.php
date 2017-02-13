@@ -171,14 +171,17 @@ function cf3_get_related_posts( $post_id = 0 ) {
 				<h2 class="related-posts__title"><?php esc_html_e( 'Related Posts', 'carrieforde3' ); ?></h2>
 			</header>
 
-		<?php while ( $related_posts->have_posts() ) :
+			<div class="grid--one-two-three">
 
-			$related_posts->the_post();
+				<?php while ( $related_posts->have_posts() ) :
 
-			get_template_part( 'template-parts/content-post-card' );
+					$related_posts->the_post();
 
-		endwhile; ?>
+					get_template_part( 'template-parts/content-post-card' );
 
+				endwhile; ?>
+
+			</div>
 		</section>
 
 	<?php endif;
