@@ -5,6 +5,10 @@
 	font-size: 0.9em;
 	text-align: center;
 
+	@include media(max-width $tablet-portrait-up) {
+		margin-bottom: rem(30);
+	}
+
 	@include element(inner-wrap) {
 		box-shadow: $box-shadow__card;
 		position: relative;
