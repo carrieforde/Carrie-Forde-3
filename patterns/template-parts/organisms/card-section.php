@@ -10,12 +10,12 @@
 
 	<?php alcatraz_pattern_doc( array(
 		'heading'           => 'Posts Grid',
-		'description'       => 'This is the default posts grid layout. The posts section is wrapped in <code>' . esc_html( '<section class="posts-grid" />' ) . '</code>, and utilizes a CSS-masonry effect using <code>column-count, column-gap, and break-inside</code>.',
+		'description'       => 'This is the default posts grid layout. The posts section is wrapped in <code>' . esc_html( '<section class="grid--one-two-three" />' ) . '</code>, and utilizes a CSS-masonry effect using <code>column-count, column-gap, and break-inside</code>.',
 		'patterns_included' => 'alcatraz_button',
 		'function'          => 'cf3_fetch_posts( array(
 	\'template_part\' => \'template-parts/content-post-card\',
 ) )',
-		'output'            => '<section class="post-grid">' . cf3_fetch_posts( array(
+		'output'            => '<section class="grid--one-two-three">' . cf3_fetch_posts( array(
 			'template_part' => 'template-parts/content-post-card',
 			'posts_per_page' => 6,
 		) ) . '</section>',
@@ -25,12 +25,12 @@
 
 	<?php alcatraz_pattern_doc( array(
 		'heading'           => 'Portfolio Section',
-		'description'       => 'This is the default portfolio grid layout. The portfolio section is wrapped in <code>' . esc_html( '<section class="portfolio-grid' ) . '</code>, and this grid utilitzes CSS columns for layout.',
+		'description'       => 'This is the default portfolio grid layout. The portfolio section is wrapped in <code>' . esc_html( '<section class="grid--one-two' ) . '</code>, and this grid utilitzes CSS columns for layout.',
 		'patterns_included' => 'alcatraz_button',
 		'function'          => 'cf3_fetch_posts( array(
 	\'template_part\' => \'template-parts/content-portfolio-card\',
 ) )',
-		'output'            => '<section class="portfolio-grid">' . cf3_fetch_posts( array(
+		'output'            => '<section class="grid--one-two">' . cf3_fetch_posts( array(
 			'template_part' => 'template-parts/content-portfolio-card',
 			'posts_per_page' => 4,
 			'post_type' => 'cf-portfolio'
