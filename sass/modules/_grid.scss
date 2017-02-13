@@ -1,7 +1,15 @@
 //--------------------------------------------------------------
 // GRID
 //--------------------------------------------------------------
-.post-grid {
+
+//-----------------------------------------
+// Grid One, Two, Three
+//
+// Cards are 100% on phone (1-up), 2 columns
+// on tablet-portrait, and 3 columns on
+// tablet-landscape.
+//-----------------------------------------
+.grid--one-two-three {
 
 	@include media($tablet-portrait-up) {
 		column-count: 2;
@@ -20,4 +28,40 @@
 			padding: rem(15);
 		}
 	}
+}
+
+//-----------------------------------------
+// Grid One, Two
+//
+// Cards are 100% on phone (1-up), 2 columns
+// on tablet-portrait-up.
+//-----------------------------------------
+.grid--one-two {
+
+	@include media($tablet-portrait-up) {
+		column-count: 2;
+		column-gap: 0;
+
+		.portfolio-card {
+			break-inside: avoid;
+			padding: rem(10);
+		}
+	}
+
+	@include media($tablet-landscape-up) {
+
+		.portfolio-card {
+			padding: rem(15);
+		}
+	}
+
+//	@include media($tablet-portrait-up) {
+//
+//		.portfolio-card {
+//
+//			&:nth-child(2n) {
+//				margin-right: 0;
+//			}
+//		}
+//	}
 }
