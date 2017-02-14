@@ -1437,6 +1437,11 @@ input {
   margin-left: 0.3em;
 }
 
+.single-post .post-content {
+  margin: 1.25rem auto 2.5rem;
+  max-width: 40rem;
+}
+
 @media screen and (min-width: 37.5em){
   .color-group{
     -ms-flex-pack: distribute;
@@ -1775,6 +1780,10 @@ input {
     -moz-column-gap: 0;
     column-gap: 0;
   }
+  .related-posts .grid--one-two-three{
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+  }
   .grid--one-two-three .post-card{
     page-break-inside: avoid;
     break-inside: avoid;
@@ -1820,6 +1829,10 @@ input {
   .grid--one-two-three{
     -moz-column-count: 3;
     column-count: 3;
+  }
+  .related-posts .grid--one-two-three{
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
   }
   .grid--one-two-three .post-card{
     padding: 0.9375rem;
