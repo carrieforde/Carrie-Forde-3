@@ -5,11 +5,11 @@ body,
 input {
 	font-size: $font__body-size-smaller;
 
-	@include media ($tablet-landscape-up) {
+	@include grid-media ($tablet-landscape-up) {
 		font-size: $font__body-size;
 	}
 
-	@include media ($desktop-large-up) {
+	@include grid-media ($desktop-large-up) {
 		font-size: $font__body-size-larger;
 	}
 }

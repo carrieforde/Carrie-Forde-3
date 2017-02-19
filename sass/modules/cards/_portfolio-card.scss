@@ -5,7 +5,7 @@
 	font-size: 0.9em;
 	text-align: center;
 
-	@include media(max-width $tablet-portrait-up) {
+	@media (max-width: 600) {
 		margin-bottom: rem(30);
 	}
 

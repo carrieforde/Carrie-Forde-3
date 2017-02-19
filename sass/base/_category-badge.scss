@@ -29,13 +29,13 @@
 	.post-hero & {
 		@include position(absolute, null null rem(-10) rem(20));
 
-		@include media($tablet-portrait-up) {
+		@include grid-media($tablet-portrait-up) {
 			bottom: rem(-16);
 			font-size: 1.1em; // font is 10% larger than body font.
 			left: rem(40);
 		}
 
-		@include media($desktop-up) {
+		@include grid-media($desktop-up) {
 			bottom: rem(-18);
 			font-size: 1.2em; // font is 20% larger than body font.
 			left: rem(60);

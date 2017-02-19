@@ -20,15 +20,15 @@
 		transform: translateY(-50%);
 		width: 45%;
 
-		@include media(max-width $tablet-portrait-up) {
+		@media (max-width: 600px) {
 			display: none;
 		}
 
-		@include media($tablet-landscape-up) {
+		@include grid-media($tablet-landscape-up) {
 			font-size: initial;
 		}
 
-		@include media($desktop-up) {
+		@include grid-media($desktop-up) {
 			font-size: 1.2em;
 		}
 	}

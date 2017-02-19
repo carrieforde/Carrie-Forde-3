@@ -11,7 +11,7 @@
 //-----------------------------------------
 .grid--one-two-three {
 
-	@include media($tablet-portrait-up) {
+	@include grid-media($tablet-portrait-up) {
 		column-count: 2;
 		column-gap: 0;
 
@@ -26,7 +26,7 @@
 		}
 	}
 
-	@include media($tablet-landscape-up) {
+	@include grid-media($tablet-landscape-up) {
 		column-count: 3;
 
 		.related-posts & {
@@ -48,7 +48,7 @@
 //-----------------------------------------
 .grid--one-two {
 
-	@include media($tablet-portrait-up) {
+	@include grid-media($tablet-portrait-up) {
 		column-count: 2;
 		column-gap: 0;
 
@@ -58,14 +58,14 @@
 		}
 	}
 
-	@include media($tablet-landscape-up) {
+	@include grid-media($tablet-landscape-up) {
 
 		.portfolio-card {
 			padding: rem(15);
 		}
 	}
 
-//	@include media($tablet-portrait-up) {
+//	@include grid-media($tablet-portrait-up) {
 //
 //		.portfolio-card {
 //

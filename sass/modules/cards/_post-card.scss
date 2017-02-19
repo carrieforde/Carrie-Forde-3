@@ -5,7 +5,7 @@
 	font-size: 0.9em;
 	max-width: rem(600);
 
-	@include media(max-width $tablet-portrait-up) {
+	@media (max-width: 600px) {
 		margin-bottom: rem(30);
 	}
 
@@ -53,7 +53,7 @@
 		max-width: 100%;
 		padding: rem(20);
 
-		@include media($tablet-portrait-up) {
+		@media (max-width: 600px) {
 			display: flex;
 			justify-content: space-between;
 			position: relative;
@@ -82,7 +82,7 @@
 			}
 		}
 
-		@include media(em(725)) {
+		@media (max-width: 725px) {
 			max-height: rem(350);
 
 			@include element(image) {
