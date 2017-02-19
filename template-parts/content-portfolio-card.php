@@ -6,7 +6,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'portfolio-card' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'alcatraz-col--6 portfolio-card' ); ?>>
 	<div class="portfolio-card__inner-wrap">
 		<header class="entry-header portfolio-card__header">
 			<a href="<?php the_permalink(); ?>">
