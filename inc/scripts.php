@@ -33,12 +33,22 @@ function cf3_enqueue_scripts() {
 		CARRIEFORDE3_VERSION
 	);
 
+	// Masonry.
+	wp_register_script(
+		'masonry-js',
+		CARRIEFORDE3_URL . 'js/masonry.pkgd.min.js',
+		array( 'jquery' ),
+		'4.1.1',
+		true
+	);
+
 	// Include this theme's JS.
 	wp_enqueue_script(
 		'carrieforde3-scripts',
 		CARRIEFORDE3_URL . 'js/carrieforde3-theme.min.js',
-		array( 'jquery' ),
-		CARRIEFORDE3_VERSION
+		array( 'jquery', 'masonry-js' ),
+		CARRIEFORDE3_VERSION,
+		true
 	);
 }
 
