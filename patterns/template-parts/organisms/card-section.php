@@ -10,12 +10,12 @@
 
 	<?php alcatraz_pattern_doc( array(
 		'heading'           => 'Posts Grid',
-		'description'       => 'This is the default posts grid layout. The posts section is wrapped in <code>' . esc_html( '<section class="grid--one-two-three" />' ) . '</code>, and utilizes a CSS-masonry effect using <code>column-count, column-gap, and break-inside</code>.',
+		'description'       => 'This is the default posts grid layout. The posts section is wrapped in <code>' . esc_html( '<section class="grid--one-two-three masonry" />' ) . '</code>, and utilizes a CSS-masonry effect using <code>column-count, column-gap, and break-inside</code>.',
 		'patterns_included' => 'alcatraz_button',
 		'function'          => 'cf3_fetch_posts( array(
 	\'template_part\' => \'template-parts/content-post-card\',
 ) )',
-		'output'            => '<section class="grid--one-two-three">' . cf3_fetch_posts( array(
+		'output'            => '<section class="grid--one-two-three masonry">' . cf3_fetch_posts( array(
 			'template_part' => 'template-parts/content-post-card',
 			'posts_per_page' => 6,
 		) ) . '</section>',

@@ -46,10 +46,25 @@ function cf3_enqueue_scripts() {
 	wp_enqueue_script(
 		'carrieforde3-scripts',
 		CARRIEFORDE3_URL . 'js/carrieforde3-theme.min.js',
+		array( 'jquery' ),
+		CARRIEFORDE3_VERSION,
+		true
+	);
+
+	// Post masonry.
+	wp_register_script(
+		'carrieforde3-masonry',
+		CARRIEFORDE3_URL . 'js/card-masonry.js',
 		array( 'jquery', 'masonry-js' ),
 		CARRIEFORDE3_VERSION,
 		true
 	);
+
+	// For now, we'll only enqueue masonry on this template.
+	if ( is_page_template( 'template-patterns-organisms.php' ) ) {
+		wp_enqueue_script( 'masonry-js' );
+		wp_enqueue_script( 'carrieforde3-masonry' );
+	}
 }
 
 add_action( 'wp_head', 'cf3_typekit' );
