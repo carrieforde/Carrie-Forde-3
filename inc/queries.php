@@ -171,7 +171,7 @@ function cf3_get_related_posts( $post_id = 0 ) {
 				<h2 class="related-posts__title"><?php esc_html_e( 'Related Posts', 'carrieforde3' ); ?></h2>
 			</header>
 
-			<div class="grid--one-two-three">
+			<div class="grid--one-two-three masonry">
 
 				<?php while ( $related_posts->have_posts() ) :
 
