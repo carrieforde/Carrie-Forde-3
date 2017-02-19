@@ -3,10 +3,11 @@
 //--------------------------------------------------------------
 .portfolio-card {
 	font-size: 0.9em;
+	margin-bottom: 25px;
 	text-align: center;
 
 	@media (max-width: 600px) {
-		margin-bottom: 30px;
+
 	}
 
 	@include element(inner-wrap) {

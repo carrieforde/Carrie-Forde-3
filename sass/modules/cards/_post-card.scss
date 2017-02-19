@@ -3,11 +3,8 @@
 //--------------------------------------------------------------
 .post-card {
 	font-size: 0.9em;
+	margin-bottom: 25px;
 	max-width: 600px;
-
-	@media (max-width: 600px) {
-		margin-bottom: 30px;
-	}
 
 	// An inner wrap is needed for the posts grid layout. Otherwise, without the padding, the posts will break across columns.
 	@include element(inner-wrap) {

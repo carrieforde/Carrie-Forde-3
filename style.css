@@ -1284,6 +1284,7 @@ input {
 
 .post-card {
   font-size: 0.9em;
+  margin-bottom: 25px;
   max-width: 600px;
 }
 
@@ -1326,6 +1327,7 @@ input {
 
 .portfolio-card {
   font-size: 0.9em;
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -1427,6 +1429,18 @@ input {
 .post-navigation .nav-next a:after {
   content: '\00BB';
   margin-left: 0.3em;
+}
+
+.grid--one-two-three::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.grid--one-two::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .single-post .post-content {
@@ -1621,6 +1635,16 @@ input {
     font-size: 1.1em;
     left: 40px;
   }
+  .grid--one-two-three .alcatraz-col--4{
+    width: calc(50% - 37.5px);
+    float: left;
+    margin-left: 25px;
+  }
+  .grid--one-two .alcatraz-col--6{
+    width: calc(50% - 37.5px);
+    float: left;
+    margin-left: 25px;
+  }
 }
 
 @media only screen and (min-width: 900px){
@@ -1634,6 +1658,11 @@ input {
   }
   .hero-acf__text{
     font-size: initial;
+  }
+  .grid--one-two-three .alcatraz-col--4{
+    width: calc(33.3333333333% - 33.3333333333px);
+    float: left;
+    margin-left: 25px;
   }
 }
 
@@ -1728,9 +1757,6 @@ input {
   .mobile-nav-style-slide-right .primary-menu.open{
     transform: translateX(0);
   }
-  .post-card{
-    margin-bottom: 30px;
-  }
   .post-card--sticky{
     display: -ms-flexbox;
     display: flex;
@@ -1760,9 +1786,6 @@ input {
   }
   .post-card--sticky__footer{
     margin-top: auto;
-  }
-  .portfolio-card{
-    margin-bottom: 30px;
   }
   .hero-acf__text{
     display: none;

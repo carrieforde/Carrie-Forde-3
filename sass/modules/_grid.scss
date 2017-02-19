@@ -5,37 +5,24 @@
 //-----------------------------------------
 // Grid One, Two, Three
 //
-// Cards are 100% on phone (1-up), 2 columns
-// on tablet-portrait, and 3 columns on
-// tablet-landscape.
+// Post cards are 100% on phone (1-up),
+// 2 columns on tablet-portrait, and
+// 3 columns on tablet-landscape.
 //-----------------------------------------
 .grid--one-two-three {
+	@include grid-container;
 
 	@include grid-media($tablet-portrait-up) {
-		column-count: 2;
-		column-gap: 0;
 
-		.related-posts & {
-			margin-left: rem(-10);
-			margin-right: rem(-10);
-		}
-
-		.post-card {
-			break-inside: avoid;
-			padding: rem(10);
-		}
+		.alcatraz-col--4 {
+			@include grid-column(6, $card-grid);
+		} // .alcatraz-col--4
 	}
 
 	@include grid-media($tablet-landscape-up) {
-		column-count: 3;
 
-		.related-posts & {
-			margin-left: rem(-15);
-			margin-right: rem(-15);
-		}
-
-		.post-card {
-			padding: rem(15);
+		.alcatraz-col--4 {
+			@include grid-column(4, $card-grid);
 		}
 	}
 }
@@ -47,31 +34,12 @@
 // on tablet-portrait-up.
 //-----------------------------------------
 .grid--one-two {
+	@include grid-container;
 
 	@include grid-media($tablet-portrait-up) {
-		column-count: 2;
-		column-gap: 0;
 
-		.portfolio-card {
-			break-inside: avoid;
-			padding: rem(10);
+		.alcatraz-col--6 {
+			@include grid-column(6, $card-grid);
 		}
 	}
-
-	@include grid-media($tablet-landscape-up) {
-
-		.portfolio-card {
-			padding: rem(15);
-		}
-	}
-
-//	@include grid-media($tablet-portrait-up) {
-//
-//		.portfolio-card {
-//
-//			&:nth-child(2n) {
-//				margin-right: 0;
-//			}
-//		}
-//	}
 }

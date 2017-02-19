@@ -1,0 +1,15 @@
+//--------------------------------------------------------------
+// GRID SETTINGS
+//
+// Use this file to override Bourbon & Neat's default settings
+//
+// Calculate your own grid using
+// http://gridcalculator.dk/#/1100/12/16/0
+//--------------------------------------------------------------
+
+
+// Grid Settings.
+$card-grid: (
+	columns: 12,
+	gutter: 25px
+);
