@@ -3,20 +3,20 @@
 //--------------------------------------------------------------
 .post-card {
 	font-size: 0.9em;
-	max-width: rem(600);
+	max-width: 600px;
 
 	@media (max-width: 600px) {
-		margin-bottom: rem(30);
+		margin-bottom: 30px;
 	}
 
 	// An inner wrap is needed for the posts grid layout. Otherwise, without the padding, the posts will break across columns.
 	@include element(inner-wrap) {
 		box-shadow: $box-shadow__card;
-		padding: rem(20);
+		padding: 20px;
 	}
 
 	@include element(image) {
-		margin: rem(-20) rem(-20) rem(18);
+		margin: -20px -20px 18px;
 		position: relative;
 
 		img {
@@ -51,7 +51,7 @@
 	@include modifier(sticky) {
 		box-shadow: $box-shadow__card;
 		max-width: 100%;
-		padding: rem(20);
+		padding: 20px;
 
 		@media (max-width: 600px) {
 			display: flex;
@@ -62,12 +62,12 @@
 				align-items: center;
 				position: initial;
 				justify-content: center;
-				margin: rem(-20);
+				margin: -20px;
 				overflow: hidden;
 				width: 50%;
 
 				img {
-					max-width: rem(650);
+					max-width: 650px;
 				}
 			}
 
@@ -83,7 +83,7 @@
 		}
 
 		@media (max-width: 725px) {
-			max-height: rem(350);
+			max-height: 350px;
 
 			@include element(image) {
 				width: 40%;

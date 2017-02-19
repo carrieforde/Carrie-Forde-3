@@ -5,8 +5,8 @@
 	font-size: 0.9em;
 	text-align: center;
 
-	@media (max-width: 600) {
-		margin-bottom: rem(30);
+	@media (max-width: 600px) {
+		margin-bottom: 30px;
 	}
 
 	@include element(inner-wrap) {

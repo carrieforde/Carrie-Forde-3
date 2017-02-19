@@ -71,7 +71,7 @@ strong {
 blockquote {
 	font-size: 1.20em; // the font size should be 20% larger than the body font size.
 	margin: 0;
-	padding: 0 rem(60);
+	padding: 0 60px;
 	position: relative;
 	text-align: center;
 
@@ -79,10 +79,10 @@ blockquote {
 	&:before {
 		color: $mine-shaft;
 		font-family: $freight-display-pro;
-		font-size: rem(90);
+		font-size: 90px;
 		font-weight: 900;
 		line-height: 0.75;
-		height: rem(40);
+		height: 40px;
 		position: absolute;
 	}
 

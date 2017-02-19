@@ -11,7 +11,7 @@
 	a {
 		color: $true-white;
 		line-height: 1;
-		padding: rem(5) rem(10);
+		padding: 5px 10px;
 		text-decoration: none;
 	}
 
@@ -19,7 +19,7 @@
 	// Post Card
 	//-----------------------------------------
 	.post-card & {
-		@include position(absolute, null null rem(-10) rem(10));
+		@include position(absolute, null null -10px 10px);
 	}
 
 
@@ -27,18 +27,18 @@
 	// Post Hero
 	//-----------------------------------------
 	.post-hero & {
-		@include position(absolute, null null rem(-10) rem(20));
+		@include position(absolute, null null -10px 20px);
 
 		@include grid-media($tablet-portrait-up) {
-			bottom: rem(-16);
+			bottom: -16px;
 			font-size: 1.1em; // font is 10% larger than body font.
-			left: rem(40);
+			left: 40px;
 		}
 
 		@include grid-media($desktop-up) {
-			bottom: rem(-18);
+			bottom: -18px;
 			font-size: 1.2em; // font is 20% larger than body font.
-			left: rem(60);
+			left: 60px;
 		}
 	}
 }
