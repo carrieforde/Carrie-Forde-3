@@ -50,7 +50,7 @@
 		max-width: 100%;
 		padding: 20px;
 
-		@media (max-width: 600px) {
+		@include grid-media($tablet-portrait-up) {
 			display: flex;
 			justify-content: space-between;
 			position: relative;
@@ -79,7 +79,7 @@
 			}
 		}
 
-		@media (max-width: 725px) {
+		@media (min-width: 725px) {
 			max-height: 350px;
 
 			@include element(image) {
