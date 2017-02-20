@@ -103,3 +103,15 @@ blockquote {
 		font-weight: 600;
 	}
 }
+
+
+//-----------------------------------------
+// Presentational Classes
+//-----------------------------------------
+.font-assistant {
+	font-family: $assistant;
+
+	@include modifier(bold) {
+		font-weight: 600;
+	}
+}

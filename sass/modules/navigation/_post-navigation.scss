@@ -3,38 +3,78 @@
 //--------------------------------------------------------------
 .post-navigation {
 
+	@include element(span) {
+		color: $oslo-gray;
+		display: block;
+		font-size: 0.8em;
+		text-transform: uppercase;
+	}
+
+	// This helps ensure the dividing border is always the height of the tallest item.
+	.nav-links {
+		display: flex;
+	}
+
 	.nav-previous,
 	.nav-next {
 
 		a {
-			align-items: center;
-			display: inline-flex;
+			color: $mine-shaft;
 			font-weight: 600;
 			text-decoration: none;
 
-			&:before,
-			&:after {
-				font-family: $freight-display-pro;
-				font-size: 2em;
-				margin-bottom: 0.2em;
+			&:before {
+				@include size(30px);
+
+				content: '';
+				display: block;
+				background: url('images/icon-chevron.svg') center no-repeat;
+				background-size: contain;
+				margin-top: 10px;
+				transition: transform 0.2s ease-in-out;
 			}
 		}
+	}
 
+	.font-assistant {
+		font-size: 1.25em;
+		overflow: hidden;
+		padding: 0 10px;
+
+		&:hover {
+			color: $razzmatazz;
+		}
+	}
+
+	.nav-next {
+		border-left: 1px solid $french-gray;
 	}
 
 	.nav-previous a {
 
 		&:before {
-			content: '\00AB';
-			margin-right: 0.3em;
+			float: left;
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+
+			&:before {
+				transform: rotate(180deg) translateX(3px);
+			}
 		}
 	}
 
 	.nav-next a {
 
-		&:after {
-			content: '\00BB';
-			margin-left: 0.3em;
+		&:before {
+			float: right;
+		}
+
+		&:hover {
+			&:before {
+				transform: translateX(3px);
+			}
 		}
 	}
 }
