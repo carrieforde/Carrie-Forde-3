@@ -60,8 +60,8 @@ function cf3_enqueue_scripts() {
 		true
 	);
 
-	// For now, we'll only enqueue masonry on this template.
-	if ( is_page_template( 'template-patterns-organisms.php' ) ) {
+	// For now, we'll only enqueue masonry on these templates.
+	if ( is_page_template( 'template-patterns-organisms.php' ) || is_singular( 'post' ) || is_archive( 'post' ) ) {
 		wp_enqueue_script( 'masonry-js' );
 		wp_enqueue_script( 'carrieforde3-masonry' );
 	}
