@@ -1635,15 +1635,65 @@ input {
     font-size: 1.1em;
     left: 40px;
   }
+  .post-card--sticky{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+  }
+  .post-card--sticky__image{
+    -ms-flex-align: center;
+    align-items: center;
+    position: initial;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: -20px;
+    overflow: hidden;
+    width: 50%;
+  }
+  .post-card--sticky__image img{
+    max-width: 650px;
+  }
+  .post-card--sticky__content-wrap{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+  }
+  .post-card--sticky__footer{
+    margin-top: auto;
+  }
+  .grid--one-two-three{
+    margin-left: -25px;
+    margin-right: -25px;
+  }
   .grid--one-two-three .alcatraz-col--4{
     width: calc(50% - 37.5px);
     float: left;
     margin-left: 25px;
   }
+  .grid--one-two{
+    margin-left: -25px;
+    margin-right: -25px;
+  }
   .grid--one-two .alcatraz-col--6{
     width: calc(50% - 37.5px);
     float: left;
     margin-left: 25px;
+  }
+}
+
+@media (min-width: 725px){
+  .post-card--sticky{
+    max-height: 350px;
+  }
+  .post-card--sticky__image{
+    width: 40%;
+  }
+  .post-card--sticky__content-wrap{
+    width: 60%;
   }
 }
 
@@ -1757,50 +1807,8 @@ input {
   .mobile-nav-style-slide-right .primary-menu.open{
     transform: translateX(0);
   }
-  .post-card--sticky{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: relative;
-  }
-  .post-card--sticky__image{
-    -ms-flex-align: center;
-    align-items: center;
-    position: initial;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: -20px;
-    overflow: hidden;
-    width: 50%;
-  }
-  .post-card--sticky__image img{
-    max-width: 650px;
-  }
-  .post-card--sticky__content-wrap{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-  }
-  .post-card--sticky__footer{
-    margin-top: auto;
-  }
   .hero-acf__text{
     display: none;
-  }
-}
-
-@media (max-width: 725px){
-  .post-card--sticky{
-    max-height: 350px;
-  }
-  .post-card--sticky__image{
-    width: 40%;
-  }
-  .post-card--sticky__content-wrap{
-    width: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */
