@@ -43,3 +43,57 @@ function cf3_get_acf_hero( $post_id = 0 ) {
 
 	return ob_get_clean();
 }
+
+/**
+ * Build the footnotes markup.
+ *
+ * @author Carrie Forde
+ * @return  string  The markup.
+ */
+function cf3_get_post_footnotes( $post_id = 0 ) {
+
+	// Bail early if we're not on a single post.
+	if ( ! is_singular( 'post' ) ) {
+		return;
+	}
+
+	// Get the post ID if one wasn't passed.
+	if ( ! $post_id ) {
+
+		$post_id = get_the_id();
+	}
+
+	// Get the meta.
+	$footnotes = get_post_meta( $post_id, 'footnotes', true );
+
+	if ( $footnotes ) :
+
+	ob_start(); ?>
+
+		<div class="footnotes">
+
+			<h2 class="footnotes__heading h3"><?php esc_html_e( 'Footnotes', 'carrieforde' ); ?></h2>
+
+			<ol class="footnotes__list">
+
+			<?php for ( $i = 0; $i < $footnotes; $i++ ) :
+
+				$footnote = get_post_meta( $post_id, 'footnotes_' . $i . '_footnote', true ); ?>
+
+				<li id="<?php echo esc_attr( $i + 1 ); ?>" class="footnotes__list-item"><?php echo wp_kses_post( $footnote ); ?></li>
+			<?php endfor; ?>
+			</ol>
+		</div>
+	<?php endif;
+
+	return ob_get_clean();
+}
+
+/**
+ * Echo the post footnotes.
+ * @author Carrie Forde
+ */
+function cf3_the_post_footnotes() {
+
+	echo cf3_get_post_footnotes();
+}

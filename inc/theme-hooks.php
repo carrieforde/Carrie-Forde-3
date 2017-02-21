@@ -120,3 +120,16 @@ function cf3_hook_related_posts() {
 	cf3_the_related_posts();
 }
 
+add_action( 'alcatraz_entry_footer_inside', 'cf3_hook_post_footnotes', 9 );
+/**
+ * Hook the post footnotes.
+ * @author Carrie Forde
+ */
+function cf3_hook_post_footnotes() {
+
+	if ( ! is_singular( 'post' ) ) {
+		return;
+	}
+
+	cf3_the_post_footnotes();
+}
