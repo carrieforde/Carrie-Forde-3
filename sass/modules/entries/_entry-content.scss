@@ -1,0 +1,41 @@
+//--------------------------------------------------------------
+// ENTRY CONTENT
+//--------------------------------------------------------------
+.post-content {
+
+	.entry-content {
+
+		//-----------------------------------------
+		// Drop Cap
+		//-----------------------------------------
+		> p:first-child {
+
+			&::first-letter {
+				color: $razzmatazz;
+				display: block;
+				float: left;
+				font-family: $freight-display-pro;
+				font-size: 3.25em;
+				line-height: 1;
+				margin-right: 5px;
+			}
+		}
+
+		//-----------------------------------------
+		// Headings
+		//
+		// Give sections of content a bit more
+		// space than they would have otherwise.
+		//-----------------------------------------
+		p {
+
+			+ h2,
+			+ h3,
+			+ h4,
+			+ h5,
+			+ h6 {
+				margin: 1.75em 0 0.25em;
+			}
+		}
+	}
+}
