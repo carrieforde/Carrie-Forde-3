@@ -106,6 +106,30 @@ blockquote {
 
 
 //-----------------------------------------
+// Entry Content
+//-----------------------------------------
+article:not(.post-card) .entry-content {
+
+	//-----------------------------------------
+	// Drop Cap
+	//-----------------------------------------
+	> p:first-child {
+
+		&::first-letter {
+			color: $razzmatazz;
+			display: block;
+			float: left;
+			font-family: $freight-display-pro;
+			font-size: 3.25em;
+			line-height: 1;
+			margin-right: 5px;
+		}
+	}
+}
+
+
+
+//-----------------------------------------
 // Presentational Classes
 //-----------------------------------------
 .font-assistant {
