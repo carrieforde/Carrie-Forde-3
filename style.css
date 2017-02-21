@@ -1461,8 +1461,12 @@ input {
   color: #ed1c72;
 }
 
-.post-navigation .nav-next {
+.post-navigation .nav-previous + .nav-next {
   border-left: 1px solid rgba(189, 190, 192, 0.3);
+}
+
+.post-navigation .nav-next {
+  margin-left: auto;
 }
 
 .post-navigation .nav-previous a:before {
