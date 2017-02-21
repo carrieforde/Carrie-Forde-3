@@ -72,7 +72,7 @@ function cf3_get_post_footnotes( $post_id = 0 ) {
 
 		<div class="footnotes">
 
-			<h2 class="footnotes__heading h3"><?php esc_html_e( 'Footnotes', 'carrieforde' ); ?></h2>
+			<h2 class="footnotes__heading h4"><?php esc_html_e( 'Footnotes', 'carrieforde' ); ?></h2>
 
 			<ol class="footnotes__list">
 
