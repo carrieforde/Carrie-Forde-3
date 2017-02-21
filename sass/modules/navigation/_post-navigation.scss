@@ -2,6 +2,12 @@
 // POST NAVIGATION
 //--------------------------------------------------------------
 .post-navigation {
+	border-bottom: 5px solid $charcoal;
+	border-top: 2px solid $charcoal;
+	margin: 0 auto;
+	max-width: 640px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 
 	@include element(span) {
 		color: $oslo-gray;
@@ -47,7 +53,7 @@
 	}
 
 	.nav-next {
-		border-left: 1px solid $french-gray;
+		border-left: 1px solid rgba($french-gray, 0.3);
 	}
 
 	.nav-previous a {
