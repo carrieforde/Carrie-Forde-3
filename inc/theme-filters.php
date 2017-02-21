@@ -120,3 +120,14 @@ function cf3_posted_on() {
 
 	return $output;
 }
+
+add_filter( 'alcatraz_entry_footer_taxonomies', 'cf3_entry_footer_taxonomies' );
+
+function cf3_entry_footer_taxonomies() {
+
+	$footer_taxonomies = array(
+		'post_tag' => __( 'Tagged: ', 'alcatraz' ),
+	);
+
+	return $footer_taxonomies;
+}
