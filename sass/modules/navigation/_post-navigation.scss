@@ -9,6 +9,11 @@
 	padding-bottom: 30px;
 	padding-top: 30px;
 
+	// Single Portfolio.
+	.single-cf-portfolio & {
+		max-width: 100%;
+	}
+
 	@include element(span) {
 		color: $oslo-gray;
 		display: block;
