@@ -97,3 +97,53 @@ function cf3_the_post_footnotes() {
 
 	echo cf3_get_post_footnotes();
 }
+
+/**
+ * Build and return the Portfolio meta.
+ *
+ * @param   int  The post ID.
+ * @return  string  The Portfolio meta markup.
+ */
+function cf3_get_portfolio_meta( $post_id = 0 ) {
+
+	// Bail if we're not on the single portfolio.
+	if ( ! is_singular( 'cf-portfolio' ) ) {
+		return;
+	}
+
+	// Get the post id if one wasn't passed.
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	$designer_name = get_post_meta( $post_id, 'designer_name', true );
+	$designer_url  = get_post_meta( $post_id, 'designer_url', true );
+	$project_url   = get_post_meta( $post_id, 'project_url', true );
+
+	ob_start(); ?>
+
+	<aside class="portfolio-meta">
+		<div class="portfolio-meta__services">
+			<h3 class="portfolio-meta__heading"><?php esc_html_e( 'Services', 'carrieforde3' ); ?></h3>
+			<p class="portfolio-meta__terms"><?php the_terms( $post_id, 'cf-project-services', '', ', ', '' ); ?></p>
+		</div>
+
+		<?php if ( isset( $designer_name ) && $designer_name ) : ?>
+		<div class="porfolio-meta__designer">
+			<h3 class="portfolio-meta__heading"><?php esc_html_e( 'Designer', 'carrieforde3' ); ?></h3>
+			<p class="portfolio-meta__details"><a href="<?php echo esc_url( $designer_url ); ?>"><?php echo esc_html( $designer_name ); ?></a></p>
+		</div>
+		<?php endif; ?>
+
+		<a href="<?php echo esc_url( $project_url ); ?>" class="button"><?php esc_html_e( 'Launch Website', 'carrieforde3' ); ?></a>
+	</aside>
+	<?php return ob_get_clean();
+}
+
+/**
+ * Echo the portfolio meta.
+ */
+function cf3_the_portfolio_meta() {
+
+	echo cf3_get_portfolio_meta(); // WPCS: XSS OK.
+}
