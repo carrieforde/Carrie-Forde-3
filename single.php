@@ -19,9 +19,11 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content-single', get_post_type() ); ?>
 
+			<?php $type = cf3_post_type_for_pagination(); ?>
+
 			<?php the_post_navigation( array(
-				'prev_text' => '<h3 class="font-assistant font-assistant--bold"><span class="post-navigation__span">Previous Post</span>%title</h3>',
-				'next_text' => '<h3 class="font-assistant font-assistant--bold"><span class="post-navigation__span">Next Post</span>%title</h3>',
+				'prev_text' => '<h3 class="font-assistant font-assistant--bold"><span class="post-navigation__span">Previous ' . $type . '</span>%title</h3>',
+				'next_text' => '<h3 class="font-assistant font-assistant--bold"><span class="post-navigation__span">Next ' . $type . '</span>%title</h3>',
 			) ); ?>
 
 			<?php // Maybe load comments. ?>

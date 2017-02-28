@@ -200,3 +200,23 @@ function cf3_the_post_hero( $post_id = 0 ) {
 
 	echo cf3_get_post_hero( $post_id ); // WPCS: XSS OK.
 }
+
+
+function cf3_post_type_for_pagination() {
+
+	switch ( get_post_type() ) {
+
+		case 'post' :
+			return 'Post';
+			break;
+		case 'cf-portfolio' :
+			return 'Project';
+			break;
+		case 'alcatraz_pattern' :
+			return 'Pattern';
+			break;
+		default :
+			return '';
+			break;
+	}
+}
