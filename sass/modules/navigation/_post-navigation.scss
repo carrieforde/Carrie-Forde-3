@@ -4,13 +4,14 @@
 .post-navigation {
 	border-bottom: 5px solid $charcoal;
 	border-top: 2px solid $charcoal;
-	margin: 0 auto;
+	margin: 40px auto 0;
 	max-width: 640px;
 	padding-bottom: 30px;
 	padding-top: 30px;
 
 	// Single Portfolio.
-	.single-cf-portfolio & {
+	.single-cf-portfolio &,
+	.single-alcatraz_patterns & {
 		max-width: 100%;
 	}
 
