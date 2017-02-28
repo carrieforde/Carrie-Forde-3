@@ -1,0 +1,19 @@
+//--------------------------------------------------------------
+// PORTFOLIO META 
+//--------------------------------------------------------------
+.portfolio-meta {
+	border: 1px solid $iron;
+	margin-bottom: 1.5em;
+	padding: 15px;
+
+	@include grid-media($tablet-portrait-up) {
+		@include grid-column(4);
+
+		float: right;
+	}
+
+	@include element(heading) {
+		font-size: 1.1em;
+		margin-bottom: 0;
+	}
+}
