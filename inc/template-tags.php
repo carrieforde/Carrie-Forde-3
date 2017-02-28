@@ -79,7 +79,7 @@ function cf3_get_category_image( $post_id = 0, $image_size = 'full' ) {
 		$post_id = get_the_ID();
 	}
 
-	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1) );
+	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
 
 	$cat_image = get_term_meta( $category[0]->term_id, 'category_image', true );
 
@@ -158,8 +158,6 @@ function cf3_get_post_tags( $post_id = 0 ) {
 			$tags[] = esc_attr( $term->slug );
 		}
 
-//		$tags = implode( ',', $tags );
-
 		return $tags;
 	}
 }
@@ -182,7 +180,7 @@ function cf3_get_post_hero( $post_id = 0 ) {
 	<section class="hero post-hero">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail(); ?>
-		<?php else: ?>
+		<?php else : ?>
 			<?php echo cf3_get_category_image( $post_id ); ?>
 		<?php endif; ?>
 		<?php echo cf3_get_post_card_category_badge( $post_id ); ?>
@@ -201,7 +199,11 @@ function cf3_the_post_hero( $post_id = 0 ) {
 	echo cf3_get_post_hero( $post_id ); // WPCS: XSS OK.
 }
 
-
+/**
+ * Determine the post type to print in the post navigation.
+ *
+ * @return  string  The post type.
+ */
 function cf3_post_type_for_pagination() {
 
 	switch ( get_post_type() ) {
@@ -212,7 +214,7 @@ function cf3_post_type_for_pagination() {
 		case 'cf-portfolio' :
 			return 'Project';
 			break;
-		case 'alcatraz_pattern' :
+		case 'alcatraz_patterns' :
 			return 'Pattern';
 			break;
 		default :
