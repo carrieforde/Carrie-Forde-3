@@ -1414,10 +1414,15 @@ input {
 .post-navigation {
   border-bottom: 5px solid #424143;
   border-top: 2px solid #424143;
-  margin: 0 auto;
+  margin: 40px auto 0;
   max-width: 640px;
   padding-bottom: 30px;
   padding-top: 30px;
+}
+
+.single-cf-portfolio .post-navigation,
+.single-alcatraz_patterns .post-navigation {
+  max-width: 100%;
 }
 
 .post-navigation__span {
@@ -1503,7 +1508,7 @@ input {
   text-decoration: none;
 }
 
-.post-content .entry-content > p:first-child::first-letter {
+.post-content .entry-content > p:first-of-type::first-letter {
   color: #ed1c72;
   display: block;
   float: left;
@@ -1519,6 +1524,10 @@ input {
 .post-content p + h5,
 .post-content p + h6 {
   margin: 1.75em 0 0.25em;
+}
+
+.single-cf-portfolio .post-content img {
+  box-shadow: 1px 1px 6px 0 rgba(50, 49, 50, 0.15);
 }
 
 .footnotes {
@@ -1594,6 +1603,17 @@ input {
   color: #ed1c72;
 }
 
+.portfolio-meta {
+  border: 1px solid #d9d5dc;
+  margin-bottom: 1.5em;
+  padding: 15px;
+}
+
+.portfolio-meta__heading {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
 .grid--one-two-three::after {
   clear: both;
   content: "";
@@ -1607,7 +1627,7 @@ input {
 }
 
 .single-post .post-content {
-  margin: 20px auto 40px;
+  margin: 20px auto 0;
   max-width: 640px;
 }
 
@@ -1830,6 +1850,12 @@ input {
   }
   .comment-metadata{
     display: block;
+  }
+  .portfolio-meta{
+    width: calc(33.3333333333% - 26.6666666667px);
+    float: left;
+    margin-left: 20px;
+    float: right;
   }
   .grid--one-two-three{
     margin-left: -25px;
