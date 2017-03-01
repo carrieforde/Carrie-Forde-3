@@ -104,7 +104,7 @@ function cf3_hook_homepage_hero() {
 		return;
 	}
 
-	echo cf3_get_acf_hero();
+	cf3_the_acf_hero();
 }
 
 add_action( 'alcatraz_after_main_inside', 'cf3_hook_related_posts' );
@@ -123,7 +123,6 @@ function cf3_hook_related_posts() {
 add_action( 'alcatraz_entry_footer_inside', 'cf3_hook_post_footnotes', 9 );
 /**
  * Hook the post footnotes.
- * @author Carrie Forde
  */
 function cf3_hook_post_footnotes() {
 
@@ -132,4 +131,17 @@ function cf3_hook_post_footnotes() {
 	}
 
 	cf3_the_post_footnotes();
+}
+
+add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
+/**
+ * Hook the portfolio hero.
+ */
+function cf3_hook_portfolio_hero() {
+
+	if ( ! is_singular( 'cf-portfolio' ) ) {
+		return;
+	}
+
+	cf3_the_portfolio_hero();
 }

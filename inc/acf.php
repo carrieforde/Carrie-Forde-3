@@ -45,6 +45,14 @@ function cf3_get_acf_hero( $post_id = 0 ) {
 }
 
 /**
+ * Echo the ACF homepage hero.
+ */
+function cf3_the_acf_hero( $post_id = 0 ) {
+
+	echo cf3_get_acf_hero( $post_id ); // WPCS: XSS OK.
+}
+
+/**
  * Build the footnotes markup.
  *
  * @author Carrie Forde
@@ -93,9 +101,9 @@ function cf3_get_post_footnotes( $post_id = 0 ) {
  * Echo the post footnotes.
  * @author Carrie Forde
  */
-function cf3_the_post_footnotes() {
+function cf3_the_post_footnotes( $post_id = 0 ) {
 
-	echo cf3_get_post_footnotes();
+	echo cf3_get_post_footnotes( $post_id );
 }
 
 /**
@@ -143,7 +151,7 @@ function cf3_get_portfolio_meta( $post_id = 0 ) {
 /**
  * Echo the portfolio meta.
  */
-function cf3_the_portfolio_meta() {
+function cf3_the_portfolio_meta( $post_id = 0 ) {
 
-	echo cf3_get_portfolio_meta(); // WPCS: XSS OK.
+	echo cf3_get_portfolio_meta( $post_id ); // WPCS: XSS OK.
 }

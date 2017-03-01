@@ -7,12 +7,12 @@
 
 /**
  * Get the terms associated with a post.
- * @param   int    [$post_id         = 0]    The post ID.
- * @param   string [$taxonomy        = '']  The taxonomy to query.
- * @param   array  [$args            = array()] Additional args to pass to wp_get_post_terms()
- * @return  array The terms.
+ *
+ * @param   int    [$post_id  = 0]        The post ID.
+ * @param   string [$taxonomy = '']       The taxonomy to query.
+ * @param   array  [$args     = array()]  Additional args to pass to wp_get_post_terms()
+ * @return  array                         The terms.
  */
-
 function cf3_get_post_terms( $post_id = 0, $taxonomy = '', $args = array() ) {
 
 	if ( ! $post_id ) {
@@ -42,7 +42,10 @@ function cf3_get_post_terms( $post_id = 0, $taxonomy = '', $args = array() ) {
 }
 
 /**
- * Echo the post card category.
+ * Build the post card category.
+ *
+ * @param   int     The post ID.
+ * @return  string  The category badge markup.
  */
 function cf3_get_post_card_category_badge( $post_id = 0 ) {
 
@@ -68,8 +71,8 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
 /**
  * Get the category image.
  *
- * @param  int    [$post_id              = 0]         The post ID.
- * @param  string [$image_size           = 'full'] The image size.
+ * @param  int    [$post_id    = 0]       The post ID.
+ * @param  string [$image_size = 'full']  The image size.
  *
  * @return string The image markup.
  */
@@ -88,10 +91,10 @@ function cf3_get_category_image( $post_id = 0, $image_size = 'full' ) {
 	return $output;
 }
 
-
 /**
  * Get the accent color for the post category.
  *
+ * @param   int     The post ID.
  * @return  string  The accent color.
  */
 function cf3_get_category_accent( $post_id = 0 ) {
@@ -140,6 +143,12 @@ function cf3_get_portfolio_terms( $post_id = 0 ) {
 	}
 }
 
+/**
+ * Build the list of post tags.
+ *
+ * @param   int     The post ID.
+ * @return  string  The post tags.
+ */
 function cf3_get_post_tags( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
@@ -200,11 +209,48 @@ function cf3_the_post_hero( $post_id = 0 ) {
 }
 
 /**
+ * Get the portfolio hero.
+ *
+ * @param   int     The post ID.
+ * @return  string  The hero markup.
+ */
+function cf3_get_portfolio_hero( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+
+		$post_id = get_the_ID();
+	}
+
+	ob_start(); ?>
+
+	<section class="hero post-hero post-hero--portfolio">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail(); ?>
+		<?php endif; ?>
+	</section>
+
+	<?php return ob_get_clean();
+}
+
+/**
+ * Echo the portfolio hero.
+ */
+function cf3_the_portfolio_hero( $post_id = 0 ) {
+
+	echo cf3_get_portfolio_hero( $post_id );; // WPCS: XSS OK.
+}
+
+/**
  * Determine the post type to print in the post navigation.
  *
  * @return  string  The post type.
  */
-function cf3_post_type_for_pagination() {
+function cf3_post_type_for_pagination( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+
+		$post_id = get_the_ID();
+	}
 
 	switch ( get_post_type() ) {
 
