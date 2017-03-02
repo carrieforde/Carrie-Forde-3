@@ -67,3 +67,18 @@ input[type='submit'] {
 		}
 	}
 }
+
+
+//-------------------------------
+// Menu Toggle
+//-------------------------------
+.menu-toggle {
+	background-color: $razzmatazz;
+	color: $true-white;
+
+	&:hover {
+		background-color: $classic-rose;
+		border-color: $classic-rose;
+		color: $charcoal;
+	}
+}
