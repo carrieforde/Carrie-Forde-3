@@ -65,6 +65,20 @@ strong {
 	font-weight: 600;
 }
 
+// Everyday anchors.
+a {
+	text-decoration: none;
+
+	.post-content & {
+		border-bottom: 1px solid $french-gray;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: $iron;
+		}
+	}
+}
+
 //-----------------------------------------
 // Blockquotes
 //-----------------------------------------
