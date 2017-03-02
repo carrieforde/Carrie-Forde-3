@@ -131,3 +131,20 @@ function cf3_entry_footer_taxonomies() {
 
 	return $footer_taxonomies;
 }
+
+add_filter( 'alcatraz_mobile_nav_styles', 'cf3_mobile_nav_styles' );
+/**
+ * Filter the mobile navgiation style choices.
+ *
+ * @return  array  The mobile nav styles.
+ */
+function cf3_mobile_nav_styles() {
+
+	$styles = array(
+		'default'     => __( 'Default', 'carrieforde3' ),
+		'full-screen' => __( 'Full Screen', 'carrieforde3' ),
+		'slide-up'    => __( 'Slide Up', 'carrieforde3' ),
+	);
+
+	return $styles;
+}
