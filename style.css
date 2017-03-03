@@ -1096,6 +1096,14 @@ input[type='submit']:hover {
   color: #fff;
 }
 
+.button--no-border {
+  border: none;
+}
+
+.button--no-border:hover {
+  background-color: transparent;
+}
+
 .button-text {
   color: #323132;
 }
@@ -1150,15 +1158,15 @@ input[type='submit']:hover {
   background-color: #eac5de;
 }
 
-.menu-toggle {
-  background-color: #ed1c72;
-  color: #fff;
+.search-toggle {
+  height: 20px;
+  width: 20px;
+  background: url("images/icon-search.svg") no-repeat;
+  text-indent: -9999px;
 }
 
-.menu-toggle:hover {
-  background-color: #eac5de;
-  border-color: #eac5de;
-  color: #424143;
+.menu-toggle {
+  display: none;
 }
 
 body,
@@ -1311,6 +1319,15 @@ input {
 
 .search-form .search-field {
   width: 100%;
+}
+
+.site-search {
+  line-height: 1;
+}
+
+.navigation-search {
+  display: none;
+  padding: 0 20px 20px;
 }
 
 .post-card {
@@ -1514,16 +1531,24 @@ input {
   transform: translateX(3px);
 }
 
-.mobile-nav-style-slide-up.menu-open .main-navigation {
-  height: 100vh;
+.mobile-nav-style-sticky-bottom .main-navigation {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #ed1c72;
 }
 
-.primary-menu .menu-item > a {
-  color: #fff;
-}
-
-.primary-menu .menu-item > a:hover {
-  color: #eac5de;
+.mobile-nav-style-sticky-bottom .primary-menu {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875em;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  text-transform: uppercase;
 }
 
 .post-content .entry-header {
@@ -1659,6 +1684,10 @@ input {
   clear: both;
   content: "";
   display: block;
+}
+
+.mobile-nav-style-sticky-bottom {
+  margin-bottom: 75px;
 }
 
 .single-post .post-content {
@@ -2036,24 +2065,6 @@ input {
   }
   .hero-acf__text{
     display: none;
-  }
-  .mobile-nav-style-slide-up .main-navigation{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #ed1c72;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 2em;
-    font-weight: 600;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 36px;
-    overflow: hidden;
-    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
