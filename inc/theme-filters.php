@@ -75,6 +75,50 @@ function cf3_set_fonts() {
 	return $fonts;
 }
 
+add_action( 'alcatraz_set_allowed_html', 'cf3_set_allowed_html' );
+function cf3_set_allowed_html() {
+
+	$allowed_tags = array_merge( wp_kses_allowed_html( 'post' ), array(
+		'input' => array(
+			'type'         => true,
+			'name'         => true,
+			'value'        => true,
+			'placeholder'  => true,
+			'required'     => true,
+			'autocomplete' => true,
+			'class'        => true,
+		),
+		'select' => array(
+			'class' => true,
+		),
+		'optgroup' => array(
+			'class' => true,
+		),
+		'option' => array(
+			'class' => true,
+		),
+		'article' => array(
+			'id' => true,
+			'class' => true,
+		),
+		'svg' => array(
+			'aria-hidden' => true,
+			'class'       => true,
+			'id'          => true,
+			'role'        => true,
+			'title'       => true,
+		),
+		'use' => array(
+			'xlink:href' => true,
+		),
+		'path' => array(
+			'd' => true,
+		),
+	) );
+
+	return $allowed_tags;
+}
+
 add_filter( 'excerpt_more', 'cf3_excerpt_more' );
 /**
  * Filter the excerpt more text.
