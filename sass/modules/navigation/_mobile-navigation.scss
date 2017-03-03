@@ -1,44 +1,20 @@
 //--------------------------------------------------------------
 // MOBILE NAVIGATION
 //--------------------------------------------------------------
-.mobile-nav-style-slide-up {
+.mobile-nav-style-sticky-bottom {
 
 	.main-navigation {
+		@include position(fixed, null 0 0 0);
 
-		@media (max-width: 600px) {
-			@include position(fixed, null 0 0 0);
-
-			background-color: $razzmatazz;
-			display: flex;
-			font-size: 2em;
-			font-weight: 600;
-			flex-direction: column;
-			justify-content: center;
-			height: 36px;
-			overflow: hidden;
-			text-align: center;
-		}
+		background-color: rgba($true-white, 0.9);
+		border-top: 1px solid $razzmatazz;
 	}
 
-	&.menu-open {
-
-		.main-navigation {
-			height: 100vh;
-		}
-	}
-}
-
-
-//-------------------------------
-// Menu Items
-//-------------------------------
-.primary-menu .menu-item {
-
-	> a {
-		color: $true-white;
-
-		&:hover {
-			color: $classic-rose;
-		}
+	.primary-menu {
+		align-items: center;
+		display: flex;
+		font-size: 0.875em; // ~ 14px
+		justify-content: space-between;
+		text-transform: uppercase;
 	}
 }
