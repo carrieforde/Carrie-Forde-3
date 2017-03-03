@@ -4,4 +4,9 @@
 
 ( function( $ ) {
 
+	var toggleNavSearch = function() {
+		$( '.navigation-search' ).slideToggle( 'slow' );
+	};
+
+	$( '.site-search' ).on( 'click', toggleNavSearch );
 } )( jQuery );
