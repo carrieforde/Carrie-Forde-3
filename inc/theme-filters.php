@@ -158,9 +158,9 @@ add_filter( 'alcatraz_mobile_nav_styles', 'cf3_mobile_nav_styles' );
 function cf3_mobile_nav_styles() {
 
 	$styles = array(
-		'default'     => __( 'Default', 'carrieforde3' ),
-		'full-screen' => __( 'Full Screen', 'carrieforde3' ),
-		'slide-up'    => __( 'Slide Up', 'carrieforde3' ),
+		'default'       => __( 'Default', 'carrieforde3' ),
+		'full-screen'   => __( 'Full Screen', 'carrieforde3' ),
+		'sticky-bottom' => __( 'Sticky Bottom', 'carrieforde3' ),
 	);
 
 	return $styles;
