@@ -268,3 +268,28 @@ function cf3_post_type_for_pagination( $post_id = 0 ) {
 			break;
 	}
 }
+
+/**
+ * Build and return the navigation search.
+ *
+ * @return  string  The navigation search HTML.
+ */
+function cf3_get_navigation_search() {
+
+	ob_start(); ?>
+
+	<button type="button" class="search-toggle button--no-border">Search
+	</button>
+
+	<div class="navigation-search"><?php get_search_form(); ?></div>
+
+	<?php return ob_get_clean();
+}
+
+/**
+ * Echo the navigation search.
+ */
+function cf3_the_navigation_search() {
+
+	echo cf3_get_navigation_search(); // WPCS: XSS OK.
+}
