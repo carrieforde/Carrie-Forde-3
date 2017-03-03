@@ -24,6 +24,16 @@ input[type='submit'] {
 	}
 }
 
+.button {
+	@include modifier(no-border) {
+		border: none;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
 .button-text {
 	@include button-text-color($razzmatazz);
 
@@ -68,6 +78,16 @@ input[type='submit'] {
 	}
 }
 
+
+//-------------------------------
+// Search Toggle Button
+//-------------------------------
+.search-toggle {
+	@include size(30px);
+
+	background: url('images/icon-search.svg') no-repeat;
+	text-indent: -9999px;
+}
 
 //-------------------------------
 // Menu Toggle
