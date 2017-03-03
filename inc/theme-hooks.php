@@ -145,3 +145,10 @@ function cf3_hook_portfolio_hero() {
 
 	cf3_the_portfolio_hero();
 }
+
+add_action( 'alcatraz_after_primary_nav', 'cf3_hook_navigation_search' );
+
+function cf3_hook_navigation_search() {
+
+	cf3_the_navigation_search();
+}

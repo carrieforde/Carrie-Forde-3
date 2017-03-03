@@ -278,9 +278,6 @@ function cf3_get_navigation_search() {
 
 	ob_start(); ?>
 
-	<button type="button" class="search-toggle button--no-border">Search
-	</button>
-
 	<div class="navigation-search"><?php get_search_form(); ?></div>
 
 	<?php return ob_get_clean();
