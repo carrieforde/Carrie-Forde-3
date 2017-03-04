@@ -33,11 +33,20 @@ function cf3_enqueue_scripts() {
 		CARRIEFORDE3_VERSION
 	);
 
+	// Sticky JS.
+	wp_enqueue_script(
+		'sticky-js',
+		CARRIEFORDE3_URL . 'js/jquery.sticky.js',
+		array( 'jquery' ),
+		'1.0.4',
+		true
+	);
+
 	// Include this theme's JS.
 	wp_enqueue_script(
 		'carrieforde3-scripts',
 		CARRIEFORDE3_URL . 'js/carrieforde3-theme.min.js',
-		array( 'jquery' ),
+		array( 'jquery', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
 		true
 	);
