@@ -17,6 +17,7 @@ button,
 input[type='button'],
 input[type='submit'] {
 	border: $button__border;
+	border-radius: 0;
 	line-height: 1;
 
 	&:hover {
