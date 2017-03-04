@@ -9,6 +9,13 @@
 		background-color: rgba($true-white, 0.9);
 		border-top: 1px solid $razzmatazz;
 		z-index: 3;
+
+		@include grid-media($tablet-portrait-up) {
+			@include position(relative, null auto auto auto);
+
+			border-bottom: 2px solid $razzmatazz;
+			border-top: 0;
+		}
 	}
 
 	.primary-menu {
