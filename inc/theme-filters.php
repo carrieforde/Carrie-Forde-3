@@ -176,19 +176,25 @@ function cf3_entry_footer_taxonomies() {
 	return $footer_taxonomies;
 }
 
-add_filter( 'alcatraz_mobile_nav_styles', 'cf3_mobile_nav_styles' );
+add_filter( 'alcatraz_option_defaults', 'cf3_option_defaults' );
 /**
- * Filter the mobile navgiation style choices.
+ * Filter the default customizer options.
  *
- * @return  array  The mobile nav styles.
+ * @return  array  The customizer defaults.
  */
-function cf3_mobile_nav_styles() {
+function cf3_option_defaults() {
 
-	$styles = array(
-		'default'       => __( 'Default', 'carrieforde3' ),
-		'full-screen'   => __( 'Full Screen', 'carrieforde3' ),
-		'sticky-bottom' => __( 'Sticky Bottom', 'carrieforde3' ),
+	$defaults = array(
+		'show_activation_notice'  => 1,
+		'site_layout'             => 'full-width',
+		'site_sidebar'            => 'right-sidebar',
+		'sub_page_nav_in_sidebar' => 0,
+		'header_style'            => 'default',
+		'logo_id'                 => '',
+		'mobile_logo_id'          => '',
+		'logo_sticky'             => '',
+		'footer_widget_areas'     => 3,
+		'footer_bottom'           => '',
+		'social_icons_in_footer'  => '',
 	);
-
-	return $styles;
 }

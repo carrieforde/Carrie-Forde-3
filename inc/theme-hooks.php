@@ -152,3 +152,41 @@ function cf3_hook_navigation_search() {
 
 	cf3_the_navigation_search();
 }
+
+add_action( 'customize_register', 'cf3_customize_register', 20 );
+/**
+ * Remove and add customizer controls.
+ *
+ * @param  object  The $wp_customize object.
+ */
+function cf3_customize_register( $wp_customize ) {
+
+	$option_defaults = alcatraz_get_option_defaults();
+
+	// Remove CSS
+	$wp_customize->remove_section( 'custom_css' );
+
+	// Remove page banner.
+	$wp_customize->remove_control( 'alcatraz_page_banner_widget_area_control' );
+
+	// Remove menu options section.
+	$wp_customize->remove_section( 'alcatraz_menu_options_section' );
+
+	// Sticky logo.
+	$wp_customize->add_setting(
+		'alcatraz_options[logo_sticky]',
+		array(
+			'default'     => $option_defaults['logo_sticky'],
+			'type'        => 'option',
+			'capability'  => 'edit_theme_options',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Media_Control( $wp_customize, 'alcatraz_logo_sticky', array(
+				'label'    => __( 'Sticky Logo', 'carrieforde3' ),
+				'section'  => 'alcatraz_header_section',
+				'settings' => 'alcatraz_options[logo_sticky]',
+			)
+		)
+	);
+}
