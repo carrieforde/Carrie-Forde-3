@@ -20,3 +20,46 @@
 		}
 	}
 }
+
+
+//-----------------------------------------
+// Site Logos
+//-----------------------------------------
+.logo {
+	display: block;
+}
+
+.logo-mobile {
+
+	@include grid-media($tablet-portrait-up) {
+		.has-regular-logo & {
+			display: none;
+		}
+	}
+}
+
+.logo-regular {
+
+	@media (max-width: 599px) {
+		.has-mobile-logo & {
+			display: none;
+		}
+	}
+
+	@include grid-media($tablet-portrait-up) {
+		.is-sticky & {
+			display: none;
+		}
+	}
+}
+
+.logo-sticky {
+	display: none;
+
+	.is-sticky & {
+		
+		@include grid-media($tablet-portrait-up) {
+			display: block;
+		}
+	}
+}
