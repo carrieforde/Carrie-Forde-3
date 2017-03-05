@@ -76,7 +76,10 @@ module.exports = function( grunt ) {
 			},
 			js: {
 				files: ['<%= jshint.files %>'],
-				tasks: ['scripts']
+				tasks: ['scripts'],
+				options: {
+					livereload: true
+				}
 			}
 		},
 		wp_readme_to_markdown: {
