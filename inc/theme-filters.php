@@ -39,23 +39,6 @@ function cf3_set_colors() {
 	return $colors;
 }
 
-add_filter( 'body_class', 'cf3_body_classes' );
-/**
- * Filter the body classes.
- */
-function cf3_body_classes() {
-
-	// Mobile navigation style class.
-	if ( isset( $options['mobile_nav_style'] ) && $options['mobile_nav_style'] ) {
-
-		if ( 'slide-left' === $options['mobile_nav_style'] || 'slide-right' === $options['mobile_nav_style'] || 'slide-up' === $options['mobile_nav_style'] ) {
-			$classes[] = 'mobile-nav-style-slide';
-			$classes[] = 'mobile-nav-style-' .esc_attr( $options['mobile_nav_style'] );
-		}
-		$classes[] = 'mobile-nav-style-' . esc_attr( $options['mobile_nav_style'] );
-	}
-}
-
 add_filter( 'alcatraz_set_fonts', 'cf3_set_fonts' );
 /**
  * Set the brand fonts.
