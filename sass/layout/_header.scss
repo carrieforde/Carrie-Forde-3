@@ -2,10 +2,21 @@
 // HEADER
 //--------------------------------------------------------------
 .site-header {
-    background-color: rgba($true-white, 0.9);
-    border-bottom: 1px solid $razzmatazz;
+	background-color: rgba($true-white, 0.9);
+	border-bottom: 1px solid $razzmatazz;
 
-    @include grid-media($tablet-portrait-up) {
-        border-bottom-width: 2px;
-    }
+	@include grid-media($tablet-portrait-up) {
+		border-bottom-width: 2px;
+		
+		.admin-bar & {
+			top: 46px !important;
+		}
+	}
+
+	@include grid-media($wp-admin-bar) {
+
+		.admin-bar & {
+			top: 32px !important;
+		}
+	}
 }
