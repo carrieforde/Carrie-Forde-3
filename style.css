@@ -903,10 +903,6 @@ pre {
   transform: rotate(90deg);
 }
 
-.mobile-nav-style-full-screen {
-  overflow: hidden;
-}
-
 .mobile-nav-style-full-screen .primary-menu.open {
   position: fixed;
   right: 0;
@@ -1707,6 +1703,10 @@ input {
   padding: 20px;
 }
 
+.home .site-header {
+  background-color: transparent;
+}
+
 .logo {
   display: block;
 }
@@ -1964,6 +1964,10 @@ input {
   .post-card--sticky__footer{
     margin-top: auto;
   }
+  .hero{
+    margin-top: -115px;
+    z-index: -2;
+  }
   .main-navigation{
     position: relative;
     right: auto;
@@ -2013,6 +2017,13 @@ input {
   }
   .admin-bar .site-header{
     top: 46px !important;
+  }
+  .home .site-header{
+    box-shadow: none;
+  }
+  .home .is-sticky .site-header{
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 6px 0 rgba(50, 49, 50, 0.15);
   }
   .has-regular-logo .logo-mobile{
     display: none;
