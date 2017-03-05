@@ -1,28 +1,25 @@
 //--------------------------------------------------------------
 // MOBILE NAVIGATION
 //--------------------------------------------------------------
-.mobile-nav-style-sticky-bottom {
+.main-navigation {
+	@include position(fixed, null 0 0 0);
 
-	.main-navigation {
-		@include position(fixed, null 0 0 0);
+	background-color: rgba($true-white, 0.9);
+	border-top: 1px solid $razzmatazz;
+	z-index: 3 !important;
 
-		background-color: rgba($true-white, 0.9);
-		border-top: 1px solid $razzmatazz;
-		z-index: 3;
+	@include grid-media($tablet-portrait-up) {
+		@include position(relative, null auto auto auto);
 
-		@include grid-media($tablet-portrait-up) {
-			@include position(relative, null auto auto auto);
-
-			border-bottom: 2px solid $razzmatazz;
-			border-top: 0;
-		}
+		border-bottom: 2px solid $razzmatazz;
+		border-top: 0;
 	}
+}
 
-	.primary-menu {
-		align-items: center;
-		display: flex;
-		font-size: 0.875em; // ~ 14px
-		justify-content: space-between;
-		text-transform: uppercase;
-	}
+.primary-menu {
+	align-items: center;
+	display: flex;
+	font-size: 0.875em; // ~ 14px
+	justify-content: space-between;
+	text-transform: uppercase;
 }
