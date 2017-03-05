@@ -22,4 +22,17 @@
 	font-size: 0.875em; // ~ 14px
 	justify-content: space-between;
 	text-transform: uppercase;
+
+	@include grid-media($tablet-portrait-up) {
+		padding: 0 20px;
+	}
+
+	.menu-item > a {
+		color: $charcoal;
+		font-weight: 600;
+		
+		&:hover {
+			color: $razzmatazz;
+		}
+	}
 }

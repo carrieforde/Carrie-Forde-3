@@ -3,10 +3,15 @@
 //--------------------------------------------------------------
 .site-header {
 	background-color: rgba($true-white, 0.9);
-	border-bottom: 1px solid $razzmatazz;
+	// border-bottom: 1px solid $razzmatazz;
+	padding: 20px;
 
 	@include grid-media($tablet-portrait-up) {
-		border-bottom-width: 2px;
+		align-items: center;
+		// border-bottom: 2px solid $charcoal;
+		box-shadow: $box-shadow__card;
+		display: flex;
+		justify-content: space-between;
 		
 		.admin-bar & {
 			top: 46px !important;
@@ -30,6 +35,8 @@
 }
 
 .logo-mobile {
+	margin: 0 auto;
+	max-height: 75px;
 
 	@include grid-media($tablet-portrait-up) {
 		.has-regular-logo & {
@@ -60,6 +67,22 @@
 		
 		@include grid-media($tablet-portrait-up) {
 			display: block;
+			max-height: 50px;
+		}
+	}
+}
+
+
+//-----------------------------------------
+// Site Title & Description
+//-----------------------------------------
+.logo-wrap {
+
+	+ .site-title {
+		@include hide-text;
+
+		+ .site-description {
+			@include hide-text;
 		}
 	}
 }
