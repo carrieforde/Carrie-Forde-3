@@ -174,19 +174,71 @@ function cf3_customize_register( $wp_customize ) {
 
 	// Sticky logo.
 	$wp_customize->add_setting(
-		'alcatraz_options[logo_sticky]',
+		'alcatraz_options[logo_sticky_id]',
 		array(
-			'default'     => $option_defaults['logo_sticky'],
+			'default'     => $option_defaults['logo_sticky_id'],
 			'type'        => 'option',
 			'capability'  => 'edit_theme_options',
 		)
 	);
 	$wp_customize->add_control(
-		new WP_Customize_Media_Control( $wp_customize, 'alcatraz_logo_sticky', array(
+		new WP_Customize_Media_Control( $wp_customize, 'alcatraz_logo_sticky',
+			array(
 				'label'    => __( 'Sticky Logo', 'carrieforde3' ),
 				'section'  => 'alcatraz_header_section',
-				'settings' => 'alcatraz_options[logo_sticky]',
+				'settings' => 'alcatraz_options[logo_sticky_id]',
 			)
 		)
 	);
+}
+
+/**
+ * Update the Alcatraz options.
+ *
+ * @param   array  $input  The options to update.
+ *
+ * @return  array          The updated options.
+ */
+function cf3_validate_new_options( $input ) {
+
+	// Call Alcatraz's validation function.
+	alcatraz_validate_options();
+
+	// Update this theme's options.
+	if ( isset( $input['logo_sticky_id'] ) ) {
+		$options['logo_sticky_id'] = alcatraz_empty_or_int( $input['logo_sticky_id'] );
+	}
+
+	return $options;
+}
+
+add_action( 'alcatraz_header', 'cf3_output_logo', 1 );
+/**
+ * Output the site logo.
+ *
+ * @since  1.0.0
+ */
+function cf3_output_logo() {
+
+	$options = get_option( 'alcatraz_options' );
+
+	// Remove the Alcatraz defaults.
+	remove_action( 'alcatraz_header', 'alcatraz_output_logo', 2 );
+
+	if ( ! empty( $options['logo_id'] ) || ! empty( $options['mobile_logo_id'] ) || ! empty( $options['logo_sticky_id'] ) ) { ?>
+
+		<div class="logo-wrap">
+
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			
+				<?php echo ( ! empty( $options['mobile_logo_id'] ) ) ? wp_get_attachment_image( $options['mobile_logo_id'], 'full', '', array( 'class' => 'logo logo-mobile' ) ) : ''; ?>
+
+				<?php echo ( ! empty( $options['logo_id'] ) ) ? wp_get_attachment_image( $options['logo_id'], 'full', '', array( 'class' => 'logo logo-regular' ) ) : ''; ?>
+
+				<?php echo ( ! empty( $options['logo_sticky_id'] ) ) ? wp_get_attachment_image( $options['logo_sticky_id'], 'full', '', array( 'class' => 'logo logo-sticky' ) ) : ''; ?>
+			</a>
+		</div>
+
+		<?php
+	}
 }
