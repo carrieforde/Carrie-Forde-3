@@ -12,17 +12,20 @@
 
 		var windowWidth    = $( window ).width(),
 			tabletPortrait = 600,
-			$mainNav       = $( '.main-navigation' );
+			$header        = $( '.site-header' );
 
 		// Fire sticky navigation on tablet portrait+.
 		if ( tabletPortrait <= windowWidth ) {
 
-			$mainNav.sticky();
+			$header.sticky({
+				zIndex: 3
+			});
 		}
 
+		// If the window is resized, or small to start, unstick the header.
 		if ( tabletPortrait > windowWidth ) {
 
-			$mainNav.unstick();
+			$header.unstick();
 		}
 	};
 
