@@ -3,6 +3,11 @@
 //--------------------------------------------------------------
 .hero {
 	position: relative;
+
+	@include grid-media($tablet-portrait-up) {
+		margin-top: -115px;
+		z-index: -2;
+	}
 }
 
 
