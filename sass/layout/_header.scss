@@ -3,12 +3,10 @@
 //--------------------------------------------------------------
 .site-header {
 	background-color: rgba($true-white, 0.9);
-	// border-bottom: 1px solid $razzmatazz;
 	padding: 20px;
 
 	@include grid-media($tablet-portrait-up) {
 		align-items: center;
-		// border-bottom: 2px solid $charcoal;
 		box-shadow: $box-shadow__card;
 		display: flex;
 		justify-content: space-between;
@@ -24,6 +22,22 @@
 			top: 32px !important;
 		}
 	}
+
+	.home & {
+
+		background-color: transparent;
+
+		@include grid-media($tablet-portrait-up) {
+			box-shadow: none;
+		}
+	}
+}
+
+.home .is-sticky .site-header {
+	@include grid-media($tablet-portrait-up) {
+			background-color: rgba($true-white, 0.9);
+			box-shadow: $box-shadow__card;
+		}
 }
 
 
