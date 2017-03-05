@@ -225,9 +225,22 @@ function cf3_output_logo() {
 	// Remove the Alcatraz defaults.
 	remove_action( 'alcatraz_header', 'alcatraz_output_logo', 2 );
 
-	if ( ! empty( $options['logo_id'] ) || ! empty( $options['mobile_logo_id'] ) || ! empty( $options['logo_sticky_id'] ) ) { ?>
+	if ( ! empty( $options['logo_id'] ) || ! empty( $options['mobile_logo_id'] ) || ! empty( $options['logo_sticky_id'] ) ) {
 
-		<div class="logo-wrap">
+		// Build the wrapper classes.
+		$classes = 'logo-wrap';
+		if ( ! empty( $options['mobile_logo_id'] ) ) {
+			$classes .= ' has-mobile-logo';
+		}
+		if ( ! empty( $options['logo_id'] ) ) {
+			$classes .= ' has-regular-logo';
+		}
+		if ( ! empty( $options['logo_sticky_id'] ) ) {
+			$classes .= ' has-sticky-logo';
+		}
+
+		// Start the markup. 🎉 ?>
+		<div class="<?php echo esc_attr( $classes ); ?>">
 
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			
