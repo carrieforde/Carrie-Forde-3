@@ -23,7 +23,7 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<div class="grid--one-two-three masonry">
+			<div class="grid--one-two masonry">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php

@@ -44,7 +44,8 @@
 		margin-left: -25px;
 		margin-right: -25px;
 
-		.alcatraz-col--6 {
+		.alcatraz-col--6,
+		.alcatraz-col--4 {
 			@include grid-column(6, $card-grid);
 		}
 	}
