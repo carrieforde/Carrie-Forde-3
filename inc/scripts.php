@@ -61,7 +61,7 @@ function cf3_enqueue_scripts() {
 	);
 
 	// For now, we'll only enqueue masonry on these templates.
-	if ( is_page_template( 'template-patterns-organisms.php' ) || is_singular( 'post' ) || is_archive( 'post' ) ) {
+	if ( is_page_template( 'template-patterns-organisms.php' ) || is_singular( 'post' ) || is_archive( 'post' ) || is_home() ) {
 		wp_enqueue_script( 'jquery-masonry' );
 		wp_enqueue_script( 'carrieforde3-masonry' );
 	}
