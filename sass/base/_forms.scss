@@ -35,6 +35,25 @@ input {
 }
 
 .navigation-search {
-	display: none;
-	padding: 0 20px 20px;
+	height: 0;
+	padding: 0 20px;
+	overflow: hidden;
+	transition: height 0.3s ease-in-out;
+
+	@include grid-media($tablet-portrait-up) {
+		height: auto;
+		padding: 0;
+		transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+		width: 0;
+	}
+
+	&.show {
+		height: 58px;
+		padding-bottom: 20px;
+
+		@include grid-media($tablet-portrait-up) {
+			@include size(320px auto);
+			padding-bottom: 0;
+		}
+	}
 }
