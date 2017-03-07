@@ -32,7 +32,7 @@
 
 	<?php alcatraz_pattern_doc( array(
 		'heading'           => 'Navigation Search Form',
-		'description'       => 'This is the native WordPress search form which will be placed within the mobile navigation. The search form hides by default, and is triggered by clicking the Search button.',
+		'description'       => 'This is the native WordPress search form which is hooked into the main navigation. The search form hides by default, and is triggered by clicking the Search button. On mobile, the search slides up, and on tablet-portrait-up, it slides in from the right.',
 		'patterns_included' => '',
 		'function'          => 'cf3_get_navigation_search()',
 		'output'            => '<button type="button" class="search-toggle button--no-border">Search</button>' . cf3_get_navigation_search(),
