@@ -2028,7 +2028,8 @@ input {
     margin-left: -25px;
     margin-right: -25px;
   }
-  .grid--one-two .alcatraz-col--6{
+  .grid--one-two .alcatraz-col--6,
+  .grid--one-two .alcatraz-col--4{
     width: calc(50% - 37.5px);
     float: left;
     margin-left: 25px;
