@@ -26,6 +26,7 @@
 	.home & {
 
 		background-color: transparent;
+		transition: background-color 0.3s ease-in-out;
 
 		@include grid-media($tablet-portrait-up) {
 			box-shadow: none;
@@ -35,9 +36,13 @@
 
 .home .is-sticky .site-header {
 	@include grid-media($tablet-portrait-up) {
-			background-color: rgba($true-white, 0.9);
-			box-shadow: $box-shadow__card;
-		}
+		background-color: rgba($true-white, 0.9);
+		box-shadow: $box-shadow__card;
+	}
+}
+
+.sticky-wrapper {
+	transition: height 0.3s ease-in-out;
 }
 
 
