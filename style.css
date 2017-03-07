@@ -1324,8 +1324,15 @@ input {
 }
 
 .navigation-search {
-  display: none;
-  padding: 0 20px 20px;
+  height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.navigation-search.show {
+  height: 58px;
+  padding-bottom: 20px;
 }
 
 .post-card {
@@ -1535,7 +1542,7 @@ input {
   bottom: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  border-top: 1px solid #ed1c72;
+  border-top: 2px solid #ed1c72;
   z-index: 3;
 }
 
@@ -1705,6 +1712,11 @@ input {
 
 .home .site-header {
   background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sticky-wrapper {
+  transition: height 0.3s ease-in-out;
 }
 
 .logo {
@@ -1934,6 +1946,17 @@ input {
     font-size: 1.1em;
     left: 40px;
   }
+  .navigation-search{
+    height: auto;
+    padding: 0;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+    width: 0;
+  }
+  .navigation-search.show{
+    height: auto;
+    width: 320px;
+    padding-bottom: 0;
+  }
   .post-card--sticky{
     display: -ms-flexbox;
     display: flex;
@@ -1973,7 +1996,11 @@ input {
     right: auto;
     bottom: auto;
     left: auto;
+    -ms-flex-align: center;
+    align-items: center;
     background-color: transparent;
+    display: -ms-flexbox;
+    display: flex;
     border-top: 0;
   }
   .primary-menu{
