@@ -5,7 +5,14 @@
 ( function( $ ) {
 
 	var toggleNavSearch = function() {
-		$( '.navigation-search' ).slideToggle( 'slow' );
+
+		var $this = $( this );
+
+		if ( $this.parent().is( '.pattern-doc__output' ) ) {
+			$this.next( '.navigation-search' ).toggleClass( 'show' );
+		} else {
+			$this.parents( '.main-navigation__menu' ).next( '.navigation-search' ).toggleClass( 'show' );
+		}
 	};
 
 	var initStickyNav = function() {
@@ -29,7 +36,7 @@
 		}
 	};
 
-	$( '.site-search' ).on( 'click', toggleNavSearch );
+	$( '.search-toggle' ).on( 'click', toggleNavSearch );
 	$( window ).on( 'load', initStickyNav );
 	$( window ).on( 'resize', initStickyNav );
 
