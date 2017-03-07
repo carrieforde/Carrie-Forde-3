@@ -5,13 +5,15 @@
 	@include position(fixed, null 0 0 0);
 
 	background-color: rgba($true-white, 0.9);
-	border-top: 1px solid $razzmatazz;
+	border-top: 2px solid $razzmatazz;
 	z-index: 3;
 
 	@include grid-media($tablet-portrait-up) {
 		@include position(relative, null auto auto auto);
 
+		align-items: center;
 		background-color: transparent;
+		display: flex;
 		border-top: 0;
 	}
 }
