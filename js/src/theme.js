@@ -15,6 +15,22 @@
 		}
 	};
 
+	var mobileSiteMarginBottom = function() {
+
+		var windowWidth      = $( window ).width(),
+			tabletPortrait   = 600,
+			bodyMarginBottom = parseInt( $( 'body' ).css( 'margin-bottom' ) ),
+			mainNavigation   = $( '.main-navigation' ).outerHeight(),
+			newMarginBottom  = bodyMarginBottom + mainNavigation + 'px';
+
+		// Return early if we're not on mobile.
+		if ( tabletPortrait <= windowWidth ) {
+			return;
+		}
+
+		$( 'body' ).css( 'margin-bottom', newMarginBottom );
+	};
+
 	var initStickyNav = function() {
 
 		var windowWidth    = $( window ).width(),
@@ -36,7 +52,9 @@
 		}
 	};
 
+	// Fire all the things! 🔥
 	$( '.search-toggle' ).on( 'click', toggleNavSearch );
+	$( window ).on( 'load', mobileSiteMarginBottom );
 	$( window ).on( 'load', initStickyNav );
 	$( window ).on( 'resize', initStickyNav );
 
