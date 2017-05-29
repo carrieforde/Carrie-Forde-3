@@ -2,7 +2,7 @@
 // CATEGORY BADGE
 //--------------------------------------------------------------
 .category-badge {
-	font-size: $font__body-size - 4;
+	font-size: em(14);
 	font-weight: 600;
 	letter-spacing: 0.025em;
 	text-transform: uppercase;
@@ -12,7 +12,7 @@
 		color: color(white);
 		display: block;
 		line-height: 1;
-		padding: 5px 10px 6px;
+		padding: em(5) em(10) em(6);
 		text-decoration: none;
 	}
 
@@ -32,13 +32,13 @@
 
 		@include grid-media($tablet-portrait-up) {
 			bottom: -16px;
-			font-size: 1.1em; // font is 10% larger than body font.
+			font-size: em(18);
 			left: 40px;
 		}
 
 		@include grid-media($desktop-up) {
 			bottom: -18px;
-			font-size: 1.2em; // font is 20% larger than body font.
+			font-size: em(20);
 			left: 60px;
 		}
 	}

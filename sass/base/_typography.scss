@@ -3,15 +3,7 @@
 //--------------------------------------------------------------
 body,
 input {
-	font-size: $font__body-size-smaller;
-
-	@include grid-media ($tablet-landscape-up) {
-		font-size: $font__body-size;
-	}
-
-	@include grid-media ($desktop-large-up) {
-		font-size: $font__body-size-larger;
-	}
+	font-size: $font__body-size;
 }
 
 //-----------------------------------------

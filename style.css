@@ -1690,7 +1690,7 @@ input[type='submit'] {
 
 body,
 input {
-  font-size: 16px;
+  font-size: 1.125em;
 }
 
 h1, .site-title, .h1,
@@ -1791,7 +1791,7 @@ blockquote cite {
 }
 
 .category-badge {
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: 600;
   letter-spacing: 0.025em;
   text-transform: uppercase;
@@ -1802,7 +1802,7 @@ blockquote cite {
   color: #fff;
   display: block;
   line-height: 1;
-  padding: 5px 10px 6px;
+  padding: 0.3125em 0.625em 0.375em;
   text-decoration: none;
 }
 
@@ -2274,7 +2274,7 @@ input {
 @media only screen and (min-width: 37.5em) {
   .post-hero .category-badge {
     bottom: -16px;
-    font-size: 1.1em;
+    font-size: 1.125em;
     left: 40px;
   }
   .navigation-search {
@@ -2594,10 +2594,6 @@ input {
     float: left;
     margin-left: 20px;
   }
-  body,
-  input {
-    font-size: 18px;
-  }
   .hero-acf__text {
     font-size: initial;
   }
@@ -2617,18 +2613,11 @@ input {
 @media only screen and (min-width: 75em) {
   .post-hero .category-badge {
     bottom: -18px;
-    font-size: 1.2em;
+    font-size: 1.25em;
     left: 60px;
   }
   .hero-acf__text {
     font-size: 1.2em;
-  }
-}
-
-@media only screen and (min-width: 112.5em) {
-  body,
-  input {
-    font-size: 20px;
   }
 }
 
