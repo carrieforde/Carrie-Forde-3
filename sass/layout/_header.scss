@@ -2,13 +2,12 @@
 // HEADER
 //--------------------------------------------------------------
 .site-header {
+	align-items: center;
 	background-color: rgba(color(white), 0.9);
-	padding: 20px;
+	display: flex;
 
 	@include grid-media($tablet-portrait-up) {
-		align-items: center;
 		box-shadow: $box-shadow__card;
-		display: flex;
 		justify-content: space-between;
 		
 		.admin-bar & {
@@ -57,12 +56,6 @@
 
 .custom-logo {
 
-	@media (max-width: 599px) {
-		.has-mobile-logo & {
-			display: none;
-		}
-	}
-
 	@include grid-media($tablet-portrait-up) {
 		.is-sticky & {
 			display: none;
@@ -78,21 +71,6 @@
 		@include grid-media($tablet-portrait-up) {
 			display: block;
 			max-height: 50px;
-		}
-	}
-}
-
-
-//-----------------------------------------
-// Site Title & Description
-//-----------------------------------------
-.logo-wrap {
-
-	+ .site-title {
-		@include hide-text;
-
-		+ .site-description {
-			@include hide-text;
 		}
 	}
 }

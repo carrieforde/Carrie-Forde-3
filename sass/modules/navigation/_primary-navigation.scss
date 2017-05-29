@@ -29,3 +29,13 @@
 		}
 	}
 }
+
+.mobile-nav-toggle-style-hamburger.admin-bar .mobile-menu-toggle {
+	top: $size__padding;
+}
+
+.mobile-nav-toggle-style-hamburger {
+	.mobile-menu-toggle {
+		top: auto !important;
+	}
+}
