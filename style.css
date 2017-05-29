@@ -1314,6 +1314,186 @@ body:not(.header-style-side) .reverse-expand .sub-menu .sub-menu {
   text-align: center;
 }
 
+.color-razzmatazz {
+  color: #ed1c72;
+}
+
+.color-classic-rose {
+  color: #eac5de;
+}
+
+.color-charcoal {
+  color: #424143;
+}
+
+.color-french-gray {
+  color: #bdbec0;
+}
+
+.color-mine-shaft {
+  color: #323132;
+}
+
+.color-dim-gray {
+  color: #686769;
+}
+
+.color-oslo-gray {
+  color: #8d8b8f;
+}
+
+.color-iron {
+  color: #d9d5dc;
+}
+
+.color-lightening-yellow {
+  color: #ffc417;
+}
+
+.color-neon-carrot {
+  color: #ff9a3d;
+}
+
+.color-honey-flower {
+  color: #461775;
+}
+
+.color-ocean-boat-blue {
+  color: #0075c4;
+}
+
+.color-dark-pastel-green {
+  color: #04be51;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-black {
+  color: #000;
+}
+
+.background-razzmatazz {
+  background-color: #ed1c72;
+}
+
+.background-classic-rose {
+  background-color: #eac5de;
+}
+
+.background-charcoal {
+  background-color: #424143;
+}
+
+.background-french-gray {
+  background-color: #bdbec0;
+}
+
+.background-mine-shaft {
+  background-color: #323132;
+}
+
+.background-dim-gray {
+  background-color: #686769;
+}
+
+.background-oslo-gray {
+  background-color: #8d8b8f;
+}
+
+.background-iron {
+  background-color: #d9d5dc;
+}
+
+.background-lightening-yellow {
+  background-color: #ffc417;
+}
+
+.background-neon-carrot {
+  background-color: #ff9a3d;
+}
+
+.background-honey-flower {
+  background-color: #461775;
+}
+
+.background-ocean-boat-blue {
+  background-color: #0075c4;
+}
+
+.background-dark-pastel-green {
+  background-color: #04be51;
+}
+
+.background-white {
+  background-color: #fff;
+}
+
+.background-black {
+  background-color: #000;
+}
+
+.fill-razzmatazz {
+  fill: #ed1c72;
+}
+
+.fill-classic-rose {
+  fill: #eac5de;
+}
+
+.fill-charcoal {
+  fill: #424143;
+}
+
+.fill-french-gray {
+  fill: #bdbec0;
+}
+
+.fill-mine-shaft {
+  fill: #323132;
+}
+
+.fill-dim-gray {
+  fill: #686769;
+}
+
+.fill-oslo-gray {
+  fill: #8d8b8f;
+}
+
+.fill-iron {
+  fill: #d9d5dc;
+}
+
+.fill-lightening-yellow {
+  fill: #ffc417;
+}
+
+.fill-neon-carrot {
+  fill: #ff9a3d;
+}
+
+.fill-honey-flower {
+  fill: #461775;
+}
+
+.fill-ocean-boat-blue {
+  fill: #0075c4;
+}
+
+.fill-dark-pastel-green {
+  fill: #04be51;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
+.fill-black {
+  fill: #000;
+}
+
 .button,
 button,
 input[type='button'],

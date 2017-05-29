@@ -1,3 +1,18 @@
 //--------------------------------------------------------------
 // COLORS
 //--------------------------------------------------------------
+
+// .color-#{$color}
+.color {
+	@include colors($theme-colors, color);
+}
+
+// .background-#{$color}
+.background {
+	@include colors($theme-colors, background);
+}
+
+// .fill-#{$color}
+.fill {
+	@include colors($theme-colors, fill);
+}
