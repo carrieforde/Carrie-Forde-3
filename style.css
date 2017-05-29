@@ -1365,30 +1365,6 @@ input[type='submit']:hover {
   color: #323132;
 }
 
-.button-text--curious-blue:hover {
-  color: #219bd0;
-}
-
-.button-text--curious-blue:after {
-  color: #219bd0;
-}
-
-.button-text--lawn-green:hover {
-  color: #85f200;
-}
-
-.button-text--lawn-green:after {
-  color: #85f200;
-}
-
-.button-text--tree-poppy:hover {
-  color: #ff951e;
-}
-
-.button-text--tree-poppy:after {
-  color: #ff951e;
-}
-
 .search-form .search-submit {
   position: absolute;
   top: 0;
