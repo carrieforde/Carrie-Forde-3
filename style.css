@@ -1934,8 +1934,10 @@ input {
   transition: height 0.3s ease-in-out;
 }
 
-.logo {
+.logo,
+.custom-logo {
   display: block;
+  margin-bottom: 0;
 }
 
 .logo-sticky {

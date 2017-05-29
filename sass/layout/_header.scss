@@ -49,8 +49,10 @@
 //-----------------------------------------
 // Site Logos
 //-----------------------------------------
-.logo {
+.logo,
+.custom-logo {
 	display: block;
+	margin-bottom: 0;
 }
 
 .custom-logo {
