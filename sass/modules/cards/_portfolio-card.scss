@@ -24,13 +24,13 @@
 		z-index: 1;
 
 		a {
-			color: $true-white;
+			color: color(white);
 			text-decoration: none;
 		}
 	}
 
 	@include element(title) {
-		color: $true-white;
+		color: color(white);
 		line-height: 1;
 		margin-bottom: 0;
 	}
@@ -48,7 +48,7 @@
 
 				content: '';
 				display: block;
-				transition: $transition__hover;
+				transition: $transition__background-hover;
 			}
 		}
 	}
@@ -57,11 +57,11 @@
 
 		.portfolio-card__header {
 			display: block;
-			transition: $transition__hover;
+			transition: $transition__background-hover;
 		}
 
 		a:after {
-			background-color: $razzmatazz;
+			background-color: color(razzmatazz);
 		}
 	}
 }

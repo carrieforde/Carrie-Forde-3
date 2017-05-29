@@ -36,7 +36,7 @@ input[type='submit'] {
 }
 
 .button-text {
-	@include button-text-color($razzmatazz);
+	@include button-text-color(color(razzmatazz));
 
 	color: $color__button-link;
 
@@ -46,17 +46,17 @@ input[type='submit'] {
 
 	// Curious Blue
 	@include modifier(curious-blue) {
-		@include button-text-color($curious-blue);
+		@include button-text-color(color(curious-blue));
 	}
 
 	// Lawn Green
 	@include modifier(lawn-green) {
-		@include button-text-color($lawn-green);
+		@include button-text-color(color(lawn-green));
 	}
 
 	// Tree Poppy
 	@include modifier(tree-poppy) {
-		@include button-text-color($tree-poppy);
+		@include button-text-color(color(tree-poppy));
 	}
 }
 
@@ -69,12 +69,12 @@ input[type='submit'] {
 	.search-submit {
 		@include position(absolute, 0 0 0 null);
 
-		background-color: $razzmatazz;
+		background-color: color(razzmatazz);
 		border: 0;
-		color: $true-white;
+		color: color(white);
 
 		&:hover {
-			background-color: $classic-rose;
+			background-color: color(classic-rose);
 		}
 	}
 }

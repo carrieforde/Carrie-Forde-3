@@ -2,8 +2,8 @@
 // POST NAVIGATION
 //--------------------------------------------------------------
 .post-navigation {
-	border-bottom: 5px solid $charcoal;
-	border-top: 2px solid $charcoal;
+	border-bottom: 5px solid color(charcoal);
+	border-top: 2px solid color(charcoal);
 	margin: 40px auto 0;
 	max-width: 640px;
 	padding-bottom: 30px;
@@ -16,7 +16,7 @@
 	}
 
 	@include element(span) {
-		color: $oslo-gray;
+		color: color(oslo-gray);
 		display: block;
 		font-size: 0.8em;
 		text-transform: uppercase;
@@ -31,7 +31,7 @@
 	.nav-next {
 
 		a {
-			color: $mine-shaft;
+			color: color(mine-shaft);
 			font-weight: 600;
 			text-decoration: none;
 
@@ -54,14 +54,14 @@
 		padding: 0 10px;
 
 		&:hover {
-			color: $razzmatazz;
+			color: color(razzmatazz);
 		}
 	}
 
 	.nav-previous {
 
 		+ .nav-next {
-			border-left: 1px solid rgba($french-gray, 0.3);
+			border-left: 1px solid rgba(color(french-gray), 0.3);
 		}
 	}
 

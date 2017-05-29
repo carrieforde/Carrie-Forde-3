@@ -11,7 +11,7 @@
 		> p:first-of-type {
 
 			&::first-letter {
-				color: $razzmatazz;
+				color: color(razzmatazz);
 				display: block;
 				float: left;
 				font-family: $freight-display-pro;

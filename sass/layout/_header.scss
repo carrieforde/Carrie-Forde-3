@@ -2,7 +2,7 @@
 // HEADER
 //--------------------------------------------------------------
 .site-header {
-	background-color: rgba($true-white, 0.9);
+	background-color: rgba(color(white), 0.9);
 	padding: 20px;
 
 	@include grid-media($tablet-portrait-up) {
@@ -36,7 +36,7 @@
 
 .home .is-sticky .site-header {
 	@include grid-media($tablet-portrait-up) {
-		background-color: rgba($true-white, 0.9);
+		background-color: rgba(color(white), 0.9);
 		box-shadow: $box-shadow__card;
 	}
 }
@@ -53,18 +53,7 @@
 	display: block;
 }
 
-.logo-mobile {
-	margin: 0 auto;
-	max-height: 75px;
-
-	@include grid-media($tablet-portrait-up) {
-		.has-regular-logo & {
-			display: none;
-		}
-	}
-}
-
-.logo-regular {
+.custom-logo {
 
 	@media (max-width: 599px) {
 		.has-mobile-logo & {

@@ -5,59 +5,58 @@
 //-------------------------------
 // Color Palette
 //-------------------------------
+$theme-colors: (
+	razzmatazz: #ed1c72,
+	classic-rose: #eac5de,
+	charcoal: #424143,
+	french-gray: #bdbec0,
+	mine-shaft: #323132,
+	dim-gray: #686769,
+	oslo-gray: #8d8b8f,
+	iron: #d9d5dc,
+	tree-poppy: #ff951e,
+	curious-blue: #219bd0,
+	lawn-green: #85f200,
+	white: #fff,
+	black: #000,
+);
 
-// Brand colors.
-$razzmatazz: #ed1c72;
-$classic-rose: #eac5de;
-$charcoal: #424143;
-$french-gray: #bdbec0;
-$pink-cloud: linear-gradient(to top right, rgba($razzmatazz, 0.85) 25%, rgba($classic-rose, 0.85));
-
-// Neutral colors.
-$mine-shaft: #323132;
-$dim-gray: #686769;
-$oslo-gray: #8d8b8f;
-$iron: #d9d5dc;
-
-// Accent colors.
-$tree-poppy: #ff951e;
-$curious-blue: #219bd0;
-$lawn-green: #85f200;
+$pink-cloud: linear-gradient(to top right, rgba(color(razzmatazz), 0.85) 25%, rgba(color(classic-rose), 0.85));
 
 
 // Box Shadows
-$box-shadow__card: 1px 1px 6px 0 rgba($mine-shaft, 0.15);
+$box-shadow__card: 1px 1px 6px 0 rgba(color(mine-shaft), 0.15);
 
 
 //-------------------------------
 // Buttons
 //-------------------------------
 $color__button-background: transparent;
-$color__button-background-hover: $razzmatazz;
-$color__button-border: $razzmatazz;
-$color__button-link: $mine-shaft;
-$color__button-text: $razzmatazz;
-$color__button-text-hover: $true-white;
+$color__button-background-hover: color(razzmatazz);
+$color__button-border: color(razzmatazz);
+$color__button-link: color(mine-shaft);
+$color__button-text: color(razzmatazz);
+$color__button-text-hover: color(white);
 
 
 //-------------------------------
 // Forms
 //-------------------------------
-$color__checkbox-background-checked: $french-gray;
-$color__checkbox-text-checked: $razzmatazz;
-$color__radio-background-checked: $razzmatazz;
-$color__forms-border: $iron;
-$color__forms-border-focus: shade($iron, 20%);
-$color__checkbox-border: $iron;
+$color__checkbox-background-checked: color(french-gray);
+$color__checkbox-text-checked: color(razzmatazz);
+$color__radio-background-checked: color(razzmatazz);
+$color__forms-border: color(iron);
+$color__forms-border-focus: shade(color(iron), 20%);
+$color__checkbox-border: color(iron);
 
 
 //-------------------------------
 // Typography
 //-------------------------------
-$color__body-text: $charcoal;
-$color__hr: $iron;
-$color__link: $razzmatazz;
-$color__link-hover: tint($razzmatazz, 30%);
-$color__link-visited: shade($razzmatazz, 10%);
-$color__pre-border: $iron;
-$color__headings: $mine-shaft;
+$color__body-text: color(charcoal);
+$color__hr: color(iron);
+$color__link: color(razzmatazz);
+$color__link-hover: tint(color(razzmatazz), 30%);
+$color__link-visited: shade(color(razzmatazz), 10%);
+$color__pre-border: color(iron);
+$color__headings: color(mine-shaft);

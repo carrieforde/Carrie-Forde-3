@@ -4,8 +4,8 @@
 .main-navigation {
 	@include position(fixed, null 0 0 0);
 
-	background-color: rgba($true-white, 0.9);
-	border-top: 2px solid $razzmatazz;
+	background-color: rgba(color(white), 0.9);
+	border-top: 2px solid color(razzmatazz);
 	z-index: 3;
 
 	@include grid-media($tablet-portrait-up) {
@@ -30,15 +30,15 @@
 	}
 
 	.menu-item > a {
-		color: $charcoal;
+		color: color(charcoal);
 		font-weight: 600;
 		
 		&:hover {
-			color: $razzmatazz;
+			color: color(razzmatazz);
 		}
 	}
 
 	.current-menu-item > a {
-		color: $razzmatazz;
+		color: color(razzmatazz);
 	}
 }
