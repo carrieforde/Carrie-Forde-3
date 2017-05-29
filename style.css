@@ -1744,13 +1744,13 @@ a {
   text-decoration: none;
 }
 
-.post-content a {
+article:not(.post-card) a {
   border-bottom: 2px solid #ed1c72;
   color: #424143;
   transition: color 0.3s ease-in-out;
 }
 
-.post-content a:hover, .post-content a:focus {
+article:not(.post-card) a:hover, article:not(.post-card) a:focus {
   color: #ed1c72;
   border-bottom-color: #ed1c72;
 }
@@ -1856,8 +1856,15 @@ input {
 
 .post-card {
   font-size: 0.9em;
-  margin-bottom: 25px;
   max-width: 600px;
+}
+
+.post-card.hentry {
+  margin-bottom: 1.5625rem;
+}
+
+.post-card.hentry:first-of-type {
+  margin-bottom: 1.5625rem;
 }
 
 .post-card__inner-wrap {
@@ -1985,8 +1992,8 @@ input {
 }
 
 .post-navigation .nav-links {
-  -ms-flex-align: start;
-      align-items: flex-start;
+  -ms-flex-align: stretch;
+      align-items: stretch;
 }
 
 .single-cf-portfolio .post-navigation,
@@ -1999,6 +2006,7 @@ input {
   font-family: "skolar-sans-latin", sans-serif;
   display: block;
   font-size: 0.8em;
+  margin-bottom: 0.3125rem;
   text-transform: uppercase;
 }
 
@@ -2011,6 +2019,7 @@ input {
 .post-navigation .nav-previous h3,
 .post-navigation .nav-next h3 {
   font-size: 1.25em;
+  margin-bottom: 0;
   overflow: hidden;
   padding: 0 0.9375rem;
 }
@@ -2210,6 +2219,18 @@ input {
   display: block;
 }
 
+.blog-grid {
+  margin-left: -25px;
+  margin-right: -25px;
+  width: calc(100% + 50px);
+}
+
+.blog-grid::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
 .site-header {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
@@ -2344,8 +2365,7 @@ input {
     margin-left: -25px;
     margin-right: -25px;
   }
-  .grid--one-two .alcatraz-col--6,
-  .grid--one-two .alcatraz-col--4 {
+  .grid--one-two .alcatraz-col--6 {
     width: calc(50% - 37.5px);
     float: left;
     margin-left: 25px;
@@ -2604,6 +2624,11 @@ input {
     background-color: transparent;
   }
   .grid--one-two-three .alcatraz-col--4 {
+    width: calc(33.3333333333% - 33.3333333333px);
+    float: left;
+    margin-left: 25px;
+  }
+  .blog-grid .alcatraz-col--4 {
     width: calc(33.3333333333% - 33.3333333333px);
     float: left;
     margin-left: 25px;

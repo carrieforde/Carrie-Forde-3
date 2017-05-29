@@ -3,8 +3,15 @@
 //--------------------------------------------------------------
 .post-card {
 	font-size: 0.9em;
-	margin-bottom: 25px;
 	max-width: 600px;
+
+	&.hentry {
+		margin-bottom: rem(25);
+
+		&:first-of-type {
+			margin-bottom: rem(25);
+		}
+	}
 
 	// An inner wrap is needed for the posts grid layout. Otherwise, without the padding, the posts will break across columns.
 	@include element(inner-wrap) {

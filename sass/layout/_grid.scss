@@ -44,9 +44,24 @@
 		margin-left: -25px;
 		margin-right: -25px;
 
-		.alcatraz-col--6,
-		.alcatraz-col--4 {
+		.alcatraz-col--6 {
 			@include grid-column(6, $card-grid);
+		}
+	}
+}
+
+
+//-----------------------------------------
+// Blog Grid
+//-----------------------------------------
+.blog-grid {
+	@include grid-container;
+	@include grid-collapse($card-grid);
+
+	@include grid-media($tablet-landscape-up) {
+
+		.alcatraz-col--4 {
+			@include grid-column(4, $card-grid);
 		}
 	}
 }
