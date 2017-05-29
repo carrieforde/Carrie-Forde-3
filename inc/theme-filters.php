@@ -190,8 +190,6 @@ function cf3_option_defaults() {
 		'site_sidebar'            => 'right-sidebar',
 		'sub_page_nav_in_sidebar' => 0,
 		'header_style'            => 'default',
-		'logo_id'                 => '',
-		'mobile_logo_id'          => '',
 		'logo_sticky'             => '',
 		'footer_widget_areas'     => 3,
 		'footer_bottom'           => '',

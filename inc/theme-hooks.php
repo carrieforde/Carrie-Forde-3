@@ -223,17 +223,14 @@ function cf3_output_logo() {
 	$options = get_option( 'alcatraz_options' );
 
 	// Remove the Alcatraz defaults.
-	remove_action( 'alcatraz_header', 'alcatraz_output_logo', 2 );
+	remove_action( 'alcatraz_header', 'alcatraz_output_logo' );
 
-	if ( ! empty( $options['logo_id'] ) || ! empty( $options['mobile_logo_id'] ) || ! empty( $options['logo_sticky_id'] ) ) {
+	if ( ! empty( $options['logo_sticky_id'] ) ) {
 
 		// Build the wrapper classes.
 		$classes = 'logo-wrap';
-		if ( ! empty( $options['mobile_logo_id'] ) ) {
-			$classes .= ' has-mobile-logo';
-		}
-		if ( ! empty( $options['logo_id'] ) ) {
-			$classes .= ' has-regular-logo';
+		if ( has_custom_logo() ) {
+			$classes .= ' has-logo';
 		}
 		if ( ! empty( $options['logo_sticky_id'] ) ) {
 			$classes .= ' has-sticky-logo';
@@ -242,11 +239,9 @@ function cf3_output_logo() {
 		// Start the markup. 🎉 ?>
 		<div class="<?php echo esc_attr( $classes ); ?>">
 
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			
-				<?php echo ( ! empty( $options['mobile_logo_id'] ) ) ? wp_get_attachment_image( $options['mobile_logo_id'], 'full', '', array( 'class' => 'logo logo-mobile' ) ) : ''; ?>
+			<?php the_custom_logo(); ?>
 
-				<?php echo ( ! empty( $options['logo_id'] ) ) ? wp_get_attachment_image( $options['logo_id'], 'full', '', array( 'class' => 'logo logo-regular' ) ) : ''; ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 
 				<?php echo ( ! empty( $options['logo_sticky_id'] ) ) ? wp_get_attachment_image( $options['logo_sticky_id'], 'full', '', array( 'class' => 'logo logo-sticky' ) ) : ''; ?>
 			</a>
