@@ -4,62 +4,58 @@
 .button,
 button,
 input[type='button'],
-input[type='submit'],
-.button-text {
+input[type='submit'] {
+	background-color: $color__button-background;
+	color: $color__button-text;
+	display: inline-block;
+	font-family: $text__button;
 	font-size: 0.8em; // 80% of body font size.
 	font-weight: 600;
 	letter-spacing: 0.025em;
 	text-transform: uppercase;
 }
 
-.button,
-button,
-input[type='button'],
-input[type='submit'] {
-	border: $button__border;
-	border-radius: 0;
-	line-height: 1;
-
-	&:hover {
-		color: $color__button-text-hover;
-	}
-}
-
 .button {
-	@include modifier(no-border) {
-		border: none;
+
+	// Text Button
+	&.button--text,
+	&.button--text:visited {
+		background-color: transparent;
+		color: $color__body-text;
+		padding: 0;
 
 		&:hover {
-			background-color: transparent;
+
+			&.color {
+				@include colors($theme-colors, color);
+			}
+
+			&:after {
+				transform: translateX(3px);
+			}
+		}
+
+		&:after {
+			content: '\f0da';
+			display: inline-block;
+			font-family: $font-awesome;
+			font-size: 1.1em;
+			margin-left: rem(3);
+			transition: transform 0.3s ease-in-out;
+			vertical-align: baseline;
+		}
+
+		&.color {
+
+			@each $name, $color in $theme-colors {
+
+				&-#{$name}:after {
+					color: $color;
+				}
+			}
 		}
 	}
 }
-
-.button-text {
-	@include button-text-color(color(razzmatazz));
-
-	color: $color__button-link;
-
-	&:visited {
-		color: $color__button-link;
-	}
-
-	// Curious Blue
-	@include modifier(curious-blue) {
-		@include button-text-color(color(curious-blue));
-	}
-
-	// Lawn Green
-	@include modifier(lawn-green) {
-		@include button-text-color(color(lawn-green));
-	}
-
-	// Tree Poppy
-	@include modifier(tree-poppy) {
-		@include button-text-color(color(tree-poppy));
-	}
-}
-
 
 //-----------------------------------------
 // Search Form Button

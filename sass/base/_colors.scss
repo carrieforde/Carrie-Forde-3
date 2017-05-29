@@ -3,7 +3,8 @@
 //--------------------------------------------------------------
 
 // .color-#{$color}
-.color {
+.color,
+a.color {
 	@include colors($theme-colors, color);
 }
 

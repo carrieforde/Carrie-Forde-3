@@ -33,11 +33,11 @@ $box-shadow__card: 1px 1px 6px 0 rgba(color(mine-shaft), 0.15);
 //-------------------------------
 // Buttons
 //-------------------------------
-$color__button-background: transparent;
-$color__button-background-hover: color(razzmatazz);
+$color__button-background: color(razzmatazz);
+$color__button-background-hover: tint(color(razzmatazz), 20%);
 $color__button-border: color(razzmatazz);
 $color__button-link: color(mine-shaft);
-$color__button-text: color(razzmatazz);
+$color__button-text: color(white);
 $color__button-text-hover: color(white);
 
 
