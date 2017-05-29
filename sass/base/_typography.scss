@@ -61,7 +61,7 @@ strong {
 a {
 	text-decoration: none;
 
-	.post-content & {
+	article:not(.post-card) & {
 		border-bottom: 2px solid color(razzmatazz);
 		color: color(charcoal);
 		transition: color 0.3s ease-in-out;
