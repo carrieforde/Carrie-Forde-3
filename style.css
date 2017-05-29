@@ -2084,6 +2084,15 @@ input {
   color: #424143;
 }
 
+.main-navigation a:hover,
+.main-navigation a:visited:hover {
+  color: #ed1c72;
+}
+
+.main-navigation .current-menu-item > a {
+  color: #ed1c72;
+}
+
 .post-content .entry-header {
   margin-bottom: 30px;
 }

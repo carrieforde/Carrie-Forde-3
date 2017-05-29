@@ -16,5 +16,16 @@
 	a,
 	a:visited {
 		color: color(charcoal);
+
+		&:hover {
+			color: color(razzmatazz);
+		}
+	}
+
+	.current-menu-item {
+
+		> a {
+			color: color(razzmatazz);
+		}
 	}
 }
