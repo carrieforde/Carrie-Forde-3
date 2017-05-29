@@ -3,26 +3,25 @@
 //--------------------------------------------------------------
 
 // Font Palette
-$assistant: 'Assistant', sans-serif;
-$freight-display-pro: 'freight-display-pro', serif;
-$inconsolata: 'Inconsolata', monospace;
-
+$skolar: 'skolar-sans-latin', sans-serif;
+$fira-sans: 'Fira Sans', sans-serif;
+$fira-mono: 'Fira Mono', monospace;
 
 //-------------------------------
 // Buttons
 //-------------------------------
-$text__button: $assistant;
+$text__button: $skolar;
 
 
 //-------------------------------
 // Typography
 //-------------------------------
-$font__body: $assistant;
+$font__body: $skolar;
 $font__body-line-height: 1.65;
 $font__body-weight: 300;
-$font__headings: $freight-display-pro;
+$font__headings: $fira-sans;
 $font__headings-line-height: 1.2;
-$font__code: $inconsolata;
+$font__code: $fira-mono;
 
 // Font Sizes
 $font__body-size: 18px;

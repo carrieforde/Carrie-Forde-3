@@ -12,7 +12,7 @@ function cf3_enqueue_scripts() {
 	// Google fonts.
 	wp_enqueue_style(
 		'carrieforde3-google-fonts',
-		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Assistant:300,600|Inconsolata' ),
+		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:600,900' ),
 		array(),
 		CARRIEFORDE3_VERSION
 	);
@@ -22,7 +22,7 @@ function cf3_enqueue_scripts() {
 		'carrieforde3-typekit-font',
 		'//use.typekit.net/jsi5beh.js',
 		array(),
-		CARRIEFORDE3_VERSION
+		'1.0.1'
 	);
 
 	// Include this theme's stylesheet.
@@ -59,12 +59,6 @@ function cf3_enqueue_scripts() {
 		CARRIEFORDE3_VERSION,
 		true
 	);
-
-	// For now, we'll only enqueue masonry on these templates.
-	if ( is_page_template( 'template-patterns-organisms.php' ) || is_singular( 'post' ) || is_archive( 'post' ) || is_home() ) {
-		wp_enqueue_script( 'jquery-masonry' );
-		wp_enqueue_script( 'carrieforde3-masonry' );
-	}
 }
 
 add_action( 'wp_head', 'cf3_typekit' );
@@ -75,5 +69,5 @@ add_action( 'wp_head', 'cf3_typekit' );
  */
 function cf3_typekit() {
 
-	echo '<script>try{Typekit.load({ async: true });}catch(e){}</script>';
+	echo '<script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>';
 }

@@ -92,7 +92,7 @@ blockquote {
 	&:after,
 	&:before {
 		color: color(mine-shaft);
-		font-family: $freight-display-pro;
+		font-family: $font__headings;
 		font-size: 90px;
 		font-weight: 900;
 		line-height: 0.75;
@@ -123,7 +123,7 @@ blockquote {
 // Presentational Classes
 //-----------------------------------------
 .font-assistant {
-	font-family: $assistant;
+	font-family: $font__body;
 
 	@include modifier(bold) {
 		font-weight: 600;

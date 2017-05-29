@@ -315,7 +315,7 @@ input,
 select,
 textarea {
   color: #424143;
-  font: 400 1em/1.65 "Assistant", sans-serif;
+  font: 400 1em/1.65 "skolar-sans-latin", sans-serif;
 }
 
 h1, .site-title, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .hfrom {
@@ -375,7 +375,7 @@ pre,
 samp,
 tt,
 var {
-  font: 400 0.875em / 1.6 "Inconsolata", monospace;
+  font: 400 0.875em / 1.6 "Fira Mono", monospace;
 }
 
 pre {
@@ -1426,7 +1426,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   color: #323132;
-  font-family: "freight-display-pro", serif;
+  font-family: "Fira Sans", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.2;
 }
@@ -1488,7 +1488,7 @@ blockquote {
 
 blockquote:after, blockquote:before {
   color: #323132;
-  font-family: "freight-display-pro", serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 90px;
   font-weight: 900;
   line-height: 0.75;
@@ -1514,7 +1514,7 @@ blockquote cite {
 }
 
 .font-assistant {
-  font-family: "Assistant", sans-serif;
+  font-family: "skolar-sans-latin", sans-serif;
 }
 
 .font-assistant--bold {
@@ -1785,6 +1785,16 @@ input {
   transform: translateX(3px);
 }
 
+.main-navigation {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-navigation a,
+.main-navigation a:visited {
+  color: #424143;
+}
+
 .post-content .entry-header {
   margin-bottom: 30px;
 }
@@ -1806,7 +1816,7 @@ input {
   color: #ed1c72;
   display: block;
   float: left;
-  font-family: "freight-display-pro", serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 3.25em;
   line-height: 1;
   margin-right: 5px;
@@ -2310,6 +2320,12 @@ input {
   }
   .hero-acf__text {
     font-size: initial;
+  }
+  .main-navigation {
+    padding: 0;
+  }
+  .mobile-nav-style-slide-right .main-navigation {
+    background-color: transparent;
   }
   .grid--one-two-three .alcatraz-col--4 {
     width: calc(33.3333333333% - 33.3333333333px);
