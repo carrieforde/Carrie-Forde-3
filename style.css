@@ -1471,11 +1471,14 @@ a {
 }
 
 .post-content a {
-  border-bottom: 1px solid #bdbec0;
+  border-bottom: 2px solid #ed1c72;
+  color: #424143;
+  transition: color 0.3s ease-in-out;
 }
 
 .post-content a:hover, .post-content a:focus {
-  border-bottom-color: #d9d5dc;
+  color: #ed1c72;
+  border-bottom-color: #ed1c72;
 }
 
 blockquote {
@@ -1510,14 +1513,6 @@ blockquote:before {
 
 blockquote cite {
   display: block;
-  font-weight: 600;
-}
-
-.font-assistant {
-  font-family: "skolar-sans-latin", sans-serif;
-}
-
-.font-assistant--bold {
   font-weight: 600;
 }
 

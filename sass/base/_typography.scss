@@ -70,11 +70,14 @@ a {
 	text-decoration: none;
 
 	.post-content & {
-		border-bottom: 1px solid color(french-gray);
+		border-bottom: 2px solid color(razzmatazz);
+		color: color(charcoal);
+		transition: color 0.3s ease-in-out;
 
 		&:hover,
 		&:focus {
-			border-bottom-color: color(iron);
+			color: color(razzmatazz);
+			border-bottom-color: color(razzmatazz);
 		}
 	}
 }
@@ -114,18 +117,6 @@ blockquote {
 
 	cite {
 		display: block;
-		font-weight: 600;
-	}
-}
-
-
-//-----------------------------------------
-// Presentational Classes
-//-----------------------------------------
-.font-assistant {
-	font-family: $font__body;
-
-	@include modifier(bold) {
 		font-weight: 600;
 	}
 }
