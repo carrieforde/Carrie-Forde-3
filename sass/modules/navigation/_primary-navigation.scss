@@ -1,0 +1,20 @@
+//--------------------------------------------------------------
+// PRIMARY NAVIGATION 
+//--------------------------------------------------------------
+.main-navigation {
+	font-weight: 600;
+	text-transform: uppercase;
+
+	@include grid-media($tablet-landscape-up) {
+		padding: 0;
+
+		.mobile-nav-style-slide-right & {
+			background-color: transparent;
+		}
+	}
+
+	a,
+	a:visited {
+		color: color(charcoal);
+	}
+}
