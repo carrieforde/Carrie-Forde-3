@@ -59,6 +59,11 @@ function cf3_enqueue_scripts() {
 		CARRIEFORDE3_VERSION,
 		true
 	);
+
+	// Enqueu masonry.
+	if ( is_home() ) {
+		wp_enqueue_script( 'carrieforde3-masonry' );
+	}
 }
 
 add_action( 'wp_head', 'cf3_typekit' );
