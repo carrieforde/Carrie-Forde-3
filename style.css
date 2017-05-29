@@ -1800,8 +1800,9 @@ blockquote cite {
 
 .category-badge a {
   color: #fff;
+  display: block;
   line-height: 1;
-  padding: 5px 10px;
+  padding: 5px 10px 6px;
   text-decoration: none;
 }
 
