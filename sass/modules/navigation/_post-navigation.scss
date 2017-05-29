@@ -9,6 +9,10 @@
 	padding-bottom: 30px;
 	padding-top: 30px;
 
+	.nav-links {
+		align-items: flex-start;
+	}
+
 	// Single Portfolio.
 	.single-cf-portfolio &,
 	.single-alcatraz_patterns & {
@@ -17,23 +21,32 @@
 
 	@include element(span) {
 		color: color(oslo-gray);
+		font-family: $font__body;
 		display: block;
 		font-size: 0.8em;
 		text-transform: uppercase;
 	}
 
-	// This helps ensure the dividing border is always the height of the tallest item.
-	.nav-links {
-		display: flex;
-	}
-
 	.nav-previous,
 	.nav-next {
+		flex: 0 0 50%;
+
+		h3 {
+			font-size: 1.25em;
+			overflow: hidden;
+			padding: 0 rem(15);
+		}
 
 		a {
 			color: color(mine-shaft);
 			font-weight: 600;
 			text-decoration: none;
+
+			&:hover {
+				h3 {
+					color: color(razzmatazz);
+				}
+			}
 
 			&:before {
 				@include size(30px);
@@ -48,16 +61,6 @@
 		}
 	}
 
-	.font-assistant {
-		font-size: 1.25em;
-		overflow: hidden;
-		padding: 0 10px;
-
-		&:hover {
-			color: color(razzmatazz);
-		}
-	}
-
 	.nav-previous {
 
 		+ .nav-next {
@@ -67,6 +70,7 @@
 
 	.nav-next {
 		margin-left: auto; // push to the right when previous post doesn't exist.
+		text-align: right;
 	}
 
 	.nav-previous a {

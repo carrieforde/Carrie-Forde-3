@@ -1709,6 +1709,11 @@ input {
   padding-top: 30px;
 }
 
+.post-navigation .nav-links {
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
 .single-cf-portfolio .post-navigation,
 .single-alcatraz_patterns .post-navigation {
   max-width: 100%;
@@ -1716,14 +1721,23 @@ input {
 
 .post-navigation__span {
   color: #8d8b8f;
+  font-family: "skolar-sans-latin", sans-serif;
   display: block;
   font-size: 0.8em;
   text-transform: uppercase;
 }
 
-.post-navigation .nav-links {
-  display: -ms-flexbox;
-  display: flex;
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+}
+
+.post-navigation .nav-previous h3,
+.post-navigation .nav-next h3 {
+  font-size: 1.25em;
+  overflow: hidden;
+  padding: 0 0.9375rem;
 }
 
 .post-navigation .nav-previous a,
@@ -1731,6 +1745,11 @@ input {
   color: #323132;
   font-weight: 600;
   text-decoration: none;
+}
+
+.post-navigation .nav-previous a:hover h3,
+.post-navigation .nav-next a:hover h3 {
+  color: #ed1c72;
 }
 
 .post-navigation .nav-previous a:before,
@@ -1745,22 +1764,13 @@ input {
   transition: transform 0.2s ease-in-out;
 }
 
-.post-navigation .font-assistant {
-  font-size: 1.25em;
-  overflow: hidden;
-  padding: 0 10px;
-}
-
-.post-navigation .font-assistant:hover {
-  color: #ed1c72;
-}
-
 .post-navigation .nav-previous + .nav-next {
   border-left: 1px solid rgba(189, 190, 192, 0.3);
 }
 
 .post-navigation .nav-next {
   margin-left: auto;
+  text-align: right;
 }
 
 .post-navigation .nav-previous a:before {
