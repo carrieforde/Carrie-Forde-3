@@ -30,12 +30,7 @@ $accent = cf3_get_category_accent();
 		</div>
 
 		<footer class="entry-footer post-card__footer">
-			<?php echo alcatraz_button( array( // WPCS: XSS OK.
-				'type' => 'text',
-				'link' => get_the_permalink(),
-				'button_text' => 'Read More',
-				'class' => 'button-text--' . esc_attr( $accent ),
-			) ); ?>
+			<a href="<?php the_permalink(); ?>" class="button button-text--<?php echo esc_attr( $accent ); ?>"><?php esc_html_e( 'Read More', 'carrieforde' ); ?></a>
 		</footer>
 	</div>
 </article>
