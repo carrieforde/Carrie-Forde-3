@@ -57,7 +57,7 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
 
 	$cat_accent = get_term_meta( $category[0]->term_id, 'theme_colors', true );
 
-	$output = sprintf( '<span class="category-badge category-badge--%s-bg"><a href="%s" rel="%s %s">%s</a></span>',
+	$output = sprintf( '<span class="category-badge background-%s"><a href="%s" rel="%s %s">%s</a></span>',
 		esc_attr( $cat_accent ),
 		get_term_link( $category[0]->term_id ),
 		esc_attr( $category[0]->slug ),
