@@ -17,10 +17,11 @@
             },
             "choices": {
                 "razzmatazz": "Razzmatazz",
-                "classic-rose": "Classic Rose",
-                "tree-poppy": "Tree Poppy",
-                "curious-blue": "Curious Blue",
-                "lawn-green": "Lawn Green"
+                "lightening-yellow": "Lightening Yellow",
+                "neon-carrot": "Neon Carrot",
+                "honey-flower": "Honey Flower",
+                "ocean-boat-blue": "Ocean Boat Blue",
+                "dark-pastel-green": "Dark Pastel Green"
             },
             "default_value": [
                 "razzmatazz"
@@ -50,5 +51,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1486605273
+    "modified": 1496076301
 }
