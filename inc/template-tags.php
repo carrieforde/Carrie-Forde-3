@@ -178,7 +178,12 @@ function cf3_get_post_tags( $post_id = 0 ) {
 function cf3_get_post_hero( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
-		$post_id = get_the_ID();
+
+		if ( is_home() ) {
+			$post_id = get_option( 'page_for_posts' );
+		} else {
+			$post_id = get_the_ID();
+		}
 	}
 
 	if ( has_post_thumbnail( $post_id ) ) {
@@ -190,7 +195,9 @@ function cf3_get_post_hero( $post_id = 0 ) {
 	ob_start(); ?>
 
 	<section class="hero post-hero image-as-background" style="background-image: url( <?php echo esc_url( $image ); ?> );">
-		<?php echo cf3_get_post_card_category_badge( $post_id ); ?>
+		<?php if ( is_singular( 'post' ) ) : ?>
+			<?php echo cf3_get_post_card_category_badge( $post_id ); ?>
+		<?php endif; ?>
 	</section>
 
 	<?php return ob_get_clean();
@@ -205,6 +212,7 @@ function cf3_the_post_hero( $post_id = 0 ) {
 
 	echo cf3_get_post_hero( $post_id ); // WPCS: XSS OK.
 }
+
 
 /**
  * Get the portfolio hero.

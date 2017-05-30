@@ -94,6 +94,16 @@ function cf3_hook_post_hero() {
 	cf3_the_post_hero();
 }
 
+add_action( 'alcatraz_after_header', 'cf3_hook_page_hero' );
+function cf3_hook_page_hero() {
+
+	if ( ! is_home() ) {
+		return;
+	}
+
+	cf3_the_post_hero();
+}
+
 add_action( 'alcatraz_after_header', 'cf3_hook_homepage_hero' );
 /**
  * Hook the Homepage hero.
