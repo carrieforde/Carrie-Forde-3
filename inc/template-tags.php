@@ -86,9 +86,7 @@ function cf3_get_category_image( $post_id = 0, $image_size = 'full' ) {
 
 	$cat_image = get_term_meta( $category[0]->term_id, 'category_image', true );
 
-	$output = wp_kses_post( wp_get_attachment_image( $cat_image, $image_size ) );
-
-	return $output;
+	return $cat_image;
 }
 
 /**
@@ -180,18 +178,18 @@ function cf3_get_post_tags( $post_id = 0 ) {
 function cf3_get_post_hero( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
-
 		$post_id = get_the_ID();
+	}
+
+	if ( has_post_thumbnail( $post_id ) ) {
+		$image = get_the_post_thumbnail_url( $post_id, 'hero-image' );
+	} else {
+		$image = wp_get_attachment_url( cf3_get_category_image( $post_id, 'hero-image' ) );
 	}
 
 	ob_start(); ?>
 
-	<section class="hero post-hero">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail(); ?>
-		<?php else : ?>
-			<?php echo cf3_get_category_image( $post_id ); ?>
-		<?php endif; ?>
+	<section class="hero post-hero image-as-background" style="background-image: url( <?php echo esc_url( $image ); ?> );">
 		<?php echo cf3_get_post_card_category_badge( $post_id ); ?>
 	</section>
 
