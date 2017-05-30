@@ -1359,6 +1359,11 @@ a.color-iron {
   color: #d9d5dc;
 }
 
+.color-white-smoke,
+a.color-white-smoke {
+  color: #eee;
+}
+
 .color-lightening-yellow,
 a.color-lightening-yellow {
   color: #ffc417;
@@ -1426,6 +1431,10 @@ a.color-black {
   background-color: #d9d5dc;
 }
 
+.background-white-smoke {
+  background-color: #eee;
+}
+
 .background-lightening-yellow {
   background-color: #ffc417;
 }
@@ -1484,6 +1493,10 @@ a.color-black {
 
 .fill-iron {
   fill: #d9d5dc;
+}
+
+.fill-white-smoke {
+  fill: #eee;
 }
 
 .fill-lightening-yellow {
@@ -1566,6 +1579,10 @@ input[type='submit'] {
   color: #d9d5dc;
 }
 
+.button.button--text:hover.color-white-smoke, .button.button--text:visited:hover.color-white-smoke {
+  color: #eee;
+}
+
 .button.button--text:hover.color-lightening-yellow, .button.button--text:visited:hover.color-lightening-yellow {
   color: #ffc417;
 }
@@ -1638,6 +1655,10 @@ input[type='submit'] {
 
 .button.button--text.color-iron:after, .button.button--text:visited.color-iron:after {
   color: #d9d5dc;
+}
+
+.button.button--text.color-white-smoke:after, .button.button--text:visited.color-white-smoke:after {
+  color: #eee;
 }
 
 .button.button--text.color-lightening-yellow:after, .button.button--text:visited.color-lightening-yellow:after {
@@ -1860,6 +1881,7 @@ input {
 }
 
 .post-card {
+  background-color: #fff;
   font-size: 0.9em;
   max-width: 600px;
 }
@@ -2296,6 +2318,10 @@ input {
 .single-post .post-content {
   margin: 20px auto 0;
   max-width: 640px;
+}
+
+.blog {
+  background-color: #eee;
 }
 
 @media only screen and (min-width: 25em) {

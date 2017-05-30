@@ -14,6 +14,7 @@ $theme-colors: (
 	dim-gray: #686769,
 	oslo-gray: #8d8b8f,
 	iron: #d9d5dc,
+	white-smoke: #eee,
 	lightening-yellow: #ffc417,
 	neon-carrot: #ff9a3d,
 	honey-flower: #461775,
@@ -28,6 +29,11 @@ $pink-cloud: linear-gradient(to top right, rgba(color(razzmatazz), 0.85) 25%, rg
 
 // Box Shadows
 $box-shadow__card: 1px 1px 6px 0 rgba(color(mine-shaft), 0.15);
+
+//-----------------------------------------
+// Global Elements
+//-----------------------------------------
+// $color__body-background: color(white-smoke);
 
 
 //-------------------------------
