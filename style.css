@@ -550,6 +550,11 @@ img {
   margin-bottom: 1.25rem;
 }
 
+.image-as-background {
+  background-size: cover;
+  background-position: center;
+}
+
 .gallery {
   margin-bottom: 1.5625rem;
   overflow: hidden;
@@ -1965,8 +1970,21 @@ input {
 }
 
 .hero-acf {
+  height: 60vh;
+  width: 100%;
   line-height: 1.5;
+  position: relative;
   text-align: center;
+}
+
+.hero-acf:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  content: '';
 }
 
 .hero-acf__text {
@@ -1976,6 +1994,7 @@ input {
   font-size: 0.8em;
   transform: translateY(-50%);
   width: 45%;
+  z-index: 3;
 }
 
 .hero-acf__title {

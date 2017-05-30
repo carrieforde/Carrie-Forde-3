@@ -12,6 +12,8 @@ define( 'CARRIEFORDE3_URL', trailingslashit( get_stylesheet_directory_uri() ) );
  */
 add_image_size( 'card-image', 1040, 690, true );
 
+add_image_size( 'hero-image', 1920, 500, true );
+
 
 require_once CARRIEFORDE3_PATH . '/inc/acf.php';
 
