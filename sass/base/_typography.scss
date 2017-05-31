@@ -17,6 +17,7 @@ h5, .h5,
 h6, .h6 {
 	color: $color__headings;
 	font-family: $font__headings;
+	font-weight: 900;
 	letter-spacing: 0.0125em;
 	line-height: $font__headings-line-height;
 }
@@ -61,7 +62,7 @@ strong {
 a:not(.button) {
 	text-decoration: none;
 
-	article:not(.post-card) & {
+	article:not(.post-card):not(.portfolio-card) & {
 		border-bottom: 2px solid color(razzmatazz);
 		color: color(charcoal);
 		transition: color 0.3s ease-in-out;
