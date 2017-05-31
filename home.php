@@ -38,8 +38,8 @@ get_header(); ?>
 			<?php $type = cf3_post_type_for_pagination(); ?>
 
 			<?php the_posts_navigation( array(
-				'prev_text' => '<h3 class="font-assistant font-assistant--bold">Older ' . $type . 's</h3>',
-				'next_text' => '<h3 class="font-assistant font-assistant--bold">Newer ' . $type . 's</h3>',
+				'prev_text' => '<h3>Older ' . $type . 's</h3>',
+				'next_text' => '<h3>Newer ' . $type . 's</h3>',
 			) ); ?>
 
 		<?php else : ?>
