@@ -5,37 +5,6 @@
  * @package carrieforde3
  */
 
-add_action( 'alcatraz_after_patterns', 'cf3_append_theme_patterns' );
-/**
- * Append theme atoms to template-patterns-atoms.php.
- */
-function cf3_append_theme_patterns() {
-
-	// Bail early if we're not looking at a pattern.
-	if ( ! is_singular( 'alcatraz_patterns' ) ) {
-		return;
-	}
-
-	// Append Atoms.
-	if ( is_page_template( 'template-patterns-atoms.php' ) ) {
-
-		get_template_part( 'patterns/template-parts/atoms/category-badges' );
-		get_template_part( 'patterns/template-parts/atoms/project-services' );
-	}
-
-	// Append Molecules.
-	if ( is_page_template( 'template-patterns-molecules.php' ) ) {
-
-		get_template_part( 'patterns/template-parts/molecules/heroes' );
-	}
-
-	// Append Organisms.
-	if ( is_page_template( 'template-patterns-organisms.php' ) ) {
-
-		get_template_part( 'patterns/template-parts/organisms/card-section' );
-	}
-}
-
 add_action( 'login_enqueue_scripts', 'cf3_custom_login_screen' );
 /**
  * Customize the login screen styles.
@@ -143,7 +112,7 @@ function cf3_hook_post_footnotes() {
 	cf3_the_post_footnotes();
 }
 
-add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
+// add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
 /**
  * Hook the portfolio hero.
  */
