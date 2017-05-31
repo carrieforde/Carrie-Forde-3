@@ -18,21 +18,24 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+				<?php the_archive_title( '<h1 class="page-title screen-reader-text">', '</h1>' ); ?>
 			</header>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<div class="page-content grid--one-two">
 
-				<?php get_template_part( 'template-parts/content', get_post_type() . '-card' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+					<?php get_template_part( 'template-parts/content', get_post_type() . '-card' ); ?>
 
-			<?php the_posts_navigation(); ?>
+				<?php endwhile; ?>
 
-		<?php else : ?>
+				<?php the_posts_navigation(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php else : ?>
 
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			
+		</div><!-- .page-content -->
 		<?php endif; ?>
 
 		<?php do_action( 'alcatraz_after_main_inside' ); ?>
