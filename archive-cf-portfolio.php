@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the portfolio CPT.
+ * Template for displaying the CF Portfolio Archive.
  *
  * @package carrieforde3
  */
