@@ -1,7 +1,8 @@
 //--------------------------------------------------------------
 // POST NAVIGATION
 //--------------------------------------------------------------
-.post-navigation {
+.post-navigation,
+.posts-navigation {
 	border-bottom: 5px solid color(charcoal);
 	border-top: 2px solid color(charcoal);
 	margin: 40px auto 0;
@@ -100,6 +101,50 @@
 			&:before {
 				transform: translateX(3px);
 			}
+		}
+	}
+}
+
+
+//-----------------------------------------
+// Posts Navigation
+//
+// This appears at the bottom of archive
+// pages. Reuses several styles from above
+// with some more finesse.
+//-----------------------------------------
+.posts-navigation {
+	border: none;
+	max-width: 100%;
+
+	.nav-next,
+	.nav-previous {
+
+		a {
+			align-items: center;
+			display: flex;
+
+			&:before {
+				margin: 0;
+			}
+		}
+	}
+
+	.nav-next {
+
+		a {
+			justify-content: flex-end;
+
+			&:before {
+				order: 1;
+			}
+		}
+	}
+
+	.nav-previous {
+
+		+ .nav-next {
+			border-left: none;
 		}
 	}
 }
