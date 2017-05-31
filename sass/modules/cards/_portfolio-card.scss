@@ -3,11 +3,10 @@
 //--------------------------------------------------------------
 .portfolio-card {
 	font-size: 0.9em;
-	margin-bottom: 25px;
 	text-align: center;
 
-	@media (max-width: 600px) {
-
+	&.hentry {
+		margin-bottom: rem(25);
 	}
 
 	@include element(inner-wrap) {
@@ -40,9 +39,11 @@
 		a,
 		img {
 			display: block;
+			margin-bottom: 0;
 		}
 
 		a {
+
 			&:after {
 				@include position(absolute, 0 0 0 0);
 
