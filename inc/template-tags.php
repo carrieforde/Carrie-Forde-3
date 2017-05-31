@@ -203,6 +203,19 @@ function cf3_get_post_hero( $post_id = 0 ) {
 	<?php return ob_get_clean();
 }
 
+
+/**
+ * Displays a hero image on the portfolio archive.
+ */
+function cf3_archive_hero() {
+
+	$image = get_option( 'options_archive_hero' );
+	$image = wp_get_attachment_url( $image, 'hero-image' ); ?>
+
+	<section class="hero archive-hero image-as-background" style="background-image: url( '<?php echo esc_url( $image ); ?>' );"></section>
+	<?php
+}
+
 /**
  * Echo the post hero.
  *
