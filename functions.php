@@ -15,6 +15,20 @@ add_image_size( 'card-image', 1040, 690, true );
 add_image_size( 'hero-image', 1920, 500, true );
 
 
+/**
+ * Adds Portfolio Archive Settings page.
+ */
+if( function_exists('acf_add_options_page') ) {
+
+	// Add subpage to Portfolio Menu.
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Portfolio Settings',
+		'menu_title' 	=> 'Portfolio Settings',
+		'parent_slug' 	=> '/edit.php?post_type=cf-portfolio',
+	));
+}
+
+
 require_once CARRIEFORDE3_PATH . '/inc/acf.php';
 
 require_once CARRIEFORDE3_PATH . '/inc/queries.php';
