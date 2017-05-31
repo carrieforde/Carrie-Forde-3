@@ -2,7 +2,7 @@
 /**
  * Template for displaying all single posts.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
 get_header(); ?>
