@@ -10,10 +10,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-content' ); ?>>
 
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="post-thumbnail">
+			<?php the_post_thumbnail(); ?>
+		</div>
+	<?php endif; ?>
+	
 	<?php alcatraz_the_entry_header(); ?>
 
 	<div class="entry-content">
-        <?php cf3_the_portfolio_meta(); ?>
+		<?php cf3_the_portfolio_meta(); ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
