@@ -58,7 +58,7 @@ strong {
 }
 
 // Everyday anchors.
-a {
+a:not(.button) {
 	text-decoration: none;
 
 	article:not(.post-card) & {
