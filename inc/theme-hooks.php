@@ -56,17 +56,7 @@ add_action( 'alcatraz_after_header', 'cf3_hook_post_hero' );
  */
 function cf3_hook_post_hero() {
 
-	if ( ! is_singular( 'post' ) ) {
-		return;
-	}
-
-	cf3_the_post_hero();
-}
-
-add_action( 'alcatraz_after_header', 'cf3_hook_page_hero' );
-function cf3_hook_page_hero() {
-
-	if ( ! is_home() ) {
+	if ( ! ( is_singular( 'post' ) || is_page() || is_home() ) ) {
 		return;
 	}
 
@@ -112,17 +102,17 @@ function cf3_hook_post_footnotes() {
 	cf3_the_post_footnotes();
 }
 
-// add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
+add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
 /**
  * Hook the portfolio hero.
  */
 function cf3_hook_portfolio_hero() {
 
-	if ( ! is_singular( 'cf-portfolio' ) ) {
+	if ( ! is_archive( 'cf-portfolio' ) ) {
 		return;
 	}
 
-	cf3_the_portfolio_hero();
+	cf3_archive_hero();
 }
 
 add_action( 'alcatraz_after_primary_nav', 'cf3_hook_navigation_search' );
