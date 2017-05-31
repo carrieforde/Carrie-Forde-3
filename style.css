@@ -1531,13 +1531,12 @@ a.color-black {
 button,
 input[type='button'],
 input[type='submit'] {
-  background-color: #ed1c72;
-  color: #fff;
   display: inline-block;
   font-family: "Fira Sans", sans-serif;
   font-size: 0.8em;
   font-weight: 600;
   letter-spacing: 0.025em;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -1727,6 +1726,7 @@ h5, .h5,
 h6, .h6 {
   color: #323132;
   font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
   letter-spacing: 0.0125em;
   line-height: 1.2;
 }
@@ -1766,17 +1766,17 @@ strong {
   font-weight: 600;
 }
 
-a {
+a:not(.button) {
   text-decoration: none;
 }
 
-article:not(.post-card) a {
+article:not(.post-card):not(.portfolio-card) a:not(.button) {
   border-bottom: 2px solid #ed1c72;
   color: #424143;
   transition: color 0.3s ease-in-out;
 }
 
-article:not(.post-card) a:hover, article:not(.post-card) a:focus {
+article:not(.post-card):not(.portfolio-card) a:not(.button):hover, article:not(.post-card):not(.portfolio-card) a:not(.button):focus {
   color: #ed1c72;
   border-bottom-color: #ed1c72;
 }
@@ -1933,8 +1933,11 @@ input {
 
 .portfolio-card {
   font-size: 0.9em;
-  margin-bottom: 25px;
   text-align: center;
+}
+
+.portfolio-card.hentry {
+  margin-bottom: 1.5625rem;
 }
 
 .portfolio-card__inner-wrap {
@@ -1965,6 +1968,7 @@ input {
 .portfolio-card__image a,
 .portfolio-card__image img {
   display: block;
+  margin-bottom: 0;
 }
 
 .portfolio-card__image a:after {
@@ -2219,7 +2223,7 @@ input {
   font-family: "Fira Sans", sans-serif;
   font-size: 3.25em;
   line-height: 1;
-  margin-right: 5px;
+  margin: 0.3125rem 0.3125rem -0.375rem 0;
 }
 
 .post-content p + h2,
@@ -2375,6 +2379,10 @@ input {
 }
 
 .blog {
+  background-color: #eee;
+}
+
+.post-type-archive-cf-portfolio {
   background-color: #eee;
 }
 
