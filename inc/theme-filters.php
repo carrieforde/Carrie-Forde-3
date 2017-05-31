@@ -27,9 +27,7 @@ add_filter( 'alcatraz_post_types', 'cf3_allowed_post_types' );
 function cf3_allowed_post_types() {
 
 	$post_type = array(
-		'alcatraz_patterns',
 		'page',
-		'style-tile',
 	);
 
 	return $post_type;
