@@ -24,6 +24,8 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<div class="blog-grid masonry">
+				<?php echo cf3_get_sticky_post( array( 'template_part' => 'template-parts/content-post-card-sticky' ) ); ?>
+
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php

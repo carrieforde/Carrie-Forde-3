@@ -2733,6 +2733,11 @@ input {
     float: left;
     margin-left: 25px;
   }
+  .blog-grid .alcatraz-col--8 {
+    width: calc(66.6666666667% - 41.6666666667px);
+    float: left;
+    margin-left: 25px;
+  }
 }
 
 @media only screen and (min-width: 75em) {
