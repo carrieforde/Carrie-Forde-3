@@ -50,30 +50,43 @@ function cf3_custom_login_screen() { ?>
 	<?php
 }
 
-add_action( 'alcatraz_after_header', 'cf3_hook_post_hero' );
-/**
- * Hook the post hero.
- */
-function cf3_hook_post_hero() {
-
-	if ( ! ( is_singular( 'post' ) || is_page() || is_home() ) ) {
-		return;
-	}
-
-	cf3_the_post_hero();
-}
-
-add_action( 'alcatraz_after_header', 'cf3_hook_homepage_hero' );
+add_action( 'alcatraz_after_header', 'cf3_hook_acf_hero' );
 /**
  * Hook the Homepage hero.
  */
-function cf3_hook_homepage_hero() {
+function cf3_hook_acf_hero() {
 
 	if ( ! is_front_page() ) {
 		return;
 	}
 
 	cf3_the_acf_hero();
+}
+
+add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
+/**
+ * Hook the portfolio hero.
+ */
+function cf3_hook_portfolio_hero() {
+
+	if ( ! is_archive( 'cf-portfolio' ) ) {
+		return;
+	}
+
+	cf3_archive_hero();
+}
+
+add_action( 'alcatraz_after_header', 'cf3_hook_post_hero' );
+/**
+ * Hook the post hero.
+ */
+function cf3_hook_post_hero() {
+
+	if ( ! ( is_singular( 'post' ) || is_page() || is_home() ) || is_front_page() ) {
+		return;
+	}
+
+	cf3_the_post_hero();
 }
 
 add_action( 'alcatraz_after_main_inside', 'cf3_hook_related_posts' );
@@ -100,19 +113,6 @@ function cf3_hook_post_footnotes() {
 	}
 
 	cf3_the_post_footnotes();
-}
-
-add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
-/**
- * Hook the portfolio hero.
- */
-function cf3_hook_portfolio_hero() {
-
-	if ( ! is_archive( 'cf-portfolio' ) ) {
-		return;
-	}
-
-	cf3_archive_hero();
 }
 
 add_action( 'alcatraz_after_primary_nav', 'cf3_hook_navigation_search' );

@@ -84,6 +84,10 @@ function cf3_get_category_image( $post_id = 0, $image_size = 'full' ) {
 
 	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
 
+	if ( empty( $category ) ) {
+		return;
+	}
+
 	$cat_image = get_term_meta( $category[0]->term_id, 'category_image', true );
 
 	return $cat_image;
@@ -190,6 +194,10 @@ function cf3_get_post_hero( $post_id = 0 ) {
 		$image = get_the_post_thumbnail_url( $post_id, 'hero-image' );
 	} else {
 		$image = wp_get_attachment_url( cf3_get_category_image( $post_id, 'hero-image' ) );
+	}
+
+	if ( empty( $image ) ) {
+		return;
 	}
 
 	ob_start(); ?>
