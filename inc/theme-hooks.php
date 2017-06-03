@@ -138,9 +138,6 @@ function cf3_customize_register( $wp_customize ) {
 	// Remove page banner.
 	$wp_customize->remove_control( 'alcatraz_page_banner_widget_area_control' );
 
-	// Remove menu options section.
-	$wp_customize->remove_section( 'alcatraz_menu_options_section' );
-
 	// Sticky logo.
 	$wp_customize->add_setting(
 		'alcatraz_options[logo_sticky_id]',
