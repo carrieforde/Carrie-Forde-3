@@ -178,6 +178,22 @@ function cf3_validate_new_options( $input ) {
 	return $options;
 }
 
+add_filter( 'upload_mimes', 'cf3_mime_types' );
+/**
+ * Allow SVG upload
+ *
+ * @author  Carrie Forde
+ *
+ * @param   array  $mimes  The allowed mime type.
+ * @return  array          The array of mime types.
+ */
+function cf3_mime_types( $mimes ) {
+
+	$mimes['svg'] = 'image/svg+xml';
+
+	return $mimes;
+}
+
 add_action( 'alcatraz_header', 'cf3_output_logo', 1 );
 /**
  * Output the site logo.
