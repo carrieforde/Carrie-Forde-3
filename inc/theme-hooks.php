@@ -63,13 +63,13 @@ function cf3_hook_acf_hero() {
 	cf3_the_acf_hero();
 }
 
-add_action( 'alcatraz_after_header', 'cf3_hook_portfolio_hero' );
+add_action( 'alcatraz_after_header', 'cf3_hook_archive_hero' );
 /**
  * Hook the portfolio hero.
  */
-function cf3_hook_portfolio_hero() {
+function cf3_hook_archive_hero() {
 
-	if ( ! is_archive( 'cf-portfolio' ) ) {
+	if ( ! ( is_archive( 'cf-portfolio' ) || is_category() )  ) {
 		return;
 	}
 

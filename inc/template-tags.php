@@ -213,12 +213,29 @@ function cf3_get_post_hero( $post_id = 0 ) {
 
 
 /**
- * Displays a hero image on the portfolio archive.
+ * Displays a hero image on an archive.
  */
 function cf3_archive_hero() {
 
-	$image = get_option( 'options_archive_hero' );
-	$image = wp_get_attachment_url( $image, 'hero-image' ); ?>
+	// Bail if we're not on an archive or category archive.
+	if ( ! is_archive() ) {
+		return;
+	}
+
+	// Get the image ID.
+	if ( is_category() ) {
+		$category = get_the_category();
+		$image    = get_term_meta( $category[0]->term_id, 'category_image', true );
+	} else {
+		$image = get_option( 'options_archive_hero' );
+	}
+
+	// Get attachment URL for background usage.
+	$image = wp_get_attachment_url( $image, 'hero-image' );
+
+	if ( empty( $image ) ) {
+		return;
+	} ?>
 
 	<section class="hero archive-hero image-as-background" style="background-image: url( '<?php echo esc_url( $image ); ?>' );"></section>
 	<?php
@@ -264,7 +281,7 @@ function cf3_get_portfolio_hero( $post_id = 0 ) {
  */
 function cf3_the_portfolio_hero( $post_id = 0 ) {
 
-	echo cf3_get_portfolio_hero( $post_id );; // WPCS: XSS OK.
+	echo cf3_get_portfolio_hero( $post_id ); // WPCS: XSS OK.
 }
 
 /**
