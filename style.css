@@ -1527,6 +1527,22 @@ a.color-black {
   fill: #000;
 }
 
+.pinks {
+  animation: pinks 3s linear infinite;
+}
+
+@keyframes pinks {
+  0% {
+    color: #ed1c72;
+  }
+  50% {
+    color: #eac5de;
+  }
+  100% {
+    color: #ed1c72;
+  }
+}
+
 .button,
 button,
 input[type='button'],
