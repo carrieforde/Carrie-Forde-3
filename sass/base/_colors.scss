@@ -17,3 +17,27 @@ a.color {
 .fill {
 	@include colors($theme-colors, fill);
 }
+
+
+//-----------------------------------------
+// Color changer
+//
+// Uses keyframes to cycle through colors.
+//-----------------------------------------
+.pinks {
+	animation: pinks 3s linear infinite;
+}
+
+@keyframes pinks {
+	0% {
+		color: color(razzmatazz);
+	}
+
+	50% {
+		color: color(classic-rose);
+	}
+
+	100% {
+		color: color(razzmatazz);
+	}
+}
