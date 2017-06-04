@@ -287,8 +287,8 @@ function cf3_post_type_for_pagination( $post_id = 0 ) {
 		case 'cf-portfolio' :
 			return 'Project';
 			break;
-		case 'alcatraz_patterns' :
-			return 'Pattern';
+		case 'wpcl-component' :
+			return 'Component';
 			break;
 		default :
 			return '';
