@@ -5,6 +5,8 @@
  * @package carrieforde
  */
 
+$type = cf3_post_type_for_pagination();
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -18,8 +20,6 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/content-single', get_post_type() ); ?>
-
-			<?php $type = cf3_post_type_for_pagination(); ?>
 
 			<?php the_post_navigation( array(
 				'prev_text' => '<h3><span class="post-navigation__span">Previous ' . $type . '</span>%title</h3>',

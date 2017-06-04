@@ -2043,9 +2043,9 @@ input {
 }
 
 .single-cf-portfolio .post-navigation,
-.single-alcatraz_patterns .post-navigation, .single-cf-portfolio
+.single-wpcl-component .post-navigation, .single-cf-portfolio
 .posts-navigation,
-.single-alcatraz_patterns
+.single-wpcl-component
 .posts-navigation {
   max-width: 100%;
 }
