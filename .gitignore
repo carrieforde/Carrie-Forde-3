@@ -3,3 +3,4 @@
 /lib/bourbon/
 /lib/neat/
 .DS_Store
+package-lock.json
