@@ -12,8 +12,8 @@ $accent = cf3_get_category_accent();
 
 	<div class="post-thumbnail post-card__image post-card--sticky__image">
 		<a href="<?php the_permalink(); ?>">
-			<?php if ( has_post_thumbnail( 'card-image' ) ) : ?>
-				<?php the_post_thumbnail(); ?>
+			<?php if ( has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail( 'card-image' ); ?>
 			<?php else : ?>
 				<?php echo wp_get_attachment_image( cf3_get_category_image( get_the_ID(), 'card-image' ), 'card-image' ); ?>
 			<?php endif; ?>
