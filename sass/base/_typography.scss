@@ -62,7 +62,7 @@ strong {
 a:not(.button) {
 	text-decoration: none;
 
-	article:not(.post-card):not(.portfolio-card) & {
+	article:not(.post-card):not(.portfolio-card):not(.component-content) & {
 		border-bottom: 2px solid color(razzmatazz);
 		color: color(charcoal);
 		transition: color 0.3s ease-in-out;
