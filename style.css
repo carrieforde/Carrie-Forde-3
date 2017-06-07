@@ -1786,13 +1786,13 @@ a:not(.button) {
   text-decoration: none;
 }
 
-article:not(.post-card):not(.portfolio-card) a:not(.button) {
+article:not(.post-card):not(.portfolio-card):not(.component-content) a:not(.button) {
   border-bottom: 2px solid #ed1c72;
   color: #424143;
   transition: color 0.3s ease-in-out;
 }
 
-article:not(.post-card):not(.portfolio-card) a:not(.button):hover, article:not(.post-card):not(.portfolio-card) a:not(.button):focus {
+article:not(.post-card):not(.portfolio-card):not(.component-content) a:not(.button):hover, article:not(.post-card):not(.portfolio-card):not(.component-content) a:not(.button):focus {
   color: #ed1c72;
   border-bottom-color: #ed1c72;
 }
@@ -1894,6 +1894,80 @@ input {
 .navigation-search.show {
   height: 58px;
   padding-bottom: 20px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  -moz-tab-size: 4;
+       tab-size: 4;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-family: "Fira Mono", monospace;
+  color: #424143;
+}
+
+pre[class*="language-"] {
+  padding: 12px;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 2px 6px;
+}
+
+code[class*="language-"] .namespace, pre[class*="language-"] .namespace {
+  opacity: .7;
+}
+
+code[class*="language-"] .token.comment, code[class*="language-"] .token.prolog, code[class*="language-"] .token.doctype, code[class*="language-"] .token.cdata, pre[class*="language-"] .token.comment, pre[class*="language-"] .token.prolog, pre[class*="language-"] .token.doctype, pre[class*="language-"] .token.cdata {
+  color: #bdbec0;
+}
+
+code[class*="language-"] .token.function, pre[class*="language-"] .token.function {
+  color: #ed1c72;
+}
+
+code[class*="language-"] .token.null, code[class*="language-"] .token.operator, code[class*="language-"] .token.boolean, code[class*="language-"] .token.number, pre[class*="language-"] .token.null, pre[class*="language-"] .token.operator, pre[class*="language-"] .token.boolean, pre[class*="language-"] .token.number {
+  color: #461775;
+}
+
+code[class*="language-"] .token.attr-name, code[class*="language-"] .token.string, pre[class*="language-"] .token.attr-name, pre[class*="language-"] .token.string {
+  color: #04be51;
+}
+
+code[class*="language-"] .token.entity, code[class*="language-"] .token.url,
+.language-css code[class*="language-"] .token.string,
+.style code[class*="language-"] .token.string, pre[class*="language-"] .token.entity, pre[class*="language-"] .token.url,
+.language-css pre[class*="language-"] .token.string,
+.style pre[class*="language-"] .token.string {
+  color: #04be51;
+}
+
+code[class*="language-"] .token.atrule, code[class*="language-"] .token.attr-value, code[class*="language-"] .token.keyword, code[class*="language-"] .token.control, code[class*="language-"] .token.directive, code[class*="language-"] .token.important, code[class*="language-"] .token.unit, pre[class*="language-"] .token.atrule, pre[class*="language-"] .token.attr-value, pre[class*="language-"] .token.keyword, pre[class*="language-"] .token.control, pre[class*="language-"] .token.directive, pre[class*="language-"] .token.important, pre[class*="language-"] .token.unit {
+  color: #0075c4;
+}
+
+code[class*="language-"] .token.property, code[class*="language-"] .token.tag, pre[class*="language-"] .token.property, pre[class*="language-"] .token.tag {
+  color: #461775;
+}
+
+code[class*="language-"] .token.important, code[class*="language-"] .token.statement, pre[class*="language-"] .token.important, pre[class*="language-"] .token.statement {
+  font-weight: bold;
+}
+
+code[class*="language-"] .token.punctuation, pre[class*="language-"] .token.punctuation {
+  color: #bebec5;
+}
+
+code[class*="language-"] .token.entity, pre[class*="language-"] .token.entity {
+  cursor: help;
+}
+
+code[class*="language-"] .token.debug, pre[class*="language-"] .token.debug {
+  color: red;
 }
 
 .post-card {
@@ -2010,25 +2084,12 @@ input {
 .hero {
   height: 60vh;
   width: 100%;
-  position: relative;
-}
-
-.hero-acf {
   line-height: 1.5;
+  position: relative;
   text-align: center;
 }
 
-.hero-acf:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  content: '';
-}
-
-.hero-acf__text {
+.hero__text {
   position: absolute;
   top: 50%;
   left: 45%;
@@ -2038,8 +2099,12 @@ input {
   z-index: 3;
 }
 
-.hero-acf__title {
+.hero__title {
   margin-bottom: 0;
+}
+
+.single-wpcl-component .hero {
+  margin-top: 0;
 }
 
 .post-navigation,
@@ -2338,6 +2403,15 @@ input {
   margin-bottom: 0;
 }
 
+.full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
 .grid--one-two-three::after {
   clear: both;
   content: "";
@@ -2400,6 +2474,27 @@ input {
 
 .post-type-archive-cf-portfolio {
   background-color: #eee;
+}
+
+.single-wpcl-component .site-content {
+  overflow: visible;
+}
+
+.single-wpcl-component .code-implementation {
+  margin-top: 3.75rem;
+}
+
+.single-wpcl-component .ui-state-default a {
+  color: #424143;
+}
+
+.single-wpcl-component .ui-state-default a:hover {
+  border: none;
+  color: #eac5de;
+}
+
+.single-wpcl-component .ui-tabs-active a {
+  color: #ed1c72;
 }
 
 @media only screen and (min-width: 25em) {
@@ -2730,7 +2825,7 @@ input {
     float: left;
     margin-left: 20px;
   }
-  .hero-acf__text {
+  .hero__text {
     font-size: initial;
   }
   .main-navigation {
@@ -2762,7 +2857,7 @@ input {
     font-size: 1.25em;
     left: 60px;
   }
-  .hero-acf__text {
+  .hero__text {
     font-size: 1.2em;
   }
 }
@@ -2793,7 +2888,7 @@ input {
 }
 
 @media (max-width: 600px) {
-  .hero-acf__text {
+  .hero__text {
     display: none;
   }
 }
