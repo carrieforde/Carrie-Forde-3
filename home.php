@@ -24,17 +24,15 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<div class="blog-grid masonry">
-				<?php echo cf3_get_sticky_post( array( 'template_part' => 'template-parts/content-post-card-sticky' ) ); ?>
+				<?php echo cf3_get_sticky_post( array( // WPCS: XSS OK.
+					'template_part' => 'template-parts/content-post-card-sticky',
+				) ); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						// Get the template based on the post type from a child theme if it's there,
-						// otherwise use ours.
-						get_template_part( 'template-parts/content', get_post_type() . '-card' );
-					?>
-
-				<?php endwhile; ?>
+				<?php echo cf3_fetch_posts( array( // WPCS: XSS OK.
+					'offset' => 1,
+					'posts_per_page' => 8,
+					'template_part' => 'template-parts/content-post-card',
+				) ); ?>
 			</div>
 
 			<?php $type = cf3_post_type_for_pagination(); ?>
