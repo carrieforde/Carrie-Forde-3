@@ -2,6 +2,11 @@
 // GRID
 //--------------------------------------------------------------
 
+// Makes a section extend teh full width of the viewport.
+.full-width {
+	@include full-width;
+}
+
 //-----------------------------------------
 // Grid One, Two, Three
 //
