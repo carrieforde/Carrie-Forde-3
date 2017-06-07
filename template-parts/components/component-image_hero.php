@@ -25,7 +25,7 @@ if ( empty( $image ) ) {
 }
 
 // Start the markup. 🎉 ?>
-<section class="hero image-as-background" style="background-image: url( <?php echo esc_url( $image ); ?> );" role="dialog" aria-labelledby="hero-title" aria-describedby="hero-description">
+<section class="hero image-as-background full-width" style="background-image: url( <?php echo esc_url( $image ); ?> );" role="dialog" aria-labelledby="hero-title" aria-describedby="hero-description">
 
 	<?php if ( ! empty( $title ) || ! empty( $description ) ) : ?>
 		<div class="hero__text">
