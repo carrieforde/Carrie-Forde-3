@@ -3,30 +3,15 @@
 //--------------------------------------------------------------
 .hero {
 	@include size(100% 60vh);
-	
+
+	line-height: 1.5;
 	position: relative;
+	text-align: center;
 
 	@include grid-media($tablet-portrait-up) {
 		margin-top: -115px;
 		z-index: -2;
 	}
-}
-
-
-//-----------------------------------------
-// Hero ACF
-//-----------------------------------------
-.hero-acf {
-	line-height: 1.5;
-	text-align: center;
-
-	&:after {
-		@include position(absolute, 0 0 0 0);
-
-		background-color: rgba(color(white), 0.3);
-		content: '';
-	}
-
 
 	@include element(text) {
 		@include position(absolute, 50% null null 45%);
@@ -51,5 +36,12 @@
 
 	@include element(title) {
 		margin-bottom: 0;
+	}
+
+	//-----------------------------------------
+	// Overrides
+	//-----------------------------------------
+	.single-wpcl-component & {
+		margin-top: 0;
 	}
 }
