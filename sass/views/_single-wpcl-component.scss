@@ -2,6 +2,10 @@
 // SINGLE WPCL COMPONENT
 //--------------------------------------------------------------
 .single-wpcl-component {
+
+	.site-content {
+		overflow: visible;
+	}
 	
 	.code-implementation {
 		margin-top: rem(60);
