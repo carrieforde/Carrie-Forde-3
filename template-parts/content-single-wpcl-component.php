@@ -8,7 +8,7 @@
 
 <?php do_action( 'alcatraz_before_entry' ); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'component-content' ); ?>>
 
 	<?php alcatraz_the_entry_header(); ?>
 
