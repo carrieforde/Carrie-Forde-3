@@ -481,6 +481,10 @@ textarea {
   width: 100%;
 }
 
+select {
+  border: 1px solid #d9d5dc;
+}
+
 .search-form {
   line-height: 1;
   position: relative;
@@ -2403,6 +2407,124 @@ code[class*="language-"] .token.debug, pre[class*="language-"] .token.debug {
   margin-bottom: 0;
 }
 
+.gform_body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gfield::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.gfield + .gfield {
+  margin-top: 1.25rem;
+}
+
+.gfield.gsection {
+  margin-top: 2.5rem;
+}
+
+.gsection_title {
+  margin-bottom: 0;
+}
+
+.gfield_required {
+  color: #ed1c72;
+}
+
+label {
+  margin-bottom: 0.3125rem;
+}
+
+label:not(.gfield_label) {
+  font-size: 0.8em;
+  margin-bottom: 0;
+}
+
+.ginput_container .medium {
+  width: 100%;
+}
+
+.ginput_container .large {
+  width: 100%;
+}
+
+.name_first input,
+.name_last input {
+  width: 100%;
+}
+
+.name_last {
+  margin-left: 1.25rem;
+}
+
+.gf_name_has_2 .name_first,
+.gf_name_has_2 .name_last {
+  display: inline-block;
+  float: left;
+  width: calc(50% - 10px);
+}
+
+.gform_validation_container {
+  display: none !important;
+}
+
+.gform_footer {
+  margin-top: 2.5rem;
+}
+
+.gfield_description {
+  font-size: 0.8em;
+  margin-bottom: 0.625rem;
+}
+
+.gfield_checkbox li::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.gfield_checkbox li + li {
+  margin-top: 0.9375rem;
+}
+
+.gfield_checkbox label {
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+}
+
+.gfield_checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.gfield_checkbox input[type="checkbox"] + label {
+  padding-left: 1.875rem;
+  line-height: 1.25rem;
+  position: relative;
+}
+
+.gfield_checkbox input[type="checkbox"] + label:before {
+  position: absolute;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  border: 1px solid #d9d5dc;
+  content: '';
+  float: left;
+}
+
+.gfield_checkbox input[type="checkbox"]:checked + label:before {
+  content: '\f00c';
+  color: #ed1c72;
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  line-height: 16px;
+}
+
 .full-width {
   left: 50%;
   margin-left: -50vw;
@@ -2566,6 +2688,9 @@ code[class*="language-"] .token.debug, pre[class*="language-"] .token.debug {
     float: left;
     margin-left: 20px;
     float: right;
+  }
+  .ginput_container .medium {
+    width: calc(50% - 10px);
   }
   .grid--one-two-three {
     margin-left: -25px;
