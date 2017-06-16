@@ -18,9 +18,7 @@
 	@include grid-container;
 
 	@include grid-media($tablet-portrait-up) {
-		// Neat does some weird stuff where the contents appear to pad in 2 times the gutter. This corrects that.
-		margin-left: -25px;
-		margin-right: -25px;
+		@include grid-collapse($card-grid);
 
 		.alcatraz-col--4 {
 			@include grid-column(6, $card-grid);
@@ -28,6 +26,7 @@
 	}
 
 	@include grid-media($tablet-landscape-up) {
+		@include grid-collapse($card-grid);
 
 		.alcatraz-col--4 {
 			@include grid-column(4, $card-grid);
@@ -45,9 +44,7 @@
 	@include grid-container;
 
 	@include grid-media($tablet-portrait-up) {
-		// Neat does some weird stuff where the contents appear to pad in 2 times the gutter. This corrects that.
-		margin-left: -25px;
-		margin-right: -25px;
+		@include grid-collapse($card-grid);
 
 		.alcatraz-col--6 {
 			@include grid-column(6, $card-grid);
