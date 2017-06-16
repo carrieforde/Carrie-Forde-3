@@ -1,0 +1,64 @@
+ {		
+  "key": "group_589bc70e06a25",		
+  "title": "Theme Colors",		
+  "fields": [		
+  {		
+  "key": "field_589bc7140125e",		
+  "label": "Theme Colors",		
+  "name": "theme_colors",		
+  "type": "select",		
+  "instructions": "Select a theme color. This may appear throughout the theme as an accent color.",		
+  "required": 0,		
+  "conditional_logic": 0,		
+  "wrapper": {		
+  "width": "",		
+  "class": "",		
+  "id": ""		
+  
+            },		
+  "choices": {		
+  "razzmatazz": "Razzmatazz",		
+  "lightening yellow": "Lightening Yellow",		
+  "neon carrot": "Neon Carrot",		
+  "honey flower": "Honey Flower",		
+  "ocean boat blue": "Ocean Boat Blue",		
+  "dark pastel green": "Dark Pastel Green"		
+  
+            },		
+  "default_value": [		
+  "razzmatazz"		
+  
+            ],		
+  "allow_null": 0,		
+  "multiple": 0,		
+  "ui": 0,		
+  "ajax": 0,		
+  "return_format": "value",		
+  "placeholder": ""		
+  
+        }		
+  
+    ],		
+  "location": [		
+  [		
+  {		
+  "param": "post_type",		
+  "operator": "==",		
+  "value": "post"		
+  
+            }		
+  
+        ]		
+  
+    ],		
+  "menu_order": 0,		
+  "position": "normal",		
+  "style": "default",		
+  "label_placement": "top",		
+  "instruction_placement": "label",		
+  "hide_on_screen": "",		
+  "active": 0,		
+  "description": "",		
+  "modified": 1496076301		
+  
+}
