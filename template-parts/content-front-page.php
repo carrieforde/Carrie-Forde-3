@@ -27,10 +27,7 @@
 			<h2 class="module__heading"><?php esc_html_e( 'Upcoming Talks', 'carrieforde3' ); ?></h2>
 		</header>
 
-		<?php echo cf3_fetch_posts( array( // WPCS: XSS OK.
-			'post_type'     => 'cf-speaking',
-			'template_part' => 'template-parts/content-speaking-card',
-		) ); ?>
+		<?php cf3_fetch_upcoming_speaking_post(); ?>
 	</section>
 
 	<?php alcatraz_the_entry_footer(); ?>
