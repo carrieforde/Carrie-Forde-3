@@ -22,24 +22,30 @@
 		?>
 	</div>
 
-	<section class="module speaking-module">
-		<header>
-			<h2 class="module__heading"><?php esc_html_e( 'Upcoming Talk', 'carrieforde3' ); ?></h2>
-		</header>
+	<section class="module speaking-module full-width">
 
-		<?php cf3_fetch_upcoming_speaking_post(); ?>
+		<div class="row">
+			<header>
+				<h2 class="module__heading"><?php esc_html_e( 'Upcoming Talk', 'carrieforde3' ); ?></h2>
+			</header>
 
-		<footer>
-			<a href="<?php echo esc_url( get_site_url( null, '/speaking/', null ) ); ?>" class="button"><?php esc_html_e( 'View All Talks', 'carrieforde3' ); ?></a>
-		</footer>
+			<?php cf3_fetch_upcoming_speaking_post(); ?>
+
+			<footer>
+				<a href="<?php echo esc_url( get_site_url( null, '/speaking/', null ) ); ?>" class="button"><?php esc_html_e( 'View All Talks', 'carrieforde3' ); ?></a>
+			</footer>
+		</div>
 	</section>
 
-	<section class="module open-source-project-module">
-		<header>
-			<h2 class="module__heading"><?php esc_html_e( 'I ❤️ Open Source', 'carrieforde' ); ?></h2>
-		</header>
+	<section class="module open-source-project-module full-width background-white-smoke">
 
-		<?php echo cf3_fetch_posts( array( 'category' => 'open-source', 'template_part' => 'template-parts/content-post-card-sticky' ) ); // WPCS: XSS OK. ?>
+		<div class="row">
+			<header>
+				<h2 class="module__heading"><?php esc_html_e( 'I ❤️ Open Source', 'carrieforde' ); ?></h2>
+			</header>
+
+			<?php echo cf3_fetch_posts( array( 'category' => 'open-source', 'template_part' => 'template-parts/content-post-card-sticky' ) ); // WPCS: XSS OK. ?>
+		</div>
 	</section>
 
 	<?php alcatraz_the_entry_footer(); ?>
