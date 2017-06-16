@@ -54,6 +54,10 @@
 		}
 	}
 
+	@include element(content) {
+		margin-top: 0;
+	}
+
 	&:hover {
 
 		.portfolio-card__header {
