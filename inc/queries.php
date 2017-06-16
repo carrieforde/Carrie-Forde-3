@@ -25,9 +25,8 @@ function cf3_fetch_posts( $args = array() ) {
 		'category_name'       => esc_attr( $args['category_name'] ),
 		'ignore_sticky_posts' => 1,
 		'post_type'           => esc_attr( $args['post_type'] ),
-		// 'posts_per_page'      => intval( $args['posts_per_page'] ),
+		'posts_per_page'      => intval( $args['posts_per_page'] ),
 		'post__not_in'        => array_map( 'esc_attr', $args['post__not_in'] ),
-		'offset' => intval( $args['offset'] ),
 	);
 
 	$posts = new WP_Query( $post );
