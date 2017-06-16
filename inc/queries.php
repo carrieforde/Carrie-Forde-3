@@ -198,3 +198,37 @@ function cf3_the_related_posts() {
 
 	echo cf3_get_related_posts();
 }
+
+/**
+ * Grab the next upcoming speaking gig.
+ */
+function cf3_fetch_upcoming_speaking_post( $args = array() ) {
+
+	$post = array(
+		'post_type'      => 'cf-speaking',
+		'posts_per_page' => 1,
+		'orderby'        => 'meta_value',
+		'order'          => 'ASC',
+		'meta_query'     => array(
+			array(
+				'key'     => 'event_date_time',
+				'value'   => date( 'Y-m-d H:i:s' ),
+				'compare' => '>=',
+			)
+		)
+	);
+
+	$posts = new WP_Query( $post );
+
+	if ( $posts->have_posts() ) {
+
+		while ( $posts->have_posts() ) {
+
+			$posts->the_post();
+
+			get_template_part( 'template-parts/content', 'speaking-card' );
+		}
+	}
+
+	wp_reset_postdata();
+}
