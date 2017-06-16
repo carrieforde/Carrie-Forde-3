@@ -24,10 +24,14 @@
 
 	<section class="module speaking-module">
 		<header>
-			<h2 class="module__heading"><?php esc_html_e( 'Upcoming Talks', 'carrieforde3' ); ?></h2>
+			<h2 class="module__heading"><?php esc_html_e( 'Upcoming Talk', 'carrieforde3' ); ?></h2>
 		</header>
 
 		<?php cf3_fetch_upcoming_speaking_post(); ?>
+
+		<footer>
+			<a href="<?php echo esc_url( get_site_url( null, '/speaking/', null ) ); ?>" class="button"><?php esc_html_e( 'View All Talks', 'carrieforde3' ); ?></a>
+		</footer>
 	</section>
 
 	<?php alcatraz_the_entry_footer(); ?>
