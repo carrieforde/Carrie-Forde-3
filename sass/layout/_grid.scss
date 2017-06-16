@@ -2,9 +2,24 @@
 // GRID
 //--------------------------------------------------------------
 
-// Makes a section extend teh full width of the viewport.
+// Makes a section extend the full width of the viewport.
 .full-width {
 	@include full-width;
+}
+
+.module {
+	padding: $size__padding * 3 $size__padding $size__padding * 4;
+
+	@include grid-media($tablet-portrait-up) {
+		padding: $size__padding * 4 $size__padding $size__padding * 5;
+	}
+}
+
+.row {
+	@include center;
+
+	max-width: 100%;
+	width: $size__layout-boxed-content;
 }
 
 //-----------------------------------------
