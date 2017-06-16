@@ -2076,6 +2076,10 @@ code[class*="language-"] .token.debug, pre[class*="language-"] .token.debug {
   transition: background-color 0.3s ease-in-out;
 }
 
+.portfolio-card__content {
+  margin-top: 0;
+}
+
 .portfolio-card:hover .portfolio-card__header {
   display: block;
   transition: background-color 0.3s ease-in-out;
@@ -2695,6 +2699,7 @@ label:not(.gfield_label) {
   .grid--one-two-three {
     margin-left: -25px;
     margin-right: -25px;
+    width: calc(100% + 50px);
   }
   .grid--one-two-three .alcatraz-col--4 {
     width: calc(50% - 37.5px);
@@ -2704,6 +2709,7 @@ label:not(.gfield_label) {
   .grid--one-two {
     margin-left: -25px;
     margin-right: -25px;
+    width: calc(100% + 50px);
   }
   .grid--one-two .alcatraz-col--6 {
     width: calc(50% - 37.5px);
@@ -2958,6 +2964,11 @@ label:not(.gfield_label) {
   }
   .mobile-nav-style-slide-right .main-navigation {
     background-color: transparent;
+  }
+  .grid--one-two-three {
+    margin-left: -25px;
+    margin-right: -25px;
+    width: calc(100% + 50px);
   }
   .grid--one-two-three .alcatraz-col--4 {
     width: calc(33.3333333333% - 33.3333333333px);
