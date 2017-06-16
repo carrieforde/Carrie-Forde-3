@@ -5,6 +5,10 @@
  * @package carrieforde3
  */
 
+// Set up a few variables.
+$type = cf3_post_type_for_pagination();
+$i    = 0; // an iterator to help us grab the right post card.
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -24,18 +28,20 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<div class="blog-grid masonry">
-				<?php echo cf3_get_sticky_post( array( // WPCS: XSS OK.
-					'template_part' => 'template-parts/content-post-card-sticky',
-				) ); ?>
+				
+				<?php while ( have_posts() ) : the_post(); ?>
+						
+						<?php if ( 0 === $i ) :
+							get_template_part( 'template-parts/content-post-card-sticky' );
 
-				<?php echo cf3_fetch_posts( array( // WPCS: XSS OK.
-					'offset' => 1,
-					'posts_per_page' => 8,
-					'template_part' => 'template-parts/content-post-card',
-				) ); ?>
+						else :
+							get_template_part( 'template-parts/content-post-card' );
+						endif; ?>
+
+					<?php $i++; ?>
+				<?php endwhile; ?>
+
 			</div>
-
-			<?php $type = cf3_post_type_for_pagination(); ?>
 
 			<?php the_posts_navigation( array(
 				'prev_text' => '<h3>Older ' . $type . 's</h3>',
