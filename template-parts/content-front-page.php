@@ -34,6 +34,14 @@
 		</footer>
 	</section>
 
+	<section class="module open-source-project-module">
+		<header>
+			<h2 class="module__heading"><?php esc_html_e( 'I ❤️ Open Source', 'carrieforde' ); ?></h2>
+		</header>
+
+		<?php echo cf3_fetch_posts( array( 'category' => 'open-source', 'template_part' => 'template-parts/content-post-card-sticky' ) ); // WPCS: XSS OK. ?>
+	</section>
+
 	<?php alcatraz_the_entry_footer(); ?>
 </article>
 
