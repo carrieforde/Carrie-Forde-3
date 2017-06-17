@@ -2,5 +2,46 @@
 // CARD
 //--------------------------------------------------------------
 .card {
-	
-}
+	background-color: color(white);
+	box-shadow: $box-shadow__card;
+	font-size: em(16);
+	max-width: rem(600);
+
+	&.hentry {
+		margin-bottom: gutter($card-grid);
+	}
+
+	// An inner wrap is needed for the posts grid layout. Otherwise, without the padding, the posts will break across columns.
+	@include element(inner-wrap) {
+		padding: $size__padding;
+	}
+
+	@include element(image) {
+		margin: rem(-20) rem(-20) rem(18);
+		position: relative;
+
+		img {
+			display: block;
+		}
+	}
+
+	@include element(title) {
+		margin-bottom: 0.25em;
+
+		a {
+			color: $color__headings;
+			text-decoration: none;
+
+			&:hover {
+				color: rgba($color__headings, 0.8);
+			}
+		}
+	}
+
+	@include element(content) {
+
+		p {
+			margin-bottom: 0.75em;
+		}
+	}
+} // .card
