@@ -12,10 +12,10 @@
 
 	<?php alcatraz_the_entry_header(); ?>
 
-	<section class="module newsletter-module full-width background-razzmatazz color-white">
+	<section class="module module-sm-padding newsletter-module full-width background-razzmatazz color-white">
 
-		<div class="row">
-			<h2 class="color-white"><?php esc_html_e( 'Get dev tips & tricks in your inbox!', 'carrieforde3' ); ?></h2>
+		<div class="row row-flex">
+			<h2 class="h3 color-white"><?php esc_html_e( 'Tips & tricks in your inbox!', 'carrieforde3' ); ?></h2>
 			<?php echo do_shortcode( '[gravityform id="16" title="false" description="false"]' ); ?>
 		</div>
 	</section>
