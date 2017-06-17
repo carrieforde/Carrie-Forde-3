@@ -25,7 +25,7 @@
 		</div>
 
 		<footer class="entry-footer speaking-card__footer">
-			<a href="<?php the_permalink(); ?>" class="button button--text color-razzmatazz"><?php esc_html_e( 'Read More', 'carrieforde' ); ?></a>
+			<a href="<?php the_permalink(); ?>" class="button button--text color-razzmatazz"><?php esc_html_e( 'More Details', 'carrieforde' ); ?></a>
 		</footer>
 	</div>
 </article>
