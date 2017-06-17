@@ -334,3 +334,21 @@ function cf3_the_navigation_search() {
 
 	echo cf3_get_navigation_search(); // WPCS: XSS OK.
 }
+
+/**
+ * Echo the post thumbnail, or the category image.
+ *
+ * @param  int  The post ID.
+ */
+function cf3_the_post_image( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail( 'card-image' );
+	} else {
+		echo wp_get_attachment_image( cf3_get_category_image( get_the_ID(), 'card-image' ), 'card-image' );
+	}
+}
