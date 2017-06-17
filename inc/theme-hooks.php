@@ -60,7 +60,7 @@ function cf3_hook_acf_hero() {
 		return;
 	}
 
-	cf3_the_acf_hero();
+	get_template_part( 'template-parts/components/component', 'image_hero' );
 }
 
 add_action( 'alcatraz_after_header', 'cf3_hook_archive_hero' );
