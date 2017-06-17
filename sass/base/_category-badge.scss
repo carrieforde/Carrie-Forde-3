@@ -19,7 +19,7 @@
 	//-----------------------------------------
 	// Post Card
 	//-----------------------------------------
-	.post-card & {
+	.card & {
 		@include position(absolute, null null -10px 10px);
 	}
 

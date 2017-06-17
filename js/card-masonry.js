@@ -18,7 +18,7 @@ window.CF_Card_Masonry = {};
 		app.$c = {
 			window: $( window ),
 			masonry: $( '.masonry' ),
-			postCard: $( '.post-card' ),
+			postCard: $( '.card' ),
 		};
 	};
 
@@ -41,7 +41,7 @@ window.CF_Card_Masonry = {};
 	app.doMasonry = function() {
 
 		app.$c.masonry.masonry({
-			itemSelector: '.post-card',
+			itemSelector: '.card',
 			columnWidth: '.alcatraz-col--4',
 			percentPosition: true,
 		});
