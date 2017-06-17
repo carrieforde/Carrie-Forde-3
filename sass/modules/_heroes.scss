@@ -10,7 +10,6 @@
 
 	@include grid-media($tablet-portrait-up) {
 		margin-top: -115px;
-		z-index: -2;
 	}
 
 	@include element(text) {
@@ -19,7 +18,6 @@
 		font-size: 0.8em;
 		transform: translateY(-50%);
 		width: 45%;
-		z-index: 3;
 
 		@media (max-width: 600px) {
 			display: none;
