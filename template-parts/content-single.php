@@ -15,13 +15,15 @@ if ( is_singular( 'cf-speaking' ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-content' ); ?>>
 
+	<?php if ( is_singular( 'cf-speaking' ) ) : ?>
+		<?php echo apply_filters( 'the_content', $video ); // WPCS: XSS OK. ?>
+	<?php endif; ?>
+
 	<?php alcatraz_the_entry_header(); ?>
 
 	<div class="entry-content">
 		
 		<?php if ( is_singular( 'cf-speaking' ) ) : ?>
-			<?php echo apply_filters( 'the_content', $video ); // WPCS: XSS OK. ?>
-
 			<?php cf3_the_speaking_meta(); ?>
 		<?php endif; ?>
 
