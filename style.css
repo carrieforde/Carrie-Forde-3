@@ -2683,6 +2683,10 @@ label:not(.gfield_label) {
   margin-bottom: 0;
 }
 
+.custom-logo {
+  width: 100%;
+}
+
 .logo-sticky {
   display: none;
 }
