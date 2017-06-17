@@ -12,15 +12,13 @@
 
 	<?php alcatraz_the_entry_header(); ?>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'alcatraz' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div>
+	<section class="module newsletter-module full-width background-razzmatazz color-white">
+
+		<div class="row">
+			<h2 class="color-white"><?php esc_html_e( 'Get dev tips & tricks in your inbox!', 'carrieforde3' ); ?></h2>
+			<?php echo do_shortcode( '[gravityform id="16" title="false" description="false"]' ); ?>
+		</div>
+	</section>
 
 	<section class="module speaking-module full-width">
 
