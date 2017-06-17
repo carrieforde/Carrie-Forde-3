@@ -112,3 +112,7 @@ blockquote {
 		font-weight: 600;
 	}
 }
+
+::selection {
+	background-color: $color__selection;
+}
