@@ -2,5 +2,31 @@
 // SPEAKING META
 //--------------------------------------------------------------
 .speaking-meta {
-	
+	border: 1px solid color(iron);
+	margin-bottom: 1.5em;
+	padding: 15px;
+
+	@include grid-media($tablet-landscape-up) {
+		@include grid-column(4);
+
+		float: right;
+	}
+
+	@include element(heading) {
+
+		h3 {
+			font-size: 1.25em;
+			margin-bottom: 1.25em;
+		}
+	}
+
+	h4 {
+		font-size: 1.1em;
+		margin-bottom: 0 !important;
+		margin-top: 0 !important;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
 }
