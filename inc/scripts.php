@@ -12,7 +12,7 @@ function cf3_enqueue_scripts() {
 	// Google fonts.
 	wp_enqueue_style(
 		'carrieforde3-google-fonts',
-		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:600,900' ),
+		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:600,900|Montserrat:300,400' ),
 		array(),
 		CARRIEFORDE3_VERSION
 	);
