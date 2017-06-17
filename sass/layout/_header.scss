@@ -5,21 +5,12 @@
 	align-items: center;
 	background-color: rgba(color(white), 0.9);
 	display: flex;
+	position: relative;
+	z-index: 3;
 
 	@include grid-media($tablet-portrait-up) {
 		box-shadow: $box-shadow__card;
 		justify-content: space-between;
-		
-		.admin-bar & {
-			top: 46px !important;
-		}
-	}
-
-	@include grid-media($wp-admin-bar) {
-
-		.admin-bar & {
-			top: 32px !important;
-		}
 	}
 
 	.home & {
