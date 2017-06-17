@@ -15,11 +15,32 @@
 	}
 }
 
+.module-sm-padding {
+	padding-bottom: $size__padding;
+	padding-top: $size__padding;
+
+	@include grid-media($tablet-landscape-up) {
+		padding-bottom: $size__padding;
+		padding-top: $size__padding;
+	}
+}
+
 .row {
 	@include center;
 
 	max-width: 100%;
 	width: $size__layout-boxed-content;
+}
+
+.row-flex {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include grid-media($tablet-landscape-up) {
+		flex-direction: row;
+	}
 }
 
 //-----------------------------------------
