@@ -328,14 +328,15 @@ p {
 
 a {
   color: #ed1c72;
+  transition: color 0.3s ease-in-out;
 }
 
 a:visted {
-  color: #d51967;
+  color: #ed1c72;
 }
 
 a:hover, a:active {
-  color: #f2609c;
+  color: rgba(237, 28, 114, 0.8);
 }
 
 abbr[title] {
@@ -365,7 +366,7 @@ cite {
 
 ins,
 mark {
-  background-color: #fff9c0;
+  background-color: rgba(255, 196, 23, 0.3);
   text-decoration: none;
 }
 
@@ -1795,7 +1796,6 @@ a:not(.button) {
 article:not(.post-card):not(.portfolio-card):not(.component-content) a:not(.button) {
   border-bottom: 2px solid #ed1c72;
   color: #424143;
-  transition: color 0.3s ease-in-out;
 }
 
 article:not(.post-card):not(.portfolio-card):not(.component-content) a:not(.button):hover, article:not(.post-card):not(.portfolio-card):not(.component-content) a:not(.button):focus {
@@ -1836,6 +1836,14 @@ blockquote:before {
 blockquote cite {
   display: block;
   font-weight: 600;
+}
+
+::-moz-selection {
+  background-color: rgba(237, 28, 114, 0.4);
+}
+
+::selection {
+  background-color: rgba(237, 28, 114, 0.4);
 }
 
 .category-badge {
