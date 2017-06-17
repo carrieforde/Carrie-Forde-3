@@ -47,7 +47,7 @@ function cf3_get_post_terms( $post_id = 0, $taxonomy = '', $args = array() ) {
  * @param   int     The post ID.
  * @return  string  The category badge markup.
  */
-function cf3_get_post_card_category_badge( $post_id = 0 ) {
+function cf3_get_post_category_badge( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -66,6 +66,14 @@ function cf3_get_post_card_category_badge( $post_id = 0 ) {
 	);
 
 	return $output;
+}
+
+/**
+ * Echo the post category badge.
+ */
+function cf3_the_post_category_badge( $post_id = 0 ) {
+
+	echo cf3_get_post_category_badge( $post_id ); // WPCS: XSS OK.
 }
 
 /**
@@ -204,7 +212,7 @@ function cf3_get_post_hero( $post_id = 0 ) {
 
 	<section class="hero post-hero image-as-background" style="background-image: url( <?php echo esc_url( $image ); ?> );">
 		<?php if ( is_singular( 'post' ) ) : ?>
-			<?php echo cf3_get_post_card_category_badge( $post_id ); ?>
+			<?php cf3_the_post_category_badge( $post_id ); ?>
 		<?php endif; ?>
 	</section>
 
