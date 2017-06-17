@@ -64,8 +64,8 @@ $color__checkbox-border: color(iron);
 $color__body-text: color(charcoal);
 $color__hr: color(iron);
 $color__link: color(razzmatazz);
-$color__link-hover: tint(color(razzmatazz), 30%);
-$color__link-visited: shade(color(razzmatazz), 10%);
+$color__link-hover: rgba(color(razzmatazz), 0.8);
+$color__link-visited: color(razzmatazz);
 $color__pre-border: color(iron);
 $color__headings: color(mine-shaft);
 
