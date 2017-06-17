@@ -116,3 +116,57 @@ function cf3_the_portfolio_meta( $post_id = 0 ) {
 
 	echo cf3_get_portfolio_meta( $post_id ); // WPCS: XSS OK.
 }
+
+/**
+ * Build the speaking meta markup.
+ *
+ * @param   int     The ID of the speaking post.
+ *
+ * @return  srting  The meta markup.
+ */
+function cf3_get_speaking_meta( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	// Get the data.
+	$event_name      = get_post_meta( $post_id, 'event_name', true );
+	$event_time_date = get_post_meta( $post_id, 'event_date_time', true );
+	$event_website   = get_post_meta( $post_id, 'event_website', true );
+
+	$date = strtotime( $event_time_date );
+	$day  = date( 'l, F d, Y', $date );
+	$time = date( 'g:i a', $date );
+	
+	ob_start(); ?>
+
+	<aside class="speaking-meta">
+
+		<header class="speaking-meta__header">
+			<h3><?php echo esc_html( $event_name ); ?></h3>
+		</header>
+
+		<div class="speaking-meta__content">
+			<h4><?php esc_html_e( 'Date', 'carrieforde3' ); ?></h4>
+			<?php echo wp_kses_post( wpautop( $day ) ); ?>
+		
+			<h4><?php esc_html_e( 'Time', 'carrieforde3' ); ?></h4>
+			<?php echo wp_kses_post( wpautop( $time ) ); ?>
+		</div>
+		
+		<footer class="speaking-meta__footer">
+			<a href="<?php echo esc_html( $event_website ); ?>" class="button"><?php esc_html_e( 'Event Website', 'carrieforde3' ); ?></a>
+		</footer>
+	</aside>
+
+	<?php return ob_get_clean();
+}
+
+/**
+ * Echo the speaking meta.
+ */
+function cf3_the_speaking_meta( $post_id = 0 ) {
+
+	echo cf3_get_speaking_meta( $post_id ); // WPCS: XSS OK.
+}
