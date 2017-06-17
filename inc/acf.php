@@ -138,12 +138,12 @@ function cf3_get_speaking_meta( $post_id = 0 ) {
 	$date = strtotime( $event_time_date );
 	$day  = date( 'l, F d, Y', $date );
 	$time = date( 'g:i a', $date );
-	
+
 	ob_start(); ?>
 
 	<aside class="speaking-meta">
 
-		<header class="speaking-meta__header">
+		<header class="speaking-meta__heading">
 			<h3><?php echo esc_html( $event_name ); ?></h3>
 		</header>
 
