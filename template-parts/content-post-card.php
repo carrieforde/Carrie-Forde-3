@@ -8,7 +8,7 @@
 $accent = cf3_get_category_accent();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'alcatraz-col--4 post-card' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card card--post alcatraz-col--4 post-card' ); ?>>
 	<div class="post-card__inner-wrap">
 		<div class="post-thumbnail post-card__image">
 			<a href="<?php the_permalink(); ?>">

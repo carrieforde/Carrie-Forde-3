@@ -1,12 +1,12 @@
 <?php
 /**
- * Template for Post cards.
+ * Template for Speaking cards.
  *
  * @package carrieforde3
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'speaking-card' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card card--speaking speaking-card' ); ?>>
 	<div class="speaking-card__inner-wrap">
 		<div class="post-thumbnail speaking-card__image">
 			<a href="<?php the_permalink(); ?>">
