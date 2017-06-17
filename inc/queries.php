@@ -166,21 +166,24 @@ function cf3_get_related_posts( $post_id = 0 ) {
 
 		ob_start(); ?>
 
-		<section class="related-posts">
-			<header class="related-posts__header">
-				<h2 class="related-posts__title"><?php esc_html_e( 'Related Posts', 'carrieforde3' ); ?></h2>
-			</header>
+		<section class="module related-posts">
 
-			<div class="grid--one-two-three masonry">
+			<div class="row">
+				<header class="related-posts__header">
+					<h2 class="related-posts__title"><?php esc_html_e( 'Related Posts', 'carrieforde3' ); ?></h2>
+				</header>
 
-				<?php while ( $related_posts->have_posts() ) :
+				<div class="grid--one-two-three masonry">
 
-					$related_posts->the_post();
+					<?php while ( $related_posts->have_posts() ) :
 
-					get_template_part( 'template-parts/content-post-card' );
+						$related_posts->the_post();
 
-				endwhile; ?>
+						get_template_part( 'template-parts/content-post-card' );
 
+					endwhile; ?>
+
+				</div>
 			</div>
 		</section>
 
