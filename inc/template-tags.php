@@ -352,3 +352,21 @@ function cf3_the_post_image( $post_id = 0 ) {
 		echo wp_get_attachment_image( cf3_get_category_image( get_the_ID(), 'card-image' ), 'card-image' );
 	}
 }
+
+/**
+ * Echo the post thumbnail URL, or the category image URL.
+ *
+ * @param  int  The post ID.
+ */
+function cf3_the_post_image_url( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail_url( 'card-image' );
+	} else {
+		echo wp_get_attachment_image_url( cf3_get_category_image( get_the_ID(), 'card-image' ), 'card-image' );
+	}
+}
