@@ -1,3 +1,29 @@
 //--------------------------------------------------------------
 // MODULES
 //--------------------------------------------------------------
+.module {
+	padding: $size__padding * 3 $size__padding $size__padding * 4;
+
+	@include grid-media($tablet-portrait-up) {
+		padding: $size__padding * 4 $size__padding $size__padding * 5;
+	}
+
+	@include element(heading) {
+		margin-bottom: 2.25em;
+		text-align: center;
+	}
+
+	@include element(footer) {
+		text-align: center;
+	}
+}
+
+.module-sm-padding {
+	padding-bottom: $size__padding;
+	padding-top: $size__padding;
+
+	@include grid-media($tablet-landscape-up) {
+		padding-bottom: $size__padding;
+		padding-top: $size__padding;
+	}
+}

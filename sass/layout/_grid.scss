@@ -7,24 +7,6 @@
 	@include full-width;
 }
 
-.module {
-	padding: $size__padding * 3 $size__padding $size__padding * 4;
-
-	@include grid-media($tablet-portrait-up) {
-		padding: $size__padding * 4 $size__padding $size__padding * 5;
-	}
-}
-
-.module-sm-padding {
-	padding-bottom: $size__padding;
-	padding-top: $size__padding;
-
-	@include grid-media($tablet-landscape-up) {
-		padding-bottom: $size__padding;
-		padding-top: $size__padding;
-	}
-}
-
 .row {
 	@include center;
 
