@@ -8,29 +8,25 @@
 $accent = cf3_get_category_accent();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card--post-sticky post-card post-card--sticky alcatraz-col--8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card card--horizontal alcatraz-col--8' ); ?>>
 
-	<div class="post-thumbnail post-card__image post-card--sticky__image">
+	<div class="post-thumbnail card__image">
 		<a href="<?php the_permalink(); ?>">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'card-image' ); ?>
-			<?php else : ?>
-				<?php echo wp_get_attachment_image( cf3_get_category_image( get_the_ID(), 'card-image' ), 'card-image' ); ?>
-			<?php endif; ?>
+			<?php cf3_the_post_image(); ?>
 		</a>
 	<?php echo cf3_get_post_card_category_badge(); ?>
 	</div>
 
-	<div class="post-card--sticky__content-wrap">
-		<header class="entry-header post-card__header post-card--sticky__header">
-			<h2 class="entry-title post-card__title post-card--sticky__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+	<div class="card__content-wrap">
+		<header class="entry-header card__header">
+			<h2 class="entry-title card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		</header>
 
-		<div class="entry-content post-card__content post-card--sticky__content">
+		<div class="entry-content card__content">
 			<?php the_excerpt(); ?>
 		</div>
 
-		<footer class="entry-footer post-card__footer post-card--sticky__footer">
+		<footer class="entry-footer card__footer">
 			<a href="<?php the_permalink(); ?>" class="button button--text color-<?php echo esc_attr( $accent ); ?>"><?php esc_html_e( 'Read More', 'carrieforde' ); ?></a>
 		</footer>
 	</div>
