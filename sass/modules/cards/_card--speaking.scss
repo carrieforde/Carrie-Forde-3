@@ -1,0 +1,12 @@
+//--------------------------------------------------------------
+// CARD -- SPEAKING
+//--------------------------------------------------------------
+.card--speaking {
+
+	@include grid-media($tablet-portrait-up) {
+
+		.card__image {
+			order: 2;
+		}
+	}
+} // .card--speaking
