@@ -2,5 +2,13 @@
 // CONTENT
 //--------------------------------------------------------------
 .boxed-content {
-	// margin-bottom: 75px;
+
+	article:not(.card) {
+
+		&.post-content {
+			@include grid-media($tablet-portrait-up) {
+				font-size: $font__body-size-tablet;
+			}
+		}
+	}
 }
