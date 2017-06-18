@@ -1,0 +1,108 @@
+{
+    "key": "group_5941f72350dc6",
+    "title": "Speaking Events",
+    "fields": [
+        {
+            "key": "field_5941f7295ae5f",
+            "label": "Event Name",
+            "name": "event_name",
+            "type": "text",
+            "instructions": "Add the name of the event.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "WordCamp Sacramento, 2017",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5941f7e25ae62",
+            "label": "Event Date & Time",
+            "name": "event_date_time",
+            "type": "date_time_picker",
+            "instructions": "Add the event date and time.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "F j, Y g:i a",
+            "first_day": 1
+        },
+        {
+            "key": "field_59447e6e7d117",
+            "label": "Event Website",
+            "name": "event_website",
+            "type": "url",
+            "instructions": "Add a link to the event website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5941f7a45ae61",
+            "label": "Speaker Deck Link",
+            "name": "speaker_deck_link",
+            "type": "oembed",
+            "instructions": "Add a URL to the slides on Speaker Deck. This will output as an oEmbed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_5941f8225ae63",
+            "label": "Video Link",
+            "name": "video_link",
+            "type": "oembed",
+            "instructions": "Add a link to a recording of the event.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cf-speaking"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1497674033
+}
