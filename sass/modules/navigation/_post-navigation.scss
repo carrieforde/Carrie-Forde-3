@@ -6,19 +6,11 @@
 	border-bottom: 5px solid color(charcoal);
 	border-top: 2px solid color(charcoal);
 	margin: 40px auto 0;
-	max-width: 640px;
 	padding-bottom: 30px;
 	padding-top: 30px;
 
 	.nav-links {
 		align-items: stretch;
-	}
-
-	// Single Portfolio.
-	.single-cf-portfolio &,
-	.single-wpcl-component &,
-	.single-cf-speaking & {
-		max-width: 100%;
 	}
 
 	@include element(span) {
