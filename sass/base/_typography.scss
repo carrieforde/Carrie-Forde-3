@@ -62,7 +62,7 @@ strong {
 a:not(.button) {
 	text-decoration: none;
 
-	article:not(.card):not(.component-content) & {
+	article:not(.card):not(.component-content):not(.front-page-content) & {
 		border-bottom: 2px solid color(razzmatazz);
 		color: color(charcoal);
 
