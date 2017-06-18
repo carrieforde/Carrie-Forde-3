@@ -12,13 +12,11 @@ Tags:
 
 // Include Sass libraries & Alcatraz utilities.
 @import 'bourbon';
+@import 'utilities/settings';
 @import 'alcatraz/assets/sass/utilities/index'; // Alcatraz's utilities
-@import 'utilities/variables/grid-settings';
+@import 'utilities/index'; // Include this theme's utilities.
 @import 'neat';
 @import 'sanitize';
-
-// Include this theme's utilities.
-@import 'utilities/index';
 
 
 // Import the remaining partials from Alcatraz.
