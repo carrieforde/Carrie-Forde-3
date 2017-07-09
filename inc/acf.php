@@ -4,15 +4,6 @@
  */
 
 
-
-/**
- * Echo the ACF homepage hero.
- */
-function cf3_the_acf_hero( $post_id = 0 ) {
-
-	get_template_part( 'template-parts/acf-content/acf', 'hero' );
-}
-
 /**
  * Build the footnotes markup.
  *
