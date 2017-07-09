@@ -6,10 +6,23 @@
 	text-transform: uppercase;
 
 	@include grid-media($tablet-landscape-up) {
+		display: flex !important;
+		flex-shrink: 0;
+		overflow: hidden;
 		padding: 0;
+		transition: transform 0.3s ease-in-out;
+		transform: translateX(rem(320));
+
+		&.show-search {
+			transform: translateX(0);
+		}
 
 		.mobile-nav-style-slide-right & {
 			background-color: transparent;
+		}
+
+		@include element(menu) {
+			
 		}
 	}
 
