@@ -10,8 +10,17 @@ input[type='submit'] {
 	font-size: 0.8em; // 80% of body font size.
 	font-weight: 600;
 	letter-spacing: 0.025em;
+	line-height: 1.6;
 	text-decoration: none;
 	text-transform: uppercase;
+
+	&:hover {
+		color: color(white);
+	}
+}
+
+a.button {
+	transition: $transition__hover-color, $transition__hover-background;
 }
 
 .button {
@@ -79,10 +88,19 @@ input[type='submit'] {
 // Search Toggle Button
 //-------------------------------
 .search-toggle {
-	@include size(20px);
 
-	background: url('images/icon-search-thin.svg') no-repeat;
-	text-indent: -9999px;
+	@include media(null, rem(899)) {
+		display: none;
+	}
+
+	a,
+	a:visited {
+		color: color(razzmatazz) !important;
+
+		&:hover {
+			color: color(mine-shaft) !important;
+		}
+	}
 }
 
 //-------------------------------
