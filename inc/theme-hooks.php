@@ -232,3 +232,12 @@ function cf3_output_logo() {
 		<?php
 	}
 }
+
+add_action( 'alcatraz_after_nav_inside', 'cf3_display_search_form' );
+/**
+ * Display the search form.
+ */
+function cf3_display_search_form() {
+
+	get_search_form();
+}
