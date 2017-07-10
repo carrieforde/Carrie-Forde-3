@@ -2,6 +2,45 @@
 // ENTRY FOOTER
 //--------------------------------------------------------------
 
+// Post tags
+a[rel*="post_tag"] {
+	background-color: color(french-gray);
+	border-bottom: none !important;
+	font-size: em(14);
+	line-height: 1.6;
+	padding: 0 em(10) em(3) em(25);
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; bottom: 0;
+		border-top: 12px solid color(white);
+		border-bottom: 12px solid color(white);
+		border-right: 10px solid color(french-gray);
+	}
+
+	&:after {
+		content: '•';
+		position: absolute;
+		left: em(12.5);
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		color: white;
+	}
+
+	&:hover {
+		color: color(mine-shaft) !important;
+		opacity: 0.9;
+	}
+}
+
+// Turns commas between tags invisible.
+.entry-tax-term-list {
+	color: transparent;
+}
+
 //-----------------------------------------
 // Footnotes
 //-----------------------------------------
