@@ -76,7 +76,20 @@
 //-----------------------------------------
 .blog-grid {
 	@include grid-container;
-	@include grid-collapse($card-grid);
+	// @include grid-collapse($card-grid);
+
+	@include grid-media($tablet-portrait-up) {
+		@include grid-collapse($card-grid);
+		
+		.alcatraz-col--4 {
+			@include grid-column(6, $card-grid);
+		}
+
+		.alcatraz-col--8 {
+			margin-left: gutter($card-grid);
+			margin-right: gutter($card-grid);
+		}
+	}
 
 	@include grid-media($tablet-landscape-up) {
 
@@ -85,6 +98,7 @@
 		}
 
 		.alcatraz-col--8 {
+			margin-right: 0;
 			@include grid-column(8, $card-grid);
 		}
 	}
