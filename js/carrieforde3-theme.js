@@ -4,15 +4,12 @@
 
 ( function( $ ) {
 
-	var toggleNavSearch = function() {
+	var toggleNavSearch = function( e ) {
 
 		var $this = $( this );
 
-		if ( $this.parent().is( '.pattern-doc__output' ) ) {
-			$this.next( '.navigation-search' ).toggleClass( 'show' );
-		} else {
-			$this.parents( '.main-navigation__menu' ).next( '.navigation-search' ).toggleClass( 'show' );
-		}
+		e.preventDefault();
+		$this.parents( '.main-navigation' ).toggleClass( 'show-search' );
 	};
 
 	var mobileSiteMarginBottom = function() {
