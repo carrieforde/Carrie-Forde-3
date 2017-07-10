@@ -27,3 +27,15 @@
 		padding-top: $size__padding;
 	}
 }
+
+.related-posts {
+	margin-top: $size__padding $size__padding * 4;
+
+	@include grid-media($tablet-landscape-up) {
+		margin-top: $size__padding * 5;
+
+		.row {
+			padding: 0 $size__padding * 2;
+		}
+	}
+}
