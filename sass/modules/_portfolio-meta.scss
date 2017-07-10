@@ -3,10 +3,11 @@
 //--------------------------------------------------------------
 .portfolio-meta {
 	border: 1px solid color(iron);
+	font-size: em(16);
 	margin-bottom: 1.5em;
 	padding: 15px;
 
-	@include grid-media($tablet-portrait-up) {
+	@include grid-media($wp-admin-bar) {
 		@include grid-column(4);
 
 		float: right;
