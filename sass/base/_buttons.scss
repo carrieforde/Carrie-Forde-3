@@ -7,10 +7,11 @@ input[type='button'],
 input[type='submit'] {
 	display: inline-block;
 	font-family: $text__button;
-	font-size: 0.8em; // 80% of body font size.
+	font-size: em(14);
 	font-weight: 600;
-	letter-spacing: 0.025em;
+	letter-spacing: em(0.75);
 	line-height: 1.6;
+	padding: em(10) em(20) em(6.5);
 	text-decoration: none;
 	text-transform: uppercase;
 
