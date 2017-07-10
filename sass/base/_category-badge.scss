@@ -11,16 +11,21 @@
 	a {
 		color: color(white);
 		display: block;
-		line-height: 1;
-		padding: em(5) em(10) em(6);
+		letter-spacing: em(1.25);
+		line-height: 1.6;
+		padding: em(5) em(10) em(8);
 		text-decoration: none;
+
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 
 	//-----------------------------------------
 	// Post Card
 	//-----------------------------------------
 	.card & {
-		@include position(absolute, null null -10px 10px);
+		@include position(absolute, null null rem(-10) rem(10));
 	}
 
 
@@ -28,18 +33,18 @@
 	// Post Hero
 	//-----------------------------------------
 	.post-hero & {
-		@include position(absolute, null null -10px 20px);
+		@include position(absolute, null null rem(-10) rem(20));
 
 		@include grid-media($tablet-portrait-up) {
-			bottom: -16px;
+			bottom: rem(-16);
 			font-size: em(18);
-			left: 40px;
+			left: rem(40);
 		}
 
 		@include grid-media($desktop-up) {
-			bottom: -18px;
+			bottom: rem(-18);
 			font-size: em(20);
-			left: 60px;
+			left: rem(60);
 		}
 	}
 }
