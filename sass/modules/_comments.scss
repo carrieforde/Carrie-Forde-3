@@ -2,8 +2,7 @@
 // COMMENTS
 //--------------------------------------------------------------
 .comments-area {
-	margin: 40px auto 0;
-	max-width: 640px;
+	margin: rem(40) auto 0;
 }
 
 // When there are already comments.
@@ -29,12 +28,12 @@
 }
 
 .comment {
-	padding: 20px;
+	padding: $size__padding;
 }
 
 // The name of the commenter and their avatar.
 .comment-meta {
-	margin-bottom: 20px;
+	margin-bottom: $size__padding;
 	position: relative;
 
 	.avatar {
@@ -43,7 +42,7 @@
 }
 
 .comment-metadata {
-	@include position(absolute, null null 0 87px);
+	@include position(absolute, null null 0 rem(87));
 
 	display: none;
 
@@ -54,7 +53,7 @@
 
 // The content of the comment.
 .comment-body {
-	margin-bottom: 10px;
+	margin-bottom: rem(10);
 }
 
 // The area where the comment is actually entered.
