@@ -5,6 +5,10 @@
 
 	.entry-header {
 		margin-bottom: 30px;
+
+		.single-cf-portfolio & {
+			margin-top: 2em;
+		}
 	}
 
 	.entry-title {
