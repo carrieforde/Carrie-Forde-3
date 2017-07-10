@@ -75,7 +75,7 @@ add_filter( 'alcatraz_entry_footer_taxonomies', 'cf3_entry_footer_taxonomies' );
 function cf3_entry_footer_taxonomies() {
 
 	$footer_taxonomies = array(
-		'post_tag' => __( 'Tagged: ', 'alcatraz' ),
+		'post_tag' => '<span class="screen-reader-text">Tagged:</span>',
 	);
 
 	return $footer_taxonomies;
