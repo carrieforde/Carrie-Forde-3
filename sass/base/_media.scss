@@ -2,5 +2,21 @@
 // MEDIA
 //--------------------------------------------------------------
 iframe {
-    max-height: rem(510);
+	max-height: rem(510);
+}
+
+// Borrowed from wd_s. 👍
+.fluid-embed {
+	clear: both; // make sure it clears any floated elements.
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+	position: relative;
+
+	embed,
+	object,
+	iframe {
+		@include position(absolute, 0 null null 0);
+		@include size(100%);
+	} // embed, object, iframe
 }

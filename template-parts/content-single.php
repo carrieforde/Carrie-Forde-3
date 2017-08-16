@@ -15,8 +15,10 @@ if ( is_singular( 'cf-speaking' ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-content' ); ?>>
 
-	<?php if ( is_singular( 'cf-speaking' ) ) : ?>
-		<?php echo apply_filters( 'the_content', $video ); // WPCS: XSS OK. ?>
+	<?php if ( is_singular( 'cf-speaking' ) && ! empty( $video ) ) : ?>
+		<div class="fluid-embed">
+			<?php echo apply_filters( 'the_content', $video ); // WPCS: XSS OK. ?>
+		</div>
 	<?php endif; ?>
 
 	<?php alcatraz_the_entry_header(); ?>
@@ -35,8 +37,10 @@ if ( is_singular( 'cf-speaking' ) ) {
 			) );
 		?>
 
-		<?php if ( is_singular( 'cf-speaking' ) ) : ?>
-			<?php echo apply_filters( 'the_content', $presentation ); ?>
+		<?php if ( is_singular( 'cf-speaking' ) && ! empty( $presentation ) ) : ?>
+			<div class="fluid-embed">
+				<?php echo apply_filters( 'the_content', $presentation ); ?>
+			</div>
 		<?php endif; ?>
 	</div>
 
