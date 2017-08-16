@@ -20,6 +20,8 @@
 		</div>
 	</section>
 
+	<?php get_template_part( 'template-parts/components/component', 'three_column_text' ); ?>
+
 	<section class="module speaking-module full-width">
 
 		<div class="row">

@@ -1,0 +1,19 @@
+//--------------------------------------------------------------
+// COMPONENT - THREE COLUMN TEXT
+//--------------------------------------------------------------
+.component--three-column-text {
+	text-align: center;
+
+	h3 {
+		margin-bottom: 0.25em;
+	}
+
+	.row {
+		
+		@include grid-media($tablet-landscape-up) {
+			display: grid;
+			grid-gap: rem(30);
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

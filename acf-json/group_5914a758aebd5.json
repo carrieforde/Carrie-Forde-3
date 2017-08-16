@@ -1,0 +1,615 @@
+{
+    "key": "group_5914a758aebd5",
+    "title": "Components",
+    "fields": [
+        {
+            "key": "field_5914a7e39336f",
+            "label": "Component",
+            "name": "component",
+            "type": "flexible_content",
+            "instructions": "Select the component that corresponds to the document.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5914a7f2611ba": {
+                    "key": "5914a7f2611ba",
+                    "name": "image_hero",
+                    "label": "Image Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5914b169ece61",
+                            "label": "Image Hero",
+                            "name": "image_hero",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5914adecb1b12"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "59334c3de5080": {
+                    "key": "59334c3de5080",
+                    "name": "colors",
+                    "label": "Colors",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59334c58e5081",
+                            "label": "Color Group",
+                            "name": "color_group",
+                            "type": "repeater",
+                            "instructions": "Add a color group with individual colors.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_59334c8be5082",
+                                    "label": "Group Label",
+                                    "name": "group_label",
+                                    "type": "text",
+                                    "instructions": "Add a label for the group.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "Brand Colors",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_59334cb2e5083",
+                                    "label": "Colors",
+                                    "name": "colors",
+                                    "type": "repeater",
+                                    "instructions": "Add each color belonging to the group.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "table",
+                                    "button_label": "",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_59334cd0e5084",
+                                            "label": "Color Name",
+                                            "name": "color_name",
+                                            "type": "text",
+                                            "instructions": "Enter the color name.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "67",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "Hotpink",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_59334d02e5085",
+                                            "label": "Color",
+                                            "name": "color",
+                                            "type": "color_picker",
+                                            "instructions": "Use the color picker to add the color.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "33",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "59337aaaadec3": {
+                    "key": "59337aaaadec3",
+                    "name": "fonts",
+                    "label": "Fonts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59337ab3adec4",
+                            "label": "Fonts",
+                            "name": "fonts",
+                            "type": "repeater",
+                            "instructions": "Add the fonts that will be used within the theme.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_59337ad5adec5",
+                                    "label": "Sass Variable",
+                                    "name": "sass_variable",
+                                    "type": "text",
+                                    "instructions": "If using Sass, add the variable that will be used to apply this font throughout the Sass partials.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "$font__body",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_59337b1fadec6",
+                                    "label": "Font Stack",
+                                    "name": "font_stack",
+                                    "type": "text",
+                                    "instructions": "Add the entire font stack for the font.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "'Source Sans Pro', sans-serif",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "59338bdefd9ad": {
+                    "key": "59338bdefd9ad",
+                    "name": "buttons",
+                    "label": "Buttons",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59338bf2fd9ae",
+                            "label": "Buttons",
+                            "name": "buttons",
+                            "type": "repeater",
+                            "instructions": "Add the different button styles that will be used throughout the site.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_59338d51c07d5",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "Add a name for the button. This will be used as a heading for the button within the component single.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_59338c24fd9af",
+                                    "label": "Class",
+                                    "name": "class",
+                                    "type": "text",
+                                    "instructions": "Add a class (or classes, separated by spaces) to style the button with CSS.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "button button-cta",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_59338c6cfd9b0",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "text",
+                                    "instructions": "Add optional text to customize the button.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Click Me",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_59338cc8fd9b1",
+                                    "label": "Markup",
+                                    "name": "markup",
+                                    "type": "radio",
+                                    "instructions": "Chose button or link markup.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "button": "Button",
+                                        "anchor": "Link"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "save_other_choice": 0,
+                                    "default_value": "button",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "593392fd572fd": {
+                    "key": "593392fd572fd",
+                    "name": "text_elements",
+                    "label": "Text Elements",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59339304572fe",
+                            "label": "Instructions",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This component has no configurable fields.\r\n\r\nThe Text Elements block outputs the following:\r\n1. Headings\r\n2. Horizontal Rule\r\n3. Inline elements\r\n4. Paragraph\r\n5. Preformatted",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "595d19b30f62f": {
+                    "key": "595d19b30f62f",
+                    "name": "form_elements",
+                    "label": "Form Elements",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_595d19ba0f630",
+                            "label": "Instructions",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This component has no configurable fields.\r\n\r\nThe Form Elements block includes the following:\r\n• Text\r\n• Text with Error\r\n• Radio\r\n• Checkbox\r\n• Textarea\r\n• Select \/ Dropdown\r\n• Search",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "595d3ffe24bd0": {
+                    "key": "595d3ffe24bd0",
+                    "name": "image_sizes",
+                    "label": "Image Sizes",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_595d400624bd1",
+                            "label": "Instructions",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This component has no configurable options.\r\n\r\nThe image sizes component outputs every available image size. Upload a featured image to see the image sizes.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "59949f8090e23": {
+                    "key": "59949f8090e23",
+                    "name": "three_column_text",
+                    "label": "Three Column Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59949f8a90e24",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_59949dd9803d6"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": 1
+        },
+        {
+            "key": "field_5918ca7e15998",
+            "label": "Usage",
+            "name": "usage",
+            "type": "wysiwyg",
+            "instructions": "Indicate the dos \/ don'ts, rules, and considerations of using this component. E.g. \"Use this hero for single posts, and use the masthead for pages.\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5914a80c93370",
+            "label": "Implementation",
+            "name": "implementation",
+            "type": "wysiwyg",
+            "instructions": "Enter a template tag or basic code showing how to pull the component into the template for use\r\n\r\nE.g. <?php wp_component_library()->image-hero->image-hero-markup(); ?>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5933774ebffb2",
+            "label": "Show Code",
+            "name": "show_code",
+            "type": "radio",
+            "instructions": "Would you like to show the code for this component?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "yes": "Yes"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "no",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_593768f90733e",
+            "label": "PHP",
+            "name": "php",
+            "type": "wysiwyg",
+            "instructions": "Enter the PHP Code needed to produce the component.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5933774ebffb2",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5914a85693372",
+            "label": "Sass",
+            "name": "sass",
+            "type": "wysiwyg",
+            "instructions": "Enter the Sass code needed to style the component.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5933774ebffb2",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5914a86f93373",
+            "label": "JavaScript",
+            "name": "javascript",
+            "type": "wysiwyg",
+            "instructions": "Add required JavaScript for the component.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5933774ebffb2",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "wpcl-component"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1502912416
+}
