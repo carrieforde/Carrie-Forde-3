@@ -8,13 +8,27 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+	.image-as-background {
+		min-height: rem(500);
+	}
+
 	.talks {
-		padding: $size__padding;
+		padding: $size__padding * 2 $size__padding;
 
 		@include grid-media($tablet-landscape-up) {
 			max-width: 100%;
-			padding: $size__padding * 2;
+			padding: $size__padding * 4 0 $size__padding * 4 $size__padding * 2;
 			width: $size__layout-boxed-content / 2;
+		}
+	}
+
+	.card__title a {
+		border-bottom: none !important;
+		color: color(white) !important;
+
+		&:hover,
+		&:focus {
+			color: rgba(color(white), 0.8);
 		}
 	}
 }

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------
-// componentS
+// COMPONENTS
 //--------------------------------------------------------------
 .component {
 	padding: $size__padding * 3 $size__padding $size__padding * 4;
@@ -8,9 +8,9 @@
 		padding: $size__padding * 4 $size__padding $size__padding * 5;
 	}
 
-	@include element(heading) {
+	@include element(header) {
 		margin-bottom: 2.25em;
-		text-align: center;
+		// text-align: center;
 	}
 
 	@include element(footer) {
@@ -25,6 +25,14 @@
 	@include grid-media($tablet-landscape-up) {
 		padding-bottom: $size__padding;
 		padding-top: $size__padding;
+	}
+}
+
+.component-no-padding {
+	padding: 0 !important;
+
+	@include grid-media($tablet-landscape-up) {
+		padding: 0;
 	}
 }
 
