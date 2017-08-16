@@ -1,0 +1,56 @@
+//--------------------------------------------------------------
+// CARD - COMPONENTS
+//--------------------------------------------------------------
+.post-type-archive-wpcl-component {
+	background-color: color(white-smoke);
+
+	.page-content {
+		
+		@include grid-media($tablet-portrait-up) {
+			display: grid;
+			grid-gap: rem(30);
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include grid-media($tablet-landscape-up) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include grid-media($desktop-up) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}
+
+.card--component {
+	display: flex;
+	flex-direction: column;
+	
+	&.hentry {
+		margin-bottom: rem(30);
+
+		@include grid-media($tablet-portrait-up) {
+			margin-bottom: 0;
+		}
+	}
+
+	.card__image {
+		margin: 0;
+		padding: rem(20);
+	}
+
+	.post-thumbnail img {
+		margin-bottom: 0;
+		width: rem(125);
+	}
+
+	.card__content-wrap {
+		margin-bottom: rem(5);
+		margin-top: auto; // pushes title to bottom of card, always.
+		text-align: center;
+	}
+
+	.card__title {
+		font-size: 1.25em;
+	}
+}

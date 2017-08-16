@@ -1,0 +1,48 @@
+{
+    "key": "group_59939e0ccfae6",
+    "title": "Component Category",
+    "fields": [
+        {
+            "key": "field_59939e122c201",
+            "label": "Icon",
+            "name": "icon",
+            "type": "image",
+            "instructions": "Upload a PNG or SVG icon to represent the Component Category.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 150,
+            "min_height": 150,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, svg"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "wpcl-component-category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1502846564
+}

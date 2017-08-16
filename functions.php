@@ -11,6 +11,7 @@ define( 'CARRIEFORDE3_URL', trailingslashit( get_stylesheet_directory_uri() ) );
  * Add theme image sizes.
  */
 add_image_size( 'card-image', 1040, 690, true );
+add_image_size( 'component-image', 250, 250, false );
 
 add_image_size( 'hero-image', 1920, 500, true );
 
@@ -18,14 +19,14 @@ add_image_size( 'hero-image', 1920, 500, true );
 /**
  * Adds Portfolio Archive Settings page.
  */
-if( function_exists('acf_add_options_page') ) {
+if ( function_exists( 'acf_add_options_page' ) ) {
 
 	// Add subpage to Portfolio Menu.
-	acf_add_options_sub_page(array(
+	acf_add_options_sub_page( array(
 		'page_title' 	=> 'Portfolio Settings',
 		'menu_title' 	=> 'Portfolio Settings',
 		'parent_slug' 	=> '/edit.php?post_type=cf-portfolio',
-	));
+	) );
 }
 
 
