@@ -308,16 +308,12 @@ function cf3_post_type_for_pagination( $post_id = 0 ) {
 
 		case 'post' :
 			return 'Post';
-			break;
 		case 'cf-portfolio' :
 			return 'Project';
-			break;
 		case 'wpcl-component' :
 			return 'Component';
-			break;
 		default :
 			return '';
-			break;
 	}
 }
 
@@ -362,6 +358,20 @@ function cf3_the_post_image( $post_id = 0 ) {
 }
 
 /**
+ * Echo the component category image.
+ *
+ * @param  int  The post ID.
+ */
+function cf3_the_component_image( $post_id = 0 ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	echo wp_get_attachment_image( cf3_get_component_category_image( $post_id, 'component-image' ), 'component-image' );
+}
+
+/**
  * Echo the post thumbnail URL, or the category image URL.
  *
  * @param  int  The post ID.
@@ -377,4 +387,29 @@ function cf3_the_post_image_url( $post_id = 0 ) {
 	} else {
 		echo wp_get_attachment_image_url( cf3_get_category_image( get_the_ID(), 'card-image' ), 'card-image' );
 	}
+}
+
+/**
+ * Get the component category image.
+ *
+ * @param  int    [$post_id    = 0]       The post ID.
+ * @param  string [$image_size = 'full']  The image size.
+ *
+ * @return string The image markup.
+ */
+function cf3_get_component_category_image( $post_id = 0, $image_size = 'component-image' ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	$category = cf3_get_post_terms( $post_id, 'wpcl-component-category', array( 'number' => 1 ) );
+
+	if ( empty( $category ) ) {
+		return;
+	}
+
+	$cat_image = get_term_meta( $category[0]->term_id, 'icon', true );
+
+	return $cat_image;
 }
