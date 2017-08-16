@@ -40,4 +40,4 @@ $col_3_text  = get_post_meta( $post_id, $prefix . 'column_3_text', true );
 			<div class="content"><?php echo wp_kses_post( $col_3_text ); ?></div>
 		</div>
 	</div>
-</section><!-- .hero -->
+</section>
