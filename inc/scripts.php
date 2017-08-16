@@ -77,7 +77,7 @@ function cf3_typekit() {
 	echo '<script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>';
 }
 
-add_action( 'wp_footer', 'cf3_google_analytics' );
+// add_action( 'wp_footer', 'cf3_google_analytics' );
 /**
  * Add Google Analytics Tracking.
  */
