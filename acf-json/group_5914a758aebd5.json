@@ -440,6 +440,52 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5994aa9ffa738",
+                            "label": "Three Column Text",
+                            "name": "three_column_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5994aa8cfa737": {
+                    "key": "5994aa8cfa737",
+                    "name": "talks",
+                    "label": "Talks",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5994aaa8fa739",
+                            "label": "Instructions",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This field dynamically populates; there are no configurable options.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -611,5 +657,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1502912416
+    "modified": 1502915270
 }

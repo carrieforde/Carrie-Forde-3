@@ -209,7 +209,7 @@ function cf3_fetch_upcoming_speaking_post( $args = array() ) {
 
 	$post = array(
 		'post_type'      => 'cf-speaking',
-		'posts_per_page' => 1,
+		// 'posts_per_page' => 1,
 		'orderby'        => 'meta_value',
 		'order'          => 'ASC',
 		'meta_query'     => array(

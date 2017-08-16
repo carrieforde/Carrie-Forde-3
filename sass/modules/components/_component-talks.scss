@@ -1,0 +1,20 @@
+//--------------------------------------------------------------
+// COMPONENT - TALKS
+//--------------------------------------------------------------
+.component--talks {
+
+	@include grid-media($tablet-landscape-up) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.talks {
+		padding: $size__padding;
+
+		@include grid-media($tablet-landscape-up) {
+			max-width: 100%;
+			padding: $size__padding * 2;
+			width: $size__layout-boxed-content / 2;
+		}
+	}
+}

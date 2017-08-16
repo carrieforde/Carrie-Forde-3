@@ -12,7 +12,7 @@
 
 	<?php alcatraz_the_entry_header(); ?>
 
-	<section class="module module-sm-padding newsletter-module full-width background-razzmatazz color-white">
+	<section class="component component-sm-padding component--newsletter full-width background-razzmatazz color-white">
 
 		<div class="row row-flex">
 			<h2 class="h3 color-white"><?php esc_html_e( 'Tips & tricks in your inbox!', 'carrieforde3' ); ?></h2>
@@ -22,26 +22,13 @@
 
 	<?php get_template_part( 'template-parts/components/component', 'three_column_text' ); ?>
 
-	<section class="module speaking-module full-width">
+	<?php get_template_part( 'template-parts/components/component', 'talks' ); ?>
+
+	<section class="component open-source-project-component full-width background-white-smoke">
 
 		<div class="row">
 			<header>
-				<h2 class="module__heading"><?php esc_html_e( 'Upcoming Talk', 'carrieforde3' ); ?></h2>
-			</header>
-
-			<?php cf3_fetch_upcoming_speaking_post(); ?>
-
-			<footer class="module__footer">
-				<a href="<?php echo esc_url( get_site_url( null, '/speaking/', null ) ); ?>" class="button"><?php esc_html_e( 'View All Talks', 'carrieforde3' ); ?></a>
-			</footer>
-		</div>
-	</section>
-
-	<section class="module open-source-project-module full-width background-white-smoke">
-
-		<div class="row">
-			<header>
-				<h2 class="module__heading"><?php esc_html_e( 'I ❤️ Open Source', 'carrieforde' ); ?></h2>
+				<h2 class="component__heading"><?php esc_html_e( 'I ❤️ Open Source', 'carrieforde' ); ?></h2>
 			</header>
 
 			<?php echo cf3_fetch_posts( array( 'category' => 'open-source', 'template_part' => 'template-parts/content-post-card-sticky' ) ); // WPCS: XSS OK. ?>
