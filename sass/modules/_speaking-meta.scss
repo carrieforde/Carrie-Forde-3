@@ -3,8 +3,9 @@
 //--------------------------------------------------------------
 .speaking-meta {
 	border: 1px solid color(iron);
+	font-size: em(16);
 	margin-bottom: 1.5em;
-	padding: 15px;
+	padding: rem(15);
 
 	@include grid-media($tablet-landscape-up) {
 		@include grid-column(4);
