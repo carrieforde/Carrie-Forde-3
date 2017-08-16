@@ -1,7 +1,7 @@
 //--------------------------------------------------------------
-// MODULES
+// componentS
 //--------------------------------------------------------------
-.module {
+.component {
 	padding: $size__padding * 3 $size__padding $size__padding * 4;
 
 	@include grid-media($tablet-portrait-up) {
@@ -18,7 +18,7 @@
 	}
 }
 
-.module-sm-padding {
+.component-sm-padding {
 	padding-bottom: $size__padding;
 	padding-top: $size__padding;
 
