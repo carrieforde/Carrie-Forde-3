@@ -1950,6 +1950,10 @@ code[class*="language-"] .namespace, pre[class*="language-"] .namespace {
   opacity: .7;
 }
 
+code[class*="language-"] .token.comment, pre[class*="language-"] .token.comment {
+  padding: 0;
+}
+
 code[class*="language-"] .token.comment, code[class*="language-"] .token.prolog, code[class*="language-"] .token.doctype, code[class*="language-"] .token.cdata, pre[class*="language-"] .token.comment, pre[class*="language-"] .token.prolog, pre[class*="language-"] .token.doctype, pre[class*="language-"] .token.cdata {
   color: #bdbec0;
 }
@@ -2000,6 +2004,24 @@ code[class*="language-"] .token.debug, pre[class*="language-"] .token.debug {
 
 iframe {
   max-height: 28.3333333333rem;
+}
+
+.fluid-embed {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.fluid-embed embed,
+.fluid-embed object,
+.fluid-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .card {
@@ -2107,6 +2129,41 @@ iframe {
 
 .card--portfolio:hover a:after {
   background-color: #ed1c72;
+}
+
+.post-type-archive-wpcl-component {
+  background-color: #eee;
+}
+
+.card--component {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.card--component.hentry {
+  margin-bottom: 1.6666666667rem;
+}
+
+.card--component .card__image {
+  margin: 0;
+  padding: 1.1111111111rem;
+}
+
+.card--component .post-thumbnail img {
+  margin-bottom: 0;
+  width: 6.9444444444rem;
+}
+
+.card--component .card__content-wrap {
+  margin-bottom: 0.2777777778rem;
+  margin-top: auto;
+  text-align: center;
+}
+
+.card--component .card__title {
+  font-size: 1.25em;
 }
 
 .hero {
@@ -2607,8 +2664,9 @@ label:not(.gfield_label) {
 
 .speaking-meta {
   border: 1px solid #d9d5dc;
+  font-size: 0.8888888889em;
   margin-bottom: 1.5em;
-  padding: 15px;
+  padding: 0.8333333333rem;
 }
 
 .speaking-meta__heading h3 {
@@ -2626,22 +2684,50 @@ label:not(.gfield_label) {
   margin-bottom: 1em;
 }
 
-.module {
+.component--three-column-text {
+  text-align: center;
+}
+
+.component--three-column-text h3 {
+  margin-bottom: 0.25em;
+}
+
+.component--talks .image-as-background {
+  min-height: 27.7777777778rem;
+}
+
+.component--talks .talks {
+  padding: 2.2222222222rem 1.1111111111rem;
+}
+
+.component--talks .card__title a {
+  border-bottom: none !important;
+  color: #fff !important;
+}
+
+.component--talks .card__title a:hover, .component--talks .card__title a:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.component {
   padding: 3.3333333333rem 1.1111111111rem 4.4444444444rem;
 }
 
-.module__heading {
+.component__header {
   margin-bottom: 2.25em;
+}
+
+.component__footer {
   text-align: center;
 }
 
-.module__footer {
-  text-align: center;
-}
-
-.module-sm-padding {
+.component-sm-padding {
   padding-bottom: 1.1111111111rem;
   padding-top: 1.1111111111rem;
+}
+
+.component-no-padding {
+  padding: 0 !important;
 }
 
 .related-posts {
@@ -2777,7 +2863,7 @@ label:not(.gfield_label) {
   padding-top: 0;
 }
 
-.home .newsletter-module .h3 {
+.home .component--newsletter .h3 {
   color: #fff;
 }
 
@@ -2831,6 +2917,16 @@ label:not(.gfield_label) {
     -ms-flex-order: 2;
     order: 2;
   }
+  .post-type-archive-wpcl-component .page-content{
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1.6666666667rem;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card--component.hentry{
+    margin-bottom: 0;
+  }
   .hero{
     margin-top: -115px;
   }
@@ -2843,7 +2939,7 @@ label:not(.gfield_label) {
   .newsletter .medium{
     width: 100%;
   }
-  .module{
+  .component{
     padding: 4.4444444444rem 1.1111111111rem 5.5555555556rem;
   }
   .grid--one-two-three{
@@ -3132,6 +3228,10 @@ label:not(.gfield_label) {
   .search-form .search-submit{
     line-height: 1rem;
   }
+  .post-type-archive-wpcl-component .page-content{
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
   .hero__text{
     font-size: initial;
   }
@@ -3184,9 +3284,30 @@ label:not(.gfield_label) {
     margin-left: 20px;
     float: right;
   }
-  .module-sm-padding{
+  .component--three-column-text .row{
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1.6666666667rem;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .component--talks{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .component--talks .talks{
+    max-width: 100%;
+    padding: 4.4444444444rem 0 4.4444444444rem 2.2222222222rem;
+    width: 30.5555555556rem;
+  }
+  .component-sm-padding{
     padding-bottom: 1.1111111111rem;
     padding-top: 1.1111111111rem;
+  }
+  .component-no-padding{
+    padding: 0;
   }
   .related-posts{
     margin-top: 5.5555555556rem;
@@ -3219,7 +3340,7 @@ label:not(.gfield_label) {
     float: left;
     margin-left: 25px;
   }
-  .home .newsletter-module .h3{
+  .home .component--newsletter .h3{
     -ms-flex: 0 0 33%;
     flex: 0 0 33%;
     margin: 0.5555555556rem 1.1111111111rem 0 0;
@@ -3231,6 +3352,10 @@ label:not(.gfield_label) {
     bottom: -1rem;
     font-size: 1.1111111111em;
     left: 3.3333333333rem;
+  }
+  .post-type-archive-wpcl-component .page-content{
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
   }
   .hero__text{
     font-size: 1.2em;
