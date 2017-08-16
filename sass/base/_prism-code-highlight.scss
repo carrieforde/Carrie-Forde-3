@@ -75,6 +75,11 @@ $color-color-property: color(honey-flower);
 	}
 
 	.token {
+
+		&.comment {
+			padding: 0;
+		}
+
 		&.comment,
 		&.prolog,
 		&.doctype,
