@@ -9,13 +9,6 @@
 
 	.component--newsletter {
 		
-		.h3 {
-			color: color(white);
-			
-			@include grid-media($tablet-landscape-up) {
-				flex: 0 0 33%;
-				margin: rem(10) rem(20) 0 0;
-			}
-		}
+		
 	}
 }

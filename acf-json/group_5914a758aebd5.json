@@ -422,8 +422,8 @@
                     "sub_fields": [
                         {
                             "key": "field_59949f8a90e24",
-                            "label": "",
-                            "name": "",
+                            "label": "Three Column Text",
+                            "name": "three_column_text",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -440,25 +440,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_5994aa9ffa738",
-                            "label": "Three Column Text",
-                            "name": "three_column_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -484,6 +465,33 @@
                                 "id": ""
                             },
                             "message": "This field dynamically populates; there are no configurable options.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5995c300314b8": {
+                    "key": "5995c300314b8",
+                    "name": "newsletter",
+                    "label": "Newsletter",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5995c308314b9",
+                            "label": "Newsletter",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This component has no configurable fields.",
                             "new_lines": "wpautop",
                             "esc_html": 0
                         }
@@ -657,5 +665,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1502915270
+    "modified": 1502987066
 }

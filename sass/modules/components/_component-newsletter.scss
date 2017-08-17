@@ -1,0 +1,86 @@
+//--------------------------------------------------------------
+// COMPONENT - NEWSLETTER
+//--------------------------------------------------------------
+.component--newsletter {
+
+	.h3 {
+		color: color(white);
+		
+		@include grid-media($tablet-landscape-up) {
+			flex: 0 0 33%;
+			margin: rem(10) rem(20) 0 0;
+		}
+	}
+}
+
+
+//-----------------------------------------
+// Newsletter - The GF Form
+//-----------------------------------------
+.newsletter {
+
+	input[type="text"] {
+		background-color: rgba(color(white), 0.9);
+
+		&:focus {
+			background-color: rgba(color(white), 1);
+		}
+	}
+
+	.gform_footer {
+		margin-top: 0;
+
+		@include grid-media($tablet-landscape-up) {
+			align-items: center;
+			display: flex;
+		}
+
+		input[type="submit"] {
+			border: 2px solid color(white);
+			border-radius: 3px;
+			margin-left: rem(20);
+			margin-top: rem(8);
+			padding-bottom: em(6, 14);
+			padding-top: em(7.5, 14);
+
+			&:hover,
+			&:focus {
+				background-color: color(white);
+				border: 2px solid color(white);
+				color: color(razzmatazz);
+			}
+		}
+	}
+
+	@include grid-media($tablet-portrait-up) {
+
+		// Email field.
+		.medium {
+			width: 100%;
+		}
+	}
+
+	@include grid-media($tablet-landscape-up) {
+		display: flex;
+		justify-content: space-between;
+
+		.gform_fields {
+			display: flex;
+		}
+
+		// The name field.
+		.gfield{
+			width: 67%;
+
+			+ .gfield {
+				margin-left: rem(20);
+				margin-top: 0;
+				width: 33%;
+
+				input[type="text"] {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
