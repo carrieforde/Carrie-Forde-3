@@ -2452,7 +2452,7 @@ iframe {
   width: 30px;
   content: '';
   display: block;
-  background: url("images/icon-chevron.svg") center no-repeat;
+  background: url("assets/images/icon-chevron.svg") center no-repeat;
   background-size: contain;
   margin-top: 10px;
   transition: transform 0.2s ease-in-out;
@@ -2833,25 +2833,6 @@ label:not(.gfield_label) {
   line-height: 16px;
 }
 
-.newsletter input[type="text"] {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.newsletter input[type="text"]:focus {
-  background-color: white;
-}
-
-.newsletter .gform_footer {
-  margin-top: 0;
-}
-
-.newsletter .gform_footer input[type="submit"] {
-  margin-left: 1.1111111111rem;
-  margin-top: 0.4444444444rem;
-  padding-bottom: 0.7142857143em;
-  padding-top: 0.8214285714em;
-}
-
 .speaking-meta {
   border: 1px solid #d9d5dc;
   font-size: 0.8888888889em;
@@ -2955,6 +2936,37 @@ label:not(.gfield_label) {
 
 .related-posts {
   margin-top: 1.1111111111rem 4.4444444444rem;
+}
+
+.component--newsletter .h3 {
+  color: #fff;
+}
+
+.newsletter input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter input[type="text"]:focus {
+  background-color: white;
+}
+
+.newsletter .gform_footer {
+  margin-top: 0;
+}
+
+.newsletter .gform_footer input[type="submit"] {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  margin-left: 1.1111111111rem;
+  margin-top: 0.4444444444rem;
+  padding-bottom: 0.4285714286em;
+  padding-top: 0.5357142857em;
+}
+
+.newsletter .gform_footer input[type="submit"]:hover, .newsletter .gform_footer input[type="submit"]:focus {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #ed1c72;
 }
 
 .full-width {
@@ -3086,10 +3098,6 @@ label:not(.gfield_label) {
   padding-top: 0;
 }
 
-.home .component--newsletter .h3 {
-  color: #fff;
-}
-
 @media only screen and (min-width: 22.2222222222em){
   .mobile-nav-style-slide-left.menu-open:not(.mobile-nav-toggle-style-hamburger) .mobile-menu-toggle{
     left: calc(400px - (200px + 1.1111111111rem));
@@ -3159,11 +3167,11 @@ label:not(.gfield_label) {
   .ginput_container .medium{
     width: calc(50% - 10px);
   }
-  .newsletter .medium{
-    width: 100%;
-  }
   .component{
     padding: 4.4444444444rem 1.1111111111rem 5.5555555556rem;
+  }
+  .newsletter .medium{
+    width: 100%;
   }
   .grid--one-two-three{
     margin-left: -25px;
@@ -3474,33 +3482,6 @@ label:not(.gfield_label) {
   .mobile-nav-style-slide-right .main-navigation{
     background-color: transparent;
   }
-  .newsletter .gform_footer{
-    -ms-flex-align: center;
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .newsletter{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .newsletter .gform_fields{
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .newsletter .gfield{
-    width: 67%;
-  }
-  .newsletter .gfield + .gfield{
-    margin-left: 1.1111111111rem;
-    margin-top: 0;
-    width: 33%;
-  }
-  .newsletter .gfield + .gfield input[type="text"]{
-    width: 100%;
-  }
   .speaking-meta{
     width: calc(33.3333333333% - 26.6666666667px);
     float: left;
@@ -3535,6 +3516,38 @@ label:not(.gfield_label) {
   .related-posts .row{
     padding: 0 2.2222222222rem;
   }
+  .component--newsletter .h3{
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+    margin: 0.5555555556rem 1.1111111111rem 0 0;
+  }
+  .newsletter .gform_footer{
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .newsletter{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .newsletter .gform_fields{
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .newsletter .gfield{
+    width: 67%;
+  }
+  .newsletter .gfield + .gfield{
+    margin-left: 1.1111111111rem;
+    margin-top: 0;
+    width: 33%;
+  }
+  .newsletter .gfield + .gfield input[type="text"]{
+    width: 100%;
+  }
   .row-flex{
     -ms-flex-direction: row;
     flex-direction: row;
@@ -3559,11 +3572,6 @@ label:not(.gfield_label) {
     width: calc(66.6666666667% - 41.6666666667px);
     float: left;
     margin-left: 25px;
-  }
-  .home .component--newsletter .h3{
-    -ms-flex: 0 0 33%;
-    flex: 0 0 33%;
-    margin: 0.5555555556rem 1.1111111111rem 0 0;
   }
 }
 
