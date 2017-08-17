@@ -64,6 +64,32 @@ a.button {
 			}
 		}
 	}
+
+	&.button--outline {
+		background-color: transparent;
+		border: 2px solid;
+		border-radius: 3px;
+		color: $color__body-text;
+
+		&:hover {
+			background-color: $color__body-text;
+			border: 2px solid $color__body-text;
+			color: color(white);
+		}
+
+		@each $name, $color in $theme-colors {
+
+			&--#{$name} {
+				border-color: $color;
+				color: $color;
+
+				&:hover {
+					background-color: $color;
+					border-color: $color;
+				}
+			}
+		}
+	}
 }
 
 //-----------------------------------------
