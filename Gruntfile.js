@@ -16,7 +16,7 @@ module.exports = function( grunt ) {
 			},
 			dist: {
 				files: {
-					'style.css': 'sass/style.scss'
+					'style.css': 'assets/sass/style.scss'
 				},
 			},
 		},
@@ -44,15 +44,15 @@ module.exports = function( grunt ) {
 			},
 		},
 		jshint: {
-			files: ['Gruntfile.js', 'js/src/*.js']
+			files: ['Gruntfile.js', 'assets/js/src/*.js']
 		},
 		concat: {
 			options: {
 				separator: '\n\n'
 			},
 			dist: {
-				src: ['js/src/*.js'],
-				dest: 'js/<%= pkg.name %>-theme.js'
+				src: ['assets/js/src/*.js'],
+				dest: 'assets/js/<%= pkg.name %>-theme.js'
 			}
 		},
 		uglify: {
@@ -62,13 +62,13 @@ module.exports = function( grunt ) {
 			},
 			dist: {
 				files: {
-					'js/<%= pkg.name %>-theme.min.js': ['<%= concat.dist.dest %>']
+					'assets/js/<%= pkg.name %>-theme.min.js': ['<%= concat.dist.dest %>']
 				}
 			}
 		},
 		watch: {
 			css: {
-				files: ['sass/**/*.scss', 'sass/*.scss'],
+				files: ['assets/sass/**/*.scss', 'sass/*.scss'],
 				tasks: ['styles'],
 				options: {
 					livereload: true

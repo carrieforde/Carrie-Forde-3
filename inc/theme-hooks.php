@@ -27,7 +27,7 @@ function cf3_custom_login_screen() { ?>
 
 		#login h1 a,
 		.login h1 a {
-			background-image: url( <?php echo CARRIEFORDE3_URL . '/images/carrie-forde-logo_white.svg'; ?> );
+			background-image: url( <?php echo CARRIEFORDE3_URL . 'assets/images/carrie-forde-logo_white.svg'; ?> );
 			background-size: contain;
 			height: 150px;
 			width: 200px;
