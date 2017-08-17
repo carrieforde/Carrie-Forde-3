@@ -24,17 +24,6 @@
 
 	<?php get_template_part( 'template-parts/components/component', 'talks' ); ?>
 
-	<section class="component open-source-project-component full-width background-white-smoke">
-
-		<div class="row">
-			<header>
-				<h2 class="component__header"><?php esc_html_e( 'I ❤️ Open Source', 'carrieforde' ); ?></h2>
-			</header>
-
-			<?php echo cf3_fetch_posts( array( 'category' => 'open-source', 'template_part' => 'template-parts/content-post-card-sticky' ) ); // WPCS: XSS OK. ?>
-		</div>
-	</section>
-
 	<?php alcatraz_the_entry_footer(); ?>
 </article>
 
