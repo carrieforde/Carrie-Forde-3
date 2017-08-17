@@ -524,11 +524,11 @@
             "delay": 0
         },
         {
-            "key": "field_5914a80c93370",
-            "label": "Implementation",
-            "name": "implementation",
-            "type": "wysiwyg",
-            "instructions": "Enter a template tag or basic code showing how to pull the component into the template for use\r\n\r\nE.g. <?php wp_component_library()->image-hero->image-hero-markup(); ?>",
+            "key": "field_5995ce0b58750",
+            "label": "Related Components",
+            "name": "related_components",
+            "type": "relationship",
+            "instructions": "If this component is make up of other components, link to those components here.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -536,11 +536,18 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "text",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "post_type": [
+                "wpcl-component"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
         },
         {
             "key": "field_5933774ebffb2",
@@ -567,11 +574,65 @@
             "return_format": "value"
         },
         {
+            "key": "field_5914a80c93370",
+            "label": "Implementation",
+            "name": "implementation",
+            "type": "wysiwyg",
+            "instructions": "Enter a template tag or basic code showing how to pull the component into the template for use\r\n<br>\r\nE.g.  &lt;?php wp_component_library()-&gt;image-hero-&gt;image-hero-markup(); ?&gt;",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5933774ebffb2",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5995cd9efc0d1",
+            "label": "PHP Logic",
+            "name": "php_logic",
+            "type": "wysiwyg",
+            "instructions": "Enter any PHP logic code needed to produce the component. This may include queries, or other functions.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5933774ebffb2",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_593768f90733e",
-            "label": "PHP",
+            "label": "PHP Templating",
             "name": "php",
             "type": "wysiwyg",
-            "instructions": "Enter the PHP Code needed to produce the component.",
+            "instructions": "Enter the PHP Templating Code needed to produce the component.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -665,5 +726,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1502987066
+    "modified": 1502991375
 }
