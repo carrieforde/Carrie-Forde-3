@@ -26,17 +26,17 @@ $col_3_text  = get_post_meta( $post_id, $prefix . 'column_3_text', true );
 
 	<div class="row">
 		<div class="column">
-			<h3 class="color-razzmatazz"><?php echo esc_html( $col_1_title ); ?></h3>
+			<h3 class="color-oslo-gray"><?php echo esc_html( $col_1_title ); ?></h3>
 			<div class="content"><?php echo wp_kses_post( $col_1_text ); ?></div>
 		</div>
 
 		<div class="column">
-			<h3 class="color-razzmatazz"><?php echo esc_html( $col_2_title ); ?></h3>
+			<h3 class="color-oslo-gray"><?php echo esc_html( $col_2_title ); ?></h3>
 			<div class="content"><?php echo wp_kses_post( $col_2_text ); ?></div>
 		</div>
 
 		<div class="column">
-			<h3 class="color-razzmatazz"><?php echo esc_html( $col_3_title ); ?></h3>
+			<h3 class="color-oslo-gray"><?php echo esc_html( $col_3_title ); ?></h3>
 			<div class="content"><?php echo wp_kses_post( $col_3_text ); ?></div>
 		</div>
 	</div>
