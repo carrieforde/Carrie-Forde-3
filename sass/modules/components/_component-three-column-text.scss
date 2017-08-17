@@ -9,10 +9,10 @@
 	}
 
 	.row {
+		display: grid;
+		grid-gap: rem(30);
 		
 		@include grid-media($tablet-landscape-up) {
-			display: grid;
-			grid-gap: rem(30);
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}

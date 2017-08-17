@@ -18,7 +18,7 @@
 		</header>
 		<?php cf3_fetch_upcoming_speaking_post(); ?>
 		<footer class="component__footer">
-			<a href="<?php echo esc_url( get_site_url( null, '/speaking/', null ) ); ?>" class="button"><?php esc_html_e( 'View All Talks', 'carrieforde3' ); ?></a>
+			<a href="<?php echo esc_url( get_site_url( null, '/speaking/', null ) ); ?>" class="button button--outline button--outline--white"><?php esc_html_e( 'View All Talks', 'carrieforde3' ); ?></a>
 		</footer>
 	</div>
 </section>

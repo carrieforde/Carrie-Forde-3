@@ -1,0 +1,17 @@
+//--------------------------------------------------------------
+// CARD -- TALK
+//--------------------------------------------------------------
+.card--talk {
+	@include vertical-rhythm(4em);
+
+	background-color: transparent;
+	box-shadow: none;
+
+	.card__content {
+		margin-top: 0;
+	}
+
+	.button.button--text {
+		color: color(white);
+	}
+}

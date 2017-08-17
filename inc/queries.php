@@ -229,7 +229,7 @@ function cf3_fetch_upcoming_speaking_post( $args = array() ) {
 
 			$posts->the_post();
 
-			get_template_part( 'template-parts/content', 'speaking-card' );
+			get_template_part( 'template-parts/content', 'talk-card' );
 		}
 	}
 
