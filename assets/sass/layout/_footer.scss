@@ -1,0 +1,52 @@
+//--------------------------------------------------------------
+// FOOTER
+//--------------------------------------------------------------
+.site-footer {
+	color: color(white);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0;
+
+	a {
+		color: color(white);
+
+		&:hover,
+		&:focus {
+			color: rgba(color(white), 0.8);
+		}
+	}
+}
+
+.footer-bottom,
+.social-navigation {
+	
+	@include media(null, $tablet-landscape-up) {
+		grid-column: 1 / 3;
+	}
+
+	@include grid-media($tablet-landscape-up) {
+		padding: $size__padding / 2 $size__padding; 
+	}
+}
+
+.footer-bottom {
+	background-color: color(mine-shaft);
+	font-size: 0.8em;
+	padding: $size__padding $size__padding / 2 $size__padding / 2;
+
+	@include grid-media($tablet-landscape-up) {
+		text-align: left;
+	}
+}
+
+.social-navigation {
+	background-color: color(mine-shaft);
+	margin: 0;
+	padding: $size__padding / 2 $size__padding / 2 $size__padding;
+
+	@include grid-media($tablet-landscape-up) {
+		.social-links-menu {
+			justify-content: flex-end;
+		}
+	}
+}
