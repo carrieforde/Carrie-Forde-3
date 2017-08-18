@@ -12,6 +12,78 @@ input {
 	display: block;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+
+	+ label {
+		display: inline-block;
+		padding-left: rem(30);
+		line-height: rem(20);
+		position: relative;
+
+		&:before {
+			@include position(absolute, null null null 0);
+			@include size(rem(20));
+
+			border: $border__forms;
+			content: '';
+			float: left;
+		}
+	}
+
+	&:checked {
+
+		+ label {
+
+			&:before {
+				content: '\f00c';
+				color: color(razzmatazz);
+				font-family: $font-awesome;
+				font-size: em(24);
+				line-height: 16px;
+			}
+		}
+	}
+}
+
+input[type="checkbox"] {
+
+	&:checked {
+		
+		+ label {
+
+			&:before {
+				content: '\f00c';
+			}
+		}
+	}
+}
+
+input[type="radio"] {
+
+	+ label {
+
+		&:before {
+			@include position(absolute, 0 0 0 0);
+			
+			border-radius: 50%;
+			font-size: em(16);
+			text-align: center;
+		}
+	}
+
+	&:checked {
+
+		+ label {
+
+			&:before {
+				content: '\f111';
+			}
+		}
+	}
+}
+
 
 //-----------------------------------------
 // Search Form
