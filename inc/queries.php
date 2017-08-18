@@ -166,7 +166,7 @@ function cf3_get_related_posts( $post_id = 0 ) {
 
 		ob_start(); ?>
 
-		<section class="module related-posts background-white-smoke full-width">
+		<section class="component related-posts background-white-smoke full-width">
 
 			<div class="row">
 				<header class="related-posts__header">
