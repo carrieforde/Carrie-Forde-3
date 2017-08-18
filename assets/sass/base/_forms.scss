@@ -18,8 +18,9 @@ input[type="radio"] {
 
 	+ label {
 		display: inline-block;
-		padding-left: rem(30);
+		padding-left: rem(25);
 		line-height: rem(20);
+		margin-right: rem(15);
 		position: relative;
 
 		&:before {
@@ -29,20 +30,6 @@ input[type="radio"] {
 			border: $border__forms;
 			content: '';
 			float: left;
-		}
-	}
-
-	&:checked {
-
-		+ label {
-
-			&:before {
-				content: '\f00c';
-				color: color(razzmatazz);
-				font-family: $font-awesome;
-				font-size: em(24);
-				line-height: 16px;
-			}
 		}
 	}
 }
@@ -55,6 +42,10 @@ input[type="checkbox"] {
 
 			&:before {
 				content: '\f00c';
+				color: color(razzmatazz);
+				font-family: $font-awesome;
+				font-size: em(24);
+				line-height: 16px;
 			}
 		}
 	}
@@ -78,7 +69,7 @@ input[type="radio"] {
 		+ label {
 
 			&:before {
-				content: '\f111';
+				background-color: color(razzmatazz);
 			}
 		}
 	}
