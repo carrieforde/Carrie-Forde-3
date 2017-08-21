@@ -415,3 +415,26 @@ function cf3_get_component_category_image( $post_id = 0, $image_size = 'componen
 
 	return $cat_image;
 }
+
+/**
+ * Checks if talk is upcoming.
+ *
+ * @return  bool
+ */
+function cf3_is_talk_upcoming( $post_id= 0 ) {
+
+	// Get post ID if not passed.
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	$talk_date = get_post_meta( $post_id, 'event_date_time', true );
+	$today = date( 'Y-m-d' );
+
+	// If talk is upcoming, return true.
+	if ( strtotime( $today ) < strtotime( $talk_date ) ) {
+		return true;
+	}
+
+	return false;
+}
