@@ -3,11 +3,14 @@
 //--------------------------------------------------------------
 .post-navigation,
 .posts-navigation {
-	border-bottom: 5px solid color(charcoal);
-	border-top: 2px solid color(charcoal);
 	margin: 40px auto 0;
 	padding-bottom: 30px;
 	padding-top: 30px;
+
+	.single-post & {
+		border-bottom: 5px solid color(charcoal);
+		border-top: 2px solid color(charcoal);
+	}
 
 	.nav-links {
 		align-items: stretch;
@@ -60,7 +63,10 @@
 	.nav-previous {
 
 		+ .nav-next {
-			border-left: 1px solid rgba(color(french-gray), 0.3);
+
+			.single-post & {
+				border-left: 1px solid rgba(color(french-gray), 0.3);
+			}
 		}
 	}
 
