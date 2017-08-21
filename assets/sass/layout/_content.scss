@@ -34,4 +34,18 @@
 	.single-post & {
 		padding-bottom: 0;
 	}
+
+	.home & {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+}
+
+
+// hentry.
+.hentry {
+
+	.home & {
+		margin-bottom: 0;
+	}
 }

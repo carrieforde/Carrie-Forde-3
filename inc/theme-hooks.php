@@ -241,3 +241,21 @@ function cf3_display_search_form() {
 
 	get_search_form();
 }
+
+add_filter( 'body_class', 'cf3_body_classes' );
+/**
+ * Add custom body classes.
+ *
+ * @since   1.0.0
+ *
+ * @param   array  $classes  Classes for the body element.
+ * @return  array
+ */
+function cf3_body_classes( $classes ) {
+
+	if ( is_archive() || is_home() ) {
+		$classes[] = 'background-white-smoke';
+	}
+
+	return $classes;
+}
