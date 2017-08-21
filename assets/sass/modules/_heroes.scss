@@ -4,10 +4,6 @@
 .hero {
 	@include size(100% 60vh);
 
-	.home & {
-		height: 75vh;
-	}
-
 	line-height: 1.5;
 	position: relative;
 	text-align: center;
@@ -17,26 +13,34 @@
 	}
 
 	@include element(text) {
-		@include position(absolute, 50% null null 45%);
+		@include position(absolute, 50% 0 null 0);
 
-		font-size: 0.8em;
+		margin: auto;
+		padding: 0 rem(40);
+		max-width: rem(500);
 		transform: translateY(-50%);
-		width: 45%;
 
-		@media (max-width: 600px) {
-			display: none;
+		@include grid-media($tablet-portrait-up) {
+			left: 33%;
+			padding: 0;
+			right: auto;
 		}
 
 		@include grid-media($tablet-landscape-up) {
-			font-size: initial;
+			left: 45%;
 		}
 
 		@include grid-media($desktop-up) {
 			font-size: 1.2em;
+			left: 55%;
 		}
 	}
 
 	@include element(title) {
+		margin-bottom: 0;
+	}
+
+	@include element(description) {
 		margin-bottom: 0;
 	}
 
