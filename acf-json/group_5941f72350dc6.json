@@ -85,6 +85,30 @@
             },
             "width": "",
             "height": ""
+        },
+        {
+            "key": "field_599b2e4f2bd59",
+            "label": "Featured",
+            "name": "featured",
+            "type": "radio",
+            "instructions": "Check true if the talk is a featured talk that should show when no upcoming talks are available.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "no",
+            "layout": "horizontal",
+            "return_format": "value"
         }
     ],
     "location": [
@@ -104,5 +128,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1497674033
+    "modified": 1503342571
 }
