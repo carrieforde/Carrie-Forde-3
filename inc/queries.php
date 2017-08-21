@@ -209,7 +209,7 @@ function cf3_fetch_upcoming_speaking_post( $args = array() ) {
 
 	$post = array(
 		'post_type'      => 'cf-speaking',
-		// 'posts_per_page' => 1,
+		'posts_per_page' => 2,
 		'orderby'        => 'meta_value',
 		'order'          => 'ASC',
 		'meta_query'     => array(
@@ -217,8 +217,43 @@ function cf3_fetch_upcoming_speaking_post( $args = array() ) {
 				'key'     => 'event_date_time',
 				'value'   => date( 'Y-m-d H:i:s' ),
 				'compare' => '>=',
-			)
-		)
+			),
+		),
+	);
+
+	$posts = new WP_Query( $post );
+
+	if ( $posts->have_posts() ) {
+
+		while ( $posts->have_posts() ) {
+
+			$posts->the_post();
+
+			get_template_part( 'template-parts/content', 'talk-card' );
+		}
+	} else {
+		cf3_fetch_featured_speaking_posts();
+	}
+
+	wp_reset_postdata();
+}
+
+/**
+ * Grab the featured speaking posts.
+ */
+function cf3_fetch_featured_speaking_posts() {
+
+	$post = array(
+		'post_type'      => 'cf-speaking',
+		'posts_per_page' => 2,
+		'orderby'        => 'meta_value',
+		'order'          => 'ASC',
+		'meta_query'     => array(
+			array(
+				'key'     => 'featured',
+				'value'   => 'yes',
+			),
+		),
 	);
 
 	$posts = new WP_Query( $post );
@@ -234,4 +269,32 @@ function cf3_fetch_upcoming_speaking_post( $args = array() ) {
 	}
 
 	wp_reset_postdata();
+}
+
+/**
+ * Check if we have upcoming talks.
+ */
+function cf3_has_upcoming_talks() {
+
+	$post = array(
+		'post_type'      => 'cf-speaking',
+		'posts_per_page' => 2,
+		'orderby'        => 'meta_value',
+		'order'          => 'ASC',
+		'meta_query'     => array(
+			array(
+				'key'     => 'event_date_time',
+				'value'   => date( 'Y-m-d H:i:s' ),
+				'compare' => '>=',
+			),
+		),
+	);
+
+	$posts = new WP_Query( $post );
+
+	if ( $posts->have_posts() ) {
+		return true;
+	}
+
+	return false;
 }
