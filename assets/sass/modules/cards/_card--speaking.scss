@@ -7,18 +7,18 @@
 	.fluid-embed {
 		margin: rem(-20) rem(-20) rem(18);
 	}
-
-	.card__title {
-		margin-top: rem(40);
-	}
 } // .card--speaking
 
 .upcoming-talk {
-	@include position(absolute, rem(10) null null rem(-10));
-	
+	@include position(absolute, rem(15) null null rem(-10));
+
 	font-weight: 600;
 	letter-spacing: 0.025em;
 	padding: em(5) em(10) em(8);
 	text-transform: uppercase;
 	z-index: 1;
+
+	+ .card__title {
+		margin-top: rem(45);
+	}
 }
