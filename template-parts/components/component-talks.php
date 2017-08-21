@@ -14,7 +14,13 @@
 
 	<div class="talks column">
 		<header class="component__header">
-			<h2 class="component__title color-white"><?php esc_html_e( 'Upcoming Talks', 'carrieforde3' ); ?>
+			<h2 class="component__title color-white">
+				<?php if ( cf3_has_upcoming_talks() ) : ?>
+					<?php esc_html_e( 'Upcoming Talks', 'carrieforde3' ); ?>
+				<?php else : ?>
+					<?php esc_html_e( 'Featured Talks', 'carrieforde3' ); ?>
+				<?php endif; ?>
+			</h2>
 		</header>
 		<?php cf3_fetch_upcoming_speaking_post(); ?>
 		<footer class="component__footer">
