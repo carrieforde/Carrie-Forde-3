@@ -312,6 +312,8 @@ function cf3_post_type_for_pagination( $post_id = 0 ) {
 			return 'Project';
 		case 'wpcl-component' :
 			return 'Component';
+		case 'cf-speaking' :
+			return 'Talk';
 		default :
 			return '';
 	}
