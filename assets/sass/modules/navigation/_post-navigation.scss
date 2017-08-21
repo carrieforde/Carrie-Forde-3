@@ -8,12 +8,20 @@
 	padding-top: 30px;
 
 	.single-post & {
-		border-bottom: 5px solid color(charcoal);
-		border-top: 2px solid color(charcoal);
+
+		@include grid-media($tablet-portrait-up) {
+			border-bottom: 5px solid color(charcoal);
+			border-top: 2px solid color(charcoal);
+		}
 	}
 
 	.nav-links {
 		align-items: stretch;
+		flex-wrap: wrap;
+
+		@include grid-media($tablet-portrait-up) {
+			flex-wrap: nowrap;
+		}
 	}
 
 	@include element(span) {
@@ -27,7 +35,13 @@
 
 	.nav-previous,
 	.nav-next {
-		flex: 0 0 50%;
+		flex: 0 0 100%;
+		padding: rem(20) 0;
+
+		@include grid-media($tablet-portrait-up) {
+			flex: 0 0 50%;
+			padding: 0;
+		}
 
 		h3 {
 			font-size: 1.25em;
@@ -65,7 +79,10 @@
 		+ .nav-next {
 
 			.single-post & {
-				border-left: 1px solid rgba(color(french-gray), 0.3);
+
+				@include grid-media($tablet-portrait-up) {
+					border-left: 1px solid rgba(color(french-gray), 0.3);
+				}
 			}
 		}
 	}
