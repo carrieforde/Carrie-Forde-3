@@ -60,8 +60,8 @@ function cf3_enqueue_scripts() {
 		true
 	);
 
-	// Enqueu masonry.
-	if ( is_home() ) {
+	// Enqueue masonry.
+	if ( is_home() || is_category() || is_tag() ) {
 		wp_enqueue_script( 'carrieforde3-masonry' );
 	}
 }
