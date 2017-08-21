@@ -26,3 +26,12 @@
 		border-bottom: none !important;
 	}
 }
+
+
+// Remove padding for content area.
+.content-area {
+
+	.single-post & {
+		padding-bottom: 0;
+	}
+}
