@@ -87,7 +87,7 @@
 
 		.alcatraz-col--8 {
 			margin-left: gutter($card-grid);
-			margin-right: gutter($card-grid);
+			max-width: calc(100% - 50px);
 		}
 	}
 
