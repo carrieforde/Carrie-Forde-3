@@ -16,7 +16,7 @@ $video = get_post_meta( get_the_ID(), 'video_link', true );
 				<div class="fluid-embed">
 					<?php echo apply_filters( 'the_content', $video ); // WPCS: XSS OK. ?>
 				</div>
-			<?php else : ?>
+			<?php elseif ( cf3_is_talk_upcoming() ) : ?>
 				<span class="upcoming-talk color-white background-razzmatazz"><?php esc_html_e( 'Upcoming Talk', 'carrieforde3' ); ?></span>
 			<?php endif; ?>
 			<h2 class="entry-title card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
