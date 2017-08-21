@@ -103,3 +103,19 @@
 		}
 	}
 }
+
+
+//-----------------------------------------
+// Speaking
+//-----------------------------------------
+.post-type-archive-cf-speaking {
+
+	.page-content {
+		display: grid;
+
+		@include grid-media($tablet-portrait-up) {
+			grid-column-gap: rem(25);
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
