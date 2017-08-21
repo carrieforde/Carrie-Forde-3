@@ -33,7 +33,8 @@
 }
 
 .custom-logo {
-	width: 100%;
+	max-width: 100%;
+	width: rem(250);
 
 	@include grid-media($tablet-portrait-up) {
 		.is-sticky & {
