@@ -59,17 +59,19 @@ $code-color-fade: #bebec5;
 // 
 $code-color-comment: color(french-gray);
 $code-color-keyword: color(ocean-boat-blue);
-$code-color-value:			null;
+$code-color-value: null;
 $code-color-string: color(dark-pastel-green);
-$code-color-name:			null;
+$code-color-name: null;
 $code-color-number: color(honey-flower);
-$code-color-variable:		null;
-$code-color-selector:		null;
-$code-color-punctuation:	$code-color-fade;
+$code-color-variable: null;
+$code-color-selector: null;
+$code-color-punctuation: $code-color-fade;
 $code-color-function: color(razzmatazz);
 $color-color-property: color(honey-flower);
 
 #{$code-selector} {
+	background-color: color(white);
+
 	.namespace {
 		opacity: .7;
 	}
