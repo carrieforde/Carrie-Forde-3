@@ -70,7 +70,7 @@ $code-color-function: color(razzmatazz);
 $color-color-property: color(honey-flower);
 
 #{$code-selector} {
-	background-color: color(white);
+	background-color: color(white) !important;
 
 	.namespace {
 		opacity: .7;
