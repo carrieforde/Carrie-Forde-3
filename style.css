@@ -1980,6 +1980,10 @@ h6,
   font-size: 0.88em;
 }
 
+p + *:not(p) {
+  margin-top: 2em;
+}
+
 b,
 strong {
   font-weight: 600;
@@ -2040,6 +2044,10 @@ blockquote cite {
 
 ::selection {
   background-color: rgba(237, 28, 114, 0.4);
+}
+
+pre + * {
+  margin-top: 2em;
 }
 
 .category-badge {
@@ -2167,6 +2175,10 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"] {
   padding: 2px 6px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  background-color: #fff;
 }
 
 code[class*="language-"] .namespace, pre[class*="language-"] .namespace {
@@ -2649,14 +2661,6 @@ iframe {
   font-size: 3.25em;
   line-height: 1;
   margin: 0.2777777778rem 0.2777777778rem -0.3333333333rem 0;
-}
-
-.post-content p + h2,
-.post-content p + h3,
-.post-content p + h4,
-.post-content p + h5,
-.post-content p + h6 {
-  margin: 1.75em 0 0.25em;
 }
 
 .single-cf-portfolio .post-content img {
