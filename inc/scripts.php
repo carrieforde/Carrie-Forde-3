@@ -29,7 +29,7 @@ function cf3_enqueue_scripts() {
 	wp_enqueue_style(
 		'carrieforde3-style',
 		CARRIEFORDE3_URL . 'style.min.css',
-		array( 'prism-css' ),
+		array(),
 		CARRIEFORDE3_VERSION
 	);
 
@@ -46,7 +46,7 @@ function cf3_enqueue_scripts() {
 	wp_enqueue_script(
 		'carrieforde3-scripts',
 		CARRIEFORDE3_URL . 'assets/js/carrieforde3-theme.min.js',
-		array( 'jquery', 'sticky-js', 'prism-js' ),
+		array( 'jquery', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
 		true
 	);
@@ -67,14 +67,14 @@ function cf3_enqueue_scripts() {
 
 	// Enqueue Prism.
 	if ( is_singular( 'post' ) ) {
-		wp_register_style(
+		wp_enqueue_style(
 			'prism-css',
 			CARRIEFORDE3_URL . 'assets/vendor/prism/prism.css',
 			array(),
 			CARRIEFORDE3_VERSION
 		);
 
-		wp_register_script(
+		wp_enqueue_script(
 			'prism-js',
 			CARRIEFORDE3_URL . 'assets/vendor/prism/prism.js',
 			array( 'jquery' ),
