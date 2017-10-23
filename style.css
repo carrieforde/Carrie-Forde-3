@@ -1980,7 +1980,8 @@ h6,
   font-size: 0.88em;
 }
 
-p + *:not(p) {
+p + *:not(p),
+p + *:not(blockquote) {
   margin-top: 2em;
 }
 
@@ -2005,7 +2006,7 @@ article:not(.card):not(.component-content):not(.front-page-content) a:not(.butto
 
 blockquote {
   font-size: 1.20em;
-  margin: 0;
+  margin: 3em 0;
   padding: 0 60px;
   position: relative;
   text-align: center;
