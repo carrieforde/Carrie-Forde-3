@@ -52,6 +52,12 @@ h6,
 	font-size: 0.88em; // ~16px at desktop
 }
 
+p {
+	+ *:not(p) {
+		margin-top: 2em;
+	}
+}
+
 // Sanitize CSS uses `font-weight: bolder;`, which kinda sucks.
 b,
 strong {

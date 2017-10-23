@@ -23,23 +23,6 @@
 	}
 
 	//-----------------------------------------
-	// Headings
-	//
-	// Give sections of content a bit more
-	// space than they would have otherwise.
-	//-----------------------------------------
-	p {
-
-		+ h2,
-		+ h3,
-		+ h4,
-		+ h5,
-		+ h6 {
-			margin: 1.75em 0 0.25em;
-		}
-	}
-
-	//-----------------------------------------
 	// Portfolio Images
 	//-----------------------------------------
 	.single-cf-portfolio & {
