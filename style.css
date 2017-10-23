@@ -2178,7 +2178,7 @@ pre[class*="language-"] {
 }
 
 code[class*="language-"], pre[class*="language-"] {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 code[class*="language-"] .namespace, pre[class*="language-"] .namespace {
