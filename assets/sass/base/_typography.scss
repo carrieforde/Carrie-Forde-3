@@ -124,6 +124,10 @@ blockquote {
 	background-color: $color__selection;
 }
 
+code {
+	background-color: rgba(color(oslo-gray), 0.3);
+	padding: rem(2) rem(5);
+}
 pre {
 
 	+ * {
