@@ -12,7 +12,6 @@ define( 'CARRIEFORDE3_URL', trailingslashit( get_stylesheet_directory_uri() ) );
  */
 add_image_size( 'card-image', 1040, 690, true );
 add_image_size( 'component-image', 250, 250, false );
-
 add_image_size( 'hero-image', 1920, 500, true );
 
 
