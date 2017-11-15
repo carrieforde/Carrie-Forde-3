@@ -377,7 +377,7 @@ pre,
 samp,
 tt,
 var {
-  font: 400 0.875em / 1.6 "Fira Mono", monospace;
+  font: 400 0.875em / 1.3 "Fira Mono", monospace;
 }
 
 pre {
@@ -2047,6 +2047,11 @@ blockquote cite {
   background-color: rgba(237, 28, 114, 0.4);
 }
 
+code {
+  background-color: rgba(141, 139, 143, 0.3);
+  padding: 0.1111111111rem 0.2777777778rem;
+}
+
 pre + * {
   margin-top: 2em;
 }
@@ -2471,6 +2476,11 @@ iframe {
 
 .single-wpcl-component .hero {
   margin-top: 0;
+}
+
+.home .hero {
+  font-size: 1em;
+  height: 100vh;
 }
 
 .post-navigation,
