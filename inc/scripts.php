@@ -9,6 +9,8 @@ add_action( 'wp_enqueue_scripts', 'cf3_enqueue_scripts', 15 );
  */
 function cf3_enqueue_scripts() {
 
+	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
 	// Google fonts.
 	wp_enqueue_style(
 		'carrieforde3-google-fonts',
@@ -28,7 +30,7 @@ function cf3_enqueue_scripts() {
 	// Include this theme's stylesheet.
 	wp_enqueue_style(
 		'carrieforde3-style',
-		CARRIEFORDE3_URL . 'style.min.css',
+		CARRIEFORDE3_URL . 'style' . $min . '.css',
 		array(),
 		CARRIEFORDE3_VERSION
 	);
@@ -45,7 +47,7 @@ function cf3_enqueue_scripts() {
 	// Include this theme's JS.
 	wp_enqueue_script(
 		'carrieforde3-scripts',
-		CARRIEFORDE3_URL . 'assets/js/carrieforde3-theme.min.js',
+		CARRIEFORDE3_URL . 'assets/js/carrieforde3-theme' . $min . '.js',
 		array( 'jquery', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
 		true
