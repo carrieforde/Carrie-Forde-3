@@ -19,12 +19,12 @@ function cf3_enqueue_scripts() {
 		CARRIEFORDE3_VERSION
 	);
 
-	// Typekit font.
-	wp_enqueue_script(
+	// Typekit fonts.
+	wp_enqueue_style(
 		'carrieforde3-typekit-font',
-		'//use.typekit.net/jsi5beh.js',
+		str_replace( ',', '%2C', '//use.typekit.net/jsi5beh.css' ),
 		array(),
-		'1.0.1'
+		CARRIEFORDE3_VERSION
 	);
 
 	// Include this theme's stylesheet.
@@ -84,17 +84,6 @@ function cf3_enqueue_scripts() {
 			true
 		);
 	}
-}
-
-add_action( 'wp_head', 'cf3_typekit' );
-/**
- * Load Typekit inline JavaScript in head.
- *
- * @author Carrie Forde
- */
-function cf3_typekit() {
-
-	echo '<script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>';
 }
 
 add_action( 'wp_footer', 'cf3_google_analytics' );
