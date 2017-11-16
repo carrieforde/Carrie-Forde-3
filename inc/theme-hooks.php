@@ -259,3 +259,16 @@ function cf3_body_classes( $classes ) {
 
 	return $classes;
 }
+
+add_action( 'admin_init', 'cf3_add_editor_styles' );
+/**
+ * Include our theme CSS in the TinyMCE editor.
+ *
+ * @since  1.0.0
+ */
+function cf3_add_editor_styles() {
+
+	add_editor_style( str_replace( ',', '%2C', '//use.typekit.net/jsi5beh.css' ) );
+	add_editor_style( str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:600,900|Montserrat:300,400' ) );
+	add_editor_style( get_stylesheet_uri() );
+}
