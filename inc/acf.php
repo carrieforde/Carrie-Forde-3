@@ -79,16 +79,28 @@ function cf3_get_portfolio_meta( $post_id = 0 ) {
 	$designer_name = get_post_meta( $post_id, 'designer_name', true );
 	$designer_url  = get_post_meta( $post_id, 'designer_url', true );
 	$project_url   = get_post_meta( $post_id, 'project_url', true );
+	$project_repo  = get_post_meta( $post_id, 'github_repo', true );
+	$services = get_the_term_list( $post_id, 'cf-project-services', '', ', ', '' );
+	$technologies  = get_the_term_list( $post_id, 'cf-technologies', '', ', ', '' );
 
 	ob_start(); ?>
 
 	<aside class="portfolio-meta">
-		<div class="portfolio-meta__services">
+		<?php if ( $services ) : ?>
+		<div class="porfolio-meta__taxonomy porfolio-meta__taxonomy--services">
 			<h3 class="portfolio-meta__heading"><?php esc_html_e( 'Services', 'carrieforde3' ); ?></h3>
-			<p class="portfolio-meta__terms"><?php the_terms( $post_id, 'cf-project-services', '', ', ', '' ); ?></p>
+			<p class="portfolio-meta__terms"><?php echo wp_kses_post( $services ); ?></p>
 		</div>
+		<?php endif; ?>
 
-		<?php if ( isset( $designer_name ) && $designer_name ) : ?>
+		<?php if ( $technologies ) : ?>
+		<div class="porfolio-meta__taxonomy porfolio-meta__taxonomy--techonologies">
+			<h3 class="portfolio-meta__heading"><?php esc_html_e( 'Technologies', 'carrieforde3' ); ?></h3>
+			<p class="portfolio-meta__terms"><?php echo wp_kses_post( $technologies ); ?></p>
+		</div>
+		<?php endif; ?>
+
+		<?php if ( ! empty( $designer_name )) : ?>
 		<div class="porfolio-meta__designer">
 			<h3 class="portfolio-meta__heading"><?php esc_html_e( 'Designer', 'carrieforde3' ); ?></h3>
 			<p class="portfolio-meta__details"><a href="<?php echo esc_url( $designer_url ); ?>"><?php echo esc_html( $designer_name ); ?></a></p>
@@ -96,6 +108,10 @@ function cf3_get_portfolio_meta( $post_id = 0 ) {
 		<?php endif; ?>
 
 		<a href="<?php echo esc_url( $project_url ); ?>" class="button"><?php esc_html_e( 'Launch Website', 'carrieforde3' ); ?></a>
+
+		<?php if ( ! empty( $project_repo ) ) : ?>
+		<a href="<?php echo esc_url( $project_repo ); ?>" class="button button--outline button--outline--razzmatazz"><?php esc_html_e( 'View on Github', 'carrieforde3' ); ?></a>
+		<?php endif; ?>
 	</aside>
 	<?php return ob_get_clean();
 }

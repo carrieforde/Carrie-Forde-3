@@ -3,11 +3,6 @@
     "title": "Portfolio Meta",
     "fields": [
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_5848c17e5559b",
             "label": "Designer Name",
             "name": "designer_name",
@@ -19,11 +14,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "default_value": "",
-            "placeholder": "http:\/\/",
             "key": "field_5848c1b25559c",
             "label": "Designer Website",
             "name": "designer_url",
@@ -35,11 +33,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/"
         },
         {
-            "default_value": "",
-            "placeholder": "http:\/\/",
             "key": "field_5848c1ed5559d",
             "label": "Project URL",
             "name": "project_url",
@@ -51,7 +49,25 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/"
+        },
+        {
+            "key": "field_5a75126343054",
+            "label": "Github Repo",
+            "name": "github_repo",
+            "type": "url",
+            "instructions": "Enter a link to the Github repo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -59,7 +75,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "portfolio"
+                "value": "post"
             }
         ],
         [
@@ -78,5 +94,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1486003230
+    "modified": 1517621592
 }
