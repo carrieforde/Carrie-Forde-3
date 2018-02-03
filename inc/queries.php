@@ -107,7 +107,7 @@ function cf3_get_post_id( $args = array() ) {
 
 	$post = array(
 		'category_name'   => esc_attr( $args['category_name'] ),
-		'orderby'         => esc_attr( $args['orderby']),
+		'orderby'         => esc_attr( $args['orderby'] ),
 		'post_type'       => esc_attr( $args['post_type'] ),
 		'posts_per_page'  => 1,
 		'tag'             => esc_attr( $args['tag'] ),
