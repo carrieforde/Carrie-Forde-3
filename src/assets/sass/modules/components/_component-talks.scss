@@ -1,0 +1,67 @@
+//--------------------------------------------------------------
+// COMPONENT - TALKS
+//--------------------------------------------------------------
+/* stylelint-disable no-descending-specificity */
+.component--talks {
+
+	@include grid-media($tablet-landscape-up) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.image-as-background {
+		min-height: rem(500);
+		position: relative;
+	}
+
+	.attribution {
+		@include position(absolute, null $size__padding * 2 $size__padding null);
+
+		background-color: rgba(color(charcoal), 0.7);
+		display: inline-block;
+		font-size: 0.75em;
+		padding: rem(6) $size__padding / 2 $size__padding / 2;
+
+		a {
+			color: color(white);
+
+			&:hover,
+			&:focus {
+				color: rgba(color(white), 0.8);
+			}
+		}
+	}
+
+	.talks {
+		padding: $size__padding * 2 $size__padding;
+
+		@include grid-media($tablet-landscape-up) {
+			max-width: 100%;
+			padding: $size__padding * 4 $size__padding $size__padding * 4 $size__padding * 2;
+			width: $size__layout-boxed-content / 2;
+		}
+
+		@include grid-media($desktop-up) {
+			padding-right: 0;
+		}
+	}
+
+	.card__title a {
+		border-bottom: none !important;
+		color: color(white) !important;
+
+		&:hover,
+		&:focus {
+			color: rgba(color(white), 0.8);
+		}
+	}
+
+	.component__footer {
+		margin-top: 3em;
+		text-align: left;
+	}
+
+	.button--outline:hover {
+		color: color(ocean-boat-blue);
+	}
+}

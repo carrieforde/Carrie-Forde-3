@@ -1,0 +1,73 @@
+//--------------------------------------------------------------
+// COMMENTS
+//--------------------------------------------------------------
+.comments-area {
+	margin: rem(40) auto 0;
+}
+
+.children {
+	padding-left: 0;
+}
+
+.comment {
+	padding: $size__padding;
+}
+
+// When there are already comments.
+.comment-list {
+	padding: 0;
+
+	> .comment {
+
+		+ .comment {
+			border-top: 3px solid rgba(color(french-gray), 0.3);
+		}
+	}
+}
+
+.comment-list,
+.comment-list .children {
+	list-style: none;
+	margin: 0;
+}
+
+// The name of the commenter and their avatar.
+.comment-meta {
+	margin-bottom: $size__padding;
+	position: relative;
+
+	.avatar {
+		margin-right: 10px;
+	}
+}
+
+.comment-metadata {
+	@include position(absolute, null null 0 rem(87));
+
+	display: none;
+
+	@include grid-media($tablet-portrait-up) {
+		display: block;
+	}
+}
+
+// The content of the comment.
+.comment-body {
+	margin-bottom: rem(10);
+}
+
+// The area where the comment is actually entered.
+.comment-form {
+
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	textarea {
+		background-color: color(white);
+		width: 100%;
+	}
+}
+
+.required {
+	color: color(razzmatazz);
+}

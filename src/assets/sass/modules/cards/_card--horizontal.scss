@@ -1,0 +1,48 @@
+//--------------------------------------------------------------
+// CARD -- HORIZONTAL
+//--------------------------------------------------------------
+.card--horizontal {
+	max-width: 100%;
+	padding: $size__padding;
+
+	@include grid-media($tablet-portrait-up) {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		.card__image {
+			align-items: center;
+			justify-content: center;
+			margin: rem(-20);
+			overflow: hidden;
+			position: initial;
+			width: 50%;
+
+			img {
+				max-width: rem(650);
+			}
+		}
+
+		.card__content-wrap {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+		}
+
+		.card__footer {
+			margin-top: auto; // this will push the button to the bottom of the container.
+		}
+	}
+
+	@include media(rem(725), null) {
+		max-height: rem(400);
+
+		.card__image {
+			width: 40%;
+		}
+
+		.card__content-wrap {
+			width: 60%;
+		}
+	}
+} // .card--horizontal

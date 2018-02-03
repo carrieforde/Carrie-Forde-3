@@ -1,0 +1,51 @@
+//--------------------------------------------------------------
+// PRIMARY NAVIGATION 
+//--------------------------------------------------------------
+/* stylelint-disable no-descending-specificity */
+.main-navigation {
+	font-weight: 600;
+	text-transform: uppercase;
+
+	@include grid-media($tablet-landscape-up) {
+		display: flex !important;
+		flex-shrink: 0;
+		overflow: hidden;
+		padding: 0;
+		transform: translateX(rem(320));
+		transition: transform 0.3s ease-in-out;
+
+		&.show-search {
+			transform: translateX(0);
+		}
+
+		.mobile-nav-style-slide-right & {
+			background-color: transparent;
+		}
+	}
+
+	a,
+	a:visited {
+		color: color(charcoal);
+
+		&:hover {
+			color: color(razzmatazz);
+		}
+	}
+
+	.current-menu-item {
+
+		> a {
+			color: color(razzmatazz);
+		}
+	}
+}
+
+.mobile-nav-toggle-style-hamburger.admin-bar .mobile-menu-toggle {
+	top: $size__padding;
+}
+
+.mobile-nav-toggle-style-hamburger {
+	.mobile-menu-toggle {
+		top: auto !important;
+	}
+}

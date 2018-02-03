@@ -1561,6 +1561,7 @@ a.color-black {
 button,
 input[type='button'],
 input[type='submit'] {
+  border-radius: 3px;
   display: inline-block;
   font-family: "Fira Sans", sans-serif;
   font-size: 0.7777777778em;
@@ -2801,6 +2802,16 @@ a[rel*="post_tag"]:hover {
   margin-bottom: 0;
 }
 
+.portfolio-meta .button {
+  border: 2px solid #ed1c72;
+  min-width: 8.3333333333rem;
+  text-align: center;
+}
+
+.portfolio-meta .button + .button {
+  margin-left: 1.1111111111rem;
+}
+
 .gform_body ul {
   list-style: none;
   margin: 0;
@@ -3404,6 +3415,14 @@ label:not(.gfield_label) {
     float: left;
     margin-left: 20px;
     float: right;
+  }
+  .portfolio-meta .button{
+    display: block;
+    width: 100%;
+  }
+  .portfolio-meta .button + .button{
+    margin-left: 0;
+    margin-top: 1.1111111111rem;
   }
 }
 

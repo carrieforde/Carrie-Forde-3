@@ -1,0 +1,167 @@
+//--------------------------------------------------------------
+// POST NAVIGATION
+//--------------------------------------------------------------
+/* stylelint-disable no-descending-specificity */
+.post-navigation,
+.posts-navigation {
+	margin: 40px auto 0;
+	padding-bottom: 30px;
+	padding-top: 30px;
+
+	.single-post & {
+
+		@include grid-media($tablet-portrait-up) {
+			border-bottom: 5px solid color(charcoal);
+			border-top: 2px solid color(charcoal);
+		}
+	}
+
+	.nav-links {
+		align-items: stretch;
+		flex-wrap: wrap;
+
+		@include grid-media($tablet-portrait-up) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	@include element(span) {
+		color: color(oslo-gray);
+		display: block;
+		font-family: $font__body;
+		font-size: 0.8em;
+		margin-bottom: rem(5);
+		text-transform: uppercase;
+	}
+
+	.nav-previous,
+	.nav-next {
+		flex: 0 0 100%;
+		padding: rem(20) 0;
+
+		@include grid-media($tablet-portrait-up) {
+			flex: 0 0 50%;
+			padding: 0;
+		}
+
+		h3 {
+			font-size: 1.25em;
+			margin-bottom: 0;
+			overflow: hidden;
+			padding: 0 rem(15);
+		}
+
+		a {
+			color: color(mine-shaft);
+			font-weight: 600;
+			text-decoration: none;
+
+			&:hover {
+				h3 {
+					color: color(razzmatazz);
+				}
+			}
+
+			&:before {
+				@include size(30px);
+
+				// background: url('images/icon-chevron.svg') center no-repeat;
+				background-size: contain;
+				content: '';
+				display: block;
+				margin-top: 10px;
+				transition: transform 0.2s ease-in-out;
+			}
+		}
+	}
+
+	.nav-previous {
+
+		+ .nav-next {
+
+			.single-post & {
+
+				@include grid-media($tablet-portrait-up) {
+					border-left: 1px solid rgba(color(french-gray), 0.3);
+				}
+			}
+		}
+	}
+
+	.nav-next {
+		margin-left: auto; // push to the right when previous post doesn't exist.
+		text-align: right;
+	}
+
+	.nav-previous a {
+
+		&:before {
+			float: left;
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+
+			&:before {
+				transform: rotate(180deg) translateX(3px);
+			}
+		}
+	}
+
+	.nav-next a {
+
+		&:before {
+			float: right;
+		}
+
+		&:hover {
+			&:before {
+				transform: translateX(3px);
+			}
+		}
+	}
+}
+
+
+//-----------------------------------------
+// Posts Navigation
+//
+// This appears at the bottom of archive
+// pages. Reuses several styles from above
+// with some more finesse.
+//-----------------------------------------
+.posts-navigation {
+	border: none;
+	max-width: 100%;
+
+	.nav-next,
+	.nav-previous {
+
+		a {
+			align-items: center;
+			display: flex;
+
+			&:before {
+				margin: 0;
+			}
+		}
+	}
+
+	.nav-next {
+
+		a {
+			justify-content: flex-end;
+
+			&:before {
+				order: 1;
+			}
+		}
+	}
+
+	.nav-previous {
+
+		+ .nav-next {
+			border-left: none;
+		}
+	}
+}

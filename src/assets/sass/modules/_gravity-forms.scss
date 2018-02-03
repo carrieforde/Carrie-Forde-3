@@ -1,0 +1,149 @@
+//--------------------------------------------------------------
+// GRAVITY FORMS
+//--------------------------------------------------------------
+
+// Local Variables
+$gfield_required: color(razzmatazz);
+
+.gform_body {
+
+	ul {
+		@include list-reset;
+	}
+}
+
+// When two fields meet, give them vertical space.
+.gfield {
+	@include clearfix;
+	@include vertical-rhythm(rem(20));
+
+	&.gsection {
+		margin-top: rem(40);
+	}
+}
+
+.gsection_title {
+	margin-bottom: 0;
+}
+
+.gfield_required {
+	color: $gfield_required;
+}
+
+// For fields with sublabels.
+label {
+	margin-bottom: rem(5);
+
+	&:not(.gfield_label) {
+		font-size: 0.8em;
+		margin-bottom: 0;
+	}
+}
+
+// Basic input wrapper.
+.ginput_container {
+
+	// Make medium fields take up 50% - 10px of their container beyond tablet-portrait.
+	.medium {
+		width: 100%;
+
+		@include grid-media($tablet-portrait-up) {
+			width: calc(50% - 10px);
+		}
+	}
+
+	// Make large fields take up 100% of their container.
+	.large {
+		width: 100%;
+	}
+}
+
+// The first name / last name wrapper.
+.name_first,
+.name_last {
+
+	input {
+		width: 100%;
+	}
+}
+
+// Last name can have some margin.
+.name_last {
+	margin-left: rem(20);
+}
+
+// For a complex container, how many inputs are present? This container has two.
+.gf_name_has_2 {
+
+	.name_first,
+	.name_last {
+		display: inline-block;
+		float: left;
+		width: calc(50% - 10px);
+	}
+}
+
+// Never display the validation container. Important is required to override injected styling.
+.gform_validation_container {
+	display: none !important;
+}
+
+.gform_footer {
+	margin-top: rem(40);
+}
+
+.gfield_description {
+	font-size: 0.8em;
+	margin-bottom: rem(10);
+}
+
+.gfield_checkbox {
+
+	// Make sure each checkbox is on its own line.
+	li {
+		@include clearfix;
+		
+		+ li {
+			margin-top: rem(15);
+		}
+	}
+
+	label {
+		display: inline-block;
+		float: left;
+		vertical-align: middle;
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+		+ label {
+			line-height: rem(20);
+			padding-left: rem(30);
+			position: relative;
+
+			&:before {
+				@include position(absolute, null null null 0);
+				@include size(rem(20));
+
+				border: $border__forms;
+				content: '';
+				float: left;
+			}
+		}
+
+		&:checked {
+
+			+ label {
+
+				&:before {
+					color: color(razzmatazz);
+					content: '\f00c';
+					font-family: $font-awesome;
+					font-size: em(24);
+					line-height: 16px;
+				}
+			}
+		}
+	}
+}

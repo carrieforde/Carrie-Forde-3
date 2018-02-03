@@ -1,0 +1,138 @@
+//--------------------------------------------------------------
+// TYPOGRAPHY
+//--------------------------------------------------------------
+/* stylelint-disable no-descending-specificity */
+body,
+input {
+	font-size: $font__body-size;
+}
+
+//-----------------------------------------
+// Headings
+//-----------------------------------------
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	color: $color__headings;
+	font-family: $font__headings;
+	font-weight: 900;
+	letter-spacing: 0.0125em;
+	line-height: $font__headings-line-height;
+}
+
+h1,
+.h1 {
+	font-size: 2em; // 36px at desktop
+}
+
+h2,
+.h2 {
+	font-size: 1.66em; // 30px at desktop
+}
+
+h3,
+.h3 {
+	font-size: 1.5em; // ~28px at desktop
+}
+
+h4,
+.h4 {
+	font-size: 1.33em; // 24px at desktop
+}
+
+h5,
+.h5 {
+	font-size: 1em; // 18px at desktop
+}
+
+h6,
+.h6 {
+	font-size: 0.88em; // ~16px at desktop
+}
+
+p {
+	+ *:not(p),
+	+ *:not(blockquote) {
+		margin-top: 2em;
+	}
+}
+
+// Sanitize CSS uses `font-weight: bolder;`, which kinda sucks.
+b,
+strong {
+	font-weight: 600;
+}
+
+// Everyday anchors.
+a:not(.button) {
+	text-decoration: none;
+
+	article:not(.card):not(.component-content):not(.front-page-content) & {
+		border-bottom: 2px solid color(razzmatazz);
+		color: color(charcoal);
+
+		&:hover,
+		&:focus {
+			border-bottom-color: color(razzmatazz);
+			color: color(razzmatazz);
+		}
+	}
+}
+
+//-----------------------------------------
+// Blockquotes
+//-----------------------------------------
+blockquote {
+	font-size: 1.20em; // the font size should be 20% larger than the body font size.
+	margin: 3em 0;
+	padding: 0 60px;
+	position: relative;
+	text-align: center;
+
+	&:after,
+	&:before {
+		color: color(mine-shaft);
+		font-family: $font__headings;
+		font-size: 90px;
+		font-weight: 900;
+		height: 40px;
+		line-height: 0.75;
+		position: absolute;
+	}
+
+	&:after {
+		bottom: 0;
+		content: '\201d';
+		right: 0;
+	}
+
+	&:before {
+		content: '\201c';
+		left: 0;
+		top: 0;
+	}
+
+	cite {
+		display: block;
+		font-weight: 600;
+	}
+}
+
+::selection {
+	background-color: $color__selection;
+}
+
+code {
+	background-color: rgba(color(oslo-gray), 0.3);
+	padding: rem(2) rem(5);
+}
+
+pre {
+
+	+ * {
+		margin-top: 2em;
+	}
+}

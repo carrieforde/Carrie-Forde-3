@@ -8,7 +8,7 @@
 
 <section class="component component--talks component-no-padding full-width background-ocean-boat-blue color-white">
 
-	<div class="image-as-background column" style="background-image: url('<?php echo CARRIEFORDE3_URL . 'assets/images/wordpress-stickers.jpg'; // WPCS: XSS OK. ?>');">
+	<div class="image-as-background column" style="background-image: url('<?php echo CARRIEFORDE3_URL . 'src/assets/images/wordpress-stickers.jpg'; // WPCS: XSS OK. ?>');">
 		<?php echo sprintf( '<span class="attribution">%s<a href="%s">%s</a></span>', esc_html__( 'Photo by Stewart Savage, ', 'carrieforde3' ), esc_url( 'http://abatonconsulting.com/' ), esc_html__( 'Abaton Consulting', 'carrieforde3' ) ); ?>
 	</div>
 

@@ -1,0 +1,58 @@
+//--------------------------------------------------------------
+// HEROES
+//--------------------------------------------------------------
+.hero {
+	height: 60vh;
+	line-height: 1.5;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	@include grid-media($tablet-portrait-up) {
+		margin-top: -115px;
+	}
+
+	@include element(text) {
+		@include position(absolute, 50% 0 null 0);
+
+		margin: auto;
+		max-width: rem(500);
+		padding: 0 rem(40);
+		transform: translateY(-50%);
+
+		@include grid-media($tablet-portrait-up) {
+			left: 33%;
+			padding: 0;
+			right: auto;
+		}
+
+		@include grid-media($tablet-landscape-up) {
+			left: 45%;
+		}
+
+		@include grid-media($desktop-up) {
+			font-size: 1.2em;
+			left: 55%;
+		}
+	}
+
+	@include element(title) {
+		margin-bottom: 0;
+	}
+
+	@include element(description) {
+		margin-bottom: 0;
+	}
+
+	//-----------------------------------------
+	// Overrides
+	//-----------------------------------------
+	.single-wpcl-component & {
+		margin-top: 0;
+	}
+
+	.home & {
+		font-size: em(18);
+		height: 100vh;
+	}
+}
