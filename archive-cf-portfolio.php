@@ -21,21 +21,7 @@ get_header(); ?>
 				<?php the_archive_title( '<h1 class="page-title screen-reader-text">', '</h1>' ); ?>
 			</header>
 
-			<div class="page-content grid--one-two">
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'template-parts/content', get_post_type() . '-card' ); ?>
-
-				<?php endwhile; ?>
-
-				<?php the_posts_navigation(); ?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
-			
-		</div><!-- .page-content -->
+			<div id="portfolio-posts" class="portfolio-posts page-content"></div>
 		<?php endif; ?>
 
 		<?php do_action( 'alcatraz_after_main_inside' ); ?>

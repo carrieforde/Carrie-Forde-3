@@ -33,6 +33,14 @@
 		margin-bottom: 0;
 	}
 
+	.card__technologies {
+		color: color(white);
+
+		a {
+			display: inline;
+		}
+	}
+
 	.card__image {
 		margin-bottom: rem(-20);
 	}

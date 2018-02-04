@@ -60,6 +60,14 @@ function cf3_enqueue_scripts() {
 		true
 	);
 
+	wp_enqueue_script(
+		'carrieforde3-app',
+		CARRIEFORDE3_URL . 'app.js',
+		array( 'wp-api' ),
+		CARRIEFORDE3_VERSION,
+		true
+	);
+
 	if ( is_front_page() ) {
 		wp_enqueue_script(
 			'carrieforde3-posts',

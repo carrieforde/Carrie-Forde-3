@@ -119,3 +119,15 @@
 		}
 	}
 }
+
+// ----------------------------------------------
+// Portfolio Posts
+// ----------------------------------------------
+.portfolio-posts {
+	display: grid;
+	grid-gap: rem(25);
+
+	@include grid-media($tablet-portrait-up) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
