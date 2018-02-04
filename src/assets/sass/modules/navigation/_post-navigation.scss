@@ -65,7 +65,7 @@
 			&:before {
 				@include size(30px);
 
-				// background: url('images/icon-chevron.svg') center no-repeat;
+				background: url('../images/icon-chevron.svg') center no-repeat;
 				background-size: contain;
 				content: '';
 				display: block;

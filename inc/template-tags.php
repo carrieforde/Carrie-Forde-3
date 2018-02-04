@@ -421,7 +421,7 @@ function cf3_get_component_category_image( $post_id = 0, $image_size = 'componen
  *
  * @return  bool
  */
-function cf3_is_talk_upcoming( $post_id= 0 ) {
+function cf3_is_talk_upcoming( $post_id = 0 ) {
 
 	// Get post ID if not passed.
 	if ( ! $post_id ) {
@@ -437,4 +437,12 @@ function cf3_is_talk_upcoming( $post_id= 0 ) {
 	}
 
 	return false;
+}
+
+add_action( 'alcatraz_before', 'add_svg_file' );
+/**
+ * Outputs SVG sprite.
+ */
+function add_svg_file() {
+	echo file_get_contents( CARRIEFORDE3_URL . 'svg-defs.svg' );
 }
