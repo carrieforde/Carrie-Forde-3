@@ -42,15 +42,6 @@ function cf3_enqueue_scripts() {
 		true
 	);
 
-	// Include this theme's JS.
-	wp_enqueue_script(
-		'carrieforde3-scripts',
-		CARRIEFORDE3_URL . 'src/assets/scripts/carrieforde3-theme.js',
-		array( 'jquery', 'sticky-js' ),
-		CARRIEFORDE3_VERSION,
-		true
-	);
-
 	// Post masonry.
 	wp_register_script(
 		'carrieforde3-masonry',
@@ -63,20 +54,10 @@ function cf3_enqueue_scripts() {
 	wp_enqueue_script(
 		'carrieforde3-app',
 		CARRIEFORDE3_URL . 'app.js',
-		array( 'wp-api' ),
+		array( 'jquery', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
 		true
 	);
-
-	if ( is_front_page() ) {
-		wp_enqueue_script(
-			'carrieforde3-posts',
-			CARRIEFORDE3_URL . 'src/assets/scripts/posts.js',
-			array( 'wp-api' ),
-			time(),
-			true
-		);
-	}
 
 	// Enqueue masonry.
 	if ( is_home() || is_category() || is_tag() ) {
