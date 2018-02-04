@@ -20,3 +20,9 @@ iframe {
 		@include size(100%);
 	} // embed, object, iframe
 }
+
+svg {
+	body > & {
+		@include hide-text;
+	}
+}
