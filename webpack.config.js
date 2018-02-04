@@ -5,7 +5,8 @@ const path              = require('path'),
       ExtractTextPlugin = require('extract-text-webpack-plugin'),
       HTMLWebpackPlugin = require('html-webpack-plugin'),
       StyleLintPlugin   = require('stylelint-webpack-plugin'),
-      SpritePlugin = require('svg-sprite-loader/plugin');
+      SpritePlugin      = require('svg-sprite-loader/plugin'),
+      BrowserSync       = require('browser-sync-webpack-plugin');
 
 const config = {
   entry: './src/app.js',
@@ -120,7 +121,12 @@ const config = {
     }),
     new StyleLintPlugin(),
     new ExtractTextPlugin('app.css'),
-    new SpritePlugin()
+    new SpritePlugin(),
+    new BrowserSync({
+      host: 'localhost',
+      port: '3000',
+      proxy: 'http://carrieforde.local'
+    })
   ]
 };
 
