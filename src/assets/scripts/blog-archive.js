@@ -15,11 +15,24 @@ export class BlogArchive {
     this.bindEvents();
   }
 
+  /**
+   * Gets the total number of posts available.
+   * 
+   * @param   {array}  posts The array of post objects
+   * @returns {number}       The total number of posts.
+   * @memberof BlogArchive
+   */
   totalPostsCount (posts) {
 
     return this.totalPosts = posts.length;
   }
 
+  /**
+   * Renders the blog post card.
+   * 
+   * @param {array} posts The array of post objects.
+   * @memberof BlogArchive
+   */
   renderPosts (posts) {
 
     const postContainer = document.querySelector('.blog-grid'),
@@ -35,16 +48,17 @@ export class BlogArchive {
       article.classList.add('card');
       article.setAttribute('id', post.id);
 
+      // Applies different classes depending upon whether we have the latest post or not.
       if (this.count === 0) {
         article.classList.add('card--horizontal', 'alcatraz-col--8');
       } else {
         article.classList.add('card--post', 'alcatraz-col--4');
       }
 
-      let articleImage = post.thumbnail ? post.thumbnail : post.term.term_image,
-          innerWrap = this.count !== 0 ? `<div class="card__inner-wrap">` : '',
-          innerWrapClose = this.count !== 0 ? `</div>` : '',
-          contentWrapper = this.count === 0 ? `<div class="card__content-wrap">` : '',
+      let articleImage        = post.thumbnail ? post.thumbnail : post.term.term_image,
+          innerWrap           = this.count !== 0 ? `<div class="card__inner-wrap">` : '',
+          innerWrapClose      = this.count !== 0 ? `</div>` : '',
+          contentWrapper      = this.count === 0 ? `<div class="card__content-wrap">` : '',
           contentWrapperClose = this.count === 0 ? `</div>` : '';
 
       article.innerHTML = `
@@ -77,15 +91,18 @@ export class BlogArchive {
       articles.push(article);
     });
 
+    // Append the articles.
     if (this.count === 8) {
       postContainer.appendChild(fragment);
 
+      // Init masonry.
       this.masonry = new Masonry(document.querySelector('.blog-grid'), {
         itemSelector: '.card',
         columnWidth: '.alcatraz-col--4',
         percentPosition: true,
       });
 
+      // Also, force layout so nothing overlaps or looks janky.
       setTimeout(() => {
         this.masonry.layout();
       }, 250);
@@ -98,16 +115,28 @@ export class BlogArchive {
       }, 250);
     }
 
+    // Check if more posts are available, hiding button if not.
     if (!this.postsAvailable()) {
       loadMore.classList.add('is-hidden');
     }
   }
 
+  /**
+   * Loads more posts.
+   * 
+   * @memberof BlogArchive
+   */
   loadMorePosts () {
 
     this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), `offset=${this.count}`, `per_page=9`);
   }
 
+  /**
+   * Check if there are more posts available to load.
+   * 
+   * @returns {boolean} Whether there are more posts or not.
+   * @memberof BlogArchive
+   */
   postsAvailable () {
 
     if (this.count >= this.totalPosts) {
@@ -117,6 +146,11 @@ export class BlogArchive {
     return true;
   }
 
+  /**
+   * Fire class events.
+   * 
+   * @memberof BlogArchive
+   */
   bindEvents () {
 
     document.addEventListener('DOMContentLoaded', () => {
