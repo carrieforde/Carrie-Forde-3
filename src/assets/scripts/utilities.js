@@ -4,9 +4,26 @@ export class Utilities {
     this.env = env || 'DEV';
   }
 
-  getPostData (method, dataURL, callback) {
+  getPostData (method, dataURL, callback, ...params) {
 
     let promise = new Promise((resolve, reject) => {
+
+      let queryParams = '';
+
+      if (params) {
+
+        let count = 0;
+
+        params.forEach(param => {
+          if (count === 0) {
+            queryParams = `?${param}`;
+          } else {
+            queryParams += `&{$param}`;
+          }
+
+          count++;
+        });
+      }
 
       const xhr = new XMLHttpRequest();
 
@@ -27,7 +44,7 @@ export class Utilities {
 
       xhr.onerror = () => reject(`Sorry, there was an error.`);
 
-      xhr.open(method, dataURL);
+      xhr.open(method, dataURL + queryParams);
       xhr.send();
     });
 
