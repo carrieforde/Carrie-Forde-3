@@ -27,26 +27,9 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<div class="blog-grid masonry">
-				
-				<?php while ( have_posts() ) : the_post(); ?>
-						
-						<?php if ( 0 === $i ) :
-							get_template_part( 'template-parts/content-post-card-sticky' );
+			<div class="blog-grid masonry"></div>
 
-						else :
-							get_template_part( 'template-parts/content-post-card' );
-						endif; ?>
-
-					<?php $i++; ?>
-				<?php endwhile; ?>
-
-			</div>
-
-			<?php the_posts_navigation( array(
-				'prev_text' => '<h3>Older ' . $type . 's</h3>',
-				'next_text' => '<h3>Newer ' . $type . 's</h3>',
-			) ); ?>
+			<button id="loadMore" class="button" type="button"><?php esc_html_e( 'Load More Posts', 'carrieforde3' ); ?></button>
 
 		<?php else : ?>
 

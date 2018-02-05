@@ -107,13 +107,14 @@ function cf3_get_category_image( $post_id = 0, $image_size = 'full' ) {
  * @param   int     The post ID.
  * @return  string  The accent color.
  */
-function cf3_get_category_accent( $post_id = 0 ) {
+function cf3_get_category_accent( $post ) {
 
-	if ( ! $post_id ) {
-		$post_id = get_the_ID();
-	}
+	// alcatraz_log($post);
+	// if ( ! $post_id ) {
+	// 	$post_id = get_the_ID();
+	// }
 
-	$category = cf3_get_post_terms( $post_id, 'category', array( 'number' => 1 ) );
+	$category = cf3_get_post_terms( $post['id'], 'category', array( 'number' => 1 ) );
 
 	$cat_accent = get_term_meta( $category[0]->term_id, 'theme_colors', true );
 

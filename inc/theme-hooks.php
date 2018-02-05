@@ -272,3 +272,12 @@ function cf3_add_editor_styles() {
 	add_editor_style( str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:600,900|Montserrat:300,400' ) );
 	add_editor_style( get_stylesheet_uri() );
 }
+
+// add_action( 'rest_api_init', 'cf3_add_post_meta' );
+
+// function cf3_add_post_meta() {
+
+// 	register_rest_field( 'post', 'category_color', array(
+// 		'get_callback' => 'cf3_get_category_accent',
+// 	));
+// }

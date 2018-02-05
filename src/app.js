@@ -3,10 +3,16 @@ const sass = require('style.scss');
 
 import { Utilities } from 'utilities.js';
 import { PortfolioArchive } from 'portfolio-archive.js';
+import { BlogArchive } from './assets/scripts/blog-archive';
 
 // Load Portfolio Archive posts.
 if (document.body.classList.contains('post-type-archive-cf-portfolio')) {
   new PortfolioArchive();
+}
+
+// Load Blog posts.
+if (document.body.classList.contains('blog')) {
+  new BlogArchive();
 }
 
 /**

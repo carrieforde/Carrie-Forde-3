@@ -42,15 +42,6 @@ function cf3_enqueue_scripts() {
 		true
 	);
 
-	// Post masonry.
-	wp_register_script(
-		'carrieforde3-masonry',
-		CARRIEFORDE3_URL . 'src/assets/scripts/card-masonry.js',
-		array( 'jquery', 'jquery-masonry' ),
-		CARRIEFORDE3_VERSION,
-		true
-	);
-
 	wp_enqueue_script(
 		'carrieforde3-app',
 		CARRIEFORDE3_URL . 'app.js',
