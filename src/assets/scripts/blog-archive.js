@@ -116,7 +116,10 @@ export class BlogArchive {
     }
 
     // Check if more posts are available, hiding button if not.
-    if (!this.postsAvailable()) {
+    if (this.count < 8) {
+      loadMore.classList.add('is-hidden');
+    }
+    if (this.count > 8 && !this.postsAvailable()) {
       loadMore.classList.add('is-hidden');
     }
   }
