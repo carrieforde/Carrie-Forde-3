@@ -8,22 +8,23 @@ export class Utilities {
 
     let promise = new Promise((resolve, reject) => {
 
-      let queryParams = '';
+      let queryParams = '',
+          count = 0;
 
       if (params) {
-
-        let count = 0;
 
         params.forEach(param => {
           if (count === 0) {
             queryParams = `?${param}`;
           } else {
-            queryParams += `&{$param}`;
+            queryParams += `&${param}`;
           }
 
           count++;
         });
       }
+
+      console.log(queryParams); // eslint-disable-line no-console
 
       const xhr = new XMLHttpRequest();
 

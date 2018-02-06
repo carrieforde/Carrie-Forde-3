@@ -49,3 +49,13 @@
 		margin-bottom: 0;
 	}
 }
+
+.page-footer {
+	margin: rem(40);
+	text-align: center;
+
+	@include grid-media($tablet-portrait-up) {
+		font-size: 1.5em;
+		margin: rem(80) 0 rem(100);
+	}
+}

@@ -125,6 +125,57 @@ export class BlogArchive {
   }
 
   /**
+   * Creates and renders the category filter buttons.
+   * 
+   * @param {array} categories The array of categories.
+   * @memberof BlogArchive
+   */
+  renderCategoryFilters (categories) {
+
+    const container = document.querySelector('.blog-grid'),
+          parent    = container.parentElement,
+          filters   = document.createElement('div'),
+          terms     = categories[0].terms;
+
+    filters.classList.add('category-filters');
+
+    filters.innerHTML += `<button type="button" class="button category-filter" data-category="all">All Categories</button>`;
+
+    terms.forEach(term => {
+
+      let termButton = `<button type="button" class="button button--${term.term_color} category-filter" data-category="${term.id}">${term.name}</button>`;
+
+      filters.innerHTML += termButton;
+    });
+
+    parent.insertBefore(filters, container);
+  }
+
+  /**
+   * Filters posts based on category button pressed.
+   * 
+   * @param {string} filter The target category button.
+   * @memberof BlogArchive
+   */
+  filterPosts (filter) {
+
+    const category = filter.dataset.category,
+          postContainer = document.querySelector('.blog-grid');
+
+    // Clear rendered posts, and reset post count.
+    postContainer.innerHTML = '';
+    this.count = 0;
+
+    // If the category is "all", get all the posts.
+    if (category === 'all') {
+      this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=-1');
+    }
+
+    // Get posts category posts.
+    this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=-1', `category=${category}`);
+  }
+
+  /**
    * Loads more posts.
    * 
    * @memberof BlogArchive
@@ -157,19 +208,28 @@ export class BlogArchive {
   bindEvents () {
 
     document.addEventListener('DOMContentLoaded', () => {
+      this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/taxonomies', this.renderCategoryFilters.bind(this), 'tax_names=category');
 
       this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=8');
     });
 
     document.addEventListener('click', event => {
 
-      const target = event.target.closest('#loadMore');
+      const target = event.target.closest('#loadMore') || event.target.closest('.category-filter');
 
       if (!target) {
         return false;
       }
 
-      this.loadMorePosts();
+      if (target.getAttribute('id') === 'loadMore') {
+        this.loadMorePosts();
+        return true;
+      }
+
+      if (target.classList.contains('category-filter')) {
+        this.filterPosts(target);
+        return true;
+      }
     });
   }
 }

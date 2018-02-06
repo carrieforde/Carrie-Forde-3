@@ -1,0 +1,29 @@
+// CATEGORY FILTERS
+
+.category-filters {
+	display: flex;
+	flex-direction: column;
+	margin: rem(40) 0;
+	overflow: hidden;
+
+	@include media($tablet-portrait-up, null) {
+		align-items: center;
+		border-radius: 3px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: rem(60) 0 rem(40);
+	}
+}
+
+.category-filter {
+	border-radius: 0 !important;
+
+	@include media(null, $tablet-portrait-up) {
+		font-size: rem(12);
+	}
+
+	@include media($tablet-portrait-up, null) {
+		flex-grow: 1;
+	}
+}

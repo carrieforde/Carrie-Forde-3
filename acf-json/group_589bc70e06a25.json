@@ -17,11 +17,11 @@
             },
             "choices": {
                 "razzmatazz": "Razzmatazz",
-                "lightening yellow": "Lightening Yellow",
-                "neon carrot": "Neon Carrot",
-                "honey flower": "Honey Flower",
-                "ocean boat blue": "Ocean Boat Blue",
-                "dark pastel green": "Dark Pastel Green"
+                "lightening-yellow": "Lightening Yellow",
+                "neon-carrot": "Neon Carrot",
+                "honey-flower": "Honey Flower",
+                "ocean-boat-blue": "Ocean Boat Blue",
+                "dark-pastel-green": "Dark Pastel Green"
             },
             "default_value": [
                 "razzmatazz"
@@ -37,9 +37,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "post"
+                "value": "category"
             }
         ]
     ],
@@ -51,5 +51,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1497583267
+    "modified": 1517881087
 }

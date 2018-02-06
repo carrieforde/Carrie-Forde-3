@@ -28,6 +28,17 @@ a.button {
 
 .button {
 
+	@each $name, $color in $theme-colors {
+
+		&--#{$name} {
+			background-color: $color;
+			
+			&:hover {
+				background-color: tint($color, 0.2) !important;
+			}
+		}
+	}
+
 	// Text Button
 	&.button--text,
 	&.button--text:visited {
