@@ -24,8 +24,6 @@ export class Utilities {
         });
       }
 
-      console.log(queryParams); // eslint-disable-line no-console
-
       const xhr = new XMLHttpRequest();
 
       xhr.onload = () => {

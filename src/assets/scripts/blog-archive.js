@@ -10,7 +10,7 @@ export class BlogArchive {
     this.count = 0;
     this.masonry;
 
-    this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.totalPostsCount.bind(this), 'per_page=-1');
+    this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint', this.totalPostsCount.bind(this), 'per_page=-1');
 
     this.bindEvents();
   }
@@ -168,11 +168,11 @@ export class BlogArchive {
 
     // If the category is "all", get all the posts.
     if (category === 'all') {
-      this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=-1');
+      this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=-1');
     }
 
     // Get posts category posts.
-    this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=-1', `category=${category}`);
+    this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=-1', `category=${category}`);
   }
 
   /**
@@ -182,7 +182,7 @@ export class BlogArchive {
    */
   loadMorePosts () {
 
-    this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), `offset=${this.count}`, `per_page=9`);
+    this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), `offset=${this.count}`, `per_page=9`);
   }
 
   /**
@@ -208,9 +208,9 @@ export class BlogArchive {
   bindEvents () {
 
     document.addEventListener('DOMContentLoaded', () => {
-      this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/taxonomies', this.renderCategoryFilters.bind(this), 'tax_names=category');
+      this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/taxonomies', this.renderCategoryFilters.bind(this), 'tax_names=category');
 
-      this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=8');
+      this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint', this.renderPosts.bind(this), 'per_page=8');
     });
 
     document.addEventListener('click', event => {

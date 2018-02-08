@@ -5,7 +5,7 @@ export class PortfolioArchive {
   constructor() {
     this.utils = new Utilities();
     
-    this.utils.getPostData('GET', 'http://carrieforde.local/wp-json/carrie-forde/v1/rest-portfolio', this.renderPosts);
+    this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/rest-portfolio', this.renderPosts);
   }
 
   renderPosts (posts) {
