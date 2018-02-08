@@ -107,12 +107,11 @@ function cf3_get_category_image( $post_id = 0, $image_size = 'full' ) {
  * @param   int     The post ID.
  * @return  string  The accent color.
  */
-function cf3_get_category_accent( $post ) {
+function cf3_get_category_accent( $post = 0 ) {
 
-	// alcatraz_log($post);
-	// if ( ! $post_id ) {
-	// 	$post_id = get_the_ID();
-	// }
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
 
 	$category = cf3_get_post_terms( $post['id'], 'category', array( 'number' => 1 ) );
 
@@ -445,5 +444,6 @@ add_action( 'alcatraz_before', 'add_svg_file' );
  * Outputs SVG sprite.
  */
 function add_svg_file() {
+	alcatraz_log(file_get_contents( CARRIEFORDE3_URL . 'svg-defs.svg' ));
 	echo file_get_contents( CARRIEFORDE3_URL . 'svg-defs.svg' );
 }
