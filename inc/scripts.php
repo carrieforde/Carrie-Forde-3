@@ -59,14 +59,14 @@ function cf3_enqueue_scripts() {
 	if ( is_singular( 'post' ) ) {
 		wp_enqueue_style(
 			'prism-css',
-			CARRIEFORDE3_URL . 'assets/vendor/prism/prism.css',
+			CARRIEFORDE3_URL . 'src/assets/vendor/prism/prism.css',
 			array(),
 			CARRIEFORDE3_VERSION
 		);
 
 		wp_enqueue_script(
 			'prism-js',
-			CARRIEFORDE3_URL . 'assets/vendor/prism/prism.js',
+			CARRIEFORDE3_URL . 'src/assets/vendor/prism/prism.js',
 			array( 'jquery' ),
 			CARRIEFORDE3_VERSION,
 			true
