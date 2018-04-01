@@ -2,12 +2,24 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAPIData, fetchPosts } from '../redux/actionCreators';
 import PostCard from './PostCard';
+import Masonry from 'masonry-layout';
 
 class Blog extends Component {
   componentDidMount() {
     if (!this.props.isFetched) {
       this.props.getPosts();
     }
+  }
+
+  componentDidUpdate() {
+    // Init masonry.
+    setTimeout(() => {
+      const masonry = new Masonry(document.querySelector('.masonry'), {
+        itemSelector: '.card',
+        columnWidth: '.alcatraz-col--4',
+        percentPosition: true
+      });
+    }, 500);
   }
 
   render() {
@@ -20,7 +32,7 @@ class Blog extends Component {
     } else {
       posts = <h2>Loading...</h2>;
     }
-    return <div>{posts}</div>;
+    return <div className="blog-grid masonry">{posts}</div>;
   }
 }
 

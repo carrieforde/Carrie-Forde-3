@@ -23,7 +23,7 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<div id="app" class="blog-grid masonry"></div>
+			<div id="app" class="app"></div>
 
 			<footer class="page-footer">
 				<button id="loadMore" class="button" type="button"><?php esc_html_e( 'Load More Posts', 'carrieforde3' ); ?></button>
