@@ -1,6 +1,5 @@
 {
   "extends": [
-    "wordpress",
     "prettier",
     "prettier/react"
   ],
