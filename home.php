@@ -5,10 +5,6 @@
  * @package carrieforde3
  */
 
-// Set up a few variables.
-$type = cf3_post_type_for_pagination();
-$i    = 0; // an iterator to help us grab the right post card.
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -27,7 +23,7 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<div class="blog-grid masonry"></div>
+			<div id="app" class="blog-grid masonry"></div>
 
 			<footer class="page-footer">
 				<button id="loadMore" class="button" type="button"><?php esc_html_e( 'Load More Posts', 'carrieforde3' ); ?></button>
