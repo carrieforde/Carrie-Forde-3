@@ -270,7 +270,7 @@ function cf3_add_editor_styles() {
 
 	add_editor_style( str_replace( ',', '%2C', '//use.typekit.net/jsi5beh.css' ) );
 	add_editor_style( str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:600,900|Montserrat:300,400' ) );
-	add_editor_style( get_stylesheet_uri() );
+	add_editor_style( CARRIEFORDE3_URL . 'dist/main.css' );
 }
 
 // add_action( 'rest_api_init', 'cf3_add_post_meta' );
