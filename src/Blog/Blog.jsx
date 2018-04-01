@@ -7,7 +7,7 @@ import Masonry from 'masonry-layout';
 class Blog extends Component {
   componentDidMount() {
     if (!this.props.isFetched) {
-      this.props.getPosts(`home-endpoint`, fetchPosts);
+      this.props.getPosts(`carrie-forde/v1/home-endpoint`, fetchPosts);
     }
 
     document.addEventListener('click', event => {
@@ -32,7 +32,7 @@ class Blog extends Component {
 
   getMorePosts() {
     this.props.getPosts(
-      `home-endpoint?offset=${this.props.posts.length}`,
+      `carrie-forde/v1/home-endpoint?offset=${this.props.posts.length}`,
       morePosts
     );
   }
@@ -72,12 +72,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   getPosts(endpoint, cb) {
-    dispatch(
-      getAPIData(
-        `http://carrieforde.test/wp-json/carrie-forde/v1/${endpoint}`,
-        cb
-      )
-    );
+    dispatch(getAPIData(endpoint, cb));
   }
 });
 

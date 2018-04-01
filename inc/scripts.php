@@ -43,7 +43,7 @@ function cf3_enqueue_scripts() {
 	);
 
 	wp_enqueue_script(
-		'carrieforde3-app',
+		'carrieforde3-scripts',
 		CARRIEFORDE3_URL . 'dist/bundle.js',
 		array( 'jquery', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
@@ -72,6 +72,13 @@ function cf3_enqueue_scripts() {
 			true
 		);
 	}
+
+	// Translatable strings and other data for JS.
+	$vars = array(
+		'root_url' => home_url( '/' ),
+	);
+
+	wp_localize_script( 'carrieforde3-scripts', 'cf3_js_vars', $vars );
 }
 
 add_action( 'wp_footer', 'cf3_google_analytics' );

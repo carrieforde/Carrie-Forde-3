@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_POSTS, FETCH_POST, MORE_POSTS } from './actions';
+import { ROOT_URL, FETCH_POSTS, FETCH_POST, MORE_POSTS } from './actions';
 
 export function fetchPosts(posts) {
   return { type: FETCH_POSTS, payload: posts };
@@ -13,10 +13,10 @@ export function morePosts(posts) {
   return { type: MORE_POSTS, payload: posts };
 }
 
-export function getAPIData(url, cb) {
+export function getAPIData(endpoint, cb) {
   return dispatch => {
     axios
-      .get(url)
+      .get(`${ROOT_URL}/wp-json/${endpoint}`)
       .then(response => {
         dispatch(cb(response.data));
       })
