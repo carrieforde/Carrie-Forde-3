@@ -1,16 +1,15 @@
 {
-  "name": "aurora",
+  "name": "carrie-forde-3",
   "version": "0.1.0",
-  "description": "A clean, modern, design-system focused project boilerplate that's both Sass and ES6 ready.",
+  "description": "The third iteration of my personal site.",
   "main": "app.js",
-  "directories": {
-    "doc": "docs"
-  },
   "devDependencies": {
     "autoprefixer": "^7.2.3",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "bourbon": "^5.0.0",
     "bourbon-neat": "2.0",
@@ -20,7 +19,11 @@
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
     "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react": "^1.1.7",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.5",
@@ -48,21 +51,21 @@
     "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
     "build": "NODE_ENV=production webpack",
-    "dev": "webpack-dev-server --open",
-    "jsdoc": "jsdoc src/assets/scripts/*.js -d docs/jsdoc",
-    "jsdocwatch": "onchange 'src/assets/scripts/*js' -- npm run jsdoc",
+    "dev": "webpack --watch",
+    "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "eslint:fix": "eslint \"src/**/*.{js,jsx}\" --quiet --fix",
+    "format": "prettier --write --single-quote \"src/**/*.{js,jsx}\"",
+    "format:sass": "prettier --write --tab-width=2 --use-tabs --single-quote=false \"src/sass/**/*.scss\"",
+    "jsdoc": "jsdoc src/*.js src/**/*.js -d docs/jsdoc",
     "kss": "kss --config kss-config.json",
-    "ksswatch": "onchange 'src/assets/sass/**/*.scss' -- npm run kss",
-    "sassdoc": "sassdoc src/assets/sass/**/*.scss -d docs/sassdoc",
-    "sassdocwatch": "onchange 'src/assets/sass/**/*.scss' -- npm run sassdoc",
-    "alldocs": "concurrently \"npm run jsdoc\" \"npm run kss\" \"npm run sassdoc"
+    "sassdoc": "sassdoc src/sass -d docs/sassdoc",
+    "stylelint": "stylelint \"src/**/*.{scss,css}\"",
+    "stylelint:fix": "stylelint \"src/**/*.{scss,css}\" --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carrieforde/Aurora.git"
+    "url": "git+https://github.com/carrieforde/Carrie-Forde-3.git"
   },
   "keywords": [
     "sass",
@@ -76,10 +79,18 @@
   "author": "Carrie Forde",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/carrieforde/Aurora/issues"
+    "url": "https://github.com/carrieforde/Carrie-Forde-3/issues"
   },
-  "homepage": "https://github.com/carrieforde/Aurora#readme",
+  "homepage": "https://github.com/carrieforde/Carrie-Forde-3#readme",
   "dependencies": {
-    "masonry-layout": "^4.2.1"
+    "axios": "^0.18.0",
+    "masonry-layout": "^4.2.1",
+    "npm": "^5.8.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   }
 }
