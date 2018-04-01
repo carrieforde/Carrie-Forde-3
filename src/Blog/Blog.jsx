@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAPIData, fetchPosts } from '../redux/actionCreators';
+import PostCard from './PostCard';
 
 class Blog extends Component {
   componentDidMount() {
@@ -10,7 +11,16 @@ class Blog extends Component {
   }
 
   render() {
-    return <h1>Hello</h1>;
+    let posts;
+
+    if (this.props.isFetched) {
+      posts = this.props.posts.map((post, index) => (
+        <PostCard key={post.id} index={index} {...post} />
+      ));
+    } else {
+      posts = <h2>Loading...</h2>;
+    }
+    return <div>{posts}</div>;
   }
 }
 
