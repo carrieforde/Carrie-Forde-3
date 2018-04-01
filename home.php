@@ -11,34 +11,7 @@ get_header(); ?>
 
 		<?php do_action( 'alcatraz_before_main' ); ?>
 
-		<main id="main" class="site-main" role="main">
-
-		<?php do_action( 'alcatraz_before_main_inside' ); ?>
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header class="page-header">
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<div id="app" class="app"></div>
-
-			<footer class="page-footer">
-				<button id="loadMore" class="button" type="button"><?php esc_html_e( 'Load More Posts', 'carrieforde3' ); ?></button>
-			</footer>
-
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		<?php do_action( 'alcatraz_after_main_inside' ); ?>
-
-		</main>
+		<main id="app" class="site-main" role="main"></main>
 
 		<?php do_action( 'alcatraz_after_main' ); ?>
 

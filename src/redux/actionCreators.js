@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_POSTS, FETCH_POST } from './actions';
+import { FETCH_POSTS, FETCH_POST, MORE_POSTS } from './actions';
 
 export function fetchPosts(posts) {
   return { type: FETCH_POSTS, payload: posts };
@@ -7,6 +7,10 @@ export function fetchPosts(posts) {
 
 export function fetchPost(post) {
   return { type: FETCH_POST, payload: post[0] };
+}
+
+export function morePosts(posts) {
+  return { type: MORE_POSTS, payload: posts };
 }
 
 export function getAPIData(url, cb) {

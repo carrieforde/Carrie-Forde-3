@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getAPIData, fetchPosts } from '../redux/actionCreators';
+import { getAPIData, fetchPosts, morePosts } from '../redux/actionCreators';
 import PostCard from './PostCard';
 import Masonry from 'masonry-layout';
 
 class Blog extends Component {
   componentDidMount() {
     if (!this.props.isFetched) {
-      this.props.getPosts();
+      this.props.getPosts(`home-endpoint`, fetchPosts);
     }
+
+    document.addEventListener('click', event => {
+      const target = event.target;
+
+      if (target.getAttribute('id') === 'loadMore') {
+        this.getMorePosts();
+      }
+    });
   }
 
   componentDidUpdate() {
@@ -22,6 +30,13 @@ class Blog extends Component {
     }, 500);
   }
 
+  getMorePosts() {
+    this.props.getPosts(
+      `home-endpoint?offset=${this.props.posts.length}`,
+      morePosts
+    );
+  }
+
   render() {
     let posts;
 
@@ -32,7 +47,19 @@ class Blog extends Component {
     } else {
       posts = <h2>Loading...</h2>;
     }
-    return <div className="blog-grid masonry">{posts}</div>;
+    return (
+      <div className="page">
+        <header className="page-header">
+          <h1 className="page-title screen-reader-text">Blog</h1>
+        </header>
+        <div className="page-content blog-grid masonry">{posts}</div>
+        <footer className="page-footer">
+          <button id="loadMore" className="button">
+            Load More Posts
+          </button>
+        </footer>
+      </div>
+    );
   }
 }
 
@@ -44,11 +71,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  getPosts() {
+  getPosts(endpoint, cb) {
     dispatch(
       getAPIData(
-        'http://carrieforde.test/wp-json/carrie-forde/v1/home-endpoint',
-        fetchPosts
+        `http://carrieforde.test/wp-json/carrie-forde/v1/${endpoint}`,
+        cb
       )
     );
   }
