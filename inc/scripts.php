@@ -45,15 +45,10 @@ function cf3_enqueue_scripts() {
 	wp_enqueue_script(
 		'carrieforde3-scripts',
 		CARRIEFORDE3_URL . 'dist/bundle.js',
-		array( 'jquery', 'sticky-js' ),
+		array( 'jquery', 'jquery-masonry', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
 		true
 	);
-
-	// Enqueue masonry.
-	if ( is_home() || is_category() || is_tag() ) {
-		wp_enqueue_script( 'carrieforde3-masonry' );
-	}
 
 	// Enqueue Prism.
 	if ( is_singular( 'post' ) ) {
