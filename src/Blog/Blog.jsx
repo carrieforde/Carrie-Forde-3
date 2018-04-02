@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAPIData, fetchPosts, morePosts } from '../redux/actionCreators';
 import PostCard from './PostCard';
-import Masonry from 'masonry-layout';
+import $ from 'jquery';
 
 class Blog extends Component {
   componentDidMount() {
@@ -19,15 +19,31 @@ class Blog extends Component {
     });
   }
 
-  componentDidUpdate() {
-    // Init masonry.
-    setTimeout(() => {
-      const masonry = new Masonry(document.querySelector('.masonry'), {
-        itemSelector: '.card',
-        columnWidth: '.alcatraz-col--4',
-        percentPosition: true
-      });
-    }, 500);
+  componentDidUpdate(prevProps) {
+    const { posts } = this.props,
+      $grid = $('.masonry');
+
+    if (prevProps.posts.length > 0) {
+      $grid.masonry('destroy');
+
+      setTimeout(() => {
+        $grid.masonry({
+          itemSelector: '.card',
+          columnWidth: '.alcatraz-col--4',
+          percentPosition: true
+        });
+      }, 500);
+    }
+
+    if (prevProps.posts.length === 0) {
+      setTimeout(() => {
+        $grid.masonry({
+          itemSelector: '.card',
+          columnWidth: '.alcatraz-col--4',
+          percentPosition: true
+        });
+      }, 250);
+    }
   }
 
   getMorePosts() {
