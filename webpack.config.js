@@ -15,6 +15,9 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss', '.json']
   },
   devtool: 'source-map',
+  externals: {
+    jquery: 'jQuery'
+  },
   module: {
     rules: [
       {
