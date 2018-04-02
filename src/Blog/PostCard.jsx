@@ -24,7 +24,10 @@ const PostCard = props => {
 
           <header className="entry-header card__header">
             <h2 className="entry-title card__title">
-              <Link to={`/${slug}`}>{title}</Link>
+              <Link
+                to={`/${slug}`}
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
             </h2>
           </header>
 
