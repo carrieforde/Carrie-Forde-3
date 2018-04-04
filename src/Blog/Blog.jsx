@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { getAPIData, fetchPosts, morePosts } from '../redux/actionCreators';
 import PostCard from './PostCard';
 import $ from 'jquery';
+import CategoryFilters from './CategoryFilters';
+import Spinner from './Spinner';
 
 class Blog extends Component {
   componentDidMount() {
@@ -15,6 +17,10 @@ class Blog extends Component {
 
       if (target.getAttribute('id') === 'loadMore') {
         this.getMorePosts();
+      }
+
+      if (target.classList.contains('category-filter')) {
+        console.log(this.props.posts);
       }
     });
   }
@@ -61,13 +67,14 @@ class Blog extends Component {
         <PostCard key={post.id} index={index} {...post} />
       ));
     } else {
-      posts = <h2>Loading...</h2>;
+      posts = <Spinner />;
     }
     return (
       <div className="page">
         <header className="page-header">
           <h1 className="page-title screen-reader-text">Blog</h1>
         </header>
+        <CategoryFilters />
         <div className="page-content blog-grid masonry">{posts}</div>
         <footer className="page-footer">
           <button id="loadMore" className="button">

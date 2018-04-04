@@ -1,5 +1,11 @@
 import axios from 'axios';
-import { ROOT_URL, FETCH_POSTS, FETCH_POST, MORE_POSTS } from './actions';
+import {
+  ROOT_URL,
+  FETCH_POSTS,
+  FETCH_POST,
+  MORE_POSTS,
+  FETCH_TAXONOMIES
+} from './actions';
 
 export function fetchPosts(posts) {
   return { type: FETCH_POSTS, payload: posts };
@@ -11,6 +17,10 @@ export function fetchPost(post) {
 
 export function morePosts(posts) {
   return { type: MORE_POSTS, payload: posts };
+}
+
+export function fetchTaxonomies(taxonomies) {
+  return { type: FETCH_TAXONOMIES, payload: taxonomies };
 }
 
 export function getAPIData(endpoint, cb) {

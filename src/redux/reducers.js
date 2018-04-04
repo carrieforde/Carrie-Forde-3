@@ -1,10 +1,16 @@
-import { FETCH_POSTS, FETCH_POST, MORE_POSTS } from './actions';
+import {
+  FETCH_POSTS,
+  FETCH_POST,
+  MORE_POSTS,
+  FETCH_TAXONOMIES
+} from './actions';
 
 // Define the default state.
 const DEFAULT_STATE = {
   posts: [],
   post: null,
-  isFetched: false
+  isFetched: false,
+  taxonomies: []
 };
 
 const fetchPosts = (state, action) =>
@@ -22,6 +28,9 @@ const morePosts = (state, action) => {
 const fetchPost = (state, action) =>
   Object.assign({}, state, { post: action.payload });
 
+const fetchTaxonomies = (state, action) =>
+  Object.assign({}, state, { taxonomies: action.payload });
+
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case FETCH_POSTS:
@@ -30,6 +39,8 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
       return fetchPost(state, action);
     case MORE_POSTS:
       return morePosts(state, action);
+    case FETCH_TAXONOMIES:
+      return fetchTaxonomies(state, action);
     default:
       return state;
   }
