@@ -26,3 +26,20 @@ svg {
 		@include hide-text;
 	}
 }
+
+.spinner {
+	display: flex;
+	justify-content: center;
+}
+
+.fa-spinner {
+	animation: spin 2s linear infinite;
+	color: color(razzmatazz);
+	font-size: 90px !important;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
