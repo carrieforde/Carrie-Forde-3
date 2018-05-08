@@ -1,3 +1,4 @@
+import { ROOT_URL } from './actions';
 import Masonry from 'masonry-layout';
 import Utilities from './utilities.js';
 
@@ -10,7 +11,7 @@ class BlogArchive {
 
     this.utils.getPostData(
       'GET',
-      'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint',
+      `${ROOT_URL}/wp-json/carrie-forde/v1/home-endpoint`,
       this.totalPostsCount.bind(this),
       'per_page=-1'
     );
@@ -176,7 +177,7 @@ class BlogArchive {
     if (category === 'all') {
       this.utils.getPostData(
         'GET',
-        'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint',
+        `${ROOT_URL}/wp-json/carrie-forde/v1/home-endpoint`,
         this.renderPosts.bind(this),
         'per_page=-1'
       );
@@ -185,7 +186,7 @@ class BlogArchive {
     // Get posts category posts.
     this.utils.getPostData(
       'GET',
-      'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint',
+      `${ROOT_URL}/wp-json/carrie-forde/v1/home-endpoint`,
       this.renderPosts.bind(this),
       'per_page=-1',
       `category=${category}`
@@ -200,7 +201,7 @@ class BlogArchive {
   loadMorePosts() {
     this.utils.getPostData(
       'GET',
-      'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint',
+      `${ROOT_URL}/wp-json/carrie-forde/v1/home-endpoint`,
       this.renderPosts.bind(this),
       `offset=${this.count}`,
       `per_page=9`
@@ -237,7 +238,7 @@ class BlogArchive {
 
       this.utils.getPostData(
         'GET',
-        'https://carrieforde.com/wp-json/carrie-forde/v1/home-endpoint',
+        `${ROOT_URL}/wp-json/carrie-forde/v1/home-endpoint`,
         this.renderPosts.bind(this),
         'per_page=8'
       );

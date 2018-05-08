@@ -1,3 +1,4 @@
+import { ROOT_URL } from './actions';
 import Utilities from './utilities.js';
 
 class PortfolioArchive {
@@ -6,7 +7,7 @@ class PortfolioArchive {
 
     this.utils.getPostData(
       'GET',
-      'https://carrieforde.com/wp-json/carrie-forde/v1/rest-portfolio',
+      `${ROOT_URL}/wp-json/carrie-forde/v1/rest-portfolio`,
       this.renderPosts
     );
   }
