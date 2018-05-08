@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style>
+    .sprite-symbol-usage {display: none;}
+    .sprite-symbol-usage:target {display: inline;}
+  </style><symbol viewBox="0 0 20.87 41.25" id="icon-chevron"><title>chevron</title><polyline points="0.25 0.25 20.62 20.62 0.25 41" fill="none" stroke="#323132" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" /></symbol></defs><use id="icon-chevron-usage" xlink:href="#icon-chevron" class="sprite-symbol-usage" /></svg>
