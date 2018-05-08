@@ -6,7 +6,7 @@ const path = require('path'),
 
 module.exports = {
   context: __dirname,
-  entry: './src/App.jsx',
+  entry: './src/app.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -43,7 +43,12 @@ module.exports = {
             {
               loader: 'sass-loader',
               options: {
-                includePaths: ['node_modules/sanitize.scss'],
+                includePaths: [
+                  'node_modules/bourbon/core',
+                  'node_modules/bourbon-neat/core',
+                  'node_modules/sanitize.scss',
+                  '..'
+                ],
                 sourceMap: true
               }
             }
@@ -90,7 +95,7 @@ module.exports = {
     new BrowserSyncPlugin({
       files: '**/*.php',
       injectChanges: true,
-      proxy: 'http://aurora.local'
+      proxy: 'http://carrieforde.test'
     })
   ]
 };

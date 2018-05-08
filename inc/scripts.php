@@ -25,10 +25,19 @@ function cf3_enqueue_scripts() {
 		CARRIEFORDE3_VERSION
 	);
 
+	// Include main stylesheet with WP header.
+	wp_enqueue_style(
+		'carrieforde3-style-header',
+		CARRIEFORDE3_URL . 'style.css',
+		array(),
+		CARRIEFORDE3_VERSION
+	);
+
+
 	// Include this theme's stylesheet.
 	wp_enqueue_style(
 		'carrieforde3-style',
-		CARRIEFORDE3_URL . 'app.css',
+		CARRIEFORDE3_URL . 'dist/main.css',
 		array(),
 		CARRIEFORDE3_VERSION
 	);
@@ -44,7 +53,7 @@ function cf3_enqueue_scripts() {
 
 	wp_enqueue_script(
 		'carrieforde3-app',
-		CARRIEFORDE3_URL . 'app.js',
+		CARRIEFORDE3_URL . 'dist/bundle.js',
 		array( 'jquery', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
 		true
