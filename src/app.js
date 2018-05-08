@@ -1,9 +1,9 @@
 /* eslint-disable */
-const sass = require('style.scss');
+import './assets/sass/style.scss';
 
-import { Utilities } from 'utilities.js';
-import { PortfolioArchive } from 'portfolio-archive.js';
-import { BlogArchive } from './assets/scripts/blog-archive';
+import Utilities from './assets/scripts/utilities';
+import PortfolioArchive from './assets/scripts/portfolio-archive';
+import BlogArchive from './assets/scripts/blog-archive';
 
 // Load Portfolio Archive posts.
 if (document.body.classList.contains('post-type-archive-cf-portfolio')) {
@@ -21,8 +21,7 @@ if (document.body.classList.contains('blog')) {
  * @param   {string}  toggle The toggle button.
  * @returns {boolean}        Whether class was applied.
  */
-function toggleNavSearch (toggle) {
-
+function toggleNavSearch(toggle) {
   const mainNavigation = toggle.closest('.main-navigation');
 
   if (!mainNavigation) {
@@ -35,7 +34,6 @@ function toggleNavSearch (toggle) {
 
 // Fire Events.
 document.addEventListener('click', e => {
-
   const target = e.target.closest('.search-toggle');
 
   if (!target) {
@@ -47,10 +45,8 @@ document.addEventListener('click', e => {
 });
 
 // Deal with jQuery-dependent plugins.
-(function ($) {
-
+(function($) {
   function initStickyNav() {
-
     const tabletPortrait = 600,
       $header = $('.site-header');
 
@@ -58,7 +54,6 @@ document.addEventListener('click', e => {
 
     // Fire sticky navigation on tablet portrait+.
     if (tabletPortrait <= windowWidth) {
-
       $header.sticky({
         zIndex: 3
       });
@@ -66,7 +61,6 @@ document.addEventListener('click', e => {
 
     // If the window is resized, or small to start, unstick the header.
     if (tabletPortrait > windowWidth) {
-
       $header.unstick();
     }
   }

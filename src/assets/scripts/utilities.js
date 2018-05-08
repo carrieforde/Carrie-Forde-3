@@ -1,18 +1,14 @@
-export class Utilities {
-
+class Utilities {
   constructor(env) {
     this.env = env || 'DEV';
   }
 
-  getPostData (method, dataURL, callback, ...params) {
-
+  getPostData(method, dataURL, callback, ...params) {
     let promise = new Promise((resolve, reject) => {
-
       let queryParams = '',
-          count = 0;
+        count = 0;
 
       if (params) {
-
         params.forEach(param => {
           if (count === 0) {
             queryParams = `?${param}`;
@@ -27,7 +23,6 @@ export class Utilities {
       const xhr = new XMLHttpRequest();
 
       xhr.onload = () => {
-
         let response;
 
         if (xhr.status === 200) {
@@ -54,6 +49,8 @@ export class Utilities {
       error => {
         console.log(error); // eslint-disable-line no-console
       }
-    )
+    );
   }
 }
+
+export default Utilities;
