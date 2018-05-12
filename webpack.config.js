@@ -1,10 +1,11 @@
-const path = require('path'),
+const webpack = require('webpack'),
+  path = require('path'),
   ExtractTextPlugin = require('extract-text-webpack-plugin'),
   StyleLintPlugin = require('stylelint-webpack-plugin'),
   BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
   SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
-module.exports = {
+const config = {
   context: __dirname,
   entry: './src/App.jsx',
   output: {
@@ -28,7 +29,7 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                importLoaders: 1,
+                minimize: process.env.NODE_ENV === 'production' ? true : false,
                 sourceMap: true
               }
             },
@@ -49,8 +50,8 @@ module.exports = {
                 includePaths: [
                   'node_modules/bourbon/core',
                   'node_modules/bourbon-neat/core',
-                  '../',
-                  'node_modules/sanitize.scss'
+                  'node_modules/sanitize.scss',
+                  '..'
                 ],
                 sourceMap: true
               }
@@ -102,3 +103,15 @@ module.exports = {
     })
   ]
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.devtool = false;
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
+  );
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
+
+module.exports = config;

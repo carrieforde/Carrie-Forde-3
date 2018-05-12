@@ -1,23 +1,27 @@
-import { Utilities } from 'utilities.js';
+import { ROOT_URL } from './actions';
+import Utilities from './utilities.js';
 
-export class PortfolioArchive {
-
+class PortfolioArchive {
   constructor() {
     this.utils = new Utilities();
-    
-    this.utils.getPostData('GET', 'https://carrieforde.com/wp-json/carrie-forde/v1/rest-portfolio', this.renderPosts);
+
+    this.utils.getPostData(
+      'GET',
+      `${ROOT_URL}/wp-json/carrie-forde/v1/rest-portfolio`,
+      this.renderPosts
+    );
   }
 
-  renderPosts (posts) {
-
+  renderPosts(posts) {
     const postContainer = document.getElementById('portfolio-posts');
 
     let portPosts = '';
 
     posts.forEach(post => {
-
       let portPost = `
-        <article id="post-${post.id}" class="card card--portfolio portfolio-card">
+        <article id="post-${
+          post.id
+        }" class="card card--portfolio portfolio-card">
           <div class="card__inner-wrap">
             <header class="entry-header card__header">
               <a href="${post.url}">
@@ -36,10 +40,11 @@ export class PortfolioArchive {
           </div>
         </article>`;
 
-        portPosts += portPost;
+      portPosts += portPost;
     });
 
     postContainer.innerHTML = portPosts;
   }
 }
 
+export default PortfolioArchive;

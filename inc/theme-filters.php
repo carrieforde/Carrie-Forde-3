@@ -101,3 +101,4 @@ function cf3_option_defaults() {
 		'social_icons_in_footer'  => '',
 	);
 }
+

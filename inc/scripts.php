@@ -25,6 +25,14 @@ function cf3_enqueue_scripts() {
 		CARRIEFORDE3_VERSION
 	);
 
+	// Include main stylesheet with WP header.
+	wp_enqueue_style(
+		'carrieforde3-style-header',
+		CARRIEFORDE3_URL . 'style.css',
+		array(),
+		CARRIEFORDE3_VERSION
+	);
+
 	// Include this theme's stylesheet.
 	wp_enqueue_style(
 		'carrieforde3-style',
@@ -43,9 +51,9 @@ function cf3_enqueue_scripts() {
 	);
 
 	wp_enqueue_script(
-		'carrieforde3-scripts',
+		'carrieforde3-app',
 		CARRIEFORDE3_URL . 'dist/bundle.js',
-		array( 'jquery', 'jquery-masonry', 'sticky-js' ),
+		array( 'jquery', 'sticky-js' ),
 		CARRIEFORDE3_VERSION,
 		true
 	);
@@ -68,12 +76,13 @@ function cf3_enqueue_scripts() {
 		);
 	}
 
-	// Translatable strings and other data for JS.
+	// Data for JS.
 	$vars = array(
 		'root_url' => home_url( '/' ),
 	);
+	$vars = apply_filters( 'carrieforde3_vars', $vars );
 
-	wp_localize_script( 'carrieforde3-scripts', 'cf3_js_vars', $vars );
+	wp_localize_script( 'carrieforde3-app', 'cf3_vars', $vars );
 }
 
 add_action( 'wp_footer', 'cf3_google_analytics' );
